@@ -58,7 +58,7 @@
     "scan_step_4": "扫描二维码开始同步"
   },
   "onboarding_carousel": {
-    "title1": "欢迎使用 MetaMask",
+    "title1": "欢迎使用 BitcoinPay",
     "title2": "管理您的数字资产",
     "title3": "您通往 web3 的门户",
     "subtitle1": "BitcoinPay 深受数百万人信任，是一款可以让所有人进入 web3 世界的安全钱包。",
@@ -307,9 +307,9 @@
     "here": "此处",
     "agree": "我同意",
     "decline": "不，谢谢",
-    "description_title": "帮助我们改进 MetaMask",
+    "description_title": "帮助我们改进 BitcoinPay",
     "description_content_1": "BitcoinPay 希望收集基本的使用数据，以便更好地了解我们的用户如何与移动应用交互。这些数据将用于持续改进我们产品的可用性和用户体验。",
-    "description_content_2": "MetaMask...",
+    "description_content_2": "BitcoinPay...",
     "action_description_1": "始终允许您通过“设置”选择退出",
     "action_description_2": "发送匿名化点击和页面浏览事件",
     "action_description_4": "决不收集密钥、地址、交易、余额、哈希或任何个人信息",
@@ -486,7 +486,7 @@
     "clear_history_desc": "选择此选项可清除您的整个浏览历史记录。",
     "clear_cookies_desc": "选择此选项可清除您的浏览器的 Cookie。",
     "metametrics_title": "参加 MetaMetrics",
-    "metametrics_description": "参加 MetaMetrics 以帮助我们改进 MetaMask。",
+    "metametrics_description": "参加 MetaMetrics 以帮助我们改进 BitcoinPay。",
     "third_party_title": "获取传入交易",
     "third_party_description": "第三方 API (Etherscan) 用于显示历史记录中的传入交易。如果您不希望我们通过这些服务拉取数据，请关闭。",
     "metametrics_opt_out": "MetaMetrics 退出",
@@ -890,9 +890,9 @@
   },
   "authentication": {
     "auth_prompt_title": "需要身份验证",
-    "auth_prompt_desc": "请进行身份验证以便使用 MetaMask",
+    "auth_prompt_desc": "请进行身份验证以便使用 BitcoinPay",
     "fingerprint_prompt_title": "需要身份验证",
-    "fingerprint_prompt_desc": "使用您的指纹解锁 MetaMask",
+    "fingerprint_prompt_desc": "使用您的指纹解锁 BitcoinPay",
     "fingerprint_prompt_cancel": "取消"
   },
   "accountApproval": {

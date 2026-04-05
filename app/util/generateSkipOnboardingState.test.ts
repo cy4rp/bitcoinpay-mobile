@@ -83,7 +83,7 @@ describe('generateSkipOnboardingState', () => {
       // Given the exported VAULT_INITIALIZED_KEY constant
       // When checking its value
       // Then it should have the correct format
-      expect(VAULT_INITIALIZED_KEY).toBe('@MetaMask:vaultInitialized');
+      expect(VAULT_INITIALIZED_KEY).toBe('@BitcoinPay:vaultInitialized');
     });
 
     it('exports predefined password from environment variable', () => {
@@ -207,8 +207,8 @@ describe('generateSkipOnboardingState', () => {
       it('validates VAULT_INITIALIZED_KEY has MetaMask namespace', () => {
         // Given the VAULT_INITIALIZED_KEY constant
         // When checking its format
-        // Then it should start with @MetaMask: prefix
-        expect(VAULT_INITIALIZED_KEY).toMatch(/^@MetaMask:/);
+        // Then it should start with @BitcoinPay: prefix
+        expect(VAULT_INITIALIZED_KEY).toMatch(/^@BitcoinPay:/);
       });
 
       it('validates VAULT_INITIALIZED_KEY contains vaultInitialized identifier', () => {

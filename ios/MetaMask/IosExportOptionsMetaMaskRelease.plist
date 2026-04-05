@@ -3,7 +3,12 @@
 <plist version="1.0">
   <dict>
     <key>signingStyle</key>
-    <string>automatic</string>
+    <string>manual</string>
+    <key>provisioningProfiles</key>
+    <dict>
+      <key>com.bitcoinpay.btcp</key>
+      <string>BitcoinPay AppStore</string>
+    </dict>
     <key>uploadSymbols</key>
     <true/>
     <key>teamID</key>

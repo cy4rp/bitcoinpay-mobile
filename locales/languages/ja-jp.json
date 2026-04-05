@@ -1316,7 +1316,7 @@
     "wyre_minimum_deposit": "最小入金額は {{amount}} です。",
     "wyre_maximum_deposit": "最大入金額は {{amount}} です。",
     "wyre_purchase": "{{currency}} の購入",
-    "wyre_total_label": "Wyre (MetaMask経由)",
+    "wyre_total_label": "Wyre (BitcoinPay経由)",
     "buy_with": "購入手段",
     "plus_fee": "および {{fee}} の手数料",
     "date": "日付",
@@ -1572,6 +1572,6 @@
   "secret_phrase_video_subtitle": {
     "title": "JA JP CC",
     "language": "ja-jp",
-    "uri": "https://github.com/MetaMask/metamask-mobile/blob/main/app/videos/subtitles/secretPhrase/subtitles-ja-jp.vtt?raw=true"
+    "uri": "https://github.com/BitcoinPay/metamask-mobile/blob/main/app/videos/subtitles/secretPhrase/subtitles-ja-jp.vtt?raw=true"
   }
 }

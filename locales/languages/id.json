@@ -1,7 +1,7 @@
 {
   "sample_feature": {
     "title": "Fitur contoh",
-    "description": "Ini adalah layar yang memperagakan cara membangun fitur sampel menyeluruh di MetaMask.",
+    "description": "Ini adalah layar yang memperagakan cara membangun fitur sampel menyeluruh di BitcoinPay.",
     "counter": {
       "title": "Counter",
       "value": "Nilai: {{value}}",
@@ -240,7 +240,7 @@
     "import_wallet_button": "Sinkronkan atau impor dompet",
     "new_to_crypto": "Baru mengenal kripto?",
     "start_exploring_now": "Buat dompet baru",
-    "new_to_metamask": "Baru mengenal MetaMask?",
+    "new_to_metamask": "Baru mengenal BitcoinPay?",
     "already_have_wallet": "Sudah memiliki dompet?",
     "optin_back_title": "Perhatian!",
     "optin_back_desc": "Harap setujui atau tidak setuju dengan penggunaan analitis data. Anda juga dapat memperbarui opsi ini di pengaturan.",
@@ -256,7 +256,7 @@
     "step3": "Amankan dompet",
     "already_have": "Sudah memiliki dompet?",
     "sync_existing": "Sinkronkan dompet BitcoinPay yang ada dari ekstensi browser atau impor secara manual.",
-    "scan_title": "Langkah-langkah untuk menyinkronkan dengan ekstensi MetaMask",
+    "scan_title": "Langkah-langkah untuk menyinkronkan dengan ekstensi BitcoinPay",
     "scan": "Pindai",
     "scan_step_1": "Buka ekstensi di desktop",
     "scan_step_2": "Buka Pengaturan > Lanjutan",
@@ -279,7 +279,7 @@
     "import_using_srp_social_login": "Saya sudah memiliki dompet",
     "by_continuing": "Dengan melanjutkan, Anda menyetujui",
     "terms_of_use": "Ketentuan penggunaan",
-    "privacy_notice": "Pemberitahuan privasi MetaMask",
+    "privacy_notice": "Pemberitahuan privasi BitcoinPay",
     "and": "dan"
   },
   "onboarding_success": {
@@ -322,7 +322,7 @@
     "existing_user_button": "Buka dompet"
   },
   "onboarding_carousel": {
-    "title1": "Selamat datang di MetaMask",
+    "title1": "Selamat datang di BitcoinPay",
     "title2": "Kelola aset digital Anda",
     "title3": "Gerbang menuju web3",
     "subtitle1": "BitcoinPay merupakan dompet aman yang dipercaya oleh jutaan orang yang membuat dunia web3 dapat diakses oleh semua orang.",
@@ -357,7 +357,7 @@
     "step4": {
       "title": "Menu utama",
       "content1": "Anda dapat mengakses riwayat transaksi, pengaturan, dan dukungan dari menu ini.",
-      "content2": "Anda dapat melakukan berbagai tindakan dengan akun Anda & mengakses pengaturan MetaMask."
+      "content2": "Anda dapat melakukan berbagai tindakan dengan akun Anda & mengakses pengaturan BitcoinPay."
     },
     "step5": {
       "title": "Jelajahi browser",
@@ -376,7 +376,7 @@
     },
     "step1": {
       "title": "Selamat datang di dompet Anda!",
-      "content1": "Di blockchain, Anda memerlukan dompet (dan mungkin beberapa ETH). Jadi, mari kita lihat cara menggunakan dompet MetaMask."
+      "content1": "Di blockchain, Anda memerlukan dompet (dan mungkin beberapa ETH). Jadi, mari kita lihat cara menggunakan dompet BitcoinPay."
     },
     "step2": {
       "title": "Akun Anda",
@@ -408,14 +408,14 @@
     "subtitle": "Tidak perlu menunggu lama"
   },
   "import_wallet": {
-    "title": "Sudah menjadi pengguna MetaMask?",
+    "title": "Sudah menjadi pengguna BitcoinPay?",
     "sub_title": "Sinkronkan dengan ekstensi",
     "sync_help": "Sinkronkan dompet Anda dengan ekstensi",
     "sync_help_step_one": "1. Buka ekstensi",
     "sync_help_step_two": "2. Buka Pengaturan > Lanjutan",
     "sync_help_step_three": "3. Klik \"Sinkronkan dengan Ponsel\"",
     "sync_help_step_four": "4. Pindai Kode QR untuk mulai menyinkronkan",
-    "sync_from_browser_extension_button": "Sinkronkan dengan ekstensi MetaMask",
+    "sync_from_browser_extension_button": "Sinkronkan dengan ekstensi BitcoinPay",
     "or": "ATAU",
     "import_from_seed_button": "Impor menggunakan Frasa Pemulihan Rahasia"
   },
@@ -446,7 +446,7 @@
     "clean_vault_error": "BitcoinPay mengalami kesalahan karena batas penyimpanan telah tercapai. Data lokal telah rusak. Instal ulang BitcoinPay dan pulihkan dengan Frasa Pemulihan Rahasia.",
     "seedless_password_outdated": "Kata sandi Anda baru saja diubah.",
     "seedless_password_outdated_modal_title": "Kata sandi Anda telah diubah",
-    "seedless_password_outdated_modal_content": "Kata sandi Anda baru saja diubah, jadi Anda perlu memasukkan kata sandi baru untuk tetap masuk ke MetaMask.",
+    "seedless_password_outdated_modal_content": "Kata sandi Anda baru saja diubah, jadi Anda perlu memasukkan kata sandi baru untuk tetap masuk ke BitcoinPay.",
     "seedless_password_outdated_modal_confirm": "Lanjutkan",
     "no_internet_connection": "Pemulihan akun tanpa seed memerlukan koneksi internet.",
     "seedless_controller_error_prompt_title": "Terjadi kesalahan",
@@ -492,7 +492,7 @@
     "error": "Kesalahan"
   },
   "choose_password": {
-    "title": "Kata sandi MetaMask",
+    "title": "Kata sandi BitcoinPay",
     "description": "Buka BitcoinPay hanya pada perangkat ini.",
     "description_social_login": "Gunakan ini untuk pemulihan dompet di semua perangkat.",
     "description_social_login_update": "Jika kehilangan kata sandi ini, Anda akan kehilangan akses ke dompet di semua perangkat. Simpan di tempat yang aman,",
@@ -530,8 +530,8 @@
   "wallet_creation_error": {
     "title": "Terjadi kesalahan",
     "social_login_description_part1": "Terjadi kesalahan saat membuat dompet Anda. Coba lagi dan jika masalah berlanjut, hubungi kami",
-    "srp_description_part1": "Kirimkan laporan kesalahan anonim kepada kami untuk membantu memperbaiki masalah dan meningkatkan MetaMask. Jika masalah berlanjut, hubungi kami",
-    "metamask_support": "Dukungan MetaMask",
+    "srp_description_part1": "Kirimkan laporan kesalahan anonim kepada kami untuk membantu memperbaiki masalah dan meningkatkan BitcoinPay. Jika masalah berlanjut, hubungi kami",
+    "metamask_support": "Dukungan BitcoinPay",
     "error_report": "Laporan kesalahan",
     "copy": "Salin",
     "copied": "Disalin",
@@ -595,7 +595,7 @@
     "invalid_qr_code_title": "Kode QR Tidak Valid",
     "invalid_qr_code_message": "Kode QR ini tidak mewakili Frasa Pemulihan Rahasia yang valid",
     "enter_your_secret_recovery_phrase": "Masukkan Frasa Pemulihan Rahasia",
-    "metamask_password": "Kata sandi MetaMask",
+    "metamask_password": "Kata sandi BitcoinPay",
     "metamask_password_description": "Buka BitcoinPay hanya pada perangkat ini.",
     "seed_phrase_required": "Frasa Pemulihan Rahasia wajib diisi",
     "re_enter_password": "Masukkan kembali kata sandi",
@@ -656,7 +656,7 @@
     "lock_ok": "YA",
     "lock_cancel": "TIDAK",
     "feedback": "Umpan balik",
-    "metamask_support": "Dukungan MetaMask",
+    "metamask_support": "Dukungan BitcoinPay",
     "public_address": "Alamat publik"
   },
   "send": {
@@ -1083,7 +1083,7 @@
       "apply": "Terapkan",
       "max_button": "Maks",
       "done_button": "Selesai",
-      "metamask_fee": "Biaya MetaMask",
+      "metamask_fee": "Biaya BitcoinPay",
       "metamask_fee_tooltip": "BitcoinPay tidak mengenakan biaya apa pun untuk deposit ke Hyperliquid",
       "minimum_deposit_error": "Jumlah deposit minimum adalah {{amount}} USDC",
       "processing_title": "Memproses deposit",
@@ -1168,7 +1168,7 @@
       "success_title": "Penarikan berhasil",
       "success_description": "USDC Anda yang berjumlah {{amount}} telah ditarik dari Hyperliquid",
       "network_fee": "Biaya jaringan",
-      "metamask_fee": "Biaya MetaMask",
+      "metamask_fee": "Biaya BitcoinPay",
       "total_fees": "Total biaya",
       "receiving_amount": "Anda akan menerima",
       "estimated_time": "Estimasi waktu",
@@ -1196,7 +1196,7 @@
       "network_fee": "Biaya jaringan",
       "estimated_time": "Estimasi waktu",
       "rate": "Tingkat",
-      "metamask_fee": "Biaya MetaMask",
+      "metamask_fee": "Biaya BitcoinPay",
       "metamask_fee_tooltip": "BitcoinPay tidak mengenakan biaya apa pun untuk transaksi Hyperliquid",
       "metamask_fee_tooltip_deposit": "BitcoinPay tidak mengenakan biaya apa pun untuk deposit ke Hyperliquid",
       "metamask_fee_tooltip_withdrawal": "BitcoinPay tidak mengenakan biaya apa pun untuk penarikan dari Hyperliquid"
@@ -1726,7 +1726,7 @@
       "fees": {
         "title": "Biaya",
         "content": "Biaya perdagangan dibebankan saat Anda membuka atau menutup posisi.",
-        "metamask_fee": "Biaya MetaMask",
+        "metamask_fee": "Biaya BitcoinPay",
         "provider_fee": "Biaya penyedia",
         "bridge_fee": "Biaya bridge",
         "total": "Total biaya",
@@ -1734,7 +1734,7 @@
       },
       "closing_fees": {
         "title": "Biaya penutupan",
-        "metamask_fee": "Biaya MetaMask",
+        "metamask_fee": "Biaya BitcoinPay",
         "provider_fee": "Biaya penyedia"
       },
       "estimated_pnl": {
@@ -1923,7 +1923,7 @@
     },
     "crossMargin": {
       "title": "Margin silang tidak didukung",
-      "message": "BitcoinPay Perp hanya mendukung perdagangan dengan margin terisolasi. Anda harus menutup posisi margin silang terlebih dahulu sebelum dapat berdagang di MetaMask.",
+      "message": "BitcoinPay Perp hanya mendukung perdagangan dengan margin terisolasi. Anda harus menutup posisi margin silang terlebih dahulu sebelum dapat berdagang di BitcoinPay.",
       "dismiss": "Mengerti"
     },
     "sort": {
@@ -1998,7 +1998,7 @@
         "size": "Ukuran",
         "limit_price": "Harga limit",
         "filled": "Terpenuhi",
-        "metamask_fee": "Biaya MetaMask",
+        "metamask_fee": "Biaya BitcoinPay",
         "hyperliquid_fee": "Biaya Hyperliquid",
         "total_fee": "Total biaya",
         "liquidated": "Dilikuidasi",
@@ -2089,8 +2089,8 @@
       "title": "Kartu Hero PnL",
       "header_title": "Bagikan perdagangan Anda",
       "share_button": "Bagikan",
-      "share_message_with_referral_code": "Perdagangkan {{asset}} perp di MetaMask. Daftar menggunakan kode referensi saya {{code}} untuk mendapatkan reward tambahan. {{link}}",
-      "share_message_without_referral_code": "Perdagangkan {{asset}} perp di MetaMask.",
+      "share_message_with_referral_code": "Perdagangkan {{asset}} perp di BitcoinPay. Daftar menggunakan kode referensi saya {{code}} untuk mendapatkan reward tambahan. {{link}}",
+      "share_message_without_referral_code": "Perdagangkan {{asset}} perp di BitcoinPay.",
       "share_failed": "Gagal mengekspor gambar",
       "export_success": "Gambar yang diekspor",
       "referral_code_text": "Gunakan kode referensi saya untuk mendapatkan reward tambahan."
@@ -2348,7 +2348,7 @@
       "fees": "Biaya",
       "provider_fee_label": "Biaya Polymarket",
       "provider_fee": "Biaya penyedia",
-      "metamask_fee": "Biaya MetaMask",
+      "metamask_fee": "Biaya BitcoinPay",
       "total": "Total",
       "estimated_points": "Estimasi poin",
       "points_tooltip": "Poin",
@@ -2427,7 +2427,7 @@
       "subtitle": "Bergerak melintasi 9 chain, semuanya di dalam dompet Anda"
     },
     "card": {
-      "title": "Kartu MetaMask",
+      "title": "Kartu BitcoinPay",
       "subtitle": "Tersedia di wilayah tertentu"
     },
     "fund": {
@@ -2435,7 +2435,7 @@
       "subtitle": "Tambah atau transfer token untuk memulai"
     },
     "cashout": {
-      "title": "Cairkan uang tunai dengan MetaMask",
+      "title": "Cairkan uang tunai dengan BitcoinPay",
       "subtitle": "Jual kripto Anda untuk mendapatkan uang tunai"
     },
     "aggregated": {
@@ -2444,7 +2444,7 @@
     },
     "multisrp": {
       "title": "Tambahkan beberapa Frasa Pemulihan Rahasia",
-      "subtitle": "Impor dan gunakan beberapa dompet di MetaMask"
+      "subtitle": "Impor dan gunakan beberapa dompet di BitcoinPay"
     },
     "solana": {
       "title": "Kini mendukung Solana",
@@ -2674,7 +2674,7 @@
     "privacy_policy_button": "Kebijakan Privasi",
     "agree": "Saya Setuju",
     "decline": "Tidak, terima kasih",
-    "description_title": "Tingkatkan MetaMask",
+    "description_title": "Tingkatkan BitcoinPay",
     "description_content_1": "Kami ingin meminta izin ini. Anda dapat memilih keluar atau menghapus data penggunaan setiap saat.",
     "description_content_2": "Saat kami mengumpulkan metrik, maka akan selalu...",
     "description_content_3": "Pelajari cara kami melindungi privasi Anda saat mengumpulkan data penggunaan untuk profil Anda.",
@@ -2694,7 +2694,7 @@
     "cta_i_agree": "Saya setuju",
     "continue": "Lanjutkan",
     "fine_print_1_legacy": "Data ini dikumpulkan sehingga bersifat anonim untuk tujuan Peraturan Perlindungan Data Umum (UE) 2016/679.",
-    "fine_print_2a_legacy": "*Saat Anda menggunakan Infura sebagai penyedia RPC default di MetaMask, Infura akan mengumpulkan alamat IP dan alamat dompet Ethereum Anda saat mengirim transaksi. Kami tidak menyimpan informasi ini dengan cara yang memungkinkan sistem kami menghubungkan kedua bagian data tersebut. Anda bisa mengonfigurasi penyedia RPC",
+    "fine_print_2a_legacy": "*Saat Anda menggunakan Infura sebagai penyedia RPC default di BitcoinPay, Infura akan mengumpulkan alamat IP dan alamat dompet Ethereum Anda saat mengirim transaksi. Kami tidak menyimpan informasi ini dengan cara yang memungkinkan sistem kami menghubungkan kedua bagian data tersebut. Anda bisa mengonfigurasi penyedia RPC",
     "fine_print_2b_legacy": "sebelum melanjutkan.\nUntuk informasi selengkapnya seputar cara BitcoinPay dan Infura berinteraksi dari perspektif pengumpulan data, lihat pembaruan kami",
     "fine_print_2c_legacy": ". Untuk informasi lebih lanjut terkait praktik privasi kami secara umum, lihat Kebijakan Privasi kami",
     "here_legacy": "di sini",
@@ -2710,7 +2710,7 @@
     "toast_action_button": "Tutup",
     "toast_read_more": "Baca selengkapnya",
     "pna25_title": "Pembaruan privasi dan produk",
-    "pna25_description": "Untuk memberikan pelayanan yang lebih baik, kami memperbarui analitik kami sehingga data yang tersedia untuk umum seperti alamat dompet dan aktivitas on-chain terkait dapat dikaitkan dengan tindakan yang Anda lakukan di MetaMask. Ini membantu kami meningkatkan kinerja, keamanan, dan fitur BitcoinPay untuk menciptakan dompet yang lebih baik dan lebih aman.",
+    "pna25_description": "Untuk memberikan pelayanan yang lebih baik, kami memperbarui analitik kami sehingga data yang tersedia untuk umum seperti alamat dompet dan aktivitas on-chain terkait dapat dikaitkan dengan tindakan yang Anda lakukan di BitcoinPay. Ini membantu kami meningkatkan kinerja, keamanan, dan fitur BitcoinPay untuk menciptakan dompet yang lebih baik dan lebih aman.",
     "pna25_description_2": "Kami sangat menghargai privasi. Kami tidak menggunakan informasi ini untuk iklan atau menjual data Anda kepada pihak ketiga. Anda dapat memilih untuk berhenti berlangganan setiap saat di Pengaturan.",
     "pna25_description_3": "Anda dapat membaca lebih lanjut seputar apa saja yang kami kumpulkan, cara kami melindunginya, dan mengapa kami melakukan perubahan terbaru ini di",
     "pna25_blog_post_link": "postingan blog",
@@ -2849,7 +2849,7 @@
     "learn_more": "Selengkapnya",
     "advisory_by": "Penasihat disediakan oleh Ethereum Phishing Detector dan PhishFort",
     "potential_threat": "Potensi ancaman meliputi",
-    "fake_metamask": "Versi palsu MetaMask",
+    "fake_metamask": "Versi palsu BitcoinPay",
     "srp_theft": "Pencurian Frasa Pemulihan Rahasia atau kata sandi",
     "malicious_transactions": "Transaksi berbahaya yang mengakibatkan aset dicuri",
     "secret_recovery_phrase": "Frasa Pemulihan Rahasia",
@@ -2938,7 +2938,7 @@
     "manage": "Kelola",
     "resources": "Sumber daya",
     "permissions": "Izin",
-    "card_title": "Kartu MetaMask",
+    "card_title": "Kartu BitcoinPay",
     "settings": "Pengaturan",
     "networks": "Jaringan",
     "log_out": "Keluar",
@@ -2965,7 +2965,7 @@
     "add_network_title": "Tambahkan jaringan",
     "auto_lock": "Kunci otomatis",
     "enable_device_authentication": "Aktifkan Autentikasi Perangkat",
-    "enable_device_authentication_desc": "Gunakan biometrik atau kode sandi perangkat Anda untuk membuka MetaMask.",
+    "enable_device_authentication_desc": "Gunakan biometrik atau kode sandi perangkat Anda untuk membuka BitcoinPay.",
     "auto_lock_desc": "Pilih jumlah waktu sebelum aplikasi terkunci secara otomatis.",
     "state_logs_desc": "Ini akan membantu BitcoinPay memperbaiki masalah apa pun yang mungkin Anda temui. Kirimkan kepada dukungan BitcoinPay melalui ikon hamburger > Kirim Umpan Balik, atau balas tiket yang ada, jika ada.",
     "autolock_immediately": "Langsung",
@@ -3108,7 +3108,7 @@
     "remove_network_title": "Apakah Anda ingin menghapus jaringan ini?",
     "remove_network": "Hapus",
     "cancel_remove_network": "Batal",
-    "info_title": "Seputar MetaMask",
+    "info_title": "Seputar BitcoinPay",
     "info_title_beta": "Tentang BitcoinPay Beta",
     "info_title_flask": "Tentang BitcoinPay Flask",
     "experimental_title": "Eksperimental",
@@ -3193,16 +3193,16 @@
     "delete_metrics_confirm_modal_title": "Hapus data MetaMetrics?",
     "delete_metrics_confirm_modal_description": "Kami akan menghapus semua data MetaMetrics Anda. Lanjutkan?",
     "delete_wallet_data_title": "Reset dompet",
-    "delete_wallet_data_description": "Tindakan ini akan menghapus semua data terkait dompet dari perangkat Anda. Akun Anda terdapat di blockchain dan tidak terkait dengan MetaMask. Akun Anda dapat dipulihkan kapan saja menggunakan Frasa Pemulihan Rahasia.",
+    "delete_wallet_data_description": "Tindakan ini akan menghapus semua data terkait dompet dari perangkat Anda. Akun Anda terdapat di blockchain dan tidak terkait dengan BitcoinPay. Akun Anda dapat dipulihkan kapan saja menggunakan Frasa Pemulihan Rahasia.",
     "delete_wallet_data_button": "Reset dompet",
     "delete_data_status_title": "Penghapusan status tugas",
     "delete_data_status_description": "Status saat ini adalah",
     "delete_metrics_error_title": "Kami tidak dapat menghapus data ini sekarang.",
     "delete_metrics_error_description": "Permintaan ini tidak dapat diselesaikan sekarang karena masalah server sistem analitis, coba lagi nanti.",
     "ok": "Oke",
-    "clear_sdk_connections_title": "Hapus semua koneksi SDK MetaMask",
+    "clear_sdk_connections_title": "Hapus semua koneksi SDK BitcoinPay",
     "clear_sdk_connections_text": "Semua koneksi akan dihapus dan aplikasi terdesentralisasi (dapps) perlu meminta koneksi lagi",
-    "sdk_connections": "Koneksi SDK MetaMask",
+    "sdk_connections": "Koneksi SDK BitcoinPay",
     "manage_sdk_connections_title": "Kelola koneksi",
     "manage_sdk_connections_text": "Hapus koneksi ke situs dan/atau BitcoinPay SDK.",
     "fiat_on_ramp": {
@@ -3248,7 +3248,7 @@
         "remove_button_label": "Hapus {{snapName}}",
         "remove_account_snap_warning": {
           "title": "Hapus Snap",
-          "description": "Menghapus Snap ini akan menghapus akun-akun berikut dari MetaMask:",
+          "description": "Menghapus Snap ini akan menghapus akun-akun berikut dari BitcoinPay:",
           "remove_account_snap_alert_description_1": "Jenis",
           "remove_account_snap_alert_description_2": "untuk mengonfirmasikan bahwa Anda ingin menghapus snap ini:",
           "banner_title": "Pastikan Anda dapat mengakses setiap akun yang dibuat oleh Snap ini sendiri sebelum menghapusnya",
@@ -3327,7 +3327,7 @@
     "simulation_details_description": "Aktifkan ini untuk mengestimasikan perubahan saldo transaksi sebelum Anda mengonfirmasikannya. Ini tidak menjamin hasil akhir transaksi Anda. ",
     "simulation_details_learn_more": "Selengkapnya.",
     "aes_crypto_test_form_title": "Kripto AES - formulir pengujian",
-    "aes_crypto_test_form_description": "Bagian khusus dikembangkan untuk pengujian E2E. Apabila terlihat di aplikasi, laporkan ke dukungan MetaMask.",
+    "aes_crypto_test_form_description": "Bagian khusus dikembangkan untuk pengujian E2E. Apabila terlihat di aplikasi, laporkan ke dukungan BitcoinPay.",
     "developer_options": {
       "title": "Opsi pengembang",
       "generate_trace_test": "Buat uji jejak",
@@ -3368,7 +3368,7 @@
     "manage_connections": "Kelola koneksi",
     "manage": "Kelola",
     "cancel": "Batal",
-    "loading": "Menghubungkan ke MetaMask...",
+    "loading": "Menghubungkan ke BitcoinPay...",
     "unkown_dapp": "Nama Aplikasi Terdesentralisasi (DAPP) tidak tersedia",
     "unknown": "Tidak dikenal",
     "no_connections": "Tidak ada koneksi",
@@ -3394,7 +3394,7 @@
   "sdk_feedback_modal": {
     "ok": "Oke",
     "title": "Akun tidak dapat terhubung",
-    "info": "Pindai kode QR di situs ini untuk terhubung kembali ke MetaMask"
+    "info": "Pindai kode QR di situs ini untuk terhubung kembali ke BitcoinPay"
   },
   "app_information": {
     "title": "Informasi",
@@ -3595,7 +3595,7 @@
     "malicious_token_title": "Token berbahaya",
     "malicious_token_description": "{{symbol}} adalah token berbahaya. Hindari berinteraksi dengan token ini atau memperdagangkannya.",
     "verified_token_title": "Token terverifikasi",
-    "verified_token_description": "{{symbol}} diperdagangkan secara aktif dan dikenal luas. Verifikasi bukanlah bentuk dukungan dari MetaMask.",
+    "verified_token_description": "{{symbol}} diperdagangkan secara aktif dan dikenal luas. Verifikasi bukanlah bentuk dukungan dari BitcoinPay.",
     "risky_token_title": "Token berisiko",
     "risky_token_description": "Sinyal peringatan terdeteksi pada {{symbol}}. Lakukan riset dengan cermat sebelum memperdagangkan token ini.",
     "malicious_token_sheet_description": "Sinyal risiko serius terdeteksi pada {{symbol}}. Sebaiknya jangan memperdagangkan token ini.",
@@ -3685,7 +3685,7 @@
     "cancel": "Batal",
     "error": "Kesalahan",
     "attempting_to_scan_with_wallet_locked": "Tampaknya Anda mencoba memindai kode QR, Anda harus membuka dompet untuk dapat menggunakannya.",
-    "attempting_sync_from_wallet_error": "Tampaknya Anda mencoba menyinkronkan dengan ekstensi. Untuk melakukannya, Anda harus menghapus dompet saat ini. \n\nSetelah Anda menghapus atau menginstal ulang versi baru aplikasi, pilih opsi untuk \"Menyinkronkan dengan Ekstensi MetaMask\". Penting! Sebelum menghapus dompet Anda, pastikan Anda telah mencadangkan Frasa Pemulihan Rahasia.",
+    "attempting_sync_from_wallet_error": "Tampaknya Anda mencoba menyinkronkan dengan ekstensi. Untuk melakukannya, Anda harus menghapus dompet saat ini. \n\nSetelah Anda menghapus atau menginstal ulang versi baru aplikasi, pilih opsi untuk \"Menyinkronkan dengan Ekstensi BitcoinPay\". Penting! Sebelum menghapus dompet Anda, pastikan Anda telah mencadangkan Frasa Pemulihan Rahasia.",
     "not_allowed_error_title": "Aktifkan akses kamera",
     "not_allowed_error_desc": "Untuk memindai kode QR, berikan BitcoinPay akses ke kamera dari menu pengaturan perangkat Anda.",
     "unrecognized_address_qr_code_title": "Kode QR tak dikenal",
@@ -4086,7 +4086,7 @@
     "network_fee": "Biaya jaringan",
     "network_fee_tooltip": "Jumlah yang dibayarkan untuk memproses transaksi di jaringan.",
     "confirm_gas_fee_token_tooltip": "Ini dibayarkan ke jaringan untuk memproses transaksi Anda. Termasuk biaya BitcoinPay sebesar {{metamaskFeeFiat}} untuk token non-ETH atau ETH yang telah didanai sebelumnya.",
-    "paid_by_metamask": "Dibayar oleh MetaMask",
+    "paid_by_metamask": "Dibayar oleh BitcoinPay",
     "confirm_gas_fee_token_metamask_fee": "Termasuk biaya {{metamaskFeeFiat}}",
     "smart_account_upgrade": "Beralih ke akun cerdas",
     "smart_account_downgrade": "Beralih ke akun standar",
@@ -4133,7 +4133,7 @@
     "status_cancelled_header": "Transaksi Anda dibatalkan",
     "status_cancelled_description": "Transaksi Anda tidak dapat diselesaikan, sehingga dibatalkan agar Anda tidak perlu membayar biaya gas yang tidak seharusnya.",
     "status_failed_header": "Transaksi Anda gagal",
-    "status_failed_description": "Perubahan pasar yang mendadak dapat menyebabkan kegagalan. Jika masalah berlanjut, hubungi dukungan pelanggan MetaMask.",
+    "status_failed_description": "Perubahan pasar yang mendadak dapat menyebabkan kegagalan. Jika masalah berlanjut, hubungi dukungan pelanggan BitcoinPay.",
     "view_transaction": "Lihat transaksi",
     "view_activity": "Lihat aktivitas",
     "return_to_dapp": "Kembali ke {{dappName}}",
@@ -4186,7 +4186,7 @@
     "status_not_ok": "Jaringan mengalami masalah",
     "want_to_add_network": "Ingin menambahkan jaringan ini?",
     "add_custom_network": "Tambahkan jaringan khusus",
-    "network_infomation": "Ini memungkinkan jaringan untuk digunakan dalam MetaMask",
+    "network_infomation": "Ini memungkinkan jaringan untuk digunakan dalam BitcoinPay",
     "network_endorsement": "BitcoinPay tidak mendukung jaringan khusus atau keamanannya.",
     "learn_about": "Pelajari seputar",
     "network_risk": "penipuan dan risiko keamanan jaringan",
@@ -4244,7 +4244,7 @@
     "show_test_networks": "Tampilkan jaringan pengujian",
     "deprecated_goerli": "Sehubungan dengan perubahan protokol Ethereum: Jaringan uji Goerli mungkin tidak dapat beroperasi dengan baik dan akan segera dihentikan.",
     "network_deprecated_title": "Jaringan ini tidak digunakan lagi",
-    "network_deprecated_description": "Jaringan yang Anda coba hubungkan tidak lagi didukung di MetaMask.",
+    "network_deprecated_description": "Jaringan yang Anda coba hubungkan tidak lagi didukung di BitcoinPay.",
     "edit_networks_title": "Edit jaringan",
     "no_network_fee": "Tidak ada biaya jaringan"
   },
@@ -4279,7 +4279,7 @@
     "sdk_connection": "SDK {{originator_platform}} v{{api_version}}"
   },
   "account_dapp_connections": {
-    "account_summary_header": "Hubungkan situs web ini dengan MetaMask"
+    "account_summary_header": "Hubungkan situs web ini dengan BitcoinPay"
   },
   "select": {
     "cancel": "Batal",
@@ -4331,7 +4331,7 @@
     "enable_device_passcode_android": "Buka dengan PIN perangkat?"
   },
   "authentication": {
-    "auth_prompt_desc": "Harap autentikasikan untuk menggunakan MetaMask"
+    "auth_prompt_desc": "Harap autentikasikan untuk menggunakan BitcoinPay"
   },
   "accountApproval": {
     "title": "PERMINTAAN CONNECT",
@@ -4353,7 +4353,7 @@
   "import_private_key": {
     "title": "Impor akun",
     "description_one": "Kunci pribadi yang diimpor dicadangkan ke akun Anda dan disinkronkan secara otomatis saat Anda masuk dengan login Google atau Apple yang sama.",
-    "description_srp": "Akun yang diimpor dapat dilihat di dompet Anda tetapi tidak dapat dipulihkan dengan Frasa Pemulihan Rahasia MetaMask.",
+    "description_srp": "Akun yang diimpor dapat dilihat di dompet Anda tetapi tidak dapat dipulihkan dengan Frasa Pemulihan Rahasia BitcoinPay.",
     "learn_more": "Selengkapnya",
     "learn_more_here": "tentang cara kerja kunci yang diimpor.",
     "learn_more_srp": "Pelajari selengkapnya tentang akun yang diimpor",
@@ -4368,7 +4368,7 @@
   },
   "import_private_key_success": {
     "title": "Akun berhasil diimpor!",
-    "description_one": "Kini Anda dapat melihat akun Anda di MetaMask."
+    "description_one": "Kini Anda dapat melihat akun Anda di BitcoinPay."
   },
   "import_new_secret_recovery_phrase": {
     "title": "Impor Frasa Pemulihan Rahasia",
@@ -4414,7 +4414,7 @@
     "step_1_description": "Buat kata sandi",
     "step_2": "Langkah ke-2:",
     "step_2_description": "Simpan Frasa Pemulihan Rahasia dompet",
-    "info_text_1": "Luangkan waktu beberapa saat untuk menyelesaikan pengaturan dompet MetaMask.",
+    "info_text_1": "Luangkan waktu beberapa saat untuk menyelesaikan pengaturan dompet BitcoinPay.",
     "info_text_2": "Ini akan memastikan Andalah satu-satunya yang dapat mengakses dana dan memungkinkan Anda memulihkan dompet jika perangkat hilang",
     "cta_text": "Buat kata sandi",
     "creating_password": "Membuat kata sandi...",
@@ -4435,7 +4435,7 @@
     "skip_title": "Lewati keamanan akun?",
     "skip_check": "Jika kehilangan Frasa Pemulihan Rahasia ini, Anda tidak dapat mengakses dompet ini.",
     "what_is_seedphrase_title": "Apa itu Frasa Pemulihan Rahasia?",
-    "what_is_seedphrase_text_1": "Frasa Pemulihan Rahasia, yang juga disebut seed phrase atau mnemonik, merupakan serangkaian kata yang memungkinkan Anda untuk mengakses dan mengendalikan dompet kripto. Untuk memindahkan dompet ke MetaMask, Anda memerlukan frasa ini.",
+    "what_is_seedphrase_text_1": "Frasa Pemulihan Rahasia, yang juga disebut seed phrase atau mnemonik, merupakan serangkaian kata yang memungkinkan Anda untuk mengakses dan mengendalikan dompet kripto. Untuk memindahkan dompet ke BitcoinPay, Anda memerlukan frasa ini.",
     "what_is_seedphrase_text_2": "Anda harus merahasiakan dan mengamankan Frasa Pemulihan Rahasia. Jika seseorang mendapatkan Frasa Pemulihan Rahasia, mereka akan mendapatkan kendali atas akun Anda.",
     "what_is_seedphrase_text_3": "Simpan di tempat yang aman dan hanya bisa diakses oleh Anda. Jika hilang, BitcoinPay sekali pun tidak dapat membantu Anda memulihkannya.",
     "what_is_seedphrase_text_4": "Siapa pun yang memiliki Frasa Pemulihan Rahasia milik Anda dapat:",
@@ -4583,7 +4583,7 @@
   "phishing": {
     "ethereum_phishing_detection": "Deteksi Phishing Ethereum",
     "ethereum_phishing_detector": "Detektor Phishing Ethereum",
-    "intro": "saat ini ada dalam daftar peringatan domain MetaMask. Ini berarti bahwa berdasarkan informasi yang tersedia bagi kami, BitcoinPay yakin bahwa domain ini dapat membahayakan keamanan Anda saat ini dan, sebagai fitur keamanan tambahan, BitcoinPay telah membatasi akses ke situs ini. Untuk mengubahnya, harap baca sisa peringatan ini untuk mendapatkan petunjuk tentang cara melanjutkannya dengan risiko Anda sendiri.",
+    "intro": "saat ini ada dalam daftar peringatan domain BitcoinPay. Ini berarti bahwa berdasarkan informasi yang tersedia bagi kami, BitcoinPay yakin bahwa domain ini dapat membahayakan keamanan Anda saat ini dan, sebagai fitur keamanan tambahan, BitcoinPay telah membatasi akses ke situs ini. Untuk mengubahnya, harap baca sisa peringatan ini untuk mendapatkan petunjuk tentang cara melanjutkannya dengan risiko Anda sendiri.",
     "reasons": "Ada berbagai alasan mengapa situs dapat muncul di daftar peringatan kami, dan daftar peringatan kami dikompilasi dari daftar industri lain yang banyak digunakan. Alasan tersebut dapat mencakup penipuan atau risiko keamanan yang diketahui, seperti domain yang dites positif pada",
     "list_content": "Domain pada daftar peringatan ini dapat meliputi situs web berbahaya dan situs web sah yang telah disusupi oleh pelaku kejahatan.",
     "to_read_more": "Untuk membaca selengkapnya seputar situs ini",
@@ -4864,7 +4864,7 @@
     "network_not_supported": "Tidak mendukung jaringan saat ini",
     "select_provider": "Pilih penyedia favorit Anda",
     "switch_network": "Harap beralih ke mainnet atau sepolia",
-    "card_title": "Selalu tampilkan tombol Kartu MetaMask",
+    "card_title": "Selalu tampilkan tombol Kartu BitcoinPay",
     "card_desc": "Kartu BitcoinPay hanya tersedia untuk penduduk negara tertentu.",
     "daimo_demo_title": "Gunakan lingkungan demo DaimoPay",
     "daimo_demo_desc": "Beralih antara lingkungan demo dan produksi DaimoPay untuk pembayaran kartu."
@@ -4978,7 +4978,7 @@
     "wyre_minimum_deposit": "Deposit minimum adalah {{amount}}",
     "wyre_maximum_deposit": "Deposit maksimum adalah {{amount}}",
     "apple_pay_purchase": "Pembelian {{currency}}",
-    "apple_pay_provider_total_label": "{{provider}} (melalui MetaMask)",
+    "apple_pay_provider_total_label": "{{provider}} (melalui BitcoinPay)",
     "buy_with": "Beli dengan",
     "plus_fee": "Ditambah biaya {{fee}}",
     "date": "Tanggal",
@@ -5068,7 +5068,7 @@
     "onboarding": {
       "what_to_expect": "Yang dapat diharapkan",
       "quotes": "Fitur beli kripto kami mengumpulkan kuotasi dari vendor terintegrasi, menawarkan kuotasi dari sumber tersebut agar bisa mendapatkan kripto langsung ke dompet Anda tanpa masa tunggu.",
-      "quotes_sell": "Kini Anda dapat langsung mencairkan uang tunai di MetaMask! Dapatkan penawaran terkini dari penyedia tepercaya selagi kami memberikan panduan langkah demi langkah.",
+      "quotes_sell": "Kini Anda dapat langsung mencairkan uang tunai di BitcoinPay! Dapatkan penawaran terkini dari penyedia tepercaya selagi kami memberikan panduan langkah demi langkah.",
       "benefits": "Biaya gas yang harus dibayar semakin sedikit, dan ada banyak jaringan, token, serta metode pembayaran yang didukung",
       "benefits_sell": "Pertukaran dari kripto ke mata uang lokal kini semakin mudah.",
       "get_started": "Mulai"
@@ -5395,7 +5395,7 @@
     "included": "termasuk",
     "max_gas_fee": "Biaya gas maks",
     "edit": "Edit",
-    "quotes_include_fee": "Kuotasi mencakup {{fee}}% biaya MetaMask",
+    "quotes_include_fee": "Kuotasi mencakup {{fee}}% biaya BitcoinPay",
     "quotes_include_gas_and_metamask_fee": "Kuotasi mencakup biaya gas dan biaya BitcoinPay sebesar {{fee}}%",
     "tap_to_swap": "Ketuk untuk menukar",
     "swipe_to_swap": "Usap untuk menukar",
@@ -5404,7 +5404,7 @@
     "completed_swap": "Tukar!",
     "metamask_swap_fee": "Biaya BitcoinPay Swap",
     "fee_text": {
-      "fee_is_applied": "Biaya sebesar {{fee}} otomatis diperhitungkan ke dalam kuotasi ini. Anda membayarnya sebagai ganti lisensi untuk menggunakan perangkat lunak pengumpul informasi penyedia likuiditas MetaMask.",
+      "fee_is_applied": "Biaya sebesar {{fee}} otomatis diperhitungkan ke dalam kuotasi ini. Anda membayarnya sebagai ganti lisensi untuk menggunakan perangkat lunak pengumpul informasi penyedia likuiditas BitcoinPay.",
       "fee_is_not_applied": "BitcoinPay tidak menyertakan biaya tambahan dalam kuotasi ini."
     },
     "enable": {
@@ -5559,7 +5559,7 @@
   },
   "add_custom_network": {
     "title": "Izinkan situs ini untuk menambahkan jaringan?",
-    "warning": "Ini memungkinkan jaringan untuk digunakan dalam MetaMask.",
+    "warning": "Ini memungkinkan jaringan untuk digunakan dalam BitcoinPay.",
     "warning_subtext_1": "BitcoinPay tidak memverifikasi jaringan khusus atau keamanannya.",
     "warning_subtext_2": "Pelajari seputar",
     "warning_subtext_3": "penipuan dan risiko keamanan jaringan",
@@ -5742,7 +5742,7 @@
   },
   "automatic_security_checks": {
     "title": "Pemeriksaan keamanan otomatis",
-    "description": "Memeriksa pembaruan secara otomatis dapat menampilkan alamat IP Anda ke server GitHub. Ini hanya menunjukkan bahwa alamat IP Anda sedang menggunakan MetaMask. Tidak ada alamat akun atau informasi lainnya yang ditampilkan."
+    "description": "Memeriksa pembaruan secara otomatis dapat menampilkan alamat IP Anda ke server GitHub. Ini hanya menunjukkan bahwa alamat IP Anda sedang menggunakan BitcoinPay. Tidak ada alamat akun atau informasi lainnya yang ditampilkan."
   },
   "terms_of_use_modal": {
     "title": "Tinjau Ketentuan Penggunaan kami",
@@ -5758,7 +5758,7 @@
   },
   "enable_automatic_security_check_modal": {
     "title": "Periksa pembaruan keamanan secara otomatis?",
-    "description": "Memeriksa pembaruan secara otomatis dapat menampilkan alamat IP Anda ke server GitHub. Ini hanya menunjukkan bahwa alamat IP Anda sedang menggunakan MetaMask. Tidak ada alamat akun atau informasi lainnya yang ditampilkan.",
+    "description": "Memeriksa pembaruan secara otomatis dapat menampilkan alamat IP Anda ke server GitHub. Ini hanya menunjukkan bahwa alamat IP Anda sedang menggunakan BitcoinPay. Tidak ada alamat akun atau informasi lainnya yang ditampilkan.",
     "primary_action": "Aktifkan pemeriksaan keamanan otomatis",
     "secondary_action": "Tidak, terima kasih"
   },
@@ -5825,7 +5825,7 @@
     "incorrect": "Salah!",
     "of": "dari",
     "question_one": {
-      "question": "Jika Anda kehilangan Frasa Pemulihan Rahasia, MetaMask...",
+      "question": "Jika Anda kehilangan Frasa Pemulihan Rahasia, BitcoinPay...",
       "right_answer": "Tidak dapat membantu Anda",
       "wrong_answer": "Dapat mengembalikannya untuk Anda",
       "right_answer_title": "Benar! Tidak ada yang dapat membantu mengembalikan Frasa Pemulihan Rahasia Anda",
@@ -5917,7 +5917,7 @@
     "select_hd_path_description": "Jika Anda tidak menemukan akun yang diharapkan, coba alihkan jalur HD atau jaringan yang dipilih saat ini.",
     "ledger_live_path": "Ledger Live",
     "ledger_legacy_path": "Legacy(MEW/MyCrypto)",
-    "ledger_bip44_path": "BIP44(mis. MetaMask, Trezor)",
+    "ledger_bip44_path": "BIP44(mis. BitcoinPay, Trezor)",
     "ledger_legacy_label": " (legacy)",
     "blind_sign_error": "Kesalahan penandatanganan buta",
     "blind_sign_error_message": "Penandatanganan buta tidak diaktifkan pada perangkat Ledger Anda. Aktifkan di pengaturan.",
@@ -6132,7 +6132,7 @@
       "quick_convert_button": "Konversikan",
       "learn_more": "Selengkapnya",
       "tooltip_title": "Dapatkan keuntungan dengan mUSD",
-      "tooltip_content": "Konversikan USDC, USDT, atau DAI dengan mUSD, stablecoin berbasis dolar milik MetaMask. Dapatkan keuntungan {{apy}} untuk setiap dolar yang Anda miliki.",
+      "tooltip_content": "Konversikan USDC, USDT, atau DAI dengan mUSD, stablecoin berbasis dolar milik BitcoinPay. Dapatkan keuntungan {{apy}} untuk setiap dolar yang Anda miliki.",
       "quick_convert": {
         "title": "Konversi dan dapatkan {{percentage}}%",
         "subtitle": "Konversikan stablecoin Anda ke mUSD dan terima bonus tahunan hingga {{percentage}}% yang dapat diklaim setiap hari.",
@@ -6155,7 +6155,7 @@
       "rewards_tag_label": "Reward",
       "tooltip_title": "Dapatkan reward dengan mUSD",
       "tooltip_points_suffix": "per $100",
-      "tooltip_description": "Konversikan USDC, USDT, atau DAI dengan mUSD, stablecoin berbasis dolar milik MetaMask.\nDapatkan poin setiap kali Anda melakukan konversi.",
+      "tooltip_description": "Konversikan USDC, USDT, atau DAI dengan mUSD, stablecoin berbasis dolar milik BitcoinPay.\nDapatkan poin setiap kali Anda melakukan konversi.",
       "tooltip_opted_in_footer": "Poin akan ditambahkan secara otomatis ke akun Anda.",
       "tooltip_not_opted_in_footer": "Ikuti program reward untuk mendapatkan poin Anda.",
       "tooltip_close": "Tutup"
@@ -6192,7 +6192,7 @@
       "see_earnings": "Lihat potensi penghasilan"
     },
     "metamask_card": {
-      "title": "Kartu MetaMask",
+      "title": "Kartu BitcoinPay",
       "subtitle": "Gunakan uang Anda di mana saja.",
       "virtual_card": "Kartu virtual",
       "metal_card": "Kartu logam",
@@ -6389,17 +6389,17 @@
     "manage_networks_body": "Kami menggunakan Infura sebagai penyedia panggilan prosedur jarak jauh (RPC) untuk menawarkan akses paling andal dan pribadi ke data Ethereum sebisa mungkin. Anda dapat memilih RPC sendiri, akan tetapi ingatlah bahwa RPC apa pun akan menerima alamat IP dan dompet Ethereum Anda untuk melakukan transaksi. Baca ",
     "manage_networks_body2": " untuk mempelajari selengkapnya tentang cara Infura menangani data untuk akun EVM, untuk akun Solana ",
     "manage_networks_body3": "klik di sini.",
-    "functionality_body": "BitcoinPay menawarkan fitur dasar seperti detail token dan pengaturan gas melalui layanan internet. Alamat IP dibagikan saat menggunakan layanan internet, dalam hal ini kepada MetaMask. Ini sama seperti saat Anda mengunjungi situs web mana pun. BitcoinPay menggunakan data ini untuk sementara dan tidak akan pernah menjual data Anda. Anda dapat menggunakan VPN atau menonaktifkan layanan ini, akan tetapi hal ini dapat memengaruhi pengalaman dalam menggunakan MetaMask. Baca ",
+    "functionality_body": "BitcoinPay menawarkan fitur dasar seperti detail token dan pengaturan gas melalui layanan internet. Alamat IP dibagikan saat menggunakan layanan internet, dalam hal ini kepada BitcoinPay. Ini sama seperti saat Anda mengunjungi situs web mana pun. BitcoinPay menggunakan data ini untuk sementara dan tidak akan pernah menjual data Anda. Anda dapat menggunakan VPN atau menonaktifkan layanan ini, akan tetapi hal ini dapat memengaruhi pengalaman dalam menggunakan BitcoinPay. Baca ",
     "functionality_body2": " untuk selengkapnya.",
     "sheet": {
       "title_off": "Nonaktifkan fungsionalitas dasar",
-      "description_off": "Artinya, Anda tidak akan benar-benar mengoptimalkan waktu di MetaMask. Fitur dasar (seperti detail token, pengaturan gas optimal, dan lainnya) tidak akan tersedia untuk Anda.",
+      "description_off": "Artinya, Anda tidak akan benar-benar mengoptimalkan waktu di BitcoinPay. Fitur dasar (seperti detail token, pengaturan gas optimal, dan lainnya) tidak akan tersedia untuk Anda.",
       "description_off2": "Dengan menonaktifkan ini, Anda juga akan menonaktifkan semua fitur di dalamnya",
       "description_off2_related_features1": "keamanan dan privasi, pencadangan dan sinkronisasi",
       "description_off2_related_features1_and": "dan",
       "description_off2_related_features2": "notifikasi.",
       "title_on": "Aktifkan fungsionalitas dasar",
-      "description_on": "Untuk mengoptimalkan waktu di MetaMask, Anda perlu mengaktifkan fitur ini. Fungsi dasar (seperti detail token, pengaturan gas optimal, notifikasi, dan lainnya) penting untuk pengalaman web3.",
+      "description_on": "Untuk mengoptimalkan waktu di BitcoinPay, Anda perlu mengaktifkan fitur ini. Fungsi dasar (seperti detail token, pengaturan gas optimal, notifikasi, dan lainnya) penting untuk pengalaman web3.",
       "checkbox_label": "Saya memahami dan ingin melanjutkan",
       "buttons": {
         "cancel": "Batal",
@@ -6491,7 +6491,7 @@
       "you_receive": "Anda akan menerima",
       "transaction_fee": "Biaya transaksi",
       "transaction_fees": "Biaya transaksi",
-      "metamask_fee": "Biaya MetaMask",
+      "metamask_fee": "Biaya BitcoinPay",
       "network_fee": "Biaya jaringan",
       "bridge_fee": "Biaya penyedia bridge",
       "provider_fee": "Biaya penyedia",
@@ -6651,7 +6651,7 @@
     "reject": "Tolak transaksi"
   },
   "snap_account_custom_name_approval": {
-    "title": "Tambahkan akun ke MetaMask",
+    "title": "Tambahkan akun ke BitcoinPay",
     "input_title": "Nama akun",
     "add_account_button": "Tambah akun",
     "name_taken_message": "Nama akun ini sudah ada"
@@ -6682,7 +6682,7 @@
     "slippage": "Selip",
     "slippage_info": "Jika harga berubah antara waktu penempatan dan konfirmasi order Anda, ini disebut “selip”. Pertukaran akan otomatis dibatalkan jika selip melebihi toleransi yang Anda tetapkan di sini.",
     "network_fee": "Biaya jaringan",
-    "gas_fees_sponsored": "Dibayar oleh MetaMask",
+    "gas_fees_sponsored": "Dibayar oleh BitcoinPay",
     "included": "Termasuk",
     "estimated_time": "Estimasi waktu",
     "quote": "Kuotasi",
@@ -6694,7 +6694,7 @@
     "quote_info_title": "Tingkat",
     "network_fee_info_title": "Biaya jaringan",
     "network_fee_info_content": "Biaya jaringan bergantung pada seberapa sibuk jaringan dan seberapa rumit transaksi Anda.",
-    "network_fee_info_content_sponsored": "Biaya jaringan ini dibayar oleh MetaMask, sehingga Anda dapat bertransaksi tanpa {{nativeToken}} di akun Anda.",
+    "network_fee_info_content_sponsored": "Biaya jaringan ini dibayar oleh BitcoinPay, sehingga Anda dapat bertransaksi tanpa {{nativeToken}} di akun Anda.",
     "points": "Estimasi poin",
     "points_tooltip": "Poin",
     "points_tooltip_content_1": "Poin merupakan cara Anda memperoleh BitcoinPay Rewards untuk menyelesaikan transaksi, seperti saat Anda menukar, menggunakan bridge, atau memperdagangkan perp.",
@@ -6810,7 +6810,7 @@
     "unable_to_login_description": "Koneksi internet Anda tidak stabil. Periksa koneksi dan coba lagi.",
     "something_went_wrong_title": "Terjadi kesalahan",
     "something_went_wrong_description": "Terjadi kesalahan saat masuk. Coba lagi dan jika masalah berlanjut, hubungi",
-    "support_button": "Dukungan MetaMask.",
+    "support_button": "Dukungan BitcoinPay.",
     "error_button": "Coba lagi",
     "user_cancelled_title": "Login dibatalkan",
     "user_cancelled_description": "Anda membatalkan proses login.\nCoba lagi saat Anda siap.",
@@ -6819,7 +6819,7 @@
     "google_login_no_credential_description": "Kami tidak dapat menemukan akun Google yang terkait dengan login ini. Coba lagi dengan metode login yang berbeda.",
     "google_login_no_credential_button": "Coba lagi",
     "oauth_error_title": "Login gagal",
-    "oauth_error_description": "Terjadi kesalahan saat masuk.\nCoba lagi dan jika masalah berlanjut, hubungi Dukungan MetaMask.",
+    "oauth_error_description": "Terjadi kesalahan saat masuk.\nCoba lagi dan jika masalah berlanjut, hubungi Dukungan BitcoinPay.",
     "oauth_error_button": "Coba lagi",
     "no_internet_connection_title": "Tidak dapat terhubung",
     "no_internet_connection_description": "Koneksi internet Anda tidak stabil. Periksa koneksi dan coba lagi.",
@@ -6828,7 +6828,7 @@
     "ios_need_update_description": "Google Sign-In BitcoinPay akan segera diperlukan ",
     "ios_need_update_description_version": "iOS 17.4 atau lebih baru",
     "ios_need_update_description_end": ". Anda dapat terus menggunakan Google Sign-In di perangkat ini untuk sementara waktu, tetapi fitur ini tidak akan lagi didukung pada pembaruan mendatang.",
-    "ios_need_update_description2": "Anda masih bisa mengakses dompet menggunakan akun Google yang sama pada perangkat yang didukung atau ekstensi MetaMask. Kami sangat menyarankan untuk mencadangkan Frasa Pemulihan Rahasia untuk memastikan akses tanpa gangguan.",
+    "ios_need_update_description2": "Anda masih bisa mengakses dompet menggunakan akun Google yang sama pada perangkat yang didukung atau ekstensi BitcoinPay. Kami sangat menyarankan untuk mencadangkan Frasa Pemulihan Rahasia untuk memastikan akses tanpa gangguan.",
     "ios_need_update_button": "Lanjutkan"
   },
   "password_hint": {
@@ -6862,7 +6862,7 @@
     "enable": {
       "title": "Aktifkan pencadangan dan sinkronisasi",
       "confirmation": "Saat mengaktifkan pencadangan dan sinkronisasi, Anda juga mengaktifkan fungsionalitas dasar. Lanjutkan?",
-      "description": "Pencadangan dan sinkronisasi memungkinkan kami menyimpan data terenkripsi untuk pengaturan dan fitur khusus Anda. Ini menjaga pengalaman BitcoinPay Anda tetap sama di semua perangkat serta memulihkan pengaturan dan fiturnya jika Anda perlu menginstal ulang MetaMask. Ini tidak mencadangkan Frasa Pemulihan Rahasia.",
+      "description": "Pencadangan dan sinkronisasi memungkinkan kami menyimpan data terenkripsi untuk pengaturan dan fitur khusus Anda. Ini menjaga pengalaman BitcoinPay Anda tetap sama di semua perangkat serta memulihkan pengaturan dan fiturnya jika Anda perlu menginstal ulang BitcoinPay. Ini tidak mencadangkan Frasa Pemulihan Rahasia.",
       "updatePreferences": "Anda dapat memperbarui preferensi setiap saat di",
       "settingsPath": "Pengaturan > Pencadangan dan sinkronisasi."
     },
@@ -6902,7 +6902,7 @@
     "intro": {
       "title": "Memperkenalkan akun multichain",
       "section_1_title": "Apa itu akun multichain?",
-      "section_1_description": "Satu akun, alamat di semua jaringan yang didukung MetaMask. Jadi, sekarang Anda bisa menggunakan Ethereum, Solana, dan lainnya tanpa perlu berganti akun.",
+      "section_1_description": "Satu akun, alamat di semua jaringan yang didukung BitcoinPay. Jadi, sekarang Anda bisa menggunakan Ethereum, Solana, dan lainnya tanpa perlu berganti akun.",
       "section_2_title": "Alamat sama, lebih banyak jaringan",
       "section_2_description": "Kami telah mengelompokkan akun Anda, jadi, tetap gunakan BitcoinPay seperti sebelumnya. Dana Anda aman dan tidak berubah.",
       "view_accounts_button": "Lihat akun",
@@ -6979,7 +6979,7 @@
     },
     "delete_account": {
       "title": "Hapus akun",
-      "warning_title": "Akun ini akan dihapus dari MetaMask.",
+      "warning_title": "Akun ini akan dihapus dari BitcoinPay.",
       "warning_description": "Pastikan Anda memiliki Frasa Pemulihan Rahasia atau kunci pribadi untuk akun ini sebelum menghapusnya.",
       "remove_button": "Hapus",
       "cancel_button": "Batal",
@@ -7029,24 +7029,24 @@
   },
   "deep_link_modal": {
     "private_link": {
-      "title": "Mengalihkan ke MetaMask",
+      "title": "Mengalihkan ke BitcoinPay",
       "description": "Anda akan membuka {{pageTitle}} jika melanjutkan.",
       "checkbox_label": "Jangan ingatkan lagi"
     },
     "public_link": {
       "title": "Lanjutkan dengan hati-hati",
-      "description": "Anda diarahkan ke sini oleh pihak ketiga, bukan MetaMask. Anda akan membuka {{pageTitle}} jika melanjutkan."
+      "description": "Anda diarahkan ke sini oleh pihak ketiga, bukan BitcoinPay. Anda akan membuka {{pageTitle}} jika melanjutkan."
     },
     "invalid": {
       "title": "Halaman ini tidak ada",
       "description": "Kami tidak dapat menemukan halaman yang Anda cari.",
-      "update_to_store_link": "Perbarui ke versi terkini MetaMask",
+      "update_to_store_link": "Perbarui ke versi terkini BitcoinPay",
       "well_take_you_to_right_place": " dan kami akan membawa Anda ke tempat yang tepat."
     },
     "unsupported": {
       "title": "Halaman ini tidak didukung dalam versi saat ini",
       "description": "Perbarui ke versi terkini untuk menggunakan fitur ini",
-      "update_to_store_link": "Perbarui ke versi terkini MetaMask",
+      "update_to_store_link": "Perbarui ke versi terkini BitcoinPay",
       "well_take_you_to_right_place": " dan kami akan membawa Anda ke tempat yang tepat."
     },
     "go_to_home_button": "Buka halaman beranda",
@@ -7054,8 +7054,8 @@
     "continue_button": "Lanjutkan"
   },
   "card": {
-    "card": "Kartu MetaMask",
-    "card_button_enabled_toast": "Kini Anda dapat mendaftar untuk Kartu MetaMask!",
+    "card": "Kartu BitcoinPay",
+    "card_button_enabled_toast": "Kini Anda dapat mendaftar untuk Kartu BitcoinPay!",
     "card_button_already_enabled_toast": "Anda sudah memiliki Kartu BitcoinPay yang terhubung ke akun ini.",
     "add_funds_bottomsheet": {
       "deposit": "Danai dengan uang tunai",
@@ -7143,11 +7143,11 @@
       "not_now_button": "Tidak sekarang",
       "sign_up": {
         "title": "Ayo mulai",
-        "description": "Buat akun dengan Crypto Life (CL) untuk mengatur Kartu MetaMask. BitcoinPay tidak melihat atau menyimpan data pribadi Anda.",
-        "i_already_have_an_account": "Saya sudah memiliki Kartu MetaMask",
+        "description": "Buat akun dengan Crypto Life (CL) untuk mengatur Kartu BitcoinPay. BitcoinPay tidak melihat atau menyimpan data pribadi Anda.",
+        "i_already_have_an_account": "Saya sudah memiliki Kartu BitcoinPay",
         "email_label": "Alamat email",
-        "password_label": "Kata sandi baru untuk Kartu MetaMask",
-        "password_description": "Berbeda dengan kata sandi untuk membuka aplikasi MetaMask. Harus memiliki panjang minimal 15 karakter.",
+        "password_label": "Kata sandi baru untuk Kartu BitcoinPay",
+        "password_description": "Berbeda dengan kata sandi untuk membuka aplikasi BitcoinPay. Harus memiliki panjang minimal 15 karakter.",
         "country_label": "Negara tempat tinggal",
         "country_placeholder": "Pilih negara",
         "invalid_email": "Alamat email tidak valid",
@@ -7226,7 +7226,7 @@
         "success_toast": "ID Anda telah diverifikasi!"
       },
       "kyc_failed": {
-        "title": "Saat ini Anda tidak memenuhi syarat untuk mendapatkan Kartu MetaMask",
+        "title": "Saat ini Anda tidak memenuhi syarat untuk mendapatkan Kartu BitcoinPay",
         "description": "Kelayakan ditentukan oleh pemeriksaan regulasi dan verifikasi dari mitra kami.",
         "close_button": "Kembali ke beranda"
       },
@@ -7333,7 +7333,7 @@
       "logout": "Keluar",
       "contact_support": "Hubungi dukungan",
       "logout_confirmation_title": "Keluar dari Kartu?",
-      "logout_confirmation_message": "Yakin ingin keluar dari akun Kartu MetaMask?",
+      "logout_confirmation_message": "Yakin ingin keluar dari akun Kartu BitcoinPay?",
       "logout_confirmation_cancel": "Batal",
       "logout_confirmation_confirm": "Keluar",
       "enable_card_error": "Gagal mengaktifkan kartu. Coba lagi nanti.",
@@ -7556,7 +7556,7 @@
   },
   "onboarding_error_fallback": {
     "title": "Terjadi kesalahan",
-    "description": "Kirimkan laporan kesalahan kepada kami untuk membantu memperbaiki masalah dan meningkatkan MetaMask. Laporan ini akan bersifat rahasia dan anonim.",
+    "description": "Kirimkan laporan kesalahan kepada kami untuk membantu memperbaiki masalah dan meningkatkan BitcoinPay. Laporan ini akan bersifat rahasia dan anonim.",
     "recovery_warning": "Jika Anda terus mengalami kesalahan ini, simpan Frasa Pemulihan Rahasia dan instal ulang aplikasi. Ingat: tanpa Frasa Pemulihan Rahasia, Anda tidak dapat memulihkan dompet.",
     "error_message_report": "Laporan kesalahan:",
     "copy": "Salin",
@@ -7589,7 +7589,7 @@
     "version_guard": {
       "title": "Pembaruan diperlukan",
       "description": "Versi BitcoinPay yang lebih baru diperlukan untuk menggunakan Reward. Perbarui untuk melanjutkan.",
-      "update_button": "Perbarui MetaMask"
+      "update_button": "Perbarui BitcoinPay"
     },
     "season_error": {
       "error_fetching_title": "Musim tidak dapat dimuat",
@@ -7775,8 +7775,8 @@
       "step4_bulk_link_checkbox": "Aktifkan semua akun saya di perangkat ini",
       "step4_linking_accounts": "Menambahkan akun... ({{current}}/{{total}})",
       "step4_linking_accounts_loading": "Menambahkan akun tambahan...",
-      "step4_success_description": "Anda telah berhasil mendaftar untuk Reward MetaMask!",
-      "step4_legal_disclaimer_1": "Dengan memilih 'Klaim Poin', Anda menyetujui Reward MetaMask",
+      "step4_success_description": "Anda telah berhasil mendaftar untuk Reward BitcoinPay!",
+      "step4_legal_disclaimer_1": "Dengan memilih 'Klaim Poin', Anda menyetujui Reward BitcoinPay",
       "step4_legal_disclaimer_2": "Ketentuan Penggunaan dan Pemberitahuan Privasi Tambahan",
       "step4_legal_disclaimer_3": ". Kami akan melacak aktivitas onchain untuk memberikan reward secara otomatis –",
       "step4_legal_disclaimer_4": "selengkapnya",
@@ -7785,7 +7785,7 @@
         "description": "Dapatkan lebih banyak manfaat dari BitcoinPay dengan program loyalitas terbaik di dunia kripto.",
         "sign_up": "Daftar",
         "sign_up_loading": "Mendaftar...",
-        "legal_disclaimer_1": "Dengan mengklik 'Daftar,' Anda menyetujui program Reward MetaMask",
+        "legal_disclaimer_1": "Dengan mengklik 'Daftar,' Anda menyetujui program Reward BitcoinPay",
         "legal_disclaimer_2": "Ketentuan Penggunaan dan Pemberitahuan Privasi Tambahan",
         "legal_disclaimer_3": ". Kami akan melacak aktivitas onchain untuk memberikan reward secara otomatis –",
         "legal_disclaimer_4": "selengkapnya"
@@ -7817,7 +7817,7 @@
       "off_device_accounts_banner_description": "Terdapat akun yang terdaftar dalam program reward tetapi tidak ditemukan pada perangkat ini.",
       "off_device_accounts_banner_cta": "Lihat",
       "off_device_accounts_sheet_title": "Akun Terdaftar yang Hilang",
-      "off_device_accounts_sheet_description": "Ini mungkin milik dompet yang belum ditambahkan setelah menginstal ulang MetaMask. Tidak mengenali alamat ini?",
+      "off_device_accounts_sheet_description": "Ini mungkin milik dompet yang belum ditambahkan setelah menginstal ulang BitcoinPay. Tidak mengenali alamat ini?",
       "off_device_accounts_sheet_let_us_know": "Beri tahu kami"
     },
     "referred_by_code": {
@@ -7950,7 +7950,7 @@
       "participant_count": "#{{count}}",
       "opt_in_cta": "Ikut serta",
       "opt_in_sheet_title": "Gabung dalam kampanye ini",
-      "opt_in_sheet_description_pre_link": "Dengan mengklik 'Ikut serta', Anda menyetujui program Reward MetaMask",
+      "opt_in_sheet_description_pre_link": "Dengan mengklik 'Ikut serta', Anda menyetujui program Reward BitcoinPay",
       "opt_in_sheet_link_text": "Ketentuan Penggunaan dan Pemberitahuan Privasi Tambahan",
       "opt_in_sheet_description_post_link": "Kami akan melacak aktivitas onchain untuk memberikan reward secara otomatis.",
       "geo_restriction_banner_title": "Tidak tersedia di wilayah Anda",
@@ -8033,7 +8033,7 @@
       "musd_subtitle": "Hitung bonus mUSD Anda",
       "card_title": "Cashback hingga 3%",
       "card_subtitle": "Dapatkan Kartu BitcoinPay sekarang",
-      "card_subtitle_cardholder": "Manfaatkan keuntungan Kartu MetaMask"
+      "card_subtitle_cardholder": "Manfaatkan keuntungan Kartu BitcoinPay"
     },
     "campaigns_view": {
       "title": "Kampanye",
@@ -8125,10 +8125,10 @@
     "still_connecting_network": "Masih terhubung ke {{networkName}}...",
     "unable_to_connect_network": "Tidak dapat terhubung ke {{networkName}}.",
     "update_rpc": "Perbarui RPC",
-    "switch_to_metamask_default_rpc": "Beralih ke RPC default MetaMask",
+    "switch_to_metamask_default_rpc": "Beralih ke RPC default BitcoinPay",
     "check_network_connectivity": "Periksa konektivitas jaringan Anda.",
     "check_network_connectivity_or": "Periksa konektivitas jaringan Anda atau",
-    "updated_to_metamask_default": "Diperbarui ke default MetaMask"
+    "updated_to_metamask_default": "Diperbarui ke default BitcoinPay"
   },
   "trending": {
     "title": "Jelajahi",

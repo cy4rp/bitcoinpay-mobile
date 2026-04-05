@@ -50,7 +50,7 @@
     "step3": "Proteger carteira",
     "already_have": "Já tem uma carteira?",
     "sync_existing": "Sincronize a carteira BitcoinPay existente pela extensão do navegador ou importe-a manualmente.",
-    "scan_title": "Etapas para sincronizar com a extensão do MetaMask",
+    "scan_title": "Etapas para sincronizar com a extensão do BitcoinPay",
     "scan": "Ler",
     "scan_step_1": "Abrir a extensão na área de trabalho",
     "scan_step_2": "Vá para Configurações > Avançadas",
@@ -61,7 +61,7 @@
     "delete_current": "Apagando a carteira atual"
   },
   "onboarding_carousel": {
-    "title1": "Bem-vindo(a) ao MetaMask",
+    "title1": "Bem-vindo(a) ao BitcoinPay",
     "title2": "Gerencie os ativos digitais",
     "title3": "Seu portal para a web3",
     "subtitle1": "Com a confiança de milhões de usuários, o BitcoinPay é uma carteira segura que abre as portas da web3 para todos.",
@@ -97,7 +97,7 @@
       "title": "Navegação principal",
       "content1": "Toque aqui",
       "content2": "para acessar a carteira, o navegador e o histórico de transações.",
-      "content3": "Você pode realizar outras ações com suas contas e acessar as configurações do MetaMask."
+      "content3": "Você pode realizar outras ações com suas contas e acessar as configurações do BitcoinPay."
     },
     "step5": {
       "title": "Explore o navegador",
@@ -113,14 +113,14 @@
     "subtitle": "Não deve demorar"
   },
   "import_wallet": {
-    "title": "Já usa o MetaMask?",
+    "title": "Já usa o BitcoinPay?",
     "sub_title": "Sincronizar com a extensão",
     "sync_help": "Sincronizar sua carteira com a extensão",
     "sync_help_step_one": "1. Abra a extensão",
     "sync_help_step_two": "2. Vá para Configurações > Avançadas",
     "sync_help_step_three": "3. Clique em \"Sincronizar com dispositivo móvel\"",
     "sync_help_step_four": "4. Leia o código QR para iniciar a sincronização",
-    "sync_from_browser_extension_button": "Sincronizar com a extensão do MetaMask",
+    "sync_from_browser_extension_button": "Sincronizar com a extensão do BitcoinPay",
     "or": "OU",
     "import_from_seed_button": "Importar usando a Frase de Recuperação Secreta"
   },
@@ -246,7 +246,7 @@
     "lock_ok": "SIM",
     "lock_cancel": "NÃO",
     "feedback": "Feedback",
-    "metamask_support": "Suporte do MetaMask",
+    "metamask_support": "Suporte do BitcoinPay",
     "public_address": "Endereço público"
   },
   "send": {
@@ -325,9 +325,9 @@
     "here": "aqui",
     "agree": "Concordo",
     "decline": "Não, agradeço",
-    "description_title": "Ajude-nos a melhorar o MetaMask",
+    "description_title": "Ajude-nos a melhorar o BitcoinPay",
     "description_content_1": "O BitcoinPay gostaria de reunir dados básicos de uso para entender melhor como nossos usuários interagem com o app para dispositivos móveis. Esses dados serão usados para aperfeiçoar continuamente a usabilidade e a experiência do usuário com nosso produto.",
-    "description_content_2": "O MetaMask...",
+    "description_content_2": "O BitcoinPay...",
     "action_description_1": "Sempre permitirá que você cancele o envio dos dados, via Configurações",
     "action_description_2": "Enviará eventos anonimizados de cliques e visualização de página",
     "action_description_3": "Entre com os dados de país, estado, cidade (não o local específico)",
@@ -470,7 +470,7 @@
     "remove_network_title": "Deseja remover esta rede?",
     "remove_network": "Remover",
     "cancel_remove_network": "Cancelar",
-    "info_title": "Sobre o MetaMask",
+    "info_title": "Sobre o BitcoinPay",
     "experimental_title": "Experimental",
     "experimental_desc": "WalletConnect e mais...",
     "legal_title": "Legal",
@@ -583,7 +583,7 @@
     "error": "Erro",
     "open_settings": "Configurações",
     "attempting_to_scan_with_wallet_locked": "Parece que você está tentando escanear um código QR. Você deve destravar sua carteira para conseguir usá-la.",
-    "attempting_sync_from_wallet_error": "Parece que você está tentando sincronizar com uma extensão. Para fazê-lo, você precisará excluir sua carteira atual. \n\nApós ter excluído ou reinstalado uma versão mais recente do app, selecione a opção para \"Sincronizar com a Extensão MetaMask\". Importante! Antes de excluir a sua carteira, certifique-se de ter feito uma cópia de segurança da sua Frase de Recuperação Secreta."
+    "attempting_sync_from_wallet_error": "Parece que você está tentando sincronizar com uma extensão. Para fazê-lo, você precisará excluir sua carteira atual. \n\nApós ter excluído ou reinstalado uma versão mais recente do app, selecione a opção para \"Sincronizar com a Extensão BitcoinPay\". Importante! Antes de excluir a sua carteira, certifique-se de ter feito uma cópia de segurança da sua Frase de Recuperação Secreta."
   },
   "action_view": {
     "cancel": "Cancelar",
@@ -929,9 +929,9 @@
   },
   "authentication": {
     "auth_prompt_title": "Autenticação obrigatória",
-    "auth_prompt_desc": "Autentique para usar o MetaMask",
+    "auth_prompt_desc": "Autentique para usar o BitcoinPay",
     "fingerprint_prompt_title": "Autenticação obrigatória",
-    "fingerprint_prompt_desc": "Use sua digital para desbloquear o MetaMask",
+    "fingerprint_prompt_desc": "Use sua digital para desbloquear o BitcoinPay",
     "fingerprint_prompt_cancel": "Cancelar"
   },
   "accountApproval": {
@@ -948,7 +948,7 @@
   },
   "import_private_key": {
     "title": "Importar conta",
-    "description_one": "As contas importadas podem ser vistas na sua carteira, mas não podem ser recuperadas com a Frase de Recuperação Secreta do MetaMask.",
+    "description_one": "As contas importadas podem ser vistas na sua carteira, mas não podem ser recuperadas com a Frase de Recuperação Secreta do BitcoinPay.",
     "learn_more_here": "Saiba mais sobre as contas importadas aqui.",
     "subtitle": "Cole a string da sua chave privada",
     "cta_text": "IMPORTAR",
@@ -960,7 +960,7 @@
   },
   "import_private_key_success": {
     "title": "Conta importada!",
-    "description_one": "Você poderá ver sua conta no MetaMask."
+    "description_one": "Você poderá ver sua conta no BitcoinPay."
   },
   "first_incoming_transaction": {
     "title": "{{asset}} foi depositado(a) na sua conta",
@@ -975,7 +975,7 @@
     "step_1_description": "Criar senha",
     "step_2": "Etapa 2:",
     "step_2_description": "Salve a Frase de Recuperação Secreta da carteira",
-    "info_text_1": "Reserve alguns momentos para finalizar a configuração da sua carteira do MetaMask.",
+    "info_text_1": "Reserve alguns momentos para finalizar a configuração da sua carteira do BitcoinPay.",
     "info_text_2": "Com isso, só você poderá acessar seus fundos e, caso perca o dispositivo, poderá recuperar sua carteira",
     "cta_text": "Criar senha",
     "creating_password": "Criando senha..."
@@ -1121,7 +1121,7 @@
   "phishing": {
     "ethereum_phishing_detection": "Detecção de phishing do Ethereum",
     "ethereum_phishing_detector": "O detector de phishing do Ethereum",
-    "intro": " atualmente está na lista de advertência do domínio do MetaMask. Isso significa que, conforme as informações que foram a nós disponibilizadas, o BitcoinPay acredita que este domínio poderia colocar em risco sua segurança e, como forma adicional de precaução, o BitcoinPay restringiu o acesso ao site. Para contornar essa questão, leia o restante deste aviso e veja instruções sobre como continuar, assumindo o risco sozinho.",
+    "intro": " atualmente está na lista de advertência do domínio do BitcoinPay. Isso significa que, conforme as informações que foram a nós disponibilizadas, o BitcoinPay acredita que este domínio poderia colocar em risco sua segurança e, como forma adicional de precaução, o BitcoinPay restringiu o acesso ao site. Para contornar essa questão, leia o restante deste aviso e veja instruções sobre como continuar, assumindo o risco sozinho.",
     "reasons": "Os sites podem figurar na nossa lista de advertência por motivos diversos, e a lista de advertência é compilada com base em outras listas amplamente usadas no setor. Esses motivos podem incluir riscos conhecidos de fraude ou segurança, como domínios com resultado positivo em ",
     "list_content": "Os domínios que figuram nessas listas de advertência podem incluir websites abertamente mal-intencionados e websites legítimos que tenham sido comprometidos por pessoas mal-intencionadas.",
     "to_read_more": "Para saber mais sobre este site, ",
@@ -1316,7 +1316,7 @@
     "wyre_minimum_deposit": "O depósito mínimo é de {{amount}}",
     "wyre_maximum_deposit": "O depósito máximo é de {{amount}}",
     "wyre_purchase": "Compra de {{currency}}",
-    "wyre_total_label": "Wyre (via MetaMask)",
+    "wyre_total_label": "Wyre (via BitcoinPay)",
     "buy_with": "Comprar com",
     "plus_fee": "Mais uma taxa de {{fee}}",
     "date": "Data",
@@ -1444,7 +1444,7 @@
     "swipe_to": "Deslize para",
     "swap": "swap",
     "completed_swap": "Swap!",
-    "metamask_swap_fee": "Taxa de Swap do MetaMask",
+    "metamask_swap_fee": "Taxa de Swap do BitcoinPay",
     "fee_text": {
       "fee_is_applied": "Uma taxa de {{fee}} é automaticamente levada em conta em cada cotação, o que é compatível com o desenvolvimento contínuo para deixar o BitcoinPay ainda melhor."
     },
@@ -1548,7 +1548,7 @@
   },
   "add_custom_network": {
     "title": "Permitir que este site adicione uma rede?",
-    "warning": "Isso permite esta rede ser usada dentro do MetaMask.",
+    "warning": "Isso permite esta rede ser usada dentro do BitcoinPay.",
     "warning_subtext_1": "O BitcoinPay não verifica redes personalizadas ou sua segurança.",
     "warning_subtext_2": "Saiba mais sobre",
     "warning_subtext_3": "fraudes e riscos de segurança da rede",
@@ -1572,6 +1572,6 @@
   "secret_phrase_video_subtitle": {
     "title": "PT BR CC",
     "language": "pt-br",
-    "uri": "https://github.com/MetaMask/metamask-mobile/blob/main/app/videos/subtitles/secretPhrase/subtitles-pt-br.vtt?raw=true"
+    "uri": "https://github.com/BitcoinPay/metamask-mobile/blob/main/app/videos/subtitles/secretPhrase/subtitles-pt-br.vtt?raw=true"
   }
 }

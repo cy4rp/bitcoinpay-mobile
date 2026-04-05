@@ -782,9 +782,9 @@ describe('ResetPassword', () => {
 
       const mockStorageWrapper = jest.mocked(StorageWrapper);
       mockStorageWrapper.getItem.mockImplementation((key) => {
-        if (key === '@MetaMask:passcodeDisabled')
+        if (key === '@BitcoinPay:passcodeDisabled')
           return Promise.resolve('TRUE');
-        if (key === '@MetaMask:biometryChoiceDisabled')
+        if (key === '@BitcoinPay:biometryChoiceDisabled')
           return Promise.resolve(null);
         return Promise.resolve(null);
       });
@@ -796,10 +796,10 @@ describe('ResetPassword', () => {
 
       expect(Authentication.getType).toHaveBeenCalled();
       expect(mockStorageWrapper.getItem).toHaveBeenCalledWith(
-        '@MetaMask:biometryChoiceDisabled',
+        '@BitcoinPay:biometryChoiceDisabled',
       );
       expect(mockStorageWrapper.getItem).toHaveBeenCalledWith(
-        '@MetaMask:passcodeDisabled',
+        '@BitcoinPay:passcodeDisabled',
       );
       expect(component).toBeTruthy();
     });
@@ -812,9 +812,9 @@ describe('ResetPassword', () => {
 
       const mockStorageWrapper = jest.mocked(StorageWrapper);
       mockStorageWrapper.getItem.mockImplementation((key) => {
-        if (key === '@MetaMask:biometryChoiceDisabled')
+        if (key === '@BitcoinPay:biometryChoiceDisabled')
           return Promise.resolve('TRUE');
-        if (key === '@MetaMask:passcodeDisabled') return Promise.resolve(null);
+        if (key === '@BitcoinPay:passcodeDisabled') return Promise.resolve(null);
         return Promise.resolve(null);
       });
 
@@ -842,10 +842,10 @@ describe('ResetPassword', () => {
 
       const mockStorageWrapper = jest.mocked(StorageWrapper);
       mockStorageWrapper.getItem.mockImplementation((key) => {
-        if (key === '@MetaMask:biometryChoice') return Promise.resolve('TRUE');
-        if (key === '@MetaMask:biometryChoiceDisabled')
+        if (key === '@BitcoinPay:biometryChoice') return Promise.resolve('TRUE');
+        if (key === '@BitcoinPay:biometryChoiceDisabled')
           return Promise.resolve(null);
-        if (key === '@MetaMask:passcodeDisabled') return Promise.resolve(null);
+        if (key === '@BitcoinPay:passcodeDisabled') return Promise.resolve(null);
         return Promise.resolve(null);
       });
 
@@ -856,7 +856,7 @@ describe('ResetPassword', () => {
       });
 
       expect(mockStorageWrapper.getItem).toHaveBeenCalledWith(
-        '@MetaMask:biometryChoiceDisabled',
+        '@BitcoinPay:biometryChoiceDisabled',
       );
       expect(component).toBeTruthy();
     });

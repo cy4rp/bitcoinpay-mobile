@@ -322,7 +322,7 @@
     "existing_user_button": "解锁钱包"
   },
   "onboarding_carousel": {
-    "title1": "欢迎使用 MetaMask",
+    "title1": "欢迎使用 BitcoinPay",
     "title2": "管理您的数字资产",
     "title3": "您通往 web3 的门户",
     "subtitle1": "BitcoinPay 深受数百万人信任，是一款可以让所有人进入 web3 世界的安全钱包。",
@@ -443,7 +443,7 @@
     "wrong_password_error": "错误：解密失败",
     "wrong_password_error_android": "错误：error:1e000065:Cipher functions:OPENSSL_internal:BAD_DECRYPT",
     "vault_error": "错误：没有以前的保管库，无法解锁。",
-    "clean_vault_error": "由于达到了存储限制，BitcoinPay 遇到错误。本地数据已损坏。请重新安装 MetaMask，并使用您的私钥助记词进行恢复。",
+    "clean_vault_error": "由于达到了存储限制，BitcoinPay 遇到错误。本地数据已损坏。请重新安装 BitcoinPay，并使用您的私钥助记词进行恢复。",
     "seedless_password_outdated": "您的密码最近已更改。",
     "seedless_password_outdated_modal_title": "您的密码已更改",
     "seedless_password_outdated_modal_content": "您的密码最近已更改，因此您需要输入新密码以保持 BitcoinPay 的登录状态。",
@@ -462,7 +462,7 @@
     "forgot_password_desc_2": "BitcoinPay 无法为您找回密码。",
     "forgot_password_point_1": "如果您已在启用了",
     "forgot_password_point_1_bold": "生物特征识别（如面容 ID）的设备上",
-    "forgot_password_point_1_1": "登录 MetaMask，您可以在此重设密码。",
+    "forgot_password_point_1_1": "登录 BitcoinPay，您可以在此重设密码。",
     "forgot_password_point_2": "如果您有",
     "forgot_password_point_2_bold": "私钥助记词,",
     "forgot_password_point_2_1": "您可以重设当前钱包并使用私钥助记词重新导入。",
@@ -493,7 +493,7 @@
   },
   "choose_password": {
     "title": "BitcoinPay 密码",
-    "description": "仅在当前设备上解锁 MetaMask。",
+    "description": "仅在当前设备上解锁 BitcoinPay。",
     "description_social_login": "使用此助记词即可在所有设备上恢复钱包。",
     "description_social_login_update": "若丢失此密码，将无法访问所有设备上的钱包。请将其妥善保存在安全的地方，",
     "description_social_login_update_ios": "在所有设备上使用此功能进行钱包恢复。BitcoinPay 无法重设它。",
@@ -530,7 +530,7 @@
   "wallet_creation_error": {
     "title": "出错了......",
     "social_login_description_part1": "创建钱包时发生错误。请重试，如果问题仍然存在，请联系",
-    "srp_description_part1": "发送匿名错误报告以帮助我们解决问题并改进 MetaMask。若问题仍然存在，请联系",
+    "srp_description_part1": "发送匿名错误报告以帮助我们解决问题并改进 BitcoinPay。若问题仍然存在，请联系",
     "metamask_support": "BitcoinPay 支持团队",
     "error_report": "错误报告",
     "copy": "复制",
@@ -570,7 +570,7 @@
     "confirm_password_placeholder": "重新输入您的密码",
     "confirm_btn": "保存",
     "warning_password_change_title": "您确定吗？",
-    "warning_password_change_description": "在此处更改密码将锁定您在其他设备上使用的 MetaMask。您需要使用新密码重新登录",
+    "warning_password_change_description": "在此处更改密码将锁定您在其他设备上使用的 BitcoinPay。您需要使用新密码重新登录",
     "warning_password_change_button": "确认",
     "warning_password_cancel_button": "取消",
     "changing_password": "正在更改密码……",
@@ -596,7 +596,7 @@
     "invalid_qr_code_message": "此二维码不代表有效的私钥助记词",
     "enter_your_secret_recovery_phrase": "在此输入您的助记词",
     "metamask_password": "BitcoinPay 密码",
-    "metamask_password_description": "仅在当前设备上解锁 MetaMask。",
+    "metamask_password_description": "仅在当前设备上解锁 BitcoinPay。",
     "seed_phrase_required": "私钥助记词为必填项",
     "re_enter_password": "重新输入您的密码",
     "use_at_least_8_characters": "使用至少 8 个字符",
@@ -2674,7 +2674,7 @@
     "privacy_policy_button": "隐私政策",
     "agree": "我同意",
     "decline": "不，谢谢",
-    "description_title": "改进 MetaMask",
+    "description_title": "改进 BitcoinPay",
     "description_content_1": "我们希望能获得这些许可。您随时可以选择退出或删除您的使用数据。",
     "description_content_2": "当我们收集指标时，总是...",
     "description_content_3": "了解我们如何在收集您的个人资料使用数据的同时保护您的隐私。",
@@ -2694,12 +2694,12 @@
     "cta_i_agree": "我同意",
     "continue": "继续",
     "fine_print_1_legacy": "此数据是汇总数据，因而可以保持匿名，以遵守《通用数据保护条例》（欧盟）2016/679。",
-    "fine_print_2a_legacy": "* 如果您在MetaMask中使用Infura作为默认的RPC提供商，在您发送交易时，Infura会收集您的IP地址和以太坊钱包地址。我们不会以允许系统将这两项数据关联起来的方式来存储此信息。您可以先配置RPC提供商，然后才继续。",
-    "fine_print_2b_legacy": "要进一步了解MetaMask和Infura在数据收集方面如何交互，请参阅我们的更新。",
+    "fine_print_2a_legacy": "* 如果您在BitcoinPay中使用Infura作为默认的RPC提供商，在您发送交易时，Infura会收集您的IP地址和以太坊钱包地址。我们不会以允许系统将这两项数据关联起来的方式来存储此信息。您可以先配置RPC提供商，然后才继续。",
+    "fine_print_2b_legacy": "要进一步了解BitcoinPay和Infura在数据收集方面如何交互，请参阅我们的更新。",
     "fine_print_2c_legacy": "要了解我们的一般隐私准则，请参阅我们的隐私政策",
     "here_legacy": "此处",
     "description_content_1_legacy": "BitcoinPay 希望收集基本的使用数据，以便更好地了解我们的用户如何与移动应用交互。这些数据将用于持续改进我们产品的可用性和用户体验。",
-    "description_content_2_legacy": "MetaMask...",
+    "description_content_2_legacy": "BitcoinPay...",
     "action_description_1_legacy": "始终允许您通过“设置”选择退出",
     "action_description_2_legacy": "发送匿名化点击和页面浏览事件",
     "action_description_3_legacy": "发送国家、地区、城市数据（不是具体位置）",
@@ -2849,7 +2849,7 @@
     "learn_more": "了解详情",
     "advisory_by": "建议由以太坊网络钓鱼探测器和PhishFort提供",
     "potential_threat": "潜在威胁包括",
-    "fake_metamask": "MetaMask的伪造版本",
+    "fake_metamask": "BitcoinPay的伪造版本",
     "srp_theft": "私钥助记词或密码被盗",
     "malicious_transactions": "导致资产被盗的恶意交易",
     "secret_recovery_phrase": "私钥助记词，",
@@ -2923,7 +2923,7 @@
   },
   "data_collection_modal": {
     "accept": "OK",
-    "content": "您关闭了我们用于营销目的的数据收集。 这仅适用于此设备。如果您在其他设备上使用 MetaMask，请务必也在其他设备上选择退出。"
+    "content": "您关闭了我们用于营销目的的数据收集。 这仅适用于此设备。如果您在其他设备上使用 BitcoinPay，请务必也在其他设备上选择退出。"
   },
   "account_selector": {
     "prev": "上一步",
@@ -2956,7 +2956,7 @@
     "current_conversion": "基础货币",
     "current_language": "当前语言",
     "ipfs_gateway": "在",
-    "ipfs_gateway_content": "MetaMask使用第三方服务来显示存储在IPFS的NFT图像、显示与在浏览器地址栏中输入的ENS地址相关的信息，并获取不同代币的图标。当您使用这些服务时，您的IP地址可能会被其获悉。",
+    "ipfs_gateway_content": "BitcoinPay使用第三方服务来显示存储在IPFS的NFT图像、显示与在浏览器地址栏中输入的ENS地址相关的信息，并获取不同代币的图标。当您使用这些服务时，您的IP地址可能会被其获悉。",
     "ipfs_gateway_down": "您当前的 IPFS 网关发生故障",
     "ipfs_gateway_desc": "选择您的首选 IPFS 网关。",
     "search_engine": "搜索引擎",
@@ -2965,7 +2965,7 @@
     "add_network_title": "添加网络",
     "auto_lock": "自动锁定",
     "enable_device_authentication": "启用设备认证",
-    "enable_device_authentication_desc": "使用您设备的生物识别功能或密码来解锁 MetaMask。",
+    "enable_device_authentication_desc": "使用您设备的生物识别功能或密码来解锁 BitcoinPay。",
     "auto_lock_desc": "选择应用程序自动锁定之前空闲的时间。",
     "state_logs_desc": "这将帮助 BitcoinPay 调试您可能遇到的任何问题。请通过电子邮件将其发送到 support@metamask.io",
     "autolock_immediately": "立即",
@@ -3130,7 +3130,7 @@
     "clear_history_desc": "选择此选项可清除您的整个浏览历史记录。",
     "clear_cookies_desc": "选择此选项可清除您的浏览器的 Cookie。",
     "metametrics_title": "参加 MetaMetrics",
-    "metametrics_description": "参加 MetaMetrics 以帮助我们改进 MetaMask。",
+    "metametrics_description": "参加 MetaMetrics 以帮助我们改进 BitcoinPay。",
     "data_collection_title": "用于营销目的的数据收集",
     "data_collection_description": "我们将使用 MetaMetrics 来了解您如何与我们的营销通信交互。我们可能会分享相关资讯（例如产品特点和其他内容）。",
     "batch_balance_requests_title": "批量账户余额请求",
@@ -3193,7 +3193,7 @@
     "delete_metrics_confirm_modal_title": "删除MetaMetrics数据?",
     "delete_metrics_confirm_modal_description": "我们即将删除您所有的MetaMetrics数据。您确定吗？",
     "delete_wallet_data_title": "重设钱包",
-    "delete_wallet_data_description": "这将会刪除您的设备中所有与钱包关联的数据。您的账户存在于区块链上，与 MetaMask无关。您可以随时使用您的私钥助记词来恢复您的账户。",
+    "delete_wallet_data_description": "这将会刪除您的设备中所有与钱包关联的数据。您的账户存在于区块链上，与 BitcoinPay无关。您可以随时使用您的私钥助记词来恢复您的账户。",
     "delete_wallet_data_button": "重设钱包",
     "delete_data_status_title": "删除任务状态",
     "delete_data_status_description": "当前状态为",
@@ -3230,7 +3230,7 @@
     "contact_support": "联系支持团队",
     "display_nft_media": "显示NFT媒体",
     "display_nft_media_desc": "打开显示 NFT 媒体和数据功能后，OpenSea 或其他第三方就可以看到您的 IP 地址。NFT 自动检测依赖于此功能，关闭后将不可用。",
-    "autodetect_nft_desc": "让MetaMask使用第三方服务（如OpenSea）来添加您所拥有的NFT。打开自动检测NFT功能后，这些服务就可以获悉您的IP地址和账户地址。启用此功能可能会将您的IP地址与以太坊地址关联起来，并显示骗子空投的虚假NFT。您可以手动添加代币以避免此风险。",
+    "autodetect_nft_desc": "让BitcoinPay使用第三方服务（如OpenSea）来添加您所拥有的NFT。打开自动检测NFT功能后，这些服务就可以获悉您的IP地址和账户地址。启用此功能可能会将您的IP地址与以太坊地址关联起来，并显示骗子空投的虚假NFT。您可以手动添加代币以避免此风险。",
     "display_nft_media_desc_new": "显示NFT媒体和数据，会导致您的IP地址被OpenSea或其他第三方获悉。NFT自动检测依赖于此功能，此功能关闭后即不可用。如果NFT媒体是完全位于IPFS上，则即使关闭此功能，该NFT媒体仍然可以显示。",
     "use_safe_chains_list_validation_desc_1": "BitcoinPay 使用第三方服务 ",
     "use_safe_chains_list_validation_desc_2": "来显示准确和标准化的网络详情。这可减少您连接到恶意或错误网络的机会。使用此功能时，您的 IP 地址会暴露给  ",
@@ -3368,7 +3368,7 @@
     "manage_connections": "管理连接",
     "manage": "管理",
     "cancel": "取消",
-    "loading": "正在连接MetaMask…...",
+    "loading": "正在连接BitcoinPay…...",
     "unkown_dapp": "去中心化应用（DAPP）名称不可用",
     "unknown": "未知",
     "no_connections": "无连接",
@@ -3394,7 +3394,7 @@
   "sdk_feedback_modal": {
     "ok": "OK",
     "title": "账户无法连接",
-    "info": "请扫描网站上的二维码重新连接 MetaMask"
+    "info": "请扫描网站上的二维码重新连接 BitcoinPay"
   },
   "app_information": {
     "title": "信息",
@@ -3841,7 +3841,7 @@
     "invalid_qr_code_sync": "无效二维码。请扫描硬件钱包的同步二维码。",
     "no_camera_permission": "您未开启摄像头权限，请在设置中给予权限后重试",
     "invalid_qr_code_sign": "无效二维码。请检查您的硬件钱包并重试。",
-    "no_camera_permission_android": "您需要授予MetaMask对您的相机的访问权限才能继续。您可能还需要更改系统设置。",
+    "no_camera_permission_android": "您需要授予BitcoinPay对您的相机的访问权限才能继续。您可能还需要更改系统设置。",
     "mismatched_qr_request_id": "交易数据不一致。请使用您的硬件钱包在下面的二维码上签名，然后点击“获取签名”。",
     "fiat_conversion_not_available": "目前不提供法币兑换",
     "hex_data_copied": "十六进制数据已复制到剪贴板",
@@ -4186,8 +4186,8 @@
     "status_not_ok": "网络遇到一些问题",
     "want_to_add_network": "想要添加此网络吗？",
     "add_custom_network": "添加自定义网络",
-    "network_infomation": "这样，此网络就可以在MetaMask中使用",
-    "network_endorsement": "MetaMask对自定义网络或其安全性不提供保证。",
+    "network_infomation": "这样，此网络就可以在BitcoinPay中使用",
+    "network_endorsement": "BitcoinPay对自定义网络或其安全性不提供保证。",
     "learn_about": "了解",
     "network_risk": "欺诈和网络安全风险",
     "network_display_name": "显示名称",
@@ -4331,7 +4331,7 @@
     "enable_device_passcode_android": "使用设备 PIN 登录？"
   },
   "authentication": {
-    "auth_prompt_desc": "请进行身份验证以便使用 MetaMask"
+    "auth_prompt_desc": "请进行身份验证以便使用 BitcoinPay"
   },
   "accountApproval": {
     "title": "连接请求",
@@ -4435,7 +4435,7 @@
     "skip_title": "跳过账户安全？",
     "skip_check": "如果您弄丢该私钥助记词，将无法访问此钱包。",
     "what_is_seedphrase_title": "什么是“私钥助记词”？",
-    "what_is_seedphrase_text_1": "私钥助记词（也称为助记词）是一组词语，可让您访问和控制自己的加密货币钱包。若要将钱包迁移至 MetaMask，您需要此助记词。",
+    "what_is_seedphrase_text_1": "私钥助记词（也称为助记词）是一组词语，可让您访问和控制自己的加密货币钱包。若要将钱包迁移至 BitcoinPay，您需要此助记词。",
     "what_is_seedphrase_text_2": "您必须确保助记词保密、安全。如果有人得到您的私钥助记词，他们将能够控制您的账户。",
     "what_is_seedphrase_text_3": "将它保存在只有您能够接触的地方。一旦丢失，即使是 BitcoinPay 也无法帮您找回。",
     "what_is_seedphrase_text_4": "任何拥有您的私钥助记词的人可以：",
@@ -4978,7 +4978,7 @@
     "wyre_minimum_deposit": "最低保证金为 {{amount}}",
     "wyre_maximum_deposit": "最高保证金为 {{amount}}",
     "apple_pay_purchase": "{{currency}} 购买",
-    "apple_pay_provider_total_label": "{{provider}}（通过 MetaMask）",
+    "apple_pay_provider_total_label": "{{provider}}（通过 BitcoinPay）",
     "buy_with": "购买时使用",
     "plus_fee": "加上 {{fee}} 费",
     "date": "日期",
@@ -5405,7 +5405,7 @@
     "metamask_swap_fee": "BitcoinPay Swap 费用",
     "fee_text": {
       "fee_is_applied": "该报价中会自动计入一笔 {{fee}} 的费用。您支付该费用以换取使用 BitcoinPay 流动性提供商信息聚合软件的许可证。",
-      "fee_is_not_applied": "MetaMask在此报价中并未包括额外费用。"
+      "fee_is_not_applied": "BitcoinPay在此报价中并未包括额外费用。"
     },
     "enable": {
       "this_will": "这将",
@@ -5558,7 +5558,7 @@
     "switch": "切换网络"
   },
   "add_custom_network": {
-    "title": "允许此网站添加一个网络到MetaMask上？",
+    "title": "允许此网站添加一个网络到BitcoinPay上？",
     "warning": "这样，此网络就可以在 BitcoinPay 中使用。",
     "warning_subtext_1": "BitcoinPay 不对自定义网络或其安全性进行验证。",
     "warning_subtext_2": "了解",
@@ -5730,7 +5730,7 @@
   "turn_off_remember_me": {
     "title": "关闭“记住我”",
     "placeholder": "确认密码",
-    "description": "一旦关闭，将无法再次使用“记住我”功能。此功能已停止服务，您可以使用密码或生物识别方式解锁 MetaMask。",
+    "description": "一旦关闭，将无法再次使用“记住我”功能。此功能已停止服务，您可以使用密码或生物识别方式解锁 BitcoinPay。",
     "action": "关闭“记住我”"
   },
   "dapp_connect": {
@@ -5742,11 +5742,11 @@
   },
   "automatic_security_checks": {
     "title": "自动安全检查",
-    "description": "自动检查更新可能会将您的IP地址暴露给GitHub服务器。这仅显示您的IP地址正在使用MetaMask。其他信息或账户地址不会暴露。"
+    "description": "自动检查更新可能会将您的IP地址暴露给GitHub服务器。这仅显示您的IP地址正在使用BitcoinPay。其他信息或账户地址不会暴露。"
   },
   "terms_of_use_modal": {
     "title": "查看我们的使用条款",
-    "terms_of_use_check_description": "我同意适用于我使用MetaMask及其所有功能的使用条款",
+    "terms_of_use_check_description": "我同意适用于我使用BitcoinPay及其所有功能的使用条款",
     "accept_cta": "接受",
     "accept_helper_description": "请滚动以阅读所有章节",
     "agree_cta": "同意"
@@ -5758,7 +5758,7 @@
   },
   "enable_automatic_security_check_modal": {
     "title": "要自动检查安全更新吗？",
-    "description": "自动检查更新可能会将您的IP地址暴露给GitHub服务器。这仅显示您的IP地址正在使用MetaMask。其他信息或账户地址不会暴露。",
+    "description": "自动检查更新可能会将您的IP地址暴露给GitHub服务器。这仅显示您的IP地址正在使用BitcoinPay。其他信息或账户地址不会暴露。",
     "primary_action": "启用自动安全检查",
     "secondary_action": "不，谢谢"
   },
@@ -5825,7 +5825,7 @@
     "incorrect": "错误！",
     "of": "/",
     "question_one": {
-      "question": "如果您丢失了私钥助记词，MetaMask......",
+      "question": "如果您丢失了私钥助记词，BitcoinPay......",
       "right_answer": "无法帮助您",
       "wrong_answer": "可以为您找回来",
       "right_answer_title": "答对了！没有人能够帮您找回您的私钥助记词",
@@ -5917,7 +5917,7 @@
     "select_hd_path_description": "如果您没有看到期望的账户，请尝试切换 HD 路径或当前选定的网络。",
     "ledger_live_path": "Ledger Live",
     "ledger_legacy_path": "Legacy(MEW/MyCrypto)",
-    "ledger_bip44_path": "BIP44（例如 MetaMask、Trezor）",
+    "ledger_bip44_path": "BIP44（例如 BitcoinPay、Trezor）",
     "ledger_legacy_label": " (legacy)",
     "blind_sign_error": "盲签错误",
     "blind_sign_error_message": "您的 Ledger 设备上未启用盲签。请在设置中启用。",
@@ -6651,7 +6651,7 @@
     "reject": "拒绝交易"
   },
   "snap_account_custom_name_approval": {
-    "title": "将账户添加到 MetaMask",
+    "title": "将账户添加到 BitcoinPay",
     "input_title": "账户名称",
     "add_account_button": "添加账户",
     "name_taken_message": "此账户名已存在"
@@ -6904,7 +6904,7 @@
       "section_1_title": "什么是多链账户？",
       "section_1_description": "单一账户即可应对 BitcoinPay 支持的所有网络的地址。现在您无需切换账户即可顺畅使用以太坊、Solana 等。",
       "section_2_title": "相同地址，更多网络",
-      "section_2_description": "我们已对您的账户进行了分组，您仍可照常使用 MetaMask。您的资金安全无虞且未变动。",
+      "section_2_description": "我们已对您的账户进行了分组，您仍可照常使用 BitcoinPay。您的资金安全无虞且未变动。",
       "view_accounts_button": "查看账户",
       "learn_more_button": "了解详情",
       "setting_up_accounts": "设置您的账户"
@@ -7029,13 +7029,13 @@
   },
   "deep_link_modal": {
     "private_link": {
-      "title": "正在将您重定向至 MetaMask",
+      "title": "正在将您重定向至 BitcoinPay",
       "description": "如果您继续操作，将会打开 {{pageTitle}}。",
       "checkbox_label": "不要再提醒我"
     },
     "public_link": {
       "title": "请谨慎操作",
-      "description": "您是由第三方（并非 MetaMask）引导至此。若您继续操作，将打开 {{pageTitle}}。"
+      "description": "您是由第三方（并非 BitcoinPay）引导至此。若您继续操作，将打开 {{pageTitle}}。"
     },
     "invalid": {
       "title": "此页面不存在",
@@ -7556,7 +7556,7 @@
   },
   "onboarding_error_fallback": {
     "title": "发生错误",
-    "description": "向我们发送错误报告以帮助解决问题并改进 MetaMask。此操作会严格保密且匿名处理。",
+    "description": "向我们发送错误报告以帮助解决问题并改进 BitcoinPay。此操作会严格保密且匿名处理。",
     "recovery_warning": "如果持续遇到此错误，请保存您的私钥助记词并重新安装应用程序。请记住：若没有私钥助记词，您将无法恢复钱包。",
     "error_message_report": "错误报告：",
     "copy": "复制",
@@ -7589,7 +7589,7 @@
     "version_guard": {
       "title": "需要更新",
       "description": "需要更高版本的 BitcoinPay 才能使用奖励功能。请更新后继续。",
-      "update_button": "更新 MetaMask"
+      "update_button": "更新 BitcoinPay"
     },
     "season_error": {
       "error_fetching_title": "赛季无法加载",
@@ -8173,7 +8173,7 @@
   },
   "ota_update_modal": {
     "title": "更新就绪",
-    "description_ios": "我们已进行一些重要修复。请重新加载以获取最新版 MetaMask。",
+    "description_ios": "我们已进行一些重要修复。请重新加载以获取最新版 BitcoinPay。",
     "description_android": "我们已进行一些重要修复。请关闭并重新打开 BitcoinPay 以应用更新。\n\n",
     "primary_action_reload": "重新加载",
     "primary_action_acknowledge": "知道了"

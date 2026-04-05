@@ -1505,7 +1505,7 @@ describe('Wallet', () => {
 
       // Assert
       expect(StorageWrapper.getItem).toHaveBeenCalledWith(
-        '@MetaMask:perpsGTMModalShown',
+        '@BitcoinPay:perpsGTMModalShown',
       );
       expect(mockNavigate).toHaveBeenCalledWith('PerpsModals', {
         screen: 'PerpsGTMModal',
@@ -1553,7 +1553,7 @@ describe('Wallet', () => {
 
       // Assert
       expect(StorageWrapper.getItem).toHaveBeenCalledWith(
-        '@MetaMask:perpsGTMModalShown',
+        '@BitcoinPay:perpsGTMModalShown',
       );
       expect(mockNavigate).not.toHaveBeenCalledWith('PerpsModals', {
         screen: 'PerpsGTMModal',
@@ -1601,7 +1601,7 @@ describe('Wallet', () => {
 
       // Assert
       expect(StorageWrapper.getItem).not.toHaveBeenCalledWith(
-        '@MetaMask:perpsGTMModalShown',
+        '@BitcoinPay:perpsGTMModalShown',
       );
       expect(mockNavigate).not.toHaveBeenCalledWith('PerpsModals', {
         screen: 'PerpsGTMModal',
@@ -1649,7 +1649,7 @@ describe('Wallet', () => {
 
       // Assert
       expect(StorageWrapper.getItem).not.toHaveBeenCalledWith(
-        '@MetaMask:perpsGTMModalShown',
+        '@BitcoinPay:perpsGTMModalShown',
       );
       expect(mockNavigate).not.toHaveBeenCalledWith('PerpsModals', {
         screen: 'PerpsGTMModal',

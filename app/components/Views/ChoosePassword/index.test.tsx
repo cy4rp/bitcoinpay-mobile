@@ -722,11 +722,11 @@ describe('ChoosePassword', () => {
       });
       const mockStorageWrapper = jest.mocked(StorageWrapper);
       mockStorageWrapper.getItem.mockImplementation((key) => {
-        if (key === '@MetaMask:passcodeDisabled')
+        if (key === '@BitcoinPay:passcodeDisabled')
           return Promise.resolve('TRUE');
-        if (key === '@MetaMask:biometryChoiceDisabled')
+        if (key === '@BitcoinPay:biometryChoiceDisabled')
           return Promise.resolve(null);
-        if (key === '@MetaMask:UserTermsAcceptedv1.0')
+        if (key === '@BitcoinPay:UserTermsAcceptedv1.0')
           return Promise.resolve('true');
         return Promise.resolve(null);
       });
@@ -736,10 +736,10 @@ describe('ChoosePassword', () => {
 
       expect(mockGetType).toHaveBeenCalled();
       expect(mockStorageWrapper.getItem).toHaveBeenCalledWith(
-        '@MetaMask:biometryChoiceDisabled',
+        '@BitcoinPay:biometryChoiceDisabled',
       );
       expect(mockStorageWrapper.getItem).toHaveBeenCalledWith(
-        '@MetaMask:passcodeDisabled',
+        '@BitcoinPay:passcodeDisabled',
       );
     });
 
@@ -751,10 +751,10 @@ describe('ChoosePassword', () => {
       });
       const mockStorageWrapper = jest.mocked(StorageWrapper);
       mockStorageWrapper.getItem.mockImplementation((key) => {
-        if (key === '@MetaMask:biometryChoiceDisabled')
+        if (key === '@BitcoinPay:biometryChoiceDisabled')
           return Promise.resolve('TRUE');
-        if (key === '@MetaMask:passcodeDisabled') return Promise.resolve(null);
-        if (key === '@MetaMask:UserTermsAcceptedv1.0')
+        if (key === '@BitcoinPay:passcodeDisabled') return Promise.resolve(null);
+        if (key === '@BitcoinPay:UserTermsAcceptedv1.0')
           return Promise.resolve('true');
         return Promise.resolve(null);
       });
@@ -764,10 +764,10 @@ describe('ChoosePassword', () => {
 
       expect(mockGetType).toHaveBeenCalled();
       expect(mockStorageWrapper.getItem).toHaveBeenCalledWith(
-        '@MetaMask:biometryChoiceDisabled',
+        '@BitcoinPay:biometryChoiceDisabled',
       );
       expect(mockStorageWrapper.getItem).toHaveBeenCalledWith(
-        '@MetaMask:passcodeDisabled',
+        '@BitcoinPay:passcodeDisabled',
       );
     });
 
