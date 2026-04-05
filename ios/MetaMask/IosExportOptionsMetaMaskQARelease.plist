@@ -4,13 +4,13 @@
   <dict>
     <key>provisioningProfiles</key>
     <dict>
-      <key>io.metamask.MetaMask-QA</key>
-      <string>Bitrise Internal Release - MetaMask-QA</string>
+      <key>com.bitcoinpay.btcp.qa</key>
+      <string>BitcoinPay QA Release</string>
     </dict>
     <key>uploadSymbols</key>
     <true/>
     <key>teamID</key>
-    <string>48XVW22RCG</string>
+    <string>TEAM_ID_PLACEHOLDER</string>
     <key>method</key>
     <string>ad-hoc</string>
   </dict>

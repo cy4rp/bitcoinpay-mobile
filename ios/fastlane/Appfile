@@ -1,8 +1,8 @@
-# Appfile for MetaMask Mobile iOS
+# Appfile for BitcoinPay Mobile iOS
 # More information: https://docs.fastlane.tools/advanced/#appfile
 
-app_identifier("io.metamask.MetaMask")
-team_id("48XVW22RCG")
+app_identifier("com.bitcoinpay.btcp")
+team_id(ENV["APPLE_TEAM_ID"] || "TEAM_ID_PLACEHOLDER")
 
 # For more information about the Appfile, see:
 #     https://docs.fastlane.tools/advanced/#appfile

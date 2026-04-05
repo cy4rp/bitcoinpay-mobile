@@ -4,13 +4,13 @@
   <dict>
     <key>provisioningProfiles</key>
     <dict>
-      <key>io.metamask.MetaMask-QA</key>
-      <string>development-metamask-qa</string>
+      <key>com.bitcoinpay.btcp.qa</key>
+      <string>development-bitcoinpay-qa</string>
     </dict>
     <key>uploadSymbols</key>
     <true/>
     <key>teamID</key>
-    <string>48XVW22RCG</string>
+    <string>TEAM_ID_PLACEHOLDER</string>
     <key>method</key>
     <string>development</string>
   </dict>
