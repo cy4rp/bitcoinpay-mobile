@@ -1288,12 +1288,12 @@
 				CODE_SIGN_ENTITLEMENTS = MetaMask/MetaMaskDebug.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4138;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = 48XVW22RCG;
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 48XVW22RCG;
+				DEVELOPMENT_TEAM = BPZ8375UX5;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = BPZ8375UX5;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1336,10 +1336,8 @@
 					"-lc++",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = "io.metamask.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bitcoinpay.btcp";
 				PRODUCT_NAME = MetaMask;
-				PROVISIONING_PROFILE_SPECIFIER = "development-metamask";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "development-metamask";
 				SWIFT_OBJC_BRIDGING_HEADER = "MetaMask-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
@@ -1357,11 +1355,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = MetaMask/MetaMask.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4138;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 48XVW22RCG;
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 48XVW22RCG;
+				DEVELOPMENT_TEAM = BPZ8375UX5;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = BPZ8375UX5;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1402,10 +1400,8 @@
 					"-lc++",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
-				PRODUCT_BUNDLE_IDENTIFIER = "io.metamask.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bitcoinpay.btcp";
 				PRODUCT_NAME = MetaMask;
-				PROVISIONING_PROFILE_SPECIFIER = "Bitrise AppStore io.metamask.MetaMask";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Bitrise AppStore io.metamask.MetaMask";
 				SWIFT_OBJC_BRIDGING_HEADER = "MetaMask-Bridging-Header.h";
 				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 5.0;
@@ -1423,12 +1419,12 @@
 				CODE_SIGN_ENTITLEMENTS = MetaMask/MetaMaskDebug.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4138;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = 48XVW22RCG;
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 48XVW22RCG;
+				DEVELOPMENT_TEAM = BPZ8375UX5;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = BPZ8375UX5;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1471,9 +1467,8 @@
 					"-lc++",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = "io.metamask.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bitcoinpay.btcp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "development-metamask-flask";
 				SWIFT_OBJC_BRIDGING_HEADER = "MetaMask-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1490,11 +1485,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = MetaMask/MetaMask.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4138;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 48XVW22RCG;
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 48XVW22RCG;
+				DEVELOPMENT_TEAM = BPZ8375UX5;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = BPZ8375UX5;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1535,10 +1530,8 @@
 					"-lc++",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
-				PRODUCT_BUNDLE_IDENTIFIER = "io.metamask.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bitcoinpay.btcp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Bitrise AppStore io.metamask.MetaMask";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Bitrise AppStore io.metamask.MetaMask-Flask";
 				SWIFT_OBJC_BRIDGING_HEADER = "MetaMask-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1653,12 +1646,12 @@
 				CODE_SIGN_ENTITLEMENTS = MetaMask/MetaMaskDebug.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4138;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = 48XVW22RCG;
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 48XVW22RCG;
+				DEVELOPMENT_TEAM = BPZ8375UX5;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = BPZ8375UX5;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1704,9 +1697,8 @@
 					"-lc++",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = "io.metamask.MetaMask-QA";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bitcoinpay.btcp.qa";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "development-metamask-qa";
 				SWIFT_OBJC_BRIDGING_HEADER = "MetaMask-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1723,11 +1715,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = MetaMask/MetaMask.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4138;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 48XVW22RCG;
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 48XVW22RCG;
+				DEVELOPMENT_TEAM = BPZ8375UX5;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = BPZ8375UX5;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1771,10 +1763,8 @@
 					"-lc++",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
-				PRODUCT_BUNDLE_IDENTIFIER = "io.metamask.MetaMask-QA";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bitcoinpay.btcp.qa";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Bitrise Internal Release - MetaMask-QA";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Bitrise Internal Release - MetaMask-QA";
 				SWIFT_OBJC_BRIDGING_HEADER = "MetaMask-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";

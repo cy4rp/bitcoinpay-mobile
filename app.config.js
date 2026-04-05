@@ -87,14 +87,14 @@ module.exports = {
   android: {
     package:
       process.env.METAMASK_BUILD_TYPE === 'flask'
-        ? 'com.bitcoinpay.wallet.flask'
-        : 'com.bitcoinpay.wallet', // Required for @expo/repack-app Android repacking
+        ? 'com.bitcoinpay.btcp.flask'
+        : 'com.bitcoinpay.btcp', // Required for @expo/repack-app Android repacking
   },
   ios: {
     bundleIdentifier:
       process.env.METAMASK_BUILD_TYPE === 'flask'
-        ? 'com.bitcoinpay.wallet.flask'
-        : 'com.bitcoinpay.wallet', // Required for @expo/repack-app iOS repacking
+        ? 'com.bitcoinpay.btcp.flask'
+        : 'com.bitcoinpay.btcp', // Required for @expo/repack-app iOS repacking
     usesAppleSignIn: true,
     jsEngine: 'hermes',
   },
@@ -115,10 +115,10 @@ module.exports = {
       },
     },
     android: {
-      package: 'com.bitcoinpay.wallet',
+      package: 'com.bitcoinpay.btcp',
     },
     ios: {
-      bundleIdentifier: 'com.bitcoinpay.wallet',
+      bundleIdentifier: 'com.bitcoinpay.btcp',
     },
   },
 };

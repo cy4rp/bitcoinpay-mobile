@@ -101,8 +101,11 @@ jobs:
           bundler-cache: true
 
       - name: Install CocoaPods
-        working-directory: ios
-        run: bundle exec pod install --repo-update
+        run: |
+          cd ios
+          bundle exec pod install --repo-update
+        env:
+          BUNDLE_GEMFILE: ios/Gemfile
 
       - name: Configure Team ID in export options
         run: |
@@ -115,33 +118,9 @@ jobs:
           cat ios/.xcode.env.local
 
       - name: Setup App Store Connect API Key
-        env:
-          API_KEY_CONTENT: ${{ secrets.APP_STORE_CONNECT_API_KEY_P8 }}
         run: |
-          # Write key content, converting literal \n to actual newlines if needed
-          echo "$API_KEY_CONTENT" | sed 's/\\n/\n/g' > ios/AuthKey.p8
-          # If file is still 1 line, the content might need different handling
-          LINE_COUNT=$(wc -l < ios/AuthKey.p8)
-          if [ "$LINE_COUNT" -le 2 ]; then
-            echo "Key file has only $LINE_COUNT lines, attempting to fix PEM format..."
-            # Try interpreting escape sequences
-            printf '%b\n' "$API_KEY_CONTENT" > ios/AuthKey.p8
-          fi
-          LINE_COUNT=$(wc -l < ios/AuthKey.p8)
-          if [ "$LINE_COUNT" -le 2 ]; then
-            echo "Still $LINE_COUNT lines. Trying to reconstruct PEM from raw base64..."
-            # Strip PEM headers and reconstruct
-            RAW=$(echo "$API_KEY_CONTENT" | sed 's/-----BEGIN PRIVATE KEY-----//;s/-----END PRIVATE KEY-----//;s/ //g;s/\\n//g')
-            echo "-----BEGIN PRIVATE KEY-----" > ios/AuthKey.p8
-            echo "$RAW" | fold -w 64 >> ios/AuthKey.p8
-            echo "-----END PRIVATE KEY-----" >> ios/AuthKey.p8
-          fi
+          echo "${{ secrets.APP_STORE_CONNECT_API_KEY_P8 }}" > ios/AuthKey.p8
           chmod 600 ios/AuthKey.p8
-          # Verify
-          echo "Key file info:"
-          wc -l ios/AuthKey.p8
-          head -1 ios/AuthKey.p8
-          tail -1 ios/AuthKey.p8
 
       - name: Build iOS Archive
         run: |
