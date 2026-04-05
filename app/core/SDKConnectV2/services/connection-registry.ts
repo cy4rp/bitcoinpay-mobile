@@ -1,0 +1,380 @@
+import { AppState, AppStateStatus } from 'react-native';
+import {
+  IKeyManager,
+  DEFAULT_SESSION_TTL,
+} from '@metamask/mobile-wallet-protocol-core';
+import {
+  ConnectionRequest,
+  isConnectionRequest,
+} from '../types/connection-request';
+import { IConnectionStore } from '../types/connection-store';
+import { IHostApplicationAdapter } from '../types/host-application-adapter';
+import { Connection } from './connection';
+import { ConnectionInfo } from '../types/connection-info';
+import logger, { redactUrl } from './logger';
+import { ACTIONS, PREFIXES } from '../../../constants/deeplinks';
+import { decompressPayloadB64 } from '../utils/compression-utils';
+import { whenStoreReady } from '../utils/when-store-ready';
+import Engine from '../../Engine';
+import { rpcErrors } from '@metamask/rpc-errors';
+import { INTERNAL_ORIGINS } from '../../../constants/transaction';
+
+/**
+ * Hard cap on the number of simultaneous active connections.
+ *
+ * Without a cap every deeplink adds a connection that persists for the full
+ * DEFAULT_SESSION_TTL (30 days). Over that window connections accumulate
+ * freely, amplifying startup reconnection bursts, chain-change fan-out, and
+ * stale BackgroundBridge listeners.
+ *
+ * When the limit is reached the oldest connection (earliest `expiresAt`) is
+ * evicted before the new one is created.
+ */
+export const MAX_CONNECTIONS = 20;
+
+/**
+ * The ConnectionRegistry is the central service responsible for managing the
+ * lifecycle of all SDKConnectV2 connections.
+ */
+export class ConnectionRegistry {
+  private readonly DEEPLINK_PREFIX = `${PREFIXES.METAMASK}${ACTIONS.CONNECT}/mwp`;
+
+  private readonly RELAY_URL: string;
+  private readonly keymanager: IKeyManager;
+  private readonly hostapp: IHostApplicationAdapter;
+  private readonly store: IConnectionStore;
+
+  private readonly ready: Promise<void>;
+  private connections = new Map<string, Connection>();
+  private deeplinks = new Set<string>();
+
+  constructor(
+    relayURL: string,
+    keymanager: IKeyManager,
+    hostapp: IHostApplicationAdapter,
+    store: IConnectionStore,
+  ) {
+    this.RELAY_URL = relayURL;
+    this.keymanager = keymanager;
+    this.hostapp = hostapp;
+    this.store = store;
+    this.ready = this.initialize();
+    this.setupAppStateListener();
+  }
+
+  /**
+   * One-time initialization to resume all persisted connections on app cold start.
+   */
+  private async initialize(): Promise<void> {
+    await whenStoreReady();
+
+    const persisted = await this.store.list().catch(() => []);
+
+    const promises = persisted.map(async (connInfo) => {
+      try {
+        const conn = await Connection.create(
+          connInfo,
+          this.keymanager,
+          this.RELAY_URL,
+          this.hostapp,
+        );
+        await conn.resume();
+        this.connections.set(conn.id, conn);
+        logger.debug('Connection resumed', conn.id);
+      } catch (error) {
+        logger.error('Failed to resume connection', connInfo.id, error);
+      }
+    });
+
+    await Promise.allSettled(promises);
+
+    await this.trimToCapacity();
+
+    this.hostapp.syncConnectionList(Array.from(this.connections.values()));
+  }
+
+  /**
+   * Trims connections down to {@link MAX_CONNECTIONS} after a cold-start
+   * resume. Oldest connections (earliest `expiresAt`) are evicted first.
+   */
+  private async trimToCapacity(): Promise<void> {
+    if (this.connections.size <= MAX_CONNECTIONS) return;
+
+    const sorted = Array.from(this.connections.values()).sort(
+      (a, b) => a.info.expiresAt - b.info.expiresAt,
+    );
+
+    const excess = sorted.slice(0, sorted.length - MAX_CONNECTIONS);
+
+    for (const conn of excess) {
+      try {
+        logger.debug('Trimming excess connection on startup:', conn.id);
+        await this.disconnect(conn.id);
+      } catch (error) {
+        logger.error('Failed to trim excess connection:', conn.id, error);
+      }
+    }
+  }
+
+  /**
+   * Returns true if the deeplink is a connect deeplink
+   * @param url - The url to check
+   * @returns - True if the deeplink is a connect deeplink
+   */
+  public isMwpDeeplink(url: unknown): url is string {
+    return typeof url === 'string' && url.startsWith(this.DEEPLINK_PREFIX);
+  }
+
+  public async handleMwpDeeplink(url: string): Promise<void> {
+    if (!this.isMwpDeeplink(url)) {
+      throw new Error(`Invalid MWP deeplink: ${redactUrl(url)}`);
+    }
+
+    try {
+      const parsed = new URL(url);
+
+      const id = parsed.searchParams.get('id');
+
+      if (id) {
+        await this.handleSimpleDeeplink(id);
+      } else {
+        await this.handleConnectDeeplink(url);
+      }
+    } catch (error) {
+      logger.error('Failed to handle MWP deeplink:', error);
+    }
+  }
+
+  public async handleSimpleDeeplink(id: string): Promise<void> {
+    logger.debug('Handling simple deeplink with id:', id);
+
+    const conn = await this.store.get(id);
+
+    if (conn) {
+      return;
+    }
+
+    logger.error(
+      'Failed to find connection in store for simple deeplink with id:',
+      id,
+    );
+
+    if (!Engine.context.KeyringController.isUnlocked()) {
+      await new Promise<void>((resolve) => {
+        const handler = () => {
+          Engine.controllerMessenger.unsubscribe(
+            'KeyringController:unlock',
+            handler,
+          );
+          resolve();
+        };
+        Engine.controllerMessenger.subscribe(
+          'KeyringController:unlock',
+          handler,
+        );
+      });
+    }
+
+    await whenStoreReady();
+
+    // Not sure what else must be initialized before this toast will show correctly
+    setTimeout(() => {
+      this.hostapp.showNotFoundError();
+    }, 1000);
+  }
+
+  /**
+   * The primary entry point for handling a new connection from a deeplink.
+   * @param url The full deeplink URL that triggered the connection.
+   *
+   * Happy path:
+   * 1. Parse the connection request
+   * 2. Show loading indicator
+   * 3. Create a new connection and connect
+   * 4. Save the connection to the store
+   * 5. Sync the connection list to the host application
+   * 6. Hide loading indicator
+   *
+   * NOTE: As the host app might call this function multiple times in a short period of time,
+   * we need keep track of the deeplinks to make this function idempotent.
+   */
+  public async handleConnectDeeplink(url: string): Promise<void> {
+    if (this.deeplinks.has(url)) return;
+    this.deeplinks.add(url);
+
+    logger.debug('Handling connect deeplink:', redactUrl(url));
+
+    let conn: Connection | undefined;
+    let connInfo: ConnectionInfo | undefined;
+
+    try {
+      const connReq = this.parseConnectionRequest(url);
+
+      // Defense-in-depth: block connections whose self-reported dapp metadata
+      // matches a known internal origin. This check is currently redundant
+      // because isConnectionRequest() validates dapp.url as a valid https://
+      // URL, which can never equal plain-string INTERNAL_ORIGINS values like
+      // 'metamask'. It remains as a safety net in case that upstream
+      // validation is ever relaxed. See isConnectionRequest() for the
+      // primary security boundary.
+      if (
+        INTERNAL_ORIGINS.includes(connReq.metadata.dapp.url) ||
+        INTERNAL_ORIGINS.includes(connReq.metadata.dapp.name)
+      ) {
+        throw rpcErrors.invalidParams({
+          message: 'External transactions cannot use internal origins',
+        });
+      }
+      await this.evictIfAtCapacity();
+
+      connInfo = this.toConnectionInfo(connReq);
+      this.hostapp.showConnectionLoading(connInfo);
+      conn = await Connection.create(
+        connInfo,
+        this.keymanager,
+        this.RELAY_URL,
+        this.hostapp,
+      );
+      await conn.connect(connReq.sessionRequest);
+      this.connections.set(conn.id, conn);
+      await this.store.save(connInfo);
+      this.hostapp.syncConnectionList(Array.from(this.connections.values()));
+      logger.debug('Handled connect deeplink.', connInfo?.id);
+    } catch (error) {
+      logger.error('Failed to handle connect deeplink:', error, redactUrl(url));
+      this.hostapp.showConnectionError();
+      if (conn) await this.disconnect(conn.id);
+    } finally {
+      if (connInfo) this.hostapp.hideConnectionLoading(connInfo);
+    }
+  }
+
+  /**
+   * If the number of active connections has reached {@link MAX_CONNECTIONS},
+   * evict the oldest connection (earliest `expiresAt`) to make room.
+   *
+   * Because every connection is created with the same TTL, the smallest
+   * `expiresAt` reliably identifies the connection that was established
+   * first.
+   */
+  private async evictIfAtCapacity(): Promise<void> {
+    if (this.connections.size < MAX_CONNECTIONS) return;
+
+    const oldest = Array.from(this.connections.values()).reduce((a, b) =>
+      a.info.expiresAt <= b.info.expiresAt ? a : b,
+    );
+
+    try {
+      logger.debug(
+        'Connection cap reached, evicting oldest connection:',
+        oldest.id,
+      );
+      await this.disconnect(oldest.id);
+    } catch (error) {
+      logger.error('Failed to evict oldest connection:', oldest.id, error);
+    }
+  }
+
+  /**
+   * Disconnects a connection, cleans up all associated data
+   * and revokes permissions.
+   * @param id The ID of the connection to terminate.
+   */
+  public async disconnect(id: string): Promise<void> {
+    await this.connections.get(id)?.disconnect();
+    await this.store.delete(id);
+    this.connections.delete(id);
+    this.hostapp.revokePermissions(id);
+    this.hostapp.syncConnectionList(Array.from(this.connections.values()));
+    logger.debug('Connection disconnected:', id);
+  }
+
+  /**
+   * Parse the connection request from the deeplink URL.
+   * @param url The full deeplink URL that triggered the connection.
+   * @returns The parsed connection request.
+   *
+   * Format: metamask://connect/mwp?p=<encoded_connection_request>&c=1
+   */
+  private parseConnectionRequest(url: string): ConnectionRequest {
+    const parsed = new URL(url);
+
+    const payload = parsed.searchParams.get('p');
+    if (!payload) {
+      throw new Error('No payload found in URL.');
+    }
+
+    if (payload.length > 1024 * 1024) {
+      throw new Error('Payload too large (max 1MB).');
+    }
+
+    const compressionFlag = parsed.searchParams.get('c');
+    const jsonString =
+      compressionFlag === '1' ? decompressPayloadB64(payload) : payload;
+
+    if (jsonString.length > 1024 * 1024) {
+      throw new Error('Decompressed payload too large (max 1MB).');
+    }
+
+    const connReq: unknown = JSON.parse(jsonString);
+
+    if (!isConnectionRequest(connReq)) {
+      throw new Error('Invalid connection request structure.');
+    }
+
+    return connReq;
+  }
+
+  private toConnectionInfo(connReq: ConnectionRequest): ConnectionInfo {
+    return {
+      id: connReq.sessionRequest.id,
+      metadata: connReq.metadata,
+      expiresAt: Date.now() + DEFAULT_SESSION_TTL,
+    };
+  }
+
+  /**
+   * Sets up the listener for app state lifecycle events to handle reconnection.
+   */
+  private setupAppStateListener(): void {
+    let isColdStart = true;
+
+    AppState.addEventListener(
+      'change',
+      (nextAppState: AppStateStatus): void => {
+        if (nextAppState !== 'active') {
+          return;
+        }
+
+        // First 'active' event on a cold start is ignored
+        if (isColdStart) {
+          isColdStart = false;
+          return;
+        }
+
+        // For all subsequent 'active' events, we reconnect, but only after
+        // the initial setup is guaranteed to be complete to avoid race conditions.
+        this.ready.then(() => this.reconnectAll());
+      },
+    );
+  }
+
+  /**
+   * Proactively refreshes all active connections. This is the primary mechanism
+   * for preventing stale/zombie connections after the app was put in the background.
+   */
+  private async reconnectAll(): Promise<void> {
+    const connections = Array.from(this.connections.values());
+
+    const promises = connections.map((conn) =>
+      conn.client
+        .reconnect()
+        .then(() => logger.debug('Connection reconnected:', conn.id))
+        .catch((err: Error) =>
+          logger.error('Failed to reconnect connection:', err, conn.id),
+        ),
+    );
+
+    await Promise.allSettled(promises);
+  }
+}

@@ -1,0 +1,775 @@
+import React, {
+  useState,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+} from 'react';
+import {
+  View,
+  Pressable,
+  RefreshControl,
+  TextInput,
+  Platform,
+  LayoutChangeEvent,
+} from 'react-native';
+import PagerView from 'react-native-pager-view';
+import {
+  SafeAreaView,
+  useSafeAreaInsets,
+} from 'react-native-safe-area-context';
+import { useTailwind } from '@metamask/design-system-twrnc-preset';
+import {
+  Box,
+  BoxAlignItems,
+  BoxFlexDirection,
+  Icon,
+  IconColor,
+  IconName,
+  IconSize,
+  Text,
+  TextColor,
+  TextVariant,
+} from '@metamask/design-system-react-native';
+import Animated, {
+  useAnimatedStyle,
+  useAnimatedScrollHandler,
+  SharedValue,
+  interpolate,
+  Extrapolation,
+} from 'react-native-reanimated';
+import { FlashList, FlashListProps, FlashListRef } from '@shopify/flash-list';
+import {
+  useNavigation,
+  useRoute,
+  RouteProp,
+  useFocusEffect,
+} from '@react-navigation/native';
+import {
+  PredictMarketListSelectorsIDs,
+  PredictSearchSelectorsIDs,
+  PredictFeedSelectorsIDs,
+  getPredictMarketListSelector,
+  getPredictFeedSelector,
+  getPredictSearchSelector,
+} from '../../Predict.testIds';
+import { usePredictMarketData } from '../../hooks/usePredictMarketData';
+import { useDebouncedValue } from '../../../../hooks/useDebouncedValue';
+import { useFeedScrollManager } from '../../hooks/useFeedScrollManager';
+import { usePredictTabs, type FeedTab } from '../../hooks/usePredictTabs';
+import { usePredictSearch } from '../../hooks/usePredictSearch';
+import {
+  PredictCategory,
+  PredictMarket as PredictMarketType,
+} from '../../types';
+import {
+  PredictEntryPoint,
+  PredictNavigationParamList,
+} from '../../types/navigation';
+import { PredictEventValues } from '../../constants/eventNames';
+import PredictMarket from '../../components/PredictMarket';
+import PredictMarketSkeleton from '../../components/PredictMarketSkeleton';
+import { PredictBalance } from '../../components/PredictBalance';
+import PredictOffline from '../../components/PredictOffline';
+import PredictFeedSessionManager from '../../services/PredictFeedSessionManager';
+import { usePredictMeasurement } from '../../hooks/usePredictMeasurement';
+import { strings } from '../../../../../../locales/i18n';
+import { useTheme } from '../../../../../util/theme';
+import { TraceName } from '../../../../../util/trace';
+import Routes from '../../../../../constants/navigation/Routes';
+import {
+  TabItem,
+  TabsBar,
+} from '../../../../../component-library/components-temp/Tabs';
+import HeaderCompactStandard from '../../../../../component-library/components-temp/HeaderCompactStandard';
+
+type PredictFlashListRef = FlashListRef<PredictMarketType>;
+type PredictFlashListProps = FlashListProps<PredictMarketType> & {
+  ref?: React.Ref<PredictFlashListRef>;
+};
+
+const AnimatedFlashList = Animated.createAnimatedComponent(
+  FlashList as unknown as React.ComponentType<PredictFlashListProps>,
+) as unknown as React.ComponentType<PredictFlashListProps>;
+
+const PredictFeedHeader: React.FC = () => (
+  <Box twClassName="py-4">
+    <PredictBalance />
+  </Box>
+);
+
+interface PredictFeedTabBarProps {
+  tabs: FeedTab[];
+  activeIndex: number;
+  onTabPress: (index: number) => void;
+}
+
+const PredictFeedTabBar: React.FC<PredictFeedTabBarProps> = ({
+  tabs,
+  activeIndex,
+  onTabPress,
+}) => {
+  const tabItems: TabItem[] = useMemo(
+    () =>
+      tabs.map((tab) => ({
+        key: tab.key,
+        label: tab.label,
+        content: null,
+      })),
+    [tabs],
+  );
+
+  return (
+    <TabsBar
+      tabs={tabItems}
+      activeIndex={activeIndex}
+      onTabPress={onTabPress}
+      testID={PredictFeedSelectorsIDs.TABS}
+    />
+  );
+};
+
+interface AnimatedHeaderProps {
+  headerTranslateY: SharedValue<number>;
+  headerHeight: number;
+  headerRef: React.RefObject<View>;
+  tabBarRef: React.RefObject<View>;
+  tabs: FeedTab[];
+  activeIndex: number;
+  onTabPress: (index: number) => void;
+  onHeaderLayout: (event: LayoutChangeEvent) => void;
+  onTabBarLayout: (event: LayoutChangeEvent) => void;
+}
+
+const AnimatedHeader: React.FC<AnimatedHeaderProps> = ({
+  headerTranslateY,
+  headerHeight,
+  headerRef,
+  tabBarRef,
+  tabs,
+  activeIndex,
+  onTabPress,
+  onHeaderLayout,
+  onTabBarLayout,
+}) => {
+  const tw = useTailwind();
+  const { colors } = useTheme();
+
+  const animatedContainerStyle = useAnimatedStyle(() => ({
+    transform: [{ translateY: headerTranslateY.value }],
+  }));
+
+  const animatedBalanceStyle = useAnimatedStyle(() => ({
+    opacity:
+      headerHeight > 0
+        ? interpolate(
+            headerTranslateY.value,
+            [-headerHeight, 0],
+            [0, 1],
+            Extrapolation.CLAMP,
+          )
+        : 1,
+  }));
+
+  return (
+    <Animated.View
+      style={[
+        tw.style('absolute top-0 left-0 right-0 z-10'),
+        { backgroundColor: colors.background.default },
+        animatedContainerStyle,
+      ]}
+    >
+      <Animated.View
+        ref={headerRef}
+        style={animatedBalanceStyle}
+        onLayout={onHeaderLayout}
+      >
+        <PredictFeedHeader />
+      </Animated.View>
+      <View ref={tabBarRef} onLayout={onTabBarLayout}>
+        <PredictFeedTabBar
+          tabs={tabs}
+          activeIndex={activeIndex}
+          onTabPress={onTabPress}
+        />
+      </View>
+    </Animated.View>
+  );
+};
+
+interface PredictMarketListItemProps {
+  market: PredictMarketType;
+  entryPoint: PredictEntryPoint;
+  testID?: string;
+}
+
+const PredictMarketListItem: React.FC<PredictMarketListItemProps> = ({
+  market,
+  entryPoint,
+  testID,
+}) => <PredictMarket market={market} entryPoint={entryPoint} testID={testID} />;
+
+interface PredictTabContentProps {
+  category: PredictCategory;
+  isActive: boolean;
+  scrollHandler: ReturnType<typeof useAnimatedScrollHandler>;
+  headerHeight: number;
+  tabBarHeight: number;
+  headerHidden: boolean;
+  customQueryParams?: string;
+}
+
+const PredictTabContent: React.FC<PredictTabContentProps> = ({
+  category,
+  isActive,
+  scrollHandler,
+  headerHeight,
+  tabBarHeight,
+  headerHidden,
+  customQueryParams,
+}) => {
+  const tw = useTailwind();
+  const listRef = useRef<PredictFlashListRef>(null);
+
+  const [hasEverBeenActive, setHasEverBeenActive] = useState(isActive);
+  useEffect(() => {
+    if (isActive && !hasEverBeenActive) {
+      setHasEverBeenActive(true);
+    }
+  }, [isActive, hasEverBeenActive]);
+
+  const {
+    marketData,
+    isFetching,
+    error,
+    hasMore,
+    refetch,
+    fetchMore,
+    isFetchingMore,
+  } = usePredictMarketData({ category, pageSize: 20, customQueryParams });
+
+  const [isRefreshing, setIsRefreshing] = useState(false);
+
+  const contentInsetTop = headerHeight + tabBarHeight;
+  const currentPaddingTop = headerHidden ? tabBarHeight : contentInsetTop;
+
+  const hasFlashListMounted = useRef(false);
+  const getContentOffset = () => {
+    if (hasFlashListMounted.current) return undefined;
+    hasFlashListMounted.current = true;
+    return Platform.select({
+      ios: { x: 0, y: headerHidden ? -tabBarHeight : -contentInsetTop },
+      android: undefined,
+    });
+  };
+
+  const renderItem = useCallback(
+    (info: { item: PredictMarketType; index: number }) => (
+      <PredictMarketListItem
+        market={info.item}
+        entryPoint={PredictEventValues.ENTRY_POINT.PREDICT_FEED}
+        testID={getPredictMarketListSelector.marketCardByCategory(
+          category,
+          info.index + 1, // E2E tests use 1-based indexing
+        )}
+      />
+    ),
+    [category],
+  );
+
+  const keyExtractor = useCallback((item: PredictMarketType) => item.id, []);
+
+  const handleEndReached = useCallback(() => {
+    if (hasMore && !isFetchingMore) {
+      fetchMore();
+    }
+  }, [hasMore, isFetchingMore, fetchMore]);
+
+  const handleRefresh = useCallback(async () => {
+    setIsRefreshing(true);
+    try {
+      await refetch();
+    } finally {
+      setIsRefreshing(false);
+    }
+  }, [refetch]);
+
+  const renderFooter = useCallback(() => {
+    if (!isFetchingMore) return null;
+    return (
+      <Box twClassName="py-2">
+        <PredictMarketSkeleton
+          testID={getPredictFeedSelector.skeletonFooter(category, 1)}
+        />
+        <PredictMarketSkeleton
+          testID={getPredictFeedSelector.skeletonFooter(category, 2)}
+        />
+      </Box>
+    );
+  }, [isFetchingMore, category]);
+
+  const contentContainerStyle = useMemo(
+    () =>
+      tw.style(
+        'pb-4 px-4',
+        Platform.select({
+          ios: { flexGrow: 1 },
+          android: {
+            flexGrow: 1,
+            paddingTop: headerHidden ? tabBarHeight : contentInsetTop,
+          },
+        }),
+      ),
+    [tw, contentInsetTop, headerHidden, tabBarHeight],
+  );
+
+  if (!hasEverBeenActive || (isFetching && !isRefreshing && !isFetchingMore)) {
+    return (
+      <Box twClassName="flex-1 px-4" style={{ paddingTop: currentPaddingTop }}>
+        <PredictMarketSkeleton
+          testID={getPredictFeedSelector.skeletonLoading(category, 1)}
+        />
+        <PredictMarketSkeleton
+          testID={getPredictFeedSelector.skeletonLoading(category, 2)}
+        />
+        <PredictMarketSkeleton
+          testID={getPredictFeedSelector.skeletonLoading(category, 3)}
+        />
+        <PredictMarketSkeleton
+          testID={getPredictFeedSelector.skeletonLoading(category, 4)}
+        />
+      </Box>
+    );
+  }
+
+  if (error) {
+    return (
+      <Box style={{ paddingTop: currentPaddingTop }}>
+        <PredictOffline onRetry={handleRefresh} />
+      </Box>
+    );
+  }
+
+  if (!marketData || marketData.length === 0) {
+    return (
+      <Box
+        testID={getPredictFeedSelector.emptyState(category)}
+        twClassName="flex-1 justify-center items-center p-8"
+        style={{ paddingTop: currentPaddingTop }}
+      >
+        <Text variant={TextVariant.BodyMd} color={TextColor.PrimaryAlternative}>
+          {strings('predict.search_empty_state', { category })}
+        </Text>
+      </Box>
+    );
+  }
+
+  return (
+    <AnimatedFlashList
+      ref={listRef}
+      testID={getPredictFeedSelector.marketList(category)}
+      data={marketData}
+      renderItem={renderItem}
+      keyExtractor={keyExtractor}
+      onEndReached={handleEndReached}
+      onEndReachedThreshold={0.7}
+      ListFooterComponent={renderFooter}
+      scrollEventThrottle={50}
+      onScroll={isActive ? (scrollHandler as never) : undefined}
+      contentInset={Platform.select({ ios: { top: contentInsetTop } })}
+      contentOffset={getContentOffset()}
+      refreshControl={
+        <RefreshControl
+          refreshing={isRefreshing}
+          onRefresh={handleRefresh}
+          progressViewOffset={headerHidden ? tabBarHeight : contentInsetTop}
+        />
+      }
+      contentContainerStyle={contentContainerStyle}
+      showsVerticalScrollIndicator={false}
+      removeClippedSubviews
+      getItemType={() => 'market'}
+    />
+  );
+};
+
+interface PredictFeedTabsProps {
+  tabs: FeedTab[];
+  activeIndex: number;
+  onPageChange: (index: number) => void;
+  scrollHandler: ReturnType<typeof useAnimatedScrollHandler>;
+  headerHeight: number;
+  tabBarHeight: number;
+  headerHidden: boolean;
+  hotTabQueryParams?: string;
+  initialPage: number;
+}
+
+const PredictFeedTabs: React.FC<PredictFeedTabsProps> = ({
+  tabs,
+  activeIndex,
+  onPageChange,
+  scrollHandler,
+  headerHeight,
+  tabBarHeight,
+  headerHidden,
+  hotTabQueryParams,
+  initialPage,
+}) => {
+  const tw = useTailwind();
+  const pagerRef = useRef<PagerView>(null);
+
+  useEffect(() => {
+    pagerRef.current?.setPage(activeIndex);
+  }, [activeIndex]);
+
+  const handlePageSelected = useCallback(
+    (e: { nativeEvent: { position: number } }) => {
+      onPageChange(e.nativeEvent.position);
+    },
+    [onPageChange],
+  );
+
+  return (
+    <PagerView
+      ref={pagerRef}
+      style={tw.style('flex-1')}
+      initialPage={initialPage}
+      onPageSelected={handlePageSelected}
+      testID={PredictFeedSelectorsIDs.PAGER}
+    >
+      {tabs.map((tab, index) => (
+        <View
+          key={tab.key}
+          style={tw.style('flex-1')}
+          testID={getPredictFeedSelector.tabPage(tab.key)}
+          collapsable={false}
+        >
+          <PredictTabContent
+            category={tab.key}
+            isActive={index === activeIndex}
+            scrollHandler={scrollHandler}
+            headerHeight={headerHeight}
+            tabBarHeight={tabBarHeight}
+            headerHidden={headerHidden}
+            customQueryParams={
+              tab.key === 'hot' ? hotTabQueryParams : undefined
+            }
+          />
+        </View>
+      ))}
+    </PagerView>
+  );
+};
+
+interface PredictSearchOverlayProps {
+  isVisible: boolean;
+  searchQuery: string;
+  onSearchChange: (query: string) => void;
+  onClose: () => void;
+}
+
+const SEARCH_DEBOUNCE_MS = 200;
+
+const PredictSearchOverlay: React.FC<PredictSearchOverlayProps> = ({
+  isVisible,
+  searchQuery,
+  onSearchChange,
+  onClose,
+}) => {
+  const tw = useTailwind();
+  const { colors } = useTheme();
+  const insets = useSafeAreaInsets();
+  const debouncedSearchQuery = useDebouncedValue(
+    searchQuery,
+    SEARCH_DEBOUNCE_MS,
+  );
+  const isDebouncing = searchQuery !== debouncedSearchQuery;
+
+  const { marketData, isFetching, error, refetch } = usePredictMarketData({
+    category: 'trending',
+    q: debouncedSearchQuery,
+    pageSize: 20,
+  });
+
+  const isSearchLoading = isDebouncing || isFetching;
+
+  const renderItem = useCallback(
+    (info: { item: PredictMarketType; index: number }) => (
+      <PredictMarketListItem
+        market={info.item}
+        entryPoint={PredictEventValues.ENTRY_POINT.SEARCH}
+        testID={getPredictSearchSelector.resultCard(info.index)}
+      />
+    ),
+    [],
+  );
+
+  const keyExtractor = useCallback((item: PredictMarketType) => item.id, []);
+
+  if (!isVisible) {
+    return null;
+  }
+
+  return (
+    <Box
+      style={tw.style('absolute inset-0 z-20', {
+        paddingTop: insets.top,
+        backgroundColor: colors.background.default,
+      })}
+    >
+      <Box
+        flexDirection={BoxFlexDirection.Row}
+        alignItems={BoxAlignItems.Center}
+        twClassName="w-full py-2 px-4 gap-3"
+      >
+        <Box
+          flexDirection={BoxFlexDirection.Row}
+          alignItems={BoxAlignItems.Center}
+          twClassName="flex-1 bg-muted rounded-lg px-3 py-2"
+        >
+          <Icon
+            testID={PredictFeedSelectorsIDs.SEARCH_ICON}
+            name={IconName.Search}
+            size={IconSize.Sm}
+            color={IconColor.IconMuted}
+            style={tw.style('mr-2')}
+          />
+          <TextInput
+            placeholder={strings('predict.search_placeholder')}
+            placeholderTextColor={colors.text.muted}
+            value={searchQuery}
+            onChangeText={onSearchChange}
+            style={tw.style('flex-1 text-base text-default')}
+            autoFocus
+          />
+          {searchQuery.length > 0 && (
+            <Pressable
+              testID={PredictSearchSelectorsIDs.CLEAR_BUTTON}
+              onPress={() => onSearchChange('')}
+            >
+              <Icon
+                name={IconName.CircleX}
+                size={IconSize.Md}
+                color={IconColor.IconMuted}
+              />
+            </Pressable>
+          )}
+        </Box>
+        <Pressable onPress={onClose}>
+          <Text variant={TextVariant.BodyMd} style={tw.style('font-medium')}>
+            {strings('predict.search_cancel')}
+          </Text>
+        </Pressable>
+      </Box>
+
+      <Box twClassName="flex-1">
+        {isSearchLoading ? (
+          <Box twClassName="px-4 pt-4">
+            <PredictMarketSkeleton
+              testID={getPredictFeedSelector.searchSkeleton(1)}
+            />
+            <PredictMarketSkeleton
+              testID={getPredictFeedSelector.searchSkeleton(2)}
+            />
+            <PredictMarketSkeleton
+              testID={getPredictFeedSelector.searchSkeleton(3)}
+            />
+          </Box>
+        ) : error ? (
+          <PredictOffline onRetry={refetch} />
+        ) : !marketData || marketData.length === 0 ? (
+          <Box twClassName="flex-1 justify-center items-center p-8">
+            <Text
+              variant={TextVariant.BodyMd}
+              color={TextColor.PrimaryAlternative}
+            >
+              {strings('predict.search_no_markets_found', { q: searchQuery })}
+            </Text>
+          </Box>
+        ) : (
+          <FlashList<PredictMarketType>
+            data={marketData}
+            renderItem={renderItem}
+            keyExtractor={keyExtractor}
+            contentContainerStyle={tw.style('px-4 pt-4 pb-4')}
+            showsVerticalScrollIndicator={false}
+          />
+        )}
+      </Box>
+    </Box>
+  );
+};
+
+const PredictFeed: React.FC = () => {
+  const {
+    tabs,
+    activeIndex,
+    setActiveIndex,
+    initialTabKey,
+    hotTabQueryParams,
+  } = usePredictTabs();
+
+  const tw = useTailwind();
+  const { colors } = useTheme();
+  const navigation = useNavigation();
+  const route =
+    useRoute<RouteProp<PredictNavigationParamList, 'PredictMarketList'>>();
+
+  const headerRef = useRef<View>(null);
+  const tabBarRef = useRef<View>(null);
+
+  const {
+    isSearchVisible,
+    searchQuery,
+    setSearchQuery,
+    showSearch,
+    clearSearchAndClose,
+  } = usePredictSearch();
+
+  const handleBackPress = useCallback(() => {
+    if (navigation.canGoBack()) {
+      navigation.goBack();
+    } else {
+      navigation.navigate(Routes.WALLET.HOME, {
+        screen: Routes.WALLET.TAB_STACK_FLOW,
+        params: {
+          screen: Routes.WALLET_VIEW,
+        },
+      });
+    }
+  }, [navigation]);
+
+  const sessionManager = PredictFeedSessionManager.getInstance();
+
+  usePredictMeasurement({
+    traceName: TraceName.PredictFeedView,
+    conditions: [!isSearchVisible],
+    debugContext: {
+      entryPoint: route.params?.entryPoint,
+      isSearchVisible,
+    },
+  });
+
+  useEffect(() => {
+    sessionManager.enableAppStateListener();
+    sessionManager.startSession(route.params?.entryPoint, initialTabKey);
+
+    return () => {
+      sessionManager.endSession();
+      sessionManager.disableAppStateListener();
+    };
+  }, [route.params?.entryPoint, sessionManager, initialTabKey]);
+
+  useFocusEffect(
+    useCallback(() => {
+      sessionManager.trackPageView();
+    }, [sessionManager]),
+  );
+
+  const {
+    headerTranslateY,
+    headerHidden,
+    headerHeight,
+    tabBarHeight,
+    layoutReady,
+    onTabSwitch,
+    scrollHandler,
+    onHeaderLayout,
+    onTabBarLayout,
+  } = useFeedScrollManager({
+    headerRef,
+    tabBarRef,
+    setActiveIndex,
+  });
+
+  const handleTabPress = useCallback(
+    (index: number) => {
+      onTabSwitch(index);
+    },
+    [onTabSwitch],
+  );
+
+  const handlePageChange = useCallback(
+    (index: number) => {
+      onTabSwitch(index);
+      const category = tabs[index]?.key;
+      if (category) {
+        sessionManager.trackTabChange(category);
+      }
+    },
+    [onTabSwitch, sessionManager, tabs],
+  );
+
+  return (
+    <SafeAreaView
+      edges={{ bottom: 'additive' }}
+      style={tw.style('flex-1 bg-default')}
+    >
+      <Box
+        testID={PredictMarketListSelectorsIDs.CONTAINER}
+        twClassName="flex-1"
+        style={{ backgroundColor: colors.background.default }}
+      >
+        <Box
+          style={tw.style('z-20', {
+            backgroundColor: colors.background.default,
+          })}
+        >
+          <HeaderCompactStandard
+            includesTopInset
+            title={strings('wallet.predict')}
+            onBack={handleBackPress}
+            backButtonProps={{
+              testID: PredictMarketListSelectorsIDs.BACK_BUTTON,
+            }}
+            endButtonIconProps={[
+              {
+                iconName: IconName.Search,
+                onPress: showSearch,
+                testID: PredictSearchSelectorsIDs.SEARCH_BUTTON,
+              },
+            ]}
+          />
+        </Box>
+
+        <Box twClassName="flex-1 relative">
+          <AnimatedHeader
+            headerTranslateY={headerTranslateY}
+            headerHeight={headerHeight}
+            headerRef={headerRef}
+            tabBarRef={tabBarRef}
+            tabs={tabs}
+            activeIndex={activeIndex}
+            onTabPress={handleTabPress}
+            onHeaderLayout={onHeaderLayout}
+            onTabBarLayout={onTabBarLayout}
+          />
+
+          {layoutReady && (
+            <PredictFeedTabs
+              tabs={tabs}
+              activeIndex={activeIndex}
+              onPageChange={handlePageChange}
+              scrollHandler={scrollHandler}
+              headerHeight={headerHeight}
+              tabBarHeight={tabBarHeight + 6}
+              headerHidden={headerHidden}
+              hotTabQueryParams={hotTabQueryParams}
+              initialPage={activeIndex}
+            />
+          )}
+        </Box>
+
+        <PredictSearchOverlay
+          isVisible={isSearchVisible}
+          searchQuery={searchQuery}
+          onSearchChange={setSearchQuery}
+          onClose={clearSearchAndClose}
+        />
+      </Box>
+    </SafeAreaView>
+  );
+};
+
+export default PredictFeed;

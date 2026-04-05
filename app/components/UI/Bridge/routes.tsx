@@ -1,0 +1,88 @@
+import React from 'react';
+import { createStackNavigator } from '@react-navigation/stack';
+import Routes from '../../../constants/navigation/Routes';
+import { BridgeTokenSelector } from './components/BridgeTokenSelector';
+import BridgeView from './Views/BridgeView';
+import BlockExplorersModal from './components/TransactionDetails/BlockExplorersModal';
+import BlockaidModal from './components/BlockaidModal';
+import RecipientSelectorModal from './components/RecipientSelectorModal';
+import MarketClosedBottomSheet from './components/MarketClosedBottomSheets/MarketClosedBottomSheet';
+import { DefaultSlippageModal } from './components/SlippageModal/DefaultSlippageModal';
+import { CustomSlippageModal } from './components/SlippageModal/CustomSlippageModal';
+import NetworkListModal from './components/BridgeTokenSelector/NetworkListModal';
+import { QuoteSelectorView } from './components/QuoteSelectorView';
+import { PriceImpactModal } from './components/PriceImpactModal';
+import { clearStackNavigatorOptions } from '../../../constants/navigation/clearStackNavigatorOptions';
+import { TokenWarningModal } from './components/TokenWarningModal';
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type ScreenComponent = React.ComponentType<any>;
+
+const Stack = createStackNavigator();
+export const BridgeScreenStack = () => (
+  <Stack.Navigator
+    screenOptions={{
+      headerShown: true,
+    }}
+  >
+    <Stack.Screen
+      name={Routes.BRIDGE.BRIDGE_VIEW}
+      component={BridgeView}
+      options={{ title: '' }}
+    />
+    <Stack.Screen
+      name={Routes.BRIDGE.TOKEN_SELECTOR}
+      component={BridgeTokenSelector}
+      options={{ title: '' }}
+    />
+    <Stack.Screen
+      name={Routes.BRIDGE.QUOTE_SELECTOR_VIEW}
+      component={QuoteSelectorView}
+      options={{ title: '' }}
+    />
+  </Stack.Navigator>
+);
+
+const ModalStack = createStackNavigator();
+export const BridgeModalStack = () => (
+  <ModalStack.Navigator
+    screenOptions={{ ...clearStackNavigatorOptions, presentation: 'modal' }}
+  >
+    <ModalStack.Screen
+      name={Routes.BRIDGE.MODALS.DEFAULT_SLIPPAGE_MODAL}
+      component={DefaultSlippageModal}
+    />
+    <ModalStack.Screen
+      name={Routes.BRIDGE.MODALS.CUSTOM_SLIPPAGE_MODAL}
+      component={CustomSlippageModal}
+    />
+    <ModalStack.Screen
+      name={Routes.BRIDGE.MODALS.TRANSACTION_DETAILS_BLOCK_EXPLORER}
+      component={BlockExplorersModal as ScreenComponent}
+    />
+    <ModalStack.Screen
+      name={Routes.BRIDGE.MODALS.BLOCKAID_MODAL}
+      component={BlockaidModal}
+    />
+    <ModalStack.Screen
+      name={Routes.BRIDGE.MODALS.RECIPIENT_SELECTOR_MODAL}
+      component={RecipientSelectorModal}
+    />
+    <ModalStack.Screen
+      name={Routes.BRIDGE.MODALS.MARKET_CLOSED_MODAL}
+      component={MarketClosedBottomSheet}
+    />
+    <ModalStack.Screen
+      name={Routes.BRIDGE.MODALS.NETWORK_LIST_MODAL}
+      component={NetworkListModal}
+    />
+    <ModalStack.Screen
+      name={Routes.BRIDGE.MODALS.PRICE_IMPACT_MODAL}
+      component={PriceImpactModal}
+    />
+    <ModalStack.Screen
+      name={Routes.BRIDGE.MODALS.TOKEN_WARNING_MODAL}
+      component={TokenWarningModal}
+    />
+  </ModalStack.Navigator>
+);

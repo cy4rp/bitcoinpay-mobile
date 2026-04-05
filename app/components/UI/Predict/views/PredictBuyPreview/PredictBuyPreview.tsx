@@ -1,0 +1,533 @@
+import {
+  Box,
+  BoxAlignItems,
+  BoxFlexDirection,
+  BoxJustifyContent,
+  ButtonSize as ButtonSizeHero,
+  Icon,
+  IconName,
+  IconSize,
+  Text,
+  TextColor,
+  TextVariant,
+} from '@metamask/design-system-react-native';
+import { useTailwind } from '@metamask/design-system-twrnc-preset';
+import {
+  RouteProp,
+  StackActions,
+  useNavigation,
+  useRoute,
+} from '@react-navigation/native';
+import React, {
+  useState,
+  useRef,
+  useEffect,
+  useMemo,
+  useCallback,
+} from 'react';
+import {
+  ActivityIndicator,
+  Image,
+  Linking,
+  ScrollView,
+  TouchableOpacity,
+} from 'react-native';
+import { useSelector } from 'react-redux';
+import Button, {
+  ButtonSize,
+  ButtonVariants,
+  ButtonWidthTypes,
+} from '../../../../../component-library/components/Buttons/Button';
+import { BottomSheetRef } from '../../../../../component-library/components/BottomSheets/BottomSheet';
+import Engine from '../../../../../core/Engine';
+import { usePredictPlaceOrder } from '../../hooks/usePredictPlaceOrder';
+import { usePredictOrderPreview } from '../../hooks/usePredictOrderPreview';
+import { Side } from '../../types';
+import { PredictNavigationParamList } from '../../types/navigation';
+import { PredictTradeStatus } from '../../constants/eventNames';
+import { parseAnalyticsProperties } from '../../utils/analytics';
+import { formatCents, formatPrice } from '../../utils/format';
+import PredictAmountDisplay from '../../components/PredictAmountDisplay';
+import PredictFeeBreakdownSheet from '../../components/PredictFeeBreakdownSheet';
+import PredictFeeSummary from '../PredictBuyWithAnyToken/components/PredictFeeSummary/PredictFeeSummary';
+import PredictOrderRetrySheet from '../../components/PredictOrderRetrySheet';
+import PredictKeypad, {
+  PredictKeypadHandles,
+} from '../../components/PredictKeypad';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { usePredictBalance } from '../../hooks/usePredictBalance';
+import { Skeleton } from '../../../../../component-library/components-temp/Skeleton';
+import { strings } from '../../../../../../locales/i18n';
+import ButtonHero from '../../../../../component-library/components-temp/Buttons/ButtonHero';
+
+import { TraceName } from '../../../../../util/trace';
+import { usePredictMeasurement } from '../../hooks/usePredictMeasurement';
+import { PredictBuyPreviewSelectorsIDs } from '../../Predict.testIds';
+import { usePredictOrderRetry } from '../../hooks/usePredictOrderRetry';
+import { selectPredictFakOrdersEnabledFlag } from '../../selectors/featureFlags';
+import { MINIMUM_BET } from '../../constants/transactions';
+
+const PredictBuyPreview = () => {
+  const tw = useTailwind();
+  const keypadRef = useRef<PredictKeypadHandles>(null);
+  const feeBreakdownSheetRef = useRef<BottomSheetRef>(null);
+  const { goBack, dispatch } = useNavigation();
+  const route =
+    useRoute<RouteProp<PredictNavigationParamList, 'PredictBuyPreview'>>();
+
+  const { market, outcome, outcomeToken, entryPoint } = route.params;
+
+  const analyticsProperties = useMemo(
+    () => parseAnalyticsProperties(market, outcomeToken, entryPoint),
+    [market, outcomeToken, entryPoint],
+  );
+
+  const {
+    placeOrder,
+    isLoading,
+    error: placeOrderError,
+    result,
+    isOrderNotFilled,
+    resetOrderNotFilled,
+  } = usePredictPlaceOrder();
+
+  const { data: balance = 0, isLoading: isBalanceLoading } =
+    usePredictBalance();
+
+  const fakOrdersEnabled = useSelector(selectPredictFakOrdersEnabledFlag);
+
+  const [currentValue, setCurrentValue] = useState(0);
+  const [currentValueUSDString, setCurrentValueUSDString] = useState('');
+  const [isInputFocused, setIsInputFocused] = useState(true);
+  const [isUserInputChange, setIsUserInputChange] = useState(false);
+  const [isFeeBreakdownVisible, setIsFeeBreakdownVisible] = useState(false);
+  const previousValueRef = useRef(0);
+
+  const {
+    preview,
+    error: previewError,
+    isCalculating,
+  } = usePredictOrderPreview({
+    marketId: market.id,
+    outcomeId: outcome.id,
+    outcomeTokenId: outcomeToken.id,
+    side: Side.BUY,
+    size: currentValue,
+    autoRefreshTimeout: 1000,
+  });
+
+  const {
+    retrySheetRef,
+    retrySheetVariant,
+    isRetrying,
+    handleRetryWithBestPrice,
+  } = usePredictOrderRetry({
+    preview,
+    placeOrder,
+    analyticsProperties,
+    isOrderNotFilled,
+    resetOrderNotFilled,
+  });
+
+  // Track screen load performance (balance + initial preview)
+  usePredictMeasurement({
+    traceName: TraceName.PredictBuyPreviewView,
+    conditions: [!isBalanceLoading, balance !== undefined, !!market],
+    debugContext: {
+      marketId: market?.id,
+      hasBalance: balance !== undefined,
+      isBalanceLoading,
+    },
+  });
+
+  // Track when user changes input to show skeleton only during user input changes
+  useEffect(() => {
+    if (!isCalculating) {
+      setIsUserInputChange(false);
+      if (currentValue === 0) {
+        previousValueRef.current = 0;
+      }
+      return;
+    }
+
+    if (
+      currentValue > 0 &&
+      currentValue !== previousValueRef.current &&
+      isCalculating
+    ) {
+      setIsUserInputChange(true);
+    }
+
+    previousValueRef.current = currentValue;
+  }, [currentValue, isCalculating]);
+
+  const errorMessage = isOrderNotFilled
+    ? undefined
+    : (previewError ?? placeOrderError);
+
+  // Track Predict Trade Transaction with initiated status when screen mounts
+  useEffect(() => {
+    const controller = Engine.context.PredictController;
+
+    controller.trackPredictOrderEvent({
+      status: PredictTradeStatus.INITIATED,
+      analyticsProperties,
+      sharePrice: outcomeToken?.price,
+    });
+    // eslint-disable-next-line react-compiler/react-compiler
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const toWin = preview?.minAmountReceived ?? 0;
+  const isRateLimited = preview?.rateLimited ?? false;
+
+  const metamaskFee = preview?.fees?.metamaskFee ?? 0;
+  const providerFee = preview?.fees?.providerFee ?? 0;
+  const total = currentValue + providerFee + metamaskFee;
+
+  const isBelowMinimum = currentValue > 0 && currentValue < MINIMUM_BET;
+  const canPlaceBet =
+    currentValue >= MINIMUM_BET &&
+    preview &&
+    !isLoading &&
+    !isBalanceLoading &&
+    !isRateLimited;
+
+  const rewardsFeeAmountUsd =
+    isLoading || previewError ? undefined : (preview?.fees?.totalFee ?? 0);
+
+  const title = market.title;
+  const outcomeGroupTitle = outcome.groupItemTitle
+    ? outcome.groupItemTitle
+    : '';
+
+  const separator = '·';
+  const outcomeTokenLabel = `${outcomeToken?.title} at ${formatCents(
+    preview?.sharePrice ?? outcomeToken?.price ?? 0,
+  )}`;
+
+  useEffect(() => {
+    if (result?.success) {
+      dispatch(StackActions.pop());
+    }
+  }, [dispatch, result]);
+
+  const onPlaceBet = useCallback(async () => {
+    if (!preview || isBelowMinimum) return;
+
+    await placeOrder({
+      analyticsProperties,
+      preview,
+    });
+  }, [preview, isBelowMinimum, placeOrder, analyticsProperties]);
+
+  const handleFeesInfoPress = useCallback(() => {
+    setIsFeeBreakdownVisible(true);
+  }, []);
+
+  const handleFeeBreakdownClose = useCallback(() => {
+    setIsFeeBreakdownVisible(false);
+  }, []);
+
+  useEffect(() => {
+    if (isFeeBreakdownVisible) {
+      feeBreakdownSheetRef.current?.onOpenBottomSheet();
+    }
+  }, [isFeeBreakdownVisible]);
+
+  const renderHeader = () => (
+    <Box
+      flexDirection={BoxFlexDirection.Row}
+      alignItems={BoxAlignItems.Center}
+      twClassName="w-full gap-4 p-4"
+    >
+      <TouchableOpacity testID="back-button" onPress={() => goBack()}>
+        <Icon name={IconName.ArrowLeft} size={IconSize.Md} />
+      </TouchableOpacity>
+      <Image
+        source={{ uri: outcome?.image }}
+        style={tw.style('w-10 h-10 rounded')}
+      />
+      <Box flexDirection={BoxFlexDirection.Column} twClassName="flex-1 min-w-0">
+        <Box flexDirection={BoxFlexDirection.Row} twClassName="min-w-0 gap-4">
+          <Box twClassName="flex-1 min-w-0">
+            <Text
+              variant={TextVariant.HeadingSm}
+              numberOfLines={1}
+              ellipsizeMode="tail"
+            >
+              {title}
+            </Text>
+          </Box>
+        </Box>
+        <Box flexDirection={BoxFlexDirection.Row} twClassName="min-w-0 gap-4">
+          <Box twClassName="flex-1 min-w-0">
+            <Box flexDirection={BoxFlexDirection.Row} twClassName="gap-1">
+              {!!outcomeGroupTitle && (
+                <>
+                  <Text
+                    variant={TextVariant.BodySm}
+                    twClassName="font-medium"
+                    color={TextColor.TextAlternative}
+                    numberOfLines={1}
+                    ellipsizeMode="tail"
+                  >
+                    {outcomeGroupTitle}
+                  </Text>
+                  <Text
+                    variant={TextVariant.BodySm}
+                    twClassName="font-medium"
+                    color={TextColor.TextAlternative}
+                  >
+                    {separator}
+                  </Text>
+                </>
+              )}
+              <Text
+                variant={TextVariant.BodySm}
+                twClassName="font-medium"
+                color={
+                  outcomeToken?.title === 'Yes'
+                    ? TextColor.SuccessDefault
+                    : TextColor.ErrorDefault
+                }
+                numberOfLines={1}
+                ellipsizeMode="tail"
+              >
+                {outcomeTokenLabel}
+              </Text>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+    </Box>
+  );
+
+  const renderAmount = () => (
+    <ScrollView
+      style={tw.style('flex-col')}
+      contentContainerStyle={tw.style('flex-grow justify-center')}
+      showsVerticalScrollIndicator={false}
+    >
+      <Box
+        flexDirection={BoxFlexDirection.Column}
+        alignItems={BoxAlignItems.Center}
+        justifyContent={BoxJustifyContent.Center}
+        twClassName="w-full"
+      >
+        <Box twClassName="text-center leading-[72px]">
+          <PredictAmountDisplay
+            amount={currentValueUSDString}
+            onPress={() => keypadRef.current?.handleAmountPress()}
+            isActive={isInputFocused}
+            hasError={false}
+          />
+        </Box>
+        {/* Available balance */}
+        <Box twClassName="text-center mt-2">
+          {isBalanceLoading ? (
+            <Skeleton width={120} height={20} />
+          ) : (
+            <Text
+              variant={TextVariant.BodyMd}
+              color={TextColor.TextAlternative}
+            >
+              {`${strings('predict.order.available')}: `}
+              {formatPrice(balance, { minimumDecimals: 2, maximumDecimals: 2 })}
+            </Text>
+          )}
+        </Box>
+        <Box
+          flexDirection={BoxFlexDirection.Row}
+          alignItems={BoxAlignItems.Center}
+          justifyContent={BoxJustifyContent.Center}
+          twClassName="mt-2"
+        >
+          <Text
+            variant={TextVariant.BodyLg}
+            twClassName="font-medium"
+            color={TextColor.SuccessDefault}
+          >
+            {`${strings('predict.order.to_win')} `}
+          </Text>
+          {isCalculating && isUserInputChange ? (
+            <Skeleton width={80} height={24} style={tw.style('rounded-md')} />
+          ) : (
+            <Text
+              variant={TextVariant.BodyLg}
+              twClassName="font-medium"
+              color={TextColor.SuccessDefault}
+            >
+              {formatPrice(toWin, {
+                minimumDecimals: 2,
+                maximumDecimals: 2,
+              })}
+            </Text>
+          )}
+        </Box>
+      </Box>
+    </ScrollView>
+  );
+
+  const renderActionButton = () => {
+    if (isLoading) {
+      return (
+        <Button
+          label={
+            <Box twClassName="flex-row items-center gap-1">
+              <ActivityIndicator size="small" />
+              <Text
+                variant={TextVariant.BodyLg}
+                twClassName="font-medium"
+                color={TextColor.PrimaryInverse}
+              >
+                {`${strings('predict.order.placing_prediction')}...`}
+              </Text>
+            </Box>
+          }
+          variant={ButtonVariants.Primary}
+          onPress={onPlaceBet}
+          size={ButtonSize.Lg}
+          width={ButtonWidthTypes.Full}
+          style={tw.style('opacity-50')}
+          disabled
+        />
+      );
+    }
+
+    return (
+      <ButtonHero
+        testID={PredictBuyPreviewSelectorsIDs.PLACE_BET_BUTTON}
+        onPress={onPlaceBet}
+        disabled={!canPlaceBet}
+        isLoading={isLoading}
+        size={ButtonSizeHero.Lg}
+        style={tw.style('w-full')}
+      >
+        <Text
+          variant={TextVariant.BodyMd}
+          style={tw.style('text-white font-medium')}
+        >
+          {outcomeToken?.title} ·{' '}
+          {formatCents(preview?.sharePrice ?? outcomeToken?.price ?? 0)}
+        </Text>
+      </ButtonHero>
+    );
+  };
+
+  const renderMinimumBetWarning = () => {
+    if (isBalanceLoading || !isBelowMinimum) {
+      return null;
+    }
+
+    return (
+      <Text
+        variant={TextVariant.BodySm}
+        color={TextColor.ErrorDefault}
+        style={tw.style('text-center pb-2')}
+      >
+        {strings('predict.order.prediction_minimum_bet', {
+          amount: formatPrice(MINIMUM_BET, {
+            minimumDecimals: 2,
+            maximumDecimals: 2,
+          }),
+        })}
+      </Text>
+    );
+  };
+
+  const renderBottomContent = () => {
+    if (isInputFocused) {
+      return null;
+    }
+
+    return (
+      <Box
+        flexDirection={BoxFlexDirection.Column}
+        twClassName="border-t border-muted"
+      >
+        <PredictFeeSummary
+          disabled={false}
+          total={total}
+          rewardsFeeAmountUsd={rewardsFeeAmountUsd}
+          rewardsLoadingOverride={isCalculating && isUserInputChange}
+          handleFeesInfoPress={handleFeesInfoPress}
+        />
+        <Box
+          justifyContent={BoxJustifyContent.Center}
+          twClassName="gap-2 px-4 pb-0"
+        >
+          {errorMessage && (
+            <Text
+              variant={TextVariant.BodySm}
+              color={TextColor.ErrorDefault}
+              style={tw.style('text-center pb-2')}
+            >
+              {errorMessage}
+            </Text>
+          )}
+          <Box twClassName="w-full h-12">{renderActionButton()}</Box>
+          <Box twClassName="text-center items-center flex-row gap-1 justify-center flex-wrap">
+            <Text
+              variant={TextVariant.BodyXs}
+              color={TextColor.TextAlternative}
+            >
+              {strings('predict.consent_sheet.disclaimer')}
+            </Text>
+            <Text
+              variant={TextVariant.BodyXs}
+              style={tw.style('text-info-default')}
+              onPress={() => {
+                Linking.openURL('https://polymarket.com/tos');
+              }}
+            >
+              {strings('predict.consent_sheet.learn_more')}
+            </Text>
+          </Box>
+        </Box>
+      </Box>
+    );
+  };
+
+  return (
+    <SafeAreaView style={tw.style('flex-1 bg-background-default')}>
+      {renderHeader()}
+      {renderAmount()}
+      {renderMinimumBetWarning()}
+      <PredictKeypad
+        ref={keypadRef}
+        isInputFocused={isInputFocused}
+        currentValue={currentValue}
+        currentValueUSDString={currentValueUSDString}
+        setCurrentValue={setCurrentValue}
+        setCurrentValueUSDString={setCurrentValueUSDString}
+        setIsInputFocused={setIsInputFocused}
+      />
+      {renderBottomContent()}
+      {isFeeBreakdownVisible && (
+        <PredictFeeBreakdownSheet
+          ref={feeBreakdownSheetRef}
+          providerFee={providerFee}
+          metamaskFee={metamaskFee}
+          sharePrice={preview?.sharePrice ?? outcomeToken?.price ?? 0}
+          contractCount={preview?.minAmountReceived ?? 0}
+          betAmount={currentValue}
+          total={total}
+          onClose={handleFeeBreakdownClose}
+          fakOrdersEnabled={fakOrdersEnabled}
+        />
+      )}
+      <PredictOrderRetrySheet
+        ref={retrySheetRef}
+        variant={retrySheetVariant}
+        sharePrice={preview?.sharePrice ?? outcomeToken?.price ?? 0}
+        side={Side.BUY}
+        onRetry={handleRetryWithBestPrice}
+        onDismiss={resetOrderNotFilled}
+        isRetrying={isRetrying}
+      />
+    </SafeAreaView>
+  );
+};
+
+export default PredictBuyPreview;

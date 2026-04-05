@@ -1,0 +1,603 @@
+import Engine from '../../../../../core/Engine';
+import {
+  CandlePeriod,
+  TimeDuration,
+  calculateCandleCount,
+  PERPS_CONSTANTS,
+  PERFORMANCE_CONFIG,
+  type CandleData,
+} from '@metamask/perps-controller';
+import DevLogger from '../../../../../core/SDKConnect/utils/DevLogger';
+import Logger from '../../../../../util/Logger';
+import { ensureError } from '../../../../../util/errorUtils';
+
+// Generic subscription parameters
+interface StreamSubscription<T> {
+  id: string;
+  cacheKey: string; // Associated cacheKey (symbol-interval) for filtering
+  callback: (data: T) => void;
+  throttleMs?: number;
+  timer?: NodeJS.Timeout;
+  pendingUpdate?: T;
+  hasReceivedFirstUpdate?: boolean;
+  onError?: (error: Error) => void;
+}
+
+// Base class for stream channel (simplified version)
+abstract class StreamChannel<T> {
+  protected cache = new Map<string, T>();
+  protected subscribers = new Map<string, StreamSubscription<T>>();
+  protected wsSubscriptions = new Map<string, () => void>();
+  protected isPaused = false;
+
+  protected notifySubscribers(cacheKey: string, updates: T) {
+    if (this.isPaused) {
+      return;
+    }
+
+    // Filter subscribers to only those matching this cacheKey
+    const matchingSubscribers = Array.from(this.subscribers.values()).filter(
+      (sub) => sub.cacheKey === cacheKey,
+    );
+
+    matchingSubscribers.forEach((subscriber) => {
+      // Check if this is the first update for this subscriber
+      if (!subscriber.hasReceivedFirstUpdate) {
+        subscriber.callback(updates);
+        subscriber.hasReceivedFirstUpdate = true;
+        return;
+      }
+
+      // If no throttling, notify immediately
+      if (!subscriber.throttleMs) {
+        subscriber.callback(updates);
+        return;
+      }
+
+      // Store pending update
+      subscriber.pendingUpdate = updates;
+
+      // Throttle pattern
+      if (!subscriber.timer) {
+        subscriber.timer = setTimeout(() => {
+          if (subscriber.pendingUpdate) {
+            subscriber.callback(subscriber.pendingUpdate);
+            subscriber.pendingUpdate = undefined;
+          }
+          subscriber.timer = undefined;
+        }, subscriber.throttleMs);
+      }
+    });
+  }
+
+  public pause(): void {
+    this.isPaused = true;
+  }
+
+  public resume(): void {
+    this.isPaused = false;
+  }
+
+  public clearCache(): void {
+    this.subscribers.forEach((subscriber) => {
+      if (subscriber.timer) {
+        clearTimeout(subscriber.timer);
+        subscriber.timer = undefined;
+      }
+      subscriber.pendingUpdate = undefined;
+    });
+
+    // Disconnect all WebSocket subscriptions
+    this.wsSubscriptions.forEach((unsubscribe) => {
+      unsubscribe();
+    });
+    this.wsSubscriptions.clear();
+
+    this.cache.clear();
+
+    // Notify subscribers with cleared data
+    this.subscribers.forEach((subscriber) => {
+      subscriber.callback(this.getClearedData());
+    });
+  }
+
+  protected abstract getClearedData(): T;
+}
+
+// CandleStreamChannel - specific channel for candle data
+export class CandleStreamChannel extends StreamChannel<CandleData> {
+  // Timer handles for deferred connect so they can be cancelled on disconnect
+  private deferConnectTimers = new Map<string, ReturnType<typeof setTimeout>>();
+  private connectRetryCounts = new Map<string, number>();
+  private static readonly MAX_CONNECT_RETRIES = 50;
+  private readonly getIsInitialized: () => boolean;
+
+  /**
+   * @param getIsInitialized - Getter for connection initialized state.
+   * Injected to avoid circular dependency:
+   * CandleStreamChannel → PerpsConnectionManager → PerpsStreamManager → CandleStreamChannel
+   */
+  constructor(getIsInitialized: () => boolean) {
+    super();
+    this.getIsInitialized = getIsInitialized;
+  }
+
+  public override clearCache(): void {
+    this.deferConnectTimers.forEach((timer) => clearTimeout(timer));
+    this.deferConnectTimers.clear();
+    this.connectRetryCounts.clear();
+    super.clearCache();
+  }
+
+  /**
+   * Schedule a deferred connect() retry with safety checks.
+   * Aborts if no subscribers remain for the given cacheKey or max retries exceeded.
+   */
+  private deferConnect(
+    symbol: string,
+    interval: CandlePeriod,
+    cacheKey: string,
+    delayMs: number,
+  ): void {
+    const hasActiveSubscribers = Array.from(this.subscribers.values()).some(
+      (sub) => sub.cacheKey === cacheKey,
+    );
+    if (!hasActiveSubscribers) {
+      this.connectRetryCounts.delete(cacheKey);
+      return;
+    }
+
+    const retryCount = this.connectRetryCounts.get(cacheKey) ?? 0;
+    if (retryCount >= CandleStreamChannel.MAX_CONNECT_RETRIES) {
+      DevLogger.log(
+        `CandleStreamChannel: Max connect retries exceeded (${CandleStreamChannel.MAX_CONNECT_RETRIES}), giving up`,
+        { cacheKey },
+      );
+      this.connectRetryCounts.delete(cacheKey);
+      return;
+    }
+
+    this.connectRetryCounts.set(cacheKey, retryCount + 1);
+    const existingTimer = this.deferConnectTimers.get(cacheKey);
+    if (existingTimer) {
+      clearTimeout(existingTimer);
+    }
+    this.deferConnectTimers.set(
+      cacheKey,
+      setTimeout(() => {
+        this.deferConnectTimers.delete(cacheKey);
+        this.connectNow(symbol, interval, cacheKey);
+      }, delayMs),
+    );
+  }
+
+  /**
+   * Get cache key for a specific symbol and interval
+   */
+  private getCacheKey(symbol: string, interval: CandlePeriod): string {
+    return `${symbol}-${interval}`;
+  }
+
+  /**
+   * Subscribe to candle updates for a specific symbol and interval.
+   * Note: The duration parameter is accepted for API compatibility but ignored -
+   * we always fetch maximum candles (YEAR_TO_DATE = 500) to avoid complex caching issues.
+   */
+  public subscribe(params: {
+    symbol: string;
+    interval: CandlePeriod;
+    duration: TimeDuration;
+    callback: (data: CandleData) => void;
+    throttleMs?: number;
+    onError?: (error: Error) => void;
+  }): () => void {
+    const { symbol, interval, callback, throttleMs, onError } = params;
+    const cacheKey = this.getCacheKey(symbol, interval);
+    const id = Math.random().toString(36);
+
+    const subscription: StreamSubscription<CandleData> = {
+      id,
+      cacheKey,
+      callback,
+      throttleMs,
+      hasReceivedFirstUpdate: false,
+      onError,
+    };
+    this.subscribers.set(id, subscription);
+
+    // Give immediate cached data if available
+    const cached = this.cache.get(cacheKey);
+    if (cached) {
+      callback(cached);
+      subscription.hasReceivedFirstUpdate = true;
+    }
+
+    // Ensure WebSocket connected for this symbol+interval
+    this.connect(symbol, interval, cacheKey);
+
+    // Return unsubscribe function
+    return () => {
+      const sub = this.subscribers.get(id);
+      if (sub?.timer) {
+        clearTimeout(sub.timer);
+        sub.timer = undefined;
+      }
+      this.subscribers.delete(id);
+
+      // Count remaining subscribers for THIS specific cacheKey
+      const remainingForThisKey = Array.from(this.subscribers.values()).filter(
+        (s) => s.cacheKey === cacheKey,
+      ).length;
+
+      // Disconnect WebSocket if no subscribers remain for this symbol+interval
+      if (remainingForThisKey === 0) {
+        DevLogger.log(
+          'CandleStreamChannel: Disconnecting WebSocket (no subscribers)',
+          { cacheKey },
+        );
+        this.disconnect(cacheKey);
+      }
+    };
+  }
+
+  /**
+   * Schedule a WebSocket connection for specific symbol and interval.
+   * Always defers via a short debounce to avoid subscription churn
+   * during rapid market switching (#28141).
+   */
+  private connect(
+    symbol: string,
+    interval: CandlePeriod,
+    cacheKey: string,
+  ): void {
+    // Skip if already connected for this symbol+interval
+    if (this.wsSubscriptions.has(cacheKey)) {
+      return;
+    }
+
+    let delay: number = PERFORMANCE_CONFIG.CandleConnectDebounceMs;
+    if (Engine.context.PerpsController.isCurrentlyReinitializing()) {
+      delay = PERPS_CONSTANTS.ReconnectionCleanupDelayMs;
+    } else if (!this.getIsInitialized()) {
+      delay = PERFORMANCE_CONFIG.NavigationParamsDelayMs;
+    }
+
+    this.deferConnect(symbol, interval, cacheKey, delay);
+  }
+
+  /**
+   * Execute the actual WebSocket subscription (called after debounce/defer).
+   * Always uses YEAR_TO_DATE duration to fetch maximum candles (500) on initial load.
+   */
+  private connectNow(
+    symbol: string,
+    interval: CandlePeriod,
+    cacheKey: string,
+  ): void {
+    // Re-check guards: state may have changed during the debounce window
+    if (this.wsSubscriptions.has(cacheKey)) {
+      return;
+    }
+    if (
+      !this.getIsInitialized() ||
+      Engine.context.PerpsController.isCurrentlyReinitializing()
+    ) {
+      // Not ready yet — re-defer
+      this.deferConnect(
+        symbol,
+        interval,
+        cacheKey,
+        PERPS_CONSTANTS.ConnectRetryDelayMs,
+      );
+      return;
+    }
+
+    this.connectRetryCounts.delete(cacheKey);
+
+    // Use a light initial fetch to conserve rate limit budget (#28141).
+    // OneWeek provides enough candles for the visible chart area; users
+    // can lazy-load more history via fetchHistoricalCandles on scroll.
+    // When cache already has data (revisit), use an even lighter fetch.
+    const hasCachedData = this.cache.has(cacheKey);
+    const duration = hasCachedData ? TimeDuration.OneDay : TimeDuration.OneWeek;
+
+    const unsubscribe = Engine.context.PerpsController.subscribeToCandles({
+      symbol,
+      interval,
+      duration,
+      callback: (candleData: CandleData) => {
+        // Update cache
+        this.cache.set(cacheKey, candleData);
+
+        // Notify all subscribers
+        this.notifySubscribers(cacheKey, candleData);
+      },
+      onError: (error: Error) => {
+        // Log initialization failure
+        DevLogger.log(
+          'CandleStreamChannel: Subscription initialization failed',
+          {
+            symbol,
+            interval,
+            cacheKey,
+            error: error.message,
+          },
+        );
+
+        // Notify all subscribers for this cacheKey of the error
+        const matchingSubscribers = Array.from(
+          this.subscribers.values(),
+        ).filter((sub) => sub.cacheKey === cacheKey);
+        matchingSubscribers.forEach((subscriber) => {
+          subscriber.onError?.(error);
+        });
+
+        // Clean up failed subscription
+        this.wsSubscriptions.delete(cacheKey);
+      },
+    });
+
+    // Log subscription establishment (once per subscription)
+    DevLogger.log('CandleStreamChannel: WebSocket subscription established', {
+      symbol,
+      interval,
+      cacheKey,
+    });
+
+    // Store cleanup function
+    this.wsSubscriptions.set(cacheKey, unsubscribe);
+  }
+
+  /**
+   * Disconnect from WebSocket for specific coin+interval, or all subscriptions if no cacheKey provided
+   * @param cacheKey - Optional cache key for specific coin+interval. If omitted, disconnects all subscriptions.
+   */
+  public disconnect(cacheKey?: string): void {
+    if (cacheKey === undefined) {
+      // Disconnect all subscriptions
+      this.disconnectAll();
+      return;
+    }
+    // Cancel any pending deferred connect for this cacheKey
+    const timer = this.deferConnectTimers.get(cacheKey);
+    if (timer) {
+      clearTimeout(timer);
+      this.deferConnectTimers.delete(cacheKey);
+    }
+    this.connectRetryCounts.delete(cacheKey);
+    // Disconnect specific subscription
+    const unsubscribe = this.wsSubscriptions.get(cacheKey);
+    if (unsubscribe) {
+      unsubscribe();
+      this.wsSubscriptions.delete(cacheKey);
+    }
+  }
+
+  /**
+   * Get cached data for specific symbol and interval
+   */
+  public getCachedData(
+    symbol: string,
+    interval: CandlePeriod,
+  ): CandleData | null {
+    const cacheKey = this.getCacheKey(symbol, interval);
+    return this.cache.get(cacheKey) || null;
+  }
+
+  /**
+   * Get cleared data (empty candle array)
+   */
+  protected getClearedData(): CandleData {
+    return {
+      symbol: '',
+      interval: CandlePeriod.OneHour,
+      candles: [],
+    };
+  }
+
+  /**
+   * Fetch additional historical candles before the current oldest candle
+   * Used for loading more history when user scrolls to the left edge of the chart
+   * Dynamically calculates fetch size based on duration and interval
+   * @param symbol - The asset symbol
+   * @param interval - The candle interval
+   * @param duration - The time duration (used to calculate dynamic fetch size)
+   * @returns Promise that resolves when fetch completes
+   */
+  public async fetchHistoricalCandles(
+    symbol: string,
+    interval: CandlePeriod,
+    duration: TimeDuration,
+  ): Promise<void> {
+    const cacheKey = this.getCacheKey(symbol, interval);
+    const cachedData = this.cache.get(cacheKey);
+
+    // If no cached data or no candles, nothing to extend
+    if (!cachedData || cachedData.candles.length === 0) {
+      DevLogger.log(
+        'CandleStreamChannel: No cached data to extend, skipping historical fetch',
+        { symbol, interval },
+      );
+      return;
+    }
+
+    // Get the oldest candle timestamp
+    const oldestCandle = cachedData.candles[0];
+    if (!oldestCandle) {
+      return;
+    }
+
+    const oldestTime = oldestCandle.time;
+    const endTime = oldestTime - 1; // Fetch candles ending just before the oldest
+
+    // Calculate dynamic limit based on duration and interval
+    const dynamicLimit = calculateCandleCount(duration, interval);
+
+    // Apply min/max safeguards
+    const FETCH_SIZE = {
+      MIN: 50, // Minimum for long intervals (1w, 1M)
+      MAX: 500, // Maximum to prevent huge fetches
+    };
+
+    const limit = Math.min(
+      Math.max(dynamicLimit, FETCH_SIZE.MIN),
+      FETCH_SIZE.MAX,
+    );
+
+    try {
+      DevLogger.log(
+        'CandleStreamChannel: Fetching additional historical candles',
+        {
+          symbol,
+          interval,
+          duration,
+          oldestTime,
+          endTime,
+          dynamicLimit,
+          limit,
+        },
+      );
+
+      // Fetch historical candles via controller
+      const newCandleData =
+        await Engine.context.PerpsController.fetchHistoricalCandles({
+          symbol,
+          interval,
+          limit,
+          endTime,
+        });
+
+      if (!newCandleData || newCandleData.candles.length === 0) {
+        DevLogger.log(
+          'CandleStreamChannel: No additional historical candles available',
+          { symbol, interval },
+        );
+        return;
+      }
+
+      // Merge new candles with existing (prepend older candles)
+      // Filter out duplicates based on timestamp
+      const existingTimes = new Set(cachedData.candles.map((c) => c.time));
+      const newUnique = newCandleData.candles.filter(
+        (c) => !existingTimes.has(c.time),
+      );
+
+      // Combine and sort by time ascending
+      const mergedCandles = [...newUnique, ...cachedData.candles].sort(
+        (a, b) => a.time - b.time,
+      );
+
+      // Limit to max 1000 candles to prevent memory issues
+      // Keep newest candles to preserve live updates
+      const MAX_CANDLES = 1000;
+      const finalCandles =
+        mergedCandles.length > MAX_CANDLES
+          ? mergedCandles.slice(-MAX_CANDLES)
+          : mergedCandles;
+
+      // Update cache with merged data
+      const updatedData: CandleData = {
+        symbol: cachedData.symbol,
+        interval: cachedData.interval,
+        candles: finalCandles,
+      };
+
+      this.cache.set(cacheKey, updatedData);
+
+      // Notify all subscribers of the updated data
+      this.notifySubscribers(cacheKey, updatedData);
+
+      DevLogger.log(
+        'CandleStreamChannel: Successfully fetched and merged historical candles',
+        {
+          symbol,
+          interval,
+          newCandles: newUnique.length,
+          totalCandles: finalCandles.length,
+          oldestTime: finalCandles[0]?.time,
+          newestTime: finalCandles[finalCandles.length - 1]?.time,
+        },
+      );
+    } catch (error) {
+      const errorInstance = ensureError(
+        error,
+        'CandleStreamChannel.fetchHistoricalCandles',
+      );
+
+      // Log to Sentry: fetch failures affect multiple subscribers
+      Logger.error(errorInstance, {
+        tags: {
+          feature: PERPS_CONSTANTS.FeatureName,
+          component: 'CandleStreamChannel',
+        },
+        context: {
+          name: 'historical_candles',
+          data: {
+            operation: 'fetchHistoricalCandles',
+            symbol,
+            interval,
+            duration,
+            cacheKey,
+          },
+        },
+      });
+
+      throw error;
+    }
+  }
+
+  /**
+   * Disconnect all subscriptions
+   */
+  public disconnectAll(): void {
+    // Cancel all deferred connect timers
+    this.deferConnectTimers.forEach((timer) => clearTimeout(timer));
+    this.deferConnectTimers.clear();
+    this.connectRetryCounts.clear();
+
+    this.subscribers.forEach((subscriber) => {
+      if (subscriber.timer) {
+        clearTimeout(subscriber.timer);
+        subscriber.timer = undefined;
+      }
+      subscriber.pendingUpdate = undefined;
+    });
+
+    this.wsSubscriptions.forEach((unsubscribe) => {
+      unsubscribe();
+    });
+    this.wsSubscriptions.clear();
+  }
+
+  /**
+   * Reconnect all active subscriptions after WebSocket reconnection
+   * Clears dead subscriptions and re-establishes connections for active subscribers
+   */
+  public reconnect(): void {
+    // Get unique cache keys from subscribers before disconnecting
+    const activeCacheKeys = new Set(
+      Array.from(this.subscribers.values()).map((sub) => sub.cacheKey),
+    );
+
+    // Disconnect all WebSocket subscriptions (they're dead after reconnection)
+    // Using disconnect() without args to call disconnectAll() internally
+    this.disconnect();
+
+    // Re-establish connections for each active cache key
+    activeCacheKeys.forEach((cacheKey) => {
+      // Parse coin and interval from cacheKey (format: "coin-interval")
+      // Since coin symbols can contain hyphens (e.g., "ETH-USD"), we need to
+      // split from the right. The interval is always the last segment after the final hyphen.
+      const lastHyphenIndex = cacheKey.lastIndexOf('-');
+      if (lastHyphenIndex === -1 || lastHyphenIndex === 0) {
+        // Invalid cache key format - skip
+        return;
+      }
+      const coin = cacheKey.substring(0, lastHyphenIndex);
+      const interval = cacheKey.substring(lastHyphenIndex + 1);
+      if (coin && interval) {
+        this.connect(coin, interval as CandlePeriod, cacheKey);
+      }
+    });
+  }
+}

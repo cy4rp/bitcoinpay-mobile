@@ -1,0 +1,350 @@
+import React, { useCallback, useMemo } from 'react';
+import { ImageSourcePropType, TouchableOpacity, View } from 'react-native';
+import { StackActions, useNavigation } from '@react-navigation/native';
+import { useSelector } from 'react-redux';
+import Text, {
+  TextColor,
+  TextVariant,
+} from '../../../../../component-library/components/Texts/Text';
+import { useStyles } from '../../../../../component-library/hooks';
+import styleSheet from './TrendingTokenRowItem.styles';
+import { TrendingAsset } from '@metamask/assets-controllers';
+import TrendingTokenLogo from '../TrendingTokenLogo';
+import Badge, {
+  BadgeVariant,
+} from '../../../../../component-library/components/Badges/Badge';
+import BadgeWrapper, {
+  BadgePosition,
+} from '../../../../../component-library/components/Badges/BadgeWrapper';
+import {
+  parseCaipChainId,
+  CaipChainId,
+  Hex,
+  isCaipChainId,
+} from '@metamask/utils';
+import { NATIVE_SWAPS_TOKEN_ADDRESS } from '../../../../../constants/bridge';
+import {
+  getDefaultNetworkByChainId,
+  getTestNetImageByChainId,
+  isTestNet,
+} from '../../../../../util/networks';
+import {
+  CustomNetworkImgMapping,
+  PopularList,
+  UnpopularNetworkList,
+  getNonEvmNetworkImageSourceByChainId,
+} from '../../../../../util/networks/customNetworks';
+import { AvatarSize } from '../../../../../component-library/components/Avatars/Avatar';
+import { formatMarketStats, getPriceChangeFieldKey } from './utils';
+import { formatPriceWithSubscriptNotation } from '../../../Predict/utils/format';
+import { TimeOption, PriceChangeOption } from '../TrendingTokensBottomSheet';
+import { selectNetworkConfigurationsByCaipChainId } from '../../../../../selectors/networkController';
+import { getTrendingTokenImageUrl } from '../../utils/getTrendingTokenImageUrl';
+import { useAddPopularNetwork } from '../../../../hooks/useAddPopularNetwork';
+import TrendingFeedSessionManager from '../../services/TrendingFeedSessionManager';
+import type { TrendingFilterContext } from '../TrendingTokensList/TrendingTokensList';
+import { TokenDetailsSource } from '../../../TokenDetails/constants/constants';
+
+/**
+ * Extracts CAIP chain ID from asset ID
+ */
+const getCaipChainIdFromAssetId = (assetId: string): CaipChainId =>
+  assetId.split('/')[0] as CaipChainId;
+
+/**
+ * Converts CAIP chain ID to hex chain ID
+ */
+const caipChainIdToHex = (caipChainId: CaipChainId): Hex => {
+  const { namespace, reference } = parseCaipChainId(caipChainId);
+  return namespace === 'eip155'
+    ? (`0x${Number(reference).toString(16)}` as Hex)
+    : (caipChainId as Hex);
+};
+
+/**
+ * Gets network badge image source for a given CAIP chain ID
+ */
+const getNetworkBadgeSource = (
+  caipChainId: CaipChainId,
+): ImageSourcePropType | undefined => {
+  const hexChainId = caipChainIdToHex(caipChainId);
+
+  if (isTestNet(hexChainId)) {
+    return getTestNetImageByChainId(hexChainId);
+  }
+
+  const defaultNetwork = getDefaultNetworkByChainId(hexChainId) as
+    | { imageSource: ImageSourcePropType }
+    | undefined;
+
+  if (defaultNetwork) {
+    return defaultNetwork.imageSource;
+  }
+
+  const unpopularNetwork = UnpopularNetworkList.find(
+    (networkConfig) => networkConfig.chainId === hexChainId,
+  );
+
+  const customNetworkImg = CustomNetworkImgMapping[hexChainId];
+
+  const popularNetwork = PopularList.find(
+    (networkConfig) => networkConfig.chainId === hexChainId,
+  );
+
+  const network = unpopularNetwork || popularNetwork;
+  if (network) {
+    return network.rpcPrefs.imageSource;
+  }
+  if (isCaipChainId(caipChainId)) {
+    return getNonEvmNetworkImageSourceByChainId(caipChainId);
+  }
+  if (customNetworkImg) {
+    return customNetworkImg as ImageSourcePropType;
+  }
+
+  return undefined;
+};
+
+/**
+ * Gets the text color for price percentage change
+ */
+const getPriceChangeColor = (priceChange: number): TextColor => {
+  if (priceChange === 0) return TextColor.Default;
+  return priceChange > 0 ? TextColor.Success : TextColor.Error;
+};
+
+/**
+ * Gets the prefix symbol for price percentage change
+ */
+const getPriceChangePrefix = (
+  priceChange: number,
+  isPositive: boolean,
+): string => {
+  if (priceChange === 0) return '';
+  return isPositive ? '+' : '-';
+};
+
+interface TrendingTokenRowItemProps {
+  token: TrendingAsset;
+  selectedTimeOption?: TimeOption;
+  /** 0-indexed position in the list for analytics */
+  position?: number;
+  /** Filter context for analytics tracking */
+  filterContext?: TrendingFilterContext;
+  /**
+   * Token Details `source` for MetaMetrics (e.g. Explore trending vs Swaps trending).
+   * @default TokenDetailsSource.Trending
+   */
+  tokenDetailsSource?: TokenDetailsSource;
+}
+
+/**
+ * Converts a TrendingAsset to Asset navigation params
+ */
+const getAssetNavigationParams = (
+  token: TrendingAsset,
+  source: TokenDetailsSource,
+) => {
+  const [caipChainId, assetIdentifier] = token.assetId.split('/');
+  if (!isCaipChainId(caipChainId)) return null;
+
+  const isEvmChain = caipChainId.startsWith('eip155:');
+  const isNativeToken = assetIdentifier?.startsWith('slip44:');
+  const address = isNativeToken
+    ? NATIVE_SWAPS_TOKEN_ADDRESS
+    : assetIdentifier?.split(':')[1];
+
+  const hexChainId = caipChainIdToHex(caipChainId);
+
+  return {
+    chainId: hexChainId,
+    address: isEvmChain ? address : token.assetId,
+    symbol: token.symbol,
+    name: token.name,
+    decimals: token.decimals,
+    image: getTrendingTokenImageUrl(token.assetId),
+    pricePercentChange1d: token.priceChangePct?.h24
+      ? parseFloat(token.priceChangePct.h24)
+      : undefined,
+    isNative: isNativeToken,
+    isETH: isNativeToken && hexChainId === '0x1',
+    isFromTrending: true,
+    source,
+    rwaData: token.rwaData,
+    securityData: token.securityData,
+  };
+};
+
+const TrendingTokenRowItem = ({
+  token,
+  selectedTimeOption = TimeOption.TwentyFourHours,
+  position,
+  filterContext,
+  tokenDetailsSource = TokenDetailsSource.Trending,
+}: TrendingTokenRowItemProps) => {
+  const { styles } = useStyles(styleSheet, {});
+  const navigation = useNavigation();
+  const networkConfigurations = useSelector(
+    selectNetworkConfigurationsByCaipChainId,
+  );
+  const { addPopularNetwork } = useAddPopularNetwork();
+  const sessionManager = TrendingFeedSessionManager.getInstance();
+
+  // Memoize derived values
+  const caipChainId = useMemo(
+    () => getCaipChainIdFromAssetId(token.assetId),
+    [token.assetId],
+  );
+
+  const assetParams = useMemo(
+    () => getAssetNavigationParams(token, tokenDetailsSource),
+    [token, tokenDetailsSource],
+  );
+
+  const networkBadgeImageSource = useMemo(
+    () => getNetworkBadgeSource(caipChainId),
+    [caipChainId],
+  );
+
+  // Parse price change percentage from API (comes as string like "-3.44" or "+0.456")
+  // Use the correct field based on selected time option
+  const priceChangeFieldKey = getPriceChangeFieldKey(selectedTimeOption);
+  const pricePercentChangeString = token.priceChangePct?.[priceChangeFieldKey];
+  const pricePercentChange = pricePercentChangeString
+    ? parseFloat(pricePercentChangeString)
+    : undefined;
+
+  // Determine the color for percentage change
+  // Handle 0 as neutral (not positive or negative)
+  const hasPercentageChange =
+    pricePercentChange !== undefined && !isNaN(pricePercentChange);
+  const isPositiveChange = hasPercentageChange && pricePercentChange > 0;
+
+  const handlePress = useCallback(async () => {
+    if (!assetParams) return;
+
+    // Track token click event BEFORE navigation to ensure capture
+    if (position !== undefined && filterContext) {
+      sessionManager.trackTokenClick({
+        token_symbol: token.symbol,
+        token_address: assetParams.address,
+        token_name: token.name,
+        chain_id: assetParams.chainId,
+        position,
+        price_usd: parseFloat(token.price) || 0,
+        price_change_pct: pricePercentChange ?? 0,
+        time_filter: filterContext.timeFilter,
+        sort_option: filterContext.sortOption || PriceChangeOption.PriceChange,
+        network_filter: filterContext.networkFilter,
+        is_search_result: filterContext.isSearchResult,
+      });
+    }
+
+    const isNetworkAdded = Boolean(networkConfigurations[caipChainId]);
+
+    if (!isNetworkAdded) {
+      const popularNetwork = PopularList.find(
+        (network) => network.chainId === assetParams.chainId,
+      );
+
+      if (popularNetwork) {
+        // Add the network directly without showing confirmation modal
+        // addPopularNetwork handles both enabling the network in the filter
+        // and switching to it (shouldSwitchNetwork defaults to true)
+        try {
+          await addPopularNetwork(popularNetwork);
+        } catch (error) {
+          // If network addition fails, don't navigate
+          console.error('Failed to add network:', error);
+          return;
+        }
+      }
+    }
+
+    // Use push so we always open a new Asset screen for the tapped token.
+    // This prevents issues such as dismissing screens like Bridge instead
+    // of navigating forward to the new token.
+    navigation.dispatch(StackActions.push('Asset', assetParams));
+  }, [
+    assetParams,
+    caipChainId,
+    navigation,
+    networkConfigurations,
+    addPopularNetwork,
+    position,
+    filterContext,
+    pricePercentChange,
+    token,
+    sessionManager,
+  ]);
+
+  return (
+    <TouchableOpacity
+      style={styles.container}
+      onPress={handlePress}
+      testID={`trending-token-row-item-${token.assetId}`}
+    >
+      <View>
+        <BadgeWrapper
+          style={styles.badge}
+          badgePosition={BadgePosition.BottomRight}
+          badgeElement={
+            <Badge
+              size={AvatarSize.Xs}
+              variant={BadgeVariant.Network}
+              imageSource={networkBadgeImageSource}
+              isScaled={false}
+            />
+          }
+        >
+          <TrendingTokenLogo
+            assetId={token.assetId}
+            symbol={token.symbol}
+            size={40}
+            recyclingKey={token.assetId}
+          />
+        </BadgeWrapper>
+      </View>
+      <View style={styles.leftContainer}>
+        <View style={styles.tokenHeaderRow}>
+          <Text
+            variant={TextVariant.BodyMDMedium}
+            color={TextColor.Default}
+            numberOfLines={1}
+            ellipsizeMode="tail"
+          >
+            {token?.name ?? token?.symbol}
+          </Text>
+        </View>
+        <Text variant={TextVariant.BodySM} color={TextColor.Alternative}>
+          {formatMarketStats(
+            token.marketCap ?? 0,
+            token.aggregatedUsdVolume ?? 0,
+          )}
+        </Text>
+      </View>
+      <View style={styles.rightContainer}>
+        <Text variant={TextVariant.BodyMDMedium} color={TextColor.Default}>
+          {formatPriceWithSubscriptNotation(token.price)}
+        </Text>
+        {parseFloat(token.price) === 0 ? (
+          <Text variant={TextVariant.BodySM} color={TextColor.Alternative}>
+            —
+          </Text>
+        ) : (
+          hasPercentageChange && (
+            <Text
+              variant={TextVariant.BodySM}
+              color={getPriceChangeColor(pricePercentChange)}
+            >
+              {getPriceChangePrefix(pricePercentChange, isPositiveChange)}
+              {Math.abs(pricePercentChange).toFixed(2)}%
+            </Text>
+          )
+        )}
+      </View>
+    </TouchableOpacity>
+  );
+};
+
+export default TrendingTokenRowItem;

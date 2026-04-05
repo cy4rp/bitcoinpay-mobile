@@ -1,0 +1,335 @@
+import React, { useEffect, useRef, useState, useMemo } from 'react';
+import { Animated, Modal, View } from 'react-native';
+import { useSelector } from 'react-redux';
+import { useTailwind } from '@metamask/design-system-twrnc-preset';
+import {
+  Box,
+  BoxFlexDirection,
+  Button,
+  ButtonSize,
+  ButtonVariant,
+} from '@metamask/design-system-react-native';
+import Text, {
+  TextVariant,
+  TextColor,
+} from '../../../../../component-library/components/Texts/Text';
+import SensitiveText, {
+  SensitiveTextLength,
+} from '../../../../../component-library/components/Texts/SensitiveText';
+import { strings } from '../../../../../../locales/i18n';
+import { selectPrivacyMode } from '../../../../../selectors/preferencesController';
+import { useColorPulseAnimation, useBalanceComparison } from '../../hooks';
+import { usePerpsHomeActions } from '../../hooks/usePerpsHomeActions';
+import PerpsBottomSheetTooltip from '../PerpsBottomSheetTooltip';
+import { usePerpsLiveAccount } from '../../hooks/stream';
+import {
+  formatPerpsFiat,
+  PRICE_RANGES_MINIMAL_VIEW,
+} from '../../utils/formatUtils';
+import { PerpsMarketBalanceActionsSelectorsIDs } from '../../Perps.testIds';
+import { BigNumber } from 'bignumber.js';
+import {
+  INITIAL_AMOUNT_UI_PROGRESS,
+  PERPS_EVENT_VALUE,
+} from '@metamask/perps-controller';
+import { usePerpsDepositProgress } from '../../hooks/usePerpsDepositProgress';
+import { usePerpsTransactionState } from '../../hooks/usePerpsTransactionState';
+import { convertPerpsAmountToUSD } from '../../utils/amountConversion';
+import { Skeleton } from '../../../../../component-library/components-temp/Skeleton';
+import PerpsEmptyBalance from '../PerpsEmptyBalance';
+import DevLogger from '../../../../../core/SDKConnect/utils/DevLogger';
+import { PerpsProgressBar } from '../PerpsProgressBar';
+import { selectWithdrawalRequestsBySelectedAccount } from '../../../../../selectors/perps';
+interface PerpsMarketBalanceActionsProps {
+  showActionButtons?: boolean;
+}
+
+const PerpsMarketBalanceActionsSkeleton: React.FC = () => {
+  const tw = useTailwind();
+
+  return (
+    <Box
+      twClassName="mx-4 mt-4 mb-4 px-4 py-6 rounded-xl"
+      style={tw.style('bg-background-section')}
+      testID={`${PerpsMarketBalanceActionsSelectorsIDs.CONTAINER}_skeleton`}
+    >
+      {/* Balance Section Skeleton */}
+      <Box>
+        {/* Large Balance Value Skeleton */}
+        <Skeleton width={200} height={48} style={tw.style('mb-2')} />
+        {/* Secondary Balance Info Skeleton */}
+        <Skeleton width={250} height={16} />
+      </Box>
+    </Box>
+  );
+};
+
+const PerpsMarketBalanceActions: React.FC<PerpsMarketBalanceActionsProps> = ({
+  showActionButtons = true,
+}) => {
+  const tw = useTailwind();
+  const { isDepositInProgress } = usePerpsDepositProgress();
+  const privacyMode = useSelector(selectPrivacyMode);
+
+  // Get withdrawal requests filtered by current account using memoized selector
+  const withdrawalRequests = useSelector(
+    selectWithdrawalRequestsBySelectedAccount,
+  );
+
+  // State for transaction amount
+  const [transactionAmountWei, setTransactionAmountWei] = useState<
+    string | null
+  >(null);
+
+  // Use live account data with 1 second throttle for balance display
+  const { account: perpsAccount, isInitialLoading } = usePerpsLiveAccount({
+    throttleMs: 1000,
+  });
+
+  const totalBalance = perpsAccount?.totalBalance || '0';
+  const isBalanceEmpty = BigNumber(totalBalance).isZero();
+
+  // Use hook for eligibility checks and action handlers
+  // Determine button location based on whether balance is empty (empty state) or not (home)
+  const buttonLocation = isBalanceEmpty
+    ? PERPS_EVENT_VALUE.BUTTON_LOCATION.PERPS_HOME_EMPTY_STATE
+    : PERPS_EVENT_VALUE.BUTTON_LOCATION.PERPS_HOME;
+
+  const {
+    handleAddFunds,
+    handleWithdraw,
+    isEligibilityModalVisible,
+    closeEligibilityModal,
+  } = usePerpsHomeActions({
+    buttonLocation,
+  });
+
+  // Extract all transaction state logic
+  const {
+    withdrawalAmount,
+    hasActiveWithdrawals,
+    statusText,
+    isAnyTransactionInProgress,
+  } = usePerpsTransactionState({
+    withdrawalRequests,
+    isDepositInProgress,
+  });
+
+  // Memoized conditions for cleaner logic
+  const isOnlyDepositInProgress = useMemo(
+    () => isDepositInProgress && !hasActiveWithdrawals,
+    [isDepositInProgress, hasActiveWithdrawals],
+  );
+
+  const isOnlyWithdrawalInProgress = useMemo(
+    () => !isDepositInProgress && hasActiveWithdrawals,
+    [isDepositInProgress, hasActiveWithdrawals],
+  );
+
+  const shouldShowDollarAmount = useMemo(
+    () =>
+      (isOnlyDepositInProgress && transactionAmountWei) ||
+      (isOnlyWithdrawalInProgress && withdrawalAmount),
+    [
+      isOnlyDepositInProgress,
+      isOnlyWithdrawalInProgress,
+      transactionAmountWei,
+      withdrawalAmount,
+    ],
+  );
+
+  // Use the reusable hooks for balance animation
+  const {
+    startPulseAnimation: startBalancePulse,
+    getAnimatedStyle: getBalanceAnimatedStyle,
+    stopAnimation: stopBalanceAnimation,
+  } = useColorPulseAnimation();
+  const { compareAndUpdateBalance } = useBalanceComparison();
+
+  // Track previous value for animation
+  const previousBalanceRef = useRef<string>('');
+
+  // Animate balance changes
+  useEffect(() => {
+    if (!perpsAccount) return;
+
+    const currentBalance = perpsAccount.totalBalance;
+
+    if (
+      previousBalanceRef.current &&
+      previousBalanceRef.current !== currentBalance
+    ) {
+      const balanceChange = compareAndUpdateBalance(currentBalance);
+
+      try {
+        startBalancePulse(balanceChange);
+      } catch (animationError) {
+        DevLogger.log(
+          'PerpsMarketBalanceActions: Balance animation error:',
+          animationError,
+        );
+      }
+    }
+
+    previousBalanceRef.current = currentBalance;
+  }, [perpsAccount, startBalancePulse, compareAndUpdateBalance]);
+
+  // Cleanup animations on unmount
+  useEffect(
+    () => () => {
+      stopBalanceAnimation();
+    },
+    [stopBalanceAnimation],
+  );
+
+  const availableBalance = perpsAccount?.availableBalance || '0';
+
+  // Show skeleton while loading initial account data
+  if (isInitialLoading) {
+    return <PerpsMarketBalanceActionsSkeleton />;
+  }
+
+  // Don't render if no balance data is available yet
+  if (!perpsAccount) {
+    return null;
+  }
+
+  return (
+    <>
+      <Box
+        testID={PerpsMarketBalanceActionsSelectorsIDs.CONTAINER}
+        twClassName={isBalanceEmpty ? 'mt-4 mb-4 rounded-xl' : 'mb-4'}
+      >
+        <PerpsProgressBar
+          progressAmount={INITIAL_AMOUNT_UI_PROGRESS}
+          height={4}
+          onTransactionAmountChange={setTransactionAmountWei}
+        />
+        {/* Single Progress Section */}
+        {isAnyTransactionInProgress && (
+          <Box twClassName="p-4">
+            <Box twClassName="w-full flex-row justify-between">
+              <Text
+                variant={TextVariant.BodySMMedium}
+                color={TextColor.Default}
+              >
+                {statusText}
+              </Text>
+              {/* Only show dollar value when there's a single transaction in progress */}
+              {shouldShowDollarAmount && (
+                <SensitiveText
+                  variant={TextVariant.BodySMMedium}
+                  color={TextColor.Default}
+                  isHidden={privacyMode}
+                  length={SensitiveTextLength.Short}
+                >
+                  {isOnlyDepositInProgress && transactionAmountWei
+                    ? convertPerpsAmountToUSD(transactionAmountWei)
+                    : isOnlyWithdrawalInProgress && withdrawalAmount
+                      ? convertPerpsAmountToUSD(withdrawalAmount)
+                      : null}
+                </SensitiveText>
+              )}
+            </Box>
+          </Box>
+        )}
+        {isAnyTransactionInProgress && (
+          <Box twClassName="w-full border-b border-muted"></Box>
+        )}
+        {/* Balance Section */}
+        {isBalanceEmpty ? (
+          <PerpsEmptyBalance onAddFunds={handleAddFunds} />
+        ) : (
+          <Box twClassName="px-4 pt-4 pb-4">
+            <Animated.View style={[getBalanceAnimatedStyle]}>
+              <SensitiveText
+                variant={TextVariant.DisplayMD}
+                color={TextColor.Default}
+                testID={PerpsMarketBalanceActionsSelectorsIDs.BALANCE_VALUE}
+                isHidden={privacyMode}
+                length={SensitiveTextLength.Medium}
+              >
+                {formatPerpsFiat(totalBalance)}
+              </SensitiveText>
+            </Animated.View>
+            <Box
+              flexDirection={BoxFlexDirection.Row}
+              style={tw.style('mt-1')}
+              testID={
+                PerpsMarketBalanceActionsSelectorsIDs.AVAILABLE_BALANCE_TEXT
+              }
+            >
+              <SensitiveText
+                variant={TextVariant.BodyMD}
+                color={TextColor.Alternative}
+                isHidden={privacyMode}
+                length={SensitiveTextLength.Short}
+              >
+                {formatPerpsFiat(availableBalance, {
+                  ranges: PRICE_RANGES_MINIMAL_VIEW,
+                  stripTrailingZeros: false,
+                })}
+              </SensitiveText>
+              <Text variant={TextVariant.BodyMD} color={TextColor.Alternative}>
+                {' '}
+                {strings('perps.available')}
+              </Text>
+            </Box>
+            {/* Action Buttons */}
+            {showActionButtons && (
+              <Box
+                twClassName="gap-3 mt-4"
+                flexDirection={BoxFlexDirection.Row}
+              >
+                <Box twClassName="flex-1">
+                  <Button
+                    variant={ButtonVariant.Secondary}
+                    size={ButtonSize.Lg}
+                    onPress={handleWithdraw}
+                    isFullWidth
+                    testID={
+                      PerpsMarketBalanceActionsSelectorsIDs.WITHDRAW_BUTTON
+                    }
+                  >
+                    {strings('perps.withdraw')}
+                  </Button>
+                </Box>
+                <Box twClassName="flex-1">
+                  <Button
+                    variant={ButtonVariant.Primary}
+                    size={ButtonSize.Lg}
+                    onPress={handleAddFunds}
+                    isFullWidth
+                    testID={
+                      PerpsMarketBalanceActionsSelectorsIDs.ADD_FUNDS_BUTTON
+                    }
+                  >
+                    {strings('perps.add_funds')}
+                  </Button>
+                </Box>
+              </Box>
+            )}
+          </Box>
+        )}
+      </Box>
+      {/* Eligibility Modal */}
+      {isEligibilityModalVisible && (
+        // Android Compatibility: Wrap the <Modal> in a plain <View> component to prevent rendering issues and freezing.
+        <View>
+          <Modal visible transparent animationType="none" statusBarTranslucent>
+            <PerpsBottomSheetTooltip
+              isVisible
+              onClose={closeEligibilityModal}
+              contentKey={'geo_block'}
+              testID={
+                PerpsMarketBalanceActionsSelectorsIDs.GEO_BLOCK_BOTTOM_SHEET_TOOLTIP
+              }
+            />
+          </Modal>
+        </View>
+      )}
+    </>
+  );
+};
+
+export default PerpsMarketBalanceActions;

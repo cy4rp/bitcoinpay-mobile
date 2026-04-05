@@ -1,0 +1,604 @@
+/* eslint-disable @typescript-eslint/consistent-type-definitions */
+
+import { Hex } from '@metamask/utils';
+
+export enum Side {
+  BUY = 'BUY',
+  SELL = 'SELL',
+}
+
+export type PredictOrderType = 'FOK' | 'FAK';
+
+export enum ActiveOrderState {
+  PREVIEW = 'preview',
+  PAY_WITH_ANY_TOKEN = 'pay_with_any_token',
+  DEPOSITING = 'depositing',
+  PLACING_ORDER = 'placing_order',
+  SUCCESS = 'success',
+}
+
+export enum PredictPriceHistoryInterval {
+  ONE_HOUR = '1h',
+  SIX_HOUR = '6h',
+  ONE_DAY = '1d',
+  ONE_WEEK = '1w',
+  ONE_MONTH = '1m',
+  MAX = 'max',
+}
+
+export interface GetPositionsParams {
+  address?: string;
+  claimable?: boolean;
+  marketId?: string;
+  outcomeId?: string;
+  limit?: number;
+  offset?: number;
+}
+
+export enum PredictMarketStatus {
+  OPEN = 'open',
+  CLOSED = 'closed',
+  RESOLVED = 'resolved',
+}
+
+export enum Recurrence {
+  NONE = 'none',
+  DAILY = 'daily',
+  WEEKLY = 'weekly',
+  MONTHLY = 'monthly',
+  YEARLY = 'yearly',
+  QUARTERLY = 'quarterly',
+  ANNUALLY = 'annually',
+}
+
+// eslint-disable-next-line @typescript-eslint/consistent-type-definitions
+export type OnchainTradeParams = {
+  from: string;
+  to: string;
+  data: string;
+  value: string;
+  chainId: number;
+  transactionId?: string;
+};
+
+// This is provider-specific
+// eslint-disable-next-line @typescript-eslint/consistent-type-definitions
+export type OffchainTradeParams = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [key: string]: any;
+};
+
+export interface OffchainTradeResponse {
+  success: boolean;
+  response: unknown;
+}
+
+export enum PredictClaimStatus {
+  IDLE = 'idle',
+  PENDING = 'pending',
+  CONFIRMED = 'confirmed',
+  CANCELLED = 'cancelled',
+  ERROR = 'error',
+}
+
+export enum PredictDepositStatus {
+  IDLE = 'idle',
+  PENDING = 'pending',
+  CONFIRMED = 'confirmed',
+  CANCELLED = 'cancelled',
+  ERROR = 'error',
+}
+
+export enum PredictWithdrawStatus {
+  IDLE = 'idle',
+  PENDING = 'pending',
+  CONFIRMED = 'confirmed',
+  CANCELLED = 'cancelled',
+  ERROR = 'error',
+}
+
+export type PredictMarket = {
+  id: string;
+  providerId: string;
+  slug: string;
+  title: string;
+  description: string;
+  endDate?: string;
+  image: string;
+  status: 'open' | 'closed' | 'resolved';
+  recurrence: Recurrence;
+  category: PredictCategory;
+  tags: string[];
+  outcomes: PredictOutcome[];
+  liquidity: number;
+  volume: number;
+  game?: PredictMarketGame;
+};
+
+export type PredictSeries = {
+  recurrence: string;
+};
+
+export type PredictCategory =
+  | 'trending'
+  | 'ending-soon'
+  | 'new'
+  | 'sports'
+  | 'crypto'
+  | 'politics'
+  | 'hot';
+
+// Sports league types
+export type PredictSportsLeague =
+  | 'nfl'
+  | 'nba'
+  | 'ucl'
+  | 'fif'
+  | 'lal'
+  | 'uef'
+  | 'bra2'
+  | 'tur'
+  | 'col1'
+  | 'mls'
+  | 'mex'
+  | 'bun'
+  | 'chi'
+  | 'epl'
+  | 'cze1'
+  | 'j1100'
+  | 'j2100'
+  | 'fl1'
+  | 'nor'
+  | 'aus'
+  | 'den'
+  | 'sea'
+  | 'kor'
+  | 'ere'
+  | 'spl'
+  | 'bra'
+  | 'por'
+  | 'chi1'
+  | 'per1'
+  | 'lib'
+  | 'cdr'
+  | 'sud'
+  | 'egy1'
+  | 'uel'
+  | 'rou1'
+  | 'col'
+  | 'bol1'
+  | 'itc'
+  | 'dfb'
+  | 'cde';
+
+// Game status
+export type PredictGameStatus = 'scheduled' | 'ongoing' | 'ended';
+
+// Team data
+export type PredictSportTeam = {
+  id: string;
+  name: string;
+  logo: string;
+  abbreviation: string; // e.g., "SEA", "DEN"
+  color: string; // Team primary color (hex)
+  alias: string; // Team alias (e.g., "Seahawks")
+};
+
+// Parsed score data
+export type PredictGameScore = {
+  away: number;
+  home: number;
+  raw: string; // Original "away-home" format (e.g., "21-14")
+};
+
+export type PredictGamePeriod =
+  | 'NS' // Not Started
+  | 'Q1' // First Quarter
+  | 'End Q1' // End of First Quarter
+  | 'Q2' // Second Quarter
+  | 'HT' // Halftime
+  | 'Q3' // Third Quarter
+  | 'End Q3' // End of Third Quarter
+  | 'Q4' // Fourth Quarter
+  | 'End Q4' // End of Fourth Quarter
+  | 'OT' // Overtime
+  | 'FT' // Final
+  | 'VFT' // Verified fulltime (when closed=true)
+  | '1H' // First Half (soccer)
+  | '2H' // Second Half (soccer)
+  | 'ET' // Extra Time (soccer)
+  | 'PK' // Penalties (soccer)
+  | (string & {}); // Escape hatch for future sports with different period formats
+
+// Game data attached to market
+export type PredictMarketGame = {
+  id: string;
+  startTime: string;
+  endTime?: string; // ISO date when game ended, available for ended games
+  status: PredictGameStatus;
+  league: PredictSportsLeague;
+  elapsed: string | null; // Game clock, null if not available
+  period: PredictGamePeriod | null; // Current period, null if not available
+  score: PredictGameScore | null; // Parsed score with away/home values, null if not available
+  homeTeam: PredictSportTeam;
+  awayTeam: PredictSportTeam;
+  turn?: string; // Team abbreviation with possession
+};
+
+// Live update types for WebSocket data
+export interface GameUpdate {
+  gameId: string;
+  score: string;
+  elapsed: string;
+  period: PredictGamePeriod;
+  status: PredictGameStatus;
+  turn?: string;
+}
+
+export interface PriceUpdate {
+  tokenId: string;
+  price: number;
+  bestBid: number;
+  bestAsk: number;
+}
+
+export type PredictOutcome = {
+  id: string;
+  providerId: string;
+  marketId: string;
+  title: string;
+  description: string;
+  image: string;
+  status: 'open' | 'closed' | 'resolved';
+  tokens: PredictOutcomeToken[];
+  volume: number;
+  groupItemTitle: string;
+  groupItemThreshold?: number;
+  negRisk?: boolean;
+  tickSize?: string;
+  resolvedBy?: string;
+  resolutionStatus?: string;
+};
+
+export type PredictOutcomeToken = {
+  id: string;
+  title: string;
+  price: number;
+};
+
+export interface PredictActivity {
+  id: string;
+  providerId: string;
+  entry: PredictActivityEntry;
+  title?: string;
+  outcome?: string;
+  icon?: string;
+}
+
+export type PredictActivityEntry =
+  | PredictActivityBuy
+  | PredictActivitySell
+  | PredictActivityClaimWinnings;
+
+export interface PredictActivityBuy {
+  type: 'buy';
+  timestamp: number;
+  marketId: string;
+  outcomeId: string;
+  outcomeTokenId: number;
+  amount: number;
+  price: number;
+}
+
+export interface PredictActivitySell {
+  type: 'sell';
+  timestamp: number;
+  marketId: string;
+  outcomeId: string;
+  outcomeTokenId: number;
+  amount: number;
+  price: number;
+}
+
+export interface PredictActivityClaimWinnings {
+  type: 'claimWinnings';
+  timestamp: number;
+  amount: number;
+}
+
+export enum PredictActivityType {
+  BUY = 'BUY',
+  SELL = 'SELL',
+  CLAIM = 'CLAIM',
+}
+
+export interface PredictActivityItem {
+  id: string;
+  type: PredictActivityType;
+  marketTitle: string;
+  detail: string;
+  amountUsd: number;
+  icon?: string;
+  outcome?: string;
+  percentChange?: number;
+  providerId?: string;
+  priceImpactPercentage?: number;
+  metamaskFeeUsd?: number;
+  providerFeeUsd?: number;
+  totalUsd?: number;
+  netPnlUsd?: number;
+  totalNetPnlUsd?: number;
+  entry: PredictActivityEntry;
+}
+
+export interface PredictPriceHistoryPoint {
+  timestamp: number;
+  price: number;
+}
+
+export interface GetPriceHistoryParams {
+  marketId: string;
+  fidelity?: number;
+  interval?: PredictPriceHistoryInterval;
+  startTs?: number;
+  endTs?: number;
+}
+
+/**
+ * Parameters for fetching prices from CLOB /prices endpoint
+ */
+export interface GetPriceParams {
+  queries: PriceQuery[];
+}
+
+export interface PriceQuery {
+  marketId: string;
+  outcomeId: string;
+  outcomeTokenId: string;
+}
+
+export interface GetPriceResponse {
+  providerId: string;
+  results: PriceResult[];
+}
+
+export interface PriceResult {
+  marketId: string;
+  outcomeId: string;
+  outcomeTokenId: string;
+  entry: PriceEntry;
+}
+
+export interface PriceEntry {
+  buy: number;
+  sell: number;
+}
+
+export enum PredictPositionStatus {
+  OPEN = 'open',
+  REDEEMABLE = 'redeemable',
+  WON = 'won',
+  LOST = 'lost',
+}
+
+export type PredictPosition = {
+  id: string;
+  providerId: string;
+  marketId: string;
+  outcomeId: string;
+  outcome: string;
+  outcomeTokenId: string;
+  currentValue: number;
+  title: string;
+  icon: string;
+  amount: number;
+  price: number;
+  status: PredictPositionStatus;
+  size: number;
+  outcomeIndex: number;
+  realizedPnl?: number;
+  percentPnl: number;
+  cashPnl: number;
+  claimable: boolean;
+  initialValue: number;
+  avgPrice: number;
+  endDate: string;
+  negRisk?: boolean;
+  optimistic?: boolean;
+};
+
+export type PredictBalance = {
+  balance: number;
+  validUntil: number;
+};
+
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface ClaimParams {}
+
+export interface GetMarketPriceResponse {
+  price: number;
+}
+
+export type Result<T = void> =
+  | {
+      success: true;
+      response: T;
+      error?: never;
+    }
+  | {
+      success: false;
+      error: string;
+      response?: never;
+    };
+
+export interface UnrealizedPnL {
+  user: string;
+  cashUpnl: number;
+  percentUpnl: number;
+}
+
+export type PredictClaim = {
+  batchId: string;
+  chainId: number;
+  status: PredictClaimStatus;
+};
+
+export type PredictDeposit = {
+  batchId: string;
+  chainId: number;
+  status: PredictDepositStatus;
+  providerId: string;
+};
+
+export type PredictWithdraw = {
+  chainId: number;
+  status: PredictWithdrawStatus;
+  providerId: string;
+  predictAddress: Hex;
+  transactionId: string;
+  amount: number;
+};
+
+export type PredictAccountMeta = {
+  isOnboarded: boolean;
+};
+
+export interface PredictCarouselMetadata {
+  marketId: string;
+}
+
+export interface GetMarketsParams {
+  q?: string;
+  status?: 'open' | 'closed' | 'resolved';
+  category?: PredictCategory;
+
+  sortBy?: 'volume24h' | 'date';
+  sortDirection?: 'asc' | 'desc';
+  offset?: number;
+  limit?: number;
+  customQueryParams?: string;
+}
+
+export interface GetBalanceParams {
+  address?: string;
+}
+
+export interface PredictFees {
+  metamaskFee: number;
+  providerFee: number;
+  totalFee: number;
+  totalFeePercentage: number;
+  collector: Hex;
+  executors?: string[];
+  permit2Enabled?: boolean;
+}
+
+/**
+ * @example
+ * side = BUY;
+ * maxAmountSpent = 12.34; // $12.34
+ * minAmountReceived = 54.32; // 54.32 shares
+ * sharePrice = 0.1234; // $0.1234
+ * slippage = 0.01; // 1%
+ *
+ * side = SELL;
+ * maxAmountSpent = 42.23; // 42.23 shares
+ * minAmountReceived = 48.56; // $48.56
+ * sharePrice = 0.3456; // $0.3456
+ * slippage = 0.005; // 0.5%
+ */
+export interface OrderPreview {
+  marketId: string;
+  outcomeId: string;
+  outcomeTokenId: string;
+  timestamp: number;
+  side: Side;
+  sharePrice: number;
+  maxAmountSpent: number;
+  minAmountReceived: number;
+  slippage: number;
+  tickSize: number;
+  minOrderSize: number;
+  negRisk: boolean;
+  feeRateBps?: string;
+  fees?: PredictFees;
+  rateLimited?: boolean;
+  // For sell orders, we can store the position ID
+  // so we can perform optimistic updates
+  positionId?: string;
+  orderType?: PredictOrderType;
+}
+
+export type OrderResult = Result<{
+  id: string;
+  spentAmount: string;
+  receivedAmount: string;
+  txHashes?: string[];
+}>;
+
+export interface PlaceOrderParams {
+  preview: OrderPreview;
+  address?: string;
+  transactionId?: string;
+  analyticsProperties?: {
+    marketId?: string;
+    marketTitle?: string;
+    marketCategory?: string;
+    marketTags?: string[];
+    entryPoint?: string;
+    transactionType?: string;
+    sharePrice?: number;
+    liquidity?: number;
+    volume?: number;
+    marketType?: string;
+    outcome?: string;
+    marketSlug?: string;
+    gameId?: string;
+    gameStartTime?: string;
+    gameLeague?: string;
+    gameStatus?: string;
+    gamePeriod?: string | null;
+    gameClock?: string | null;
+  };
+}
+
+export interface PreviewOrderParams {
+  marketId: string;
+  outcomeId: string;
+  outcomeTokenId: string;
+  side: Side;
+  size: number;
+  // For sell orders, we can store the position ID
+  // so we can perform optimistic updates
+  positionId?: string;
+}
+
+export interface AccountState {
+  address: Hex;
+  isDeployed: boolean;
+  hasAllowances: boolean;
+}
+
+export interface GeoBlockResponse {
+  isEligible: boolean;
+  country?: string;
+}
+
+export interface ConnectionStatus {
+  sportsConnected: boolean;
+  marketConnected: boolean;
+}
+
+export type GameUpdateCallback = (update: GameUpdate) => void;
+export type PriceUpdateCallback = (updates: PriceUpdate[]) => void;
+
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface PrepareDepositParams {}
+
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface GetAccountStateParams {}
+
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface PrepareWithdrawParams {}
+
+export type { PredictFeatureFlags } from './flags';
