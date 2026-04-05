@@ -181,50 +181,27 @@ jobs:
       - name: Fix header search paths for native modules
         run: |
           # Fix RCTDeprecation header not found issue for non-Pod native modules
-          # RCTAesForked and similar standalone Xcode projects need Pods headers
-          cd ios
-          ruby - << 'RUBYEOF'
-          require 'xcodeproj'
+          # RCTAesForked and similar standalone Xcode projects need Pods headers path
+          PODS_HEADERS="$(pwd)/ios/Pods/Headers/Public"
+          echo "Adding Pods headers path: $PODS_HEADERS"
 
-          # Find all .xcodeproj in node_modules that are part of the workspace
-          workspace = Xcodeproj::Workspace.new_from_xcworkspace('MetaMask.xcworkspace')
-          pods_root = File.expand_path('Pods', Dir.pwd)
+          # Find all project.pbxproj files in node_modules referenced by workspace
+          find node_modules -name "project.pbxproj" -path "*/ios/*.xcodeproj/*" | while read pbxproj; do
+            if grep -q "HEADER_SEARCH_PATHS" "$pbxproj"; then
+              # Add Pods/Headers/Public to existing HEADER_SEARCH_PATHS entries
+              sed -i '' "s|HEADER_SEARCH_PATHS = (|HEADER_SEARCH_PATHS = (\n\t\t\t\t\t\"${PODS_HEADERS}\",|g" "$pbxproj"
+              echo "Patched existing HEADER_SEARCH_PATHS in: $pbxproj"
+            else
+              echo "No HEADER_SEARCH_PATHS found in: $pbxproj (skipping)"
+            fi
+          done
 
-          workspace.file_references.each do |ref|
-            proj_path = ref.path
-            next unless proj_path.include?('node_modules')
-            full_path = File.expand_path(proj_path, Dir.pwd)
-            next unless File.exist?(full_path)
-
-            begin
-              project = Xcodeproj::Project.open(full_path)
-              project.build_configurations.each do |config|
-                paths = config.build_settings['HEADER_SEARCH_PATHS'] || ['$(inherited)']
-                paths = [paths] if paths.is_a?(String)
-                pods_headers = "\"#{pods_root}/Headers/Public\""
-                unless paths.any? { |p| p.include?('Pods/Headers/Public') || p.include?('Pods\\/Headers\\/Public') }
-                  paths << pods_headers
-                  config.build_settings['HEADER_SEARCH_PATHS'] = paths
-                end
-              end
-              project.native_targets.each do |target|
-                target.build_configurations.each do |config|
-                  paths = config.build_settings['HEADER_SEARCH_PATHS'] || ['$(inherited)']
-                  paths = [paths] if paths.is_a?(String)
-                  pods_headers = "\"#{pods_root}/Headers/Public\""
-                  unless paths.any? { |p| p.include?('Pods/Headers/Public') || p.include?('Pods\\/Headers\\/Public') }
-                    paths << pods_headers
-                    config.build_settings['HEADER_SEARCH_PATHS'] = paths
-                  end
-                end
-              end
-              project.save
-              puts "Fixed header search paths: #{proj_path}"
-            rescue => e
-              puts "Skipping #{proj_path}: #{e.message}"
-            end
-          end
-          RUBYEOF
+          # Verify the RCTAesForked fix specifically
+          AESFORKED=$(find node_modules -name "project.pbxproj" -path "*react-native-aes*" | head -1)
+          if [ -n "$AESFORKED" ]; then
+            echo "=== RCTAesForked HEADER_SEARCH_PATHS ==="
+            grep -A2 "HEADER_SEARCH_PATHS" "$AESFORKED" | head -20
+          fi
 
       - name: Build iOS Archive
         run: |
