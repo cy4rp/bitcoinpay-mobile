@@ -11,6 +11,9 @@ on:
           - release
           - debug
         default: release
+  push:
+    branches:
+      - 'trigger-ios-build'
 
 permissions:
   contents: read
