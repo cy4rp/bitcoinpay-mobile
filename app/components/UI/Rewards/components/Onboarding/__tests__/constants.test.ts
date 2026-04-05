@@ -13,7 +13,7 @@ describe('Onboarding Constants', () => {
       );
     });
 
-    it('should point to the correct MetaMask support URL', () => {
+    it('should point to the correct BitcoinPay support URL', () => {
       expect(REWARDS_ONBOARD_OPTIN_LEGAL_LEARN_MORE_URL).toBe(
         'https://support.metamask.io/manage-crypto/metamask-rewards',
       );

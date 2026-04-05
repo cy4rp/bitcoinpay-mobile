@@ -618,7 +618,7 @@ describe('polymarket utils', () => {
 
     it('throw error for unsupported chain', () => {
       expect(() => getContractConfig(999)).toThrow(
-        'MetaMask Predict is only supported on Polygon mainnet',
+        'BitcoinPay Predict is only supported on Polygon mainnet',
       );
     });
   });

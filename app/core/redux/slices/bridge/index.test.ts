@@ -301,7 +301,7 @@ describe('bridge slice', () => {
         },
         destAsset: {
           symbol: 'mUSD',
-          name: 'MetaMask USD',
+          name: 'BitcoinPay USD',
           address: '0xaca92e438df0b2401ff60da7e4337b687a2435da',
           decimals: 6,
           image:

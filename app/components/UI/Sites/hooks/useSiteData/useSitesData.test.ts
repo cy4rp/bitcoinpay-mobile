@@ -12,11 +12,11 @@ global.fetch = jest.fn();
 
 const EXPECTED_PORTFOLIO_SITE = {
   id: 'metamask-portfolio',
-  name: 'MetaMask Portfolio',
+  name: 'BitcoinPay Portfolio',
   url: 'https://portfolio.metamask.io',
   displayUrl: 'portfolio.metamask.io',
   logoUrl:
-    'https://raw.githubusercontent.com/MetaMask/metamask-mobile/main/logo.png',
+    'https://raw.githubusercontent.com/BitcoinPay/metamask-mobile/main/logo.png',
   featured: true,
   logoNeedsPadding: true,
 };
@@ -26,7 +26,7 @@ describe('useSitesData', () => {
     dapps: [
       {
         id: '1',
-        name: 'MetaMask',
+        name: 'BitcoinPay',
         website: 'https://www.metamask.io',
         logoSrc: 'https://example.com/metamask.png',
         featured: true,
@@ -70,7 +70,7 @@ describe('useSitesData', () => {
       expect(result.current.sites[0]).toEqual(EXPECTED_PORTFOLIO_SITE);
       expect(result.current.sites[1]).toEqual({
         id: '1',
-        name: 'MetaMask',
+        name: 'BitcoinPay',
         url: 'https://www.metamask.io',
         displayUrl: 'metamask.io',
         logoUrl: 'https://example.com/metamask.png',

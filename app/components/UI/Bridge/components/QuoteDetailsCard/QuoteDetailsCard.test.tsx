@@ -1025,7 +1025,7 @@ describe('QuoteDetailsCard', () => {
         { state: testState },
       );
 
-      // Then the MetaMask rewards points animation should be displayed
+      // Then the BitcoinPay rewards points animation should be displayed
       await waitFor(() => {
         expect(getByTestId('mock-rive-animation')).toBeOnTheScreen();
       });

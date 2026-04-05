@@ -567,8 +567,8 @@ describe('getAddressAccountType', () => {
   it('should return imported if address is from a keyring type simple', () => {
     expect(getAddressAccountType(mockSimpleKeyringAddress)).toBe('Imported');
   });
-  it('should return MetaMask if address is not qr or simple', () => {
-    expect(getAddressAccountType(mockHDKeyringAddress)).toBe('MetaMask');
+  it('should return BitcoinPay if address is not qr or simple', () => {
+    expect(getAddressAccountType(mockHDKeyringAddress)).toBe('BitcoinPay');
   });
 });
 describe('resemblesAddress', () => {

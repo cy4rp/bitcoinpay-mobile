@@ -134,7 +134,7 @@ describe('PerpsOrderTransactionView', () => {
   it('renders fee breakdown correctly', () => {
     const { getByText } = render(<PerpsOrderTransactionView />);
 
-    expect(getByText('MetaMask fee')).toBeTruthy();
+    expect(getByText('BitcoinPay fee')).toBeTruthy();
     expect(getByText('Hyperliquid fee')).toBeTruthy();
     expect(getByText('Total fee')).toBeTruthy();
     expect(getByText('$3')).toBeTruthy();
@@ -179,7 +179,7 @@ describe('PerpsOrderTransactionView', () => {
     expect(queryByText('< $0.01')).toBeNull();
     expect(getByText('$0.005')).toBeTruthy(); // Total fee
     expect(getByText('$0.003')).toBeTruthy(); // Protocol fee
-    expect(getByText('$0.002')).toBeTruthy(); // MetaMask fee
+    expect(getByText('$0.002')).toBeTruthy(); // BitcoinPay fee
   });
 
   it('formats fees normally when they are exactly 0.01', () => {
@@ -220,7 +220,7 @@ describe('PerpsOrderTransactionView', () => {
 
     // All fees should show exact values, not "< $0.01"
     expect(queryByText('< $0.01')).toBeNull();
-    expect(getByText('$0.003')).toBeTruthy(); // MetaMask fee (exact)
+    expect(getByText('$0.003')).toBeTruthy(); // BitcoinPay fee (exact)
     expect(getByText('$0.012')).toBeTruthy(); // Protocol fee (exact)
     expect(getByText('$0.015')).toBeTruthy(); // Total fee (exact)
   });
@@ -240,7 +240,7 @@ describe('PerpsOrderTransactionView', () => {
 
     // All fees should show exact values
     expect(queryByText('< $0.01')).toBeNull();
-    expect(getByText('$0.005')).toBeTruthy(); // MetaMask fee (exact)
+    expect(getByText('$0.005')).toBeTruthy(); // BitcoinPay fee (exact)
     expect(getByText('$0.02')).toBeTruthy(); // Protocol fee
     expect(getByText('$0.025')).toBeTruthy(); // Total fee (exact)
   });
@@ -284,7 +284,7 @@ describe('PerpsOrderTransactionView', () => {
 
     // All fees should show exact values, not "< $0.01"
     expect(queryByText('< $0.01')).toBeNull();
-    expect(getByText('$0.01')).toBeTruthy(); // MetaMask fee (exact)
+    expect(getByText('$0.01')).toBeTruthy(); // BitcoinPay fee (exact)
     expect(getByText('$0.0101')).toBeTruthy(); // Protocol fee (exact)
     expect(getByText('$0.0201')).toBeTruthy(); // Total fee (exact)
   });
@@ -306,7 +306,7 @@ describe('PerpsOrderTransactionView', () => {
     expect(queryByText('< $0.01')).toBeNull();
     expect(getByText('$0.008')).toBeTruthy(); // Total fee
     expect(getByText('$0.005')).toBeTruthy(); // Protocol fee
-    expect(getByText('$0.003')).toBeTruthy(); // MetaMask fee
+    expect(getByText('$0.003')).toBeTruthy(); // BitcoinPay fee
   });
 
   it('navigates to block explorer in browser tab when button is pressed', () => {

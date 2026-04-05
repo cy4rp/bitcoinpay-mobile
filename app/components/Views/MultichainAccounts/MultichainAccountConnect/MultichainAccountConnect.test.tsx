@@ -721,7 +721,7 @@ describe('MultichainAccountConnect', () => {
         );
 
         const warningText = queryByText(
-          `MetaMask flagged the site you're trying to visit as potentially deceptive.`,
+          `BitcoinPay flagged the site you're trying to visit as potentially deceptive.`,
         );
         expect(warningText).toBeNull();
       });

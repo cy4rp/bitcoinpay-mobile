@@ -14,12 +14,12 @@ import handleUniversalLink from '../handleUniversalLink';
 import handleDeepLinkModalDisplay from '../handleDeepLinkModalDisplay';
 import handleBrowserUrl from '../handleBrowserUrl';
 import { DeepLinkModalLinkType } from '../../../../../components/UI/DeepLinkModal';
-import handleMetaMaskDeeplink from '../handleMetaMaskDeeplink';
+import handleBitcoinPayDeeplink from '../handleBitcoinPayDeeplink';
 import { SHIELD_WEBSITE_URL } from '../../../../../constants/shield';
 // eslint-disable-next-line import-x/no-namespace
 import * as signatureUtils from '../../../utils/verifySignature';
 
-jest.mock('../handleMetaMaskDeeplink');
+jest.mock('../handleBitcoinPayDeeplink');
 jest.mock('../../../../SDKConnect/handlers/handleDeeplink');
 jest.mock('../../../../AppConstants');
 jest.mock('../../../../SDKConnect/SDKConnect');
@@ -89,9 +89,9 @@ const mockSubtle = QuickCrypto.webcrypto.subtle as jest.Mocked<
 describe('handleUniversalLink', () => {
   const mockParse = jest.fn();
   const mockNavigation = { navigate: jest.fn() };
-  const mockHandleMetaMaskDeeplink =
-    handleMetaMaskDeeplink as jest.MockedFunction<
-      typeof handleMetaMaskDeeplink
+  const mockHandleBitcoinPayDeeplink =
+    handleBitcoinPayDeeplink as jest.MockedFunction<
+      typeof handleBitcoinPayDeeplink
     >;
   const mockSDKConnectGetInstance = SDKConnect.getInstance as jest.Mock;
   const mockWC2ManagerGetInstance = WC2Manager.getInstance as jest.Mock;
@@ -152,7 +152,7 @@ describe('handleUniversalLink', () => {
     ] as const;
 
     it.each(testCases)(
-      'calls handleMetaMaskDeeplink when deeplink is $url',
+      'calls handleBitcoinPayDeeplink when deeplink is $url',
       async ({ action }) => {
         const testUrl = `https://link.metamask.io/${action}`;
         const expectedMappedUrl = `metamask://${action}`;
@@ -169,7 +169,7 @@ describe('handleUniversalLink', () => {
           source: 'origin',
         });
 
-        expect(mockHandleMetaMaskDeeplink).toHaveBeenCalledWith({
+        expect(mockHandleBitcoinPayDeeplink).toHaveBeenCalledWith({
           handled,
           wcURL,
           origin: 'origin',
@@ -1472,7 +1472,7 @@ describe('handleUniversalLink', () => {
       });
 
       it.each(sourcesRequiringModal)(
-        'displays "Redirecting you to MetaMask" modal when source is "%s" with signed (PRIVATE) link',
+        'displays "Redirecting you to BitcoinPay" modal when source is "%s" with signed (PRIVATE) link',
         async (testSource) => {
           const signedUrl = `${PROTOCOLS.HTTPS}://${AppConstants.MM_IO_UNIVERSAL_LINK_HOST}/${ACTIONS.SWAP}?sig=${validSignature}`;
           const testUrlObj = {
@@ -1574,7 +1574,7 @@ describe('handleUniversalLink', () => {
       });
 
       it.each(sourcesRequiringModal)(
-        'displays "Redirecting you to MetaMask" modal when source is "%s" with signed (PRIVATE) link',
+        'displays "Redirecting you to BitcoinPay" modal when source is "%s" with signed (PRIVATE) link',
         async (testSource) => {
           const signedUrl = `${PROTOCOLS.HTTPS}://${AppConstants.MM_IO_UNIVERSAL_LINK_HOST}/${ACTIONS.SWAP}?sig=${validSignature}`;
           const testUrlObj = {

@@ -60,7 +60,7 @@ describe('RemoteImage', () => {
     const { toJSON } = render(
       <RemoteImage
         source={{
-          uri: 'https://raw.githubusercontent.com/MetaMask/contract-metadata/master/images/dai.svg',
+          uri: 'https://raw.githubusercontent.com/BitcoinPay/contract-metadata/master/images/dai.svg',
         }}
       />,
     );

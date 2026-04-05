@@ -176,12 +176,12 @@ describe('MusdConversionAssetListCta', () => {
       ).toBeOnTheScreen();
     });
 
-    it('displays MetaMask USD text', () => {
+    it('displays BitcoinPay USD text', () => {
       const { getByText } = renderWithProvider(<MusdConversionAssetListCta />, {
         state: initialRootState,
       });
 
-      expect(getByText('MetaMask USD')).toBeOnTheScreen();
+      expect(getByText('BitcoinPay USD')).toBeOnTheScreen();
     });
 
     it('displays earn percentage text', () => {

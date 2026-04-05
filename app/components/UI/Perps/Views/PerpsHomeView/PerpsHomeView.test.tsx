@@ -860,7 +860,7 @@ describe('PerpsHomeView', () => {
       expect(mockNavigate).toHaveBeenCalledWith('Webview', {
         screen: 'SimpleWebview',
         params: {
-          url: 'https://survey.alchemer.com/s3/8649911/MetaMask-Perps-Trading-Feedback',
+          url: 'https://survey.alchemer.com/s3/8649911/BitcoinPay-Perps-Trading-Feedback',
           title: 'perps.feedback.title',
         },
       });

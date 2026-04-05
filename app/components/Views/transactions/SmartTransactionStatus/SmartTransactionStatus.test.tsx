@@ -116,7 +116,7 @@ const PENDING_APPROVALS = {
   Send: {
     pending: {
       id: 'Ws4jw14OTsnPpX30B0hso',
-      origin: 'MetaMask Mobile',
+      origin: 'BitcoinPay Mobile',
       type: 'smart_transaction_status',
       time: 1711395354068,
       requestData: null,
@@ -131,7 +131,7 @@ const PENDING_APPROVALS = {
     },
     success: {
       id: 'Ws4jw14OTsnPpX30B0hso',
-      origin: 'MetaMask Mobile',
+      origin: 'BitcoinPay Mobile',
       type: 'smart_transaction_status',
       time: 1711395354068,
       requestData: null,
@@ -161,7 +161,7 @@ const PENDING_APPROVALS = {
     },
     cancelled: {
       id: 'Ws4jw14OTsnPpX30B0hso',
-      origin: 'MetaMask Mobile',
+      origin: 'BitcoinPay Mobile',
       type: 'smart_transaction_status',
       time: 1711395354068,
       requestData: null,
@@ -179,7 +179,7 @@ const PENDING_APPROVALS = {
     },
     unknown: {
       id: 'Ws4jw14OTsnPpX30B0hso',
-      origin: 'MetaMask Mobile',
+      origin: 'BitcoinPay Mobile',
       type: 'smart_transaction_status',
       time: 1711395354068,
       requestData: null,

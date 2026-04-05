@@ -237,7 +237,7 @@ describe('SitesSearchFooter', () => {
   describe('edge cases', () => {
     it('handles URL with uppercase characters', () => {
       const { getByTestId } = render(
-        <SitesSearchFooter searchQuery="MetaMask.IO" />,
+        <SitesSearchFooter searchQuery="BitcoinPay.IO" />,
       );
 
       expect(getByTestId('trending-search-footer-url-link')).toBeOnTheScreen();

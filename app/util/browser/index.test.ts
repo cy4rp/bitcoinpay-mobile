@@ -42,7 +42,7 @@ describe('Browser utils :: prefixUrlWithProtocol', () => {
 describe('Browser utils :: safeDecodeUrl', () => {
   it('should handle URLs with URL-encoded characters', () => {
     const input =
-      'https://portfolio.metamask.io/explore?MetaMaskEntry=mobile%2F&metricsEnabled=true';
+      'https://portfolio.metamask.io/explore?BitcoinPayEntry=mobile%2F&metricsEnabled=true';
     const url = processUrlForBrowser(input, 'Google');
     expect(url).toBe(input);
   });

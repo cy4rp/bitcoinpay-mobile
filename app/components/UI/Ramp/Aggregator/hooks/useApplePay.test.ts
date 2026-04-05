@@ -81,7 +81,7 @@ describe('useApplePay', () => {
       (
         quote.getApplePayRequestInfo as jest.Mock
       ).mock.calls[0][0].getPurchaseFiatTotalAmountLabel(),
-    ).toBe('test-provider (via MetaMask)');
+    ).toBe('test-provider (via BitcoinPay)');
 
     expect(PaymentRequest).toHaveBeenCalledWith(
       'test-method-data',

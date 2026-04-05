@@ -1,7 +1,7 @@
 import { cloneDeep } from 'lodash';
 import {
-  selectMetaMaskPayFlags,
-  selectMetaMaskPayTokensFlags,
+  selectBitcoinPayPayFlags,
+  selectBitcoinPayPayTokensFlags,
   BUFFER_STEP_DEFAULT,
   BUFFER_INITIAL_DEFAULT,
   ATTEMPTS_MAX_DEFAULT,
@@ -12,7 +12,7 @@ import {
   selectGasFeeTokenFlags,
   GasFeeTokenFlags,
   selectPayQuoteConfig,
-  selectMetaMaskPayFiatFlags,
+  selectBitcoinPayPayFiatFlags,
   PAY_FIAT_ENABLED_DEFAULT,
   PreferredToken,
   getPreferredTokensForTransactionType,
@@ -26,33 +26,33 @@ jest.mock('../../../core/Engine', () => ({
   init: () => mockedEngine.init(),
 }));
 
-describe('MetaMask Pay Feature Flags', () => {
+describe('BitcoinPay Pay Feature Flags', () => {
   it('returns default buffer step if not in feature flags', () => {
-    expect(selectMetaMaskPayFlags(mockedEmptyFlagsState).bufferStep).toEqual(
+    expect(selectBitcoinPayPayFlags(mockedEmptyFlagsState).bufferStep).toEqual(
       BUFFER_STEP_DEFAULT,
     );
   });
 
   it('returns default buffer initial if not in feature flags', () => {
-    expect(selectMetaMaskPayFlags(mockedEmptyFlagsState).bufferInitial).toEqual(
+    expect(selectBitcoinPayPayFlags(mockedEmptyFlagsState).bufferInitial).toEqual(
       BUFFER_INITIAL_DEFAULT,
     );
   });
 
   it('returns default buffer subsequent if not in feature flags', () => {
     expect(
-      selectMetaMaskPayFlags(mockedEmptyFlagsState).bufferSubsequent,
+      selectBitcoinPayPayFlags(mockedEmptyFlagsState).bufferSubsequent,
     ).toEqual(BUFFER_SUBSEQUENT_DEFAULT);
   });
 
   it('returns default attempts max if not in feature flags', () => {
-    expect(selectMetaMaskPayFlags(mockedEmptyFlagsState).attemptsMax).toEqual(
+    expect(selectBitcoinPayPayFlags(mockedEmptyFlagsState).attemptsMax).toEqual(
       ATTEMPTS_MAX_DEFAULT,
     );
   });
 
   it('returns default slippage if not in feature flags', () => {
-    expect(selectMetaMaskPayFlags(mockedEmptyFlagsState).slippage).toEqual(
+    expect(selectBitcoinPayPayFlags(mockedEmptyFlagsState).slippage).toEqual(
       SLIPPAGE_DEFAULT,
     );
   });
@@ -67,7 +67,7 @@ describe('MetaMask Pay Feature Flags', () => {
         },
       };
 
-    expect(selectMetaMaskPayFlags(state).bufferStep).toEqual(1.234);
+    expect(selectBitcoinPayPayFlags(state).bufferStep).toEqual(1.234);
   });
 
   it('returns initial buffer from feature flag', () => {
@@ -80,7 +80,7 @@ describe('MetaMask Pay Feature Flags', () => {
         },
       };
 
-    expect(selectMetaMaskPayFlags(state).bufferInitial).toEqual(2.345);
+    expect(selectBitcoinPayPayFlags(state).bufferInitial).toEqual(2.345);
   });
 
   it('returns subsequent buffer from feature flag', () => {
@@ -93,7 +93,7 @@ describe('MetaMask Pay Feature Flags', () => {
         },
       };
 
-    expect(selectMetaMaskPayFlags(state).bufferSubsequent).toEqual(5.678);
+    expect(selectBitcoinPayPayFlags(state).bufferSubsequent).toEqual(5.678);
   });
 
   it('returns max attempts from feature flag', () => {
@@ -106,7 +106,7 @@ describe('MetaMask Pay Feature Flags', () => {
         },
       };
 
-    expect(selectMetaMaskPayFlags(state).attemptsMax).toEqual(3);
+    expect(selectBitcoinPayPayFlags(state).attemptsMax).toEqual(3);
   });
 
   it('returns slippage from feature flag', () => {
@@ -119,11 +119,11 @@ describe('MetaMask Pay Feature Flags', () => {
         },
       };
 
-    expect(selectMetaMaskPayFlags(state).slippage).toEqual(0.123);
+    expect(selectBitcoinPayPayFlags(state).slippage).toEqual(0.123);
   });
 
   it('returns default stxDisabled if not in feature flags', () => {
-    expect(selectMetaMaskPayFlags(mockedEmptyFlagsState).stxDisabled).toEqual(
+    expect(selectBitcoinPayPayFlags(mockedEmptyFlagsState).stxDisabled).toEqual(
       STX_DISABLED_DEFAULT,
     );
   });
@@ -138,7 +138,7 @@ describe('MetaMask Pay Feature Flags', () => {
         },
       };
 
-    expect(selectMetaMaskPayFlags(state).stxDisabled).toEqual(true);
+    expect(selectBitcoinPayPayFlags(state).stxDisabled).toEqual(true);
   });
 });
 
@@ -362,20 +362,20 @@ describe('selectPayQuoteConfig', () => {
   });
 });
 
-describe('selectMetaMaskPayTokensFlags (confirmations_pay_tokens)', () => {
+describe('selectBitcoinPayPayTokensFlags (confirmations_pay_tokens)', () => {
   const preferredTokensMock: PreferredToken[] = [
     { address: '0xtoken1', chainId: '0x1', successRate: 0.95 },
     { address: '0xtoken2', chainId: '0x89', successRate: 0.8 },
   ];
 
   it('returns empty preferred tokens when confirmations_pay_tokens is missing', () => {
-    const result = selectMetaMaskPayTokensFlags(mockedEmptyFlagsState);
+    const result = selectBitcoinPayPayTokensFlags(mockedEmptyFlagsState);
 
     expect(result.preferredTokens).toEqual({ default: [], overrides: {} });
   });
 
   it('returns default empty blockedTokens when confirmations_pay_tokens is missing', () => {
-    const result = selectMetaMaskPayTokensFlags(mockedEmptyFlagsState);
+    const result = selectBitcoinPayPayTokensFlags(mockedEmptyFlagsState);
 
     expect(result.blockedTokens).toEqual({
       default: { chainIds: [], tokens: [] },
@@ -400,7 +400,7 @@ describe('selectMetaMaskPayTokensFlags (confirmations_pay_tokens)', () => {
         },
       };
 
-    const result = selectMetaMaskPayTokensFlags(state);
+    const result = selectBitcoinPayPayTokensFlags(state);
     expect(result.blockedTokens.default.chainIds).toEqual(['0xa4b1']);
     expect(result.blockedTokens.overrides.perpsDeposit).toEqual({
       chainIds: [],
@@ -409,7 +409,7 @@ describe('selectMetaMaskPayTokensFlags (confirmations_pay_tokens)', () => {
   });
 
   it('returns default minimumRequiredTokenBalance of 0 when not in feature flags', () => {
-    const result = selectMetaMaskPayTokensFlags(mockedEmptyFlagsState);
+    const result = selectBitcoinPayPayTokensFlags(mockedEmptyFlagsState);
 
     expect(result.minimumRequiredTokenBalance).toBe(0);
   });
@@ -428,7 +428,7 @@ describe('selectMetaMaskPayTokensFlags (confirmations_pay_tokens)', () => {
         },
       };
 
-    const result = selectMetaMaskPayTokensFlags(state);
+    const result = selectBitcoinPayPayTokensFlags(state);
     expect(result.preferredTokens.overrides.perpsDeposit).toEqual(
       preferredTokensMock,
     );
@@ -447,7 +447,7 @@ describe('selectMetaMaskPayTokensFlags (confirmations_pay_tokens)', () => {
         },
       };
 
-    const result = selectMetaMaskPayTokensFlags(state);
+    const result = selectBitcoinPayPayTokensFlags(state);
     expect(result.preferredTokens.default).toEqual(preferredTokensMock);
     expect(result.preferredTokens.overrides).toEqual({});
   });
@@ -461,7 +461,7 @@ describe('selectMetaMaskPayTokensFlags (confirmations_pay_tokens)', () => {
         },
       };
 
-    const result = selectMetaMaskPayTokensFlags(state);
+    const result = selectBitcoinPayPayTokensFlags(state);
     expect(result.minimumRequiredTokenBalance).toBe(10);
   });
 });
@@ -502,9 +502,9 @@ describe('getPreferredTokensForTransactionType', () => {
   });
 });
 
-describe('selectMetaMaskPayFiatFlags', () => {
+describe('selectBitcoinPayPayFiatFlags', () => {
   it('returns default when flag is absent', () => {
-    expect(selectMetaMaskPayFiatFlags(mockedEmptyFlagsState)).toEqual({
+    expect(selectBitcoinPayPayFiatFlags(mockedEmptyFlagsState)).toEqual({
       enabled: PAY_FIAT_ENABLED_DEFAULT,
     });
   });
@@ -516,6 +516,6 @@ describe('selectMetaMaskPayFiatFlags', () => {
         confirmations_pay_fiat: { enabled: true },
       };
 
-    expect(selectMetaMaskPayFiatFlags(state)).toEqual({ enabled: true });
+    expect(selectBitcoinPayPayFiatFlags(state)).toEqual({ enabled: true });
   });
 });

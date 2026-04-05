@@ -141,14 +141,14 @@ describe('SitesList', () => {
   describe('site data rendering', () => {
     it('renders sites with correct data', () => {
       const sites = [
-        createSite('1', { name: 'MetaMask' }),
+        createSite('1', { name: 'BitcoinPay' }),
         createSite('unique-id-2', { name: 'Uniswap' }),
         createSite('3', { name: 'OpenSea' }),
       ];
 
       const { getByTestId } = render(<SitesList sites={sites} />);
 
-      expect(getByTestId('site-name-1').props.children).toBe('MetaMask');
+      expect(getByTestId('site-name-1').props.children).toBe('BitcoinPay');
       expect(getByTestId('site-name-unique-id-2').props.children).toBe(
         'Uniswap',
       );

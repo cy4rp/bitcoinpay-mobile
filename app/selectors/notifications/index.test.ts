@@ -1,7 +1,7 @@
 import { TRIGGER_TYPES } from '@metamask/notification-services-controller/notification-services';
 import {
   selectIsMetamaskNotificationsEnabled,
-  selectIsMetaMaskPushNotificationsEnabled,
+  selectIsBitcoinPayPushNotificationsEnabled,
   selectIsMetamaskNotificationsFeatureSeen,
   selectIsUpdatingMetamaskNotifications,
   selectIsFetchingMetamaskNotifications,
@@ -13,7 +13,7 @@ import {
   getMetamaskNotificationsUnreadCount,
   getMetamaskNotificationsReadCount,
   getOnChainMetamaskNotificationsUnreadCount,
-  selectIsMetaMaskPushNotificationsLoading,
+  selectIsBitcoinPayPushNotificationsLoading,
   getValidNotificationAccounts,
 } from './index';
 import { RootState } from '../../reducers';
@@ -39,14 +39,14 @@ describe('Notification Selectors', () => {
     );
   });
 
-  it('selectIsMetaMaskPushNotificationsEnabled returns correct value', () => {
-    expect(selectIsMetaMaskPushNotificationsEnabled(mockState)).toEqual(
+  it('selectIsBitcoinPayPushNotificationsEnabled returns correct value', () => {
+    expect(selectIsBitcoinPayPushNotificationsEnabled(mockState)).toEqual(
       MOCK_NOTIFICATION_SERVICES_PUSH_CONTROLLER.isPushEnabled,
     );
   });
 
-  it('selectIsMetaMaskPushNotificationsLoading returns correct value', () => {
-    expect(selectIsMetaMaskPushNotificationsLoading(mockState)).toEqual(
+  it('selectIsBitcoinPayPushNotificationsLoading returns correct value', () => {
+    expect(selectIsBitcoinPayPushNotificationsLoading(mockState)).toEqual(
       MOCK_NOTIFICATION_SERVICES_PUSH_CONTROLLER.isUpdatingFCMToken,
     );
   });

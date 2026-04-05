@@ -221,7 +221,7 @@ jest.mock('../../../../../../locales/i18n', () => ({
   strings: jest.fn((key: string) => {
     const translations: Record<string, string> = {
       'card.card_onboarding.kyc_failed.title':
-        "You're not eligible for MetaMask Card right now",
+        "You're not eligible for BitcoinPay Card right now",
       'card.card_onboarding.kyc_failed.description':
         "Eligibility is determined by our partner's regulatory and verification checks.",
       'card.card_onboarding.kyc_failed.close_button': 'Back to home',
@@ -269,7 +269,7 @@ describe('KYCFailed Component', () => {
 
       expect(title).toBeTruthy();
       expect(title.props.children).toBe(
-        "You're not eligible for MetaMask Card right now",
+        "You're not eligible for BitcoinPay Card right now",
       );
     });
 
@@ -424,7 +424,7 @@ describe('KYCFailed Component', () => {
       const title = getByTestId('kyc-failed-title');
 
       expect(title.props.children).toBe(
-        "You're not eligible for MetaMask Card right now",
+        "You're not eligible for BitcoinPay Card right now",
       );
     });
 

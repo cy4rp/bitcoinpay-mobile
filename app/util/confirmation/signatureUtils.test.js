@@ -27,7 +27,7 @@ jest.mock('../../core/Analytics/MetaMetrics.events', () => ({
 }));
 
 jest.mock('../address', () => ({
-  getAddressAccountType: jest.fn(() => 'MetaMask'),
+  getAddressAccountType: jest.fn(() => 'BitcoinPay'),
 }));
 
 jest.mock('../../selectors/networkController', () => ({
@@ -85,7 +85,7 @@ describe('handleSignatureAction', () => {
     );
     expect(mockEventBuilder.addProperties).toHaveBeenCalledWith(
       expect.objectContaining({
-        account_type: 'MetaMask',
+        account_type: 'BitcoinPay',
         signature_type: 'eth_signTypedData_v4',
       }),
     );

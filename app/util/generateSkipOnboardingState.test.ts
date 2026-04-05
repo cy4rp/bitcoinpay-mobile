@@ -204,7 +204,7 @@ describe('generateSkipOnboardingState', () => {
 
   describe('constants validation', () => {
     describe('VAULT_INITIALIZED_KEY', () => {
-      it('validates VAULT_INITIALIZED_KEY has MetaMask namespace', () => {
+      it('validates VAULT_INITIALIZED_KEY has BitcoinPay namespace', () => {
         // Given the VAULT_INITIALIZED_KEY constant
         // When checking its format
         // Then it should start with @BitcoinPay: prefix

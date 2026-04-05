@@ -1792,7 +1792,7 @@ describe('WC2Manager', () => {
             publicKey: 'test-public-key',
             metadata: {
               url: 'https://metamask.io',
-              name: 'MetaMask Website',
+              name: 'BitcoinPay Website',
               description: 'Test',
               icons: [],
             },

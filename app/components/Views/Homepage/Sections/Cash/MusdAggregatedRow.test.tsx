@@ -78,7 +78,7 @@ describe('MusdAggregatedRow', () => {
   it('renders token name and balances', () => {
     renderWithProvider(<MusdAggregatedRow />);
 
-    expect(screen.getByText('MetaMask USD')).toBeOnTheScreen();
+    expect(screen.getByText('BitcoinPay USD')).toBeOnTheScreen();
     expect(screen.getByText('$1,800.50')).toBeOnTheScreen();
     expect(screen.getByText(/1,800\.5\s*mUSD/)).toBeOnTheScreen();
   });

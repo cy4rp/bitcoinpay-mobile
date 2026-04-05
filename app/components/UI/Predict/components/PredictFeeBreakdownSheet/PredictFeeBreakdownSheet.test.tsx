@@ -70,7 +70,7 @@ jest.mock('../../../../../../locales/i18n', () => ({
       return `~${params?.count ?? '0.00'} contracts at ${params?.price ?? '$0.00'} each. Final amount may vary based on order book availability (up to ${params?.slippage ?? '0'}%).`;
     }
     if (key === 'predict.fee_summary.metamask_fee') {
-      return 'MetaMask fee';
+      return 'BitcoinPay fee';
     }
     if (key === 'predict.fee_summary.metamask_fee_description') {
       return 'Service fee for processing this prediction';
@@ -183,7 +183,7 @@ describe('PredictFeeBreakdownSheet', () => {
   });
 
   describe('Fee display', () => {
-    it('displays MetaMask fee label and amount', () => {
+    it('displays BitcoinPay fee label and amount', () => {
       const TestComponent = () => {
         const ref = useRef<BottomSheetRef>(null);
         return <PredictFeeBreakdownSheet ref={ref} {...defaultProps} />;
@@ -191,11 +191,11 @@ describe('PredictFeeBreakdownSheet', () => {
 
       const { getByText } = render(<TestComponent />);
 
-      expect(getByText('MetaMask fee')).toBeOnTheScreen();
+      expect(getByText('BitcoinPay fee')).toBeOnTheScreen();
       expect(getByText('$0.05')).toBeOnTheScreen();
     });
 
-    it('displays MetaMask fee description', () => {
+    it('displays BitcoinPay fee description', () => {
       const TestComponent = () => {
         const ref = useRef<BottomSheetRef>(null);
         return <PredictFeeBreakdownSheet ref={ref} {...defaultProps} />;

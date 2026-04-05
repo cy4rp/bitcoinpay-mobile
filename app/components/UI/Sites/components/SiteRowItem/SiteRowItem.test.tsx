@@ -7,7 +7,7 @@ describe('SiteRowItem', () => {
 
   const createSite = (overrides: Partial<SiteData> = {}): SiteData => ({
     id: 'site-1',
-    name: 'MetaMask',
+    name: 'BitcoinPay',
     url: 'https://metamask.io',
     displayUrl: 'metamask.io',
     ...overrides,
@@ -29,7 +29,7 @@ describe('SiteRowItem', () => {
         <SiteRowItem site={site} onPress={mockOnPress} />,
       );
 
-      expect(getByText('MetaMask')).toBeOnTheScreen();
+      expect(getByText('BitcoinPay')).toBeOnTheScreen();
     });
 
     it('renders display URL', () => {
@@ -74,7 +74,7 @@ describe('SiteRowItem', () => {
         <SiteRowItem site={site} onPress={mockOnPress} />,
       );
 
-      fireEvent.press(getByTestId('site-row-item-MetaMask'));
+      fireEvent.press(getByTestId('site-row-item-BitcoinPay'));
 
       expect(mockOnPress).toHaveBeenCalledTimes(1);
     });
@@ -86,7 +86,7 @@ describe('SiteRowItem', () => {
         <SiteRowItem site={site} onPress={mockOnPress} />,
       );
 
-      const pressable = getByTestId('site-row-item-MetaMask');
+      const pressable = getByTestId('site-row-item-BitcoinPay');
       expect(pressable).toBeOnTheScreen();
 
       // Verify it's a touchable element by checking it has onPress
@@ -103,7 +103,7 @@ describe('SiteRowItem', () => {
         <SiteRowItem site={site} onPress={mockOnPress} />,
       );
 
-      expect(getByText('MetaMask')).toBeOnTheScreen();
+      expect(getByText('BitcoinPay')).toBeOnTheScreen();
     });
 
     it('renders site with long name', () => {

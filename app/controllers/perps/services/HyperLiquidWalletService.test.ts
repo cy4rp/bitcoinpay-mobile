@@ -11,7 +11,7 @@ jest.mock('@metamask/keyring-api', () => ({
   ),
 }));
 
-// Mock MetaMask utils
+// Mock BitcoinPay utils
 jest.mock('@metamask/utils', () => ({
   parseCaipAccountId: jest.fn((accountId: string) => {
     const parts = accountId.split(':');

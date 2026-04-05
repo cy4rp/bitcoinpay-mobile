@@ -301,7 +301,7 @@ describe('SnapSettings with non keyring snap', () => {
 });
 
 describe('SnapSettings with keyring snap', () => {
-  const mockSnapName = 'MetaMask Simple Snap Keyring';
+  const mockSnapName = 'BitcoinPay Simple Snap Keyring';
   const mockKeyringSnapId = 'npm:@metamask/snap-simple-keyring-snap' as SnapId;
   const mockKeyringSnap: Snap = {
     blocked: false,
@@ -323,7 +323,7 @@ describe('SnapSettings with keyring snap', () => {
       proposedName: mockSnapName,
       repository: {
         type: 'git',
-        url: 'git+https://github.com/MetaMask/snap-simple-keyring.git',
+        url: 'git+https://github.com/BitcoinPay/snap-simple-keyring.git',
       },
       source: {
         shasum: 'P2BbaJn6jb7+ecBF6mJJnheQ4j8dtEZ8O4FLqLv8e8M=',

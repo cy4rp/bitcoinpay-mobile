@@ -7,7 +7,7 @@ import handleDeeplink from '../../../../SDKConnect/handlers/handleDeeplink';
 import SDKConnect from '../../../../SDKConnect/SDKConnect';
 import WC2Manager from '../../../../WalletConnect/WalletConnectV2';
 import extractURLParams from '../../../utils/extractURLParams';
-import handleMetaMaskDeeplink from '../handleMetaMaskDeeplink';
+import handleBitcoinPayDeeplink from '../handleBitcoinPayDeeplink';
 import handleRampUrl from '../handleRampUrl';
 
 jest.mock('../../../../AppConstants');
@@ -21,7 +21,7 @@ jest.mock('../../../../NativeModules', () => ({
   },
 }));
 
-describe('handleMetaMaskProtocol', () => {
+describe('handleBitcoinPayProtocol', () => {
   const mockGetApprovedHosts = jest.fn();
   const mockBindAndroidSDK = jest.fn();
   const mockNavigate = jest.fn();
@@ -88,7 +88,7 @@ describe('handleMetaMaskProtocol', () => {
   });
 
   it('calls handled', () => {
-    handleMetaMaskDeeplink({
+    handleBitcoinPayDeeplink({
       handled,
       params,
       url,
@@ -113,7 +113,7 @@ describe('handleMetaMaskProtocol', () => {
       params.scheme = undefined;
 
       expect(() => {
-        handleMetaMaskDeeplink({
+        handleBitcoinPayDeeplink({
           handled,
           params,
           url,
@@ -135,7 +135,7 @@ describe('handleMetaMaskProtocol', () => {
 
       params.scheme = 'test-scheme';
 
-      handleMetaMaskDeeplink({
+      handleBitcoinPayDeeplink({
         handled,
         params,
         url,
@@ -166,7 +166,7 @@ describe('handleMetaMaskProtocol', () => {
       params.message = undefined;
 
       expect(() => {
-        handleMetaMaskDeeplink({
+        handleBitcoinPayDeeplink({
           handled,
           params,
           url,
@@ -183,7 +183,7 @@ describe('handleMetaMaskProtocol', () => {
       params.scheme = undefined;
 
       expect(() => {
-        handleMetaMaskDeeplink({
+        handleBitcoinPayDeeplink({
           handled,
           params,
           url,
@@ -208,7 +208,7 @@ describe('handleMetaMaskProtocol', () => {
       params.message = 'test-message';
       params.scheme = 'test-scheme';
 
-      handleMetaMaskDeeplink({
+      handleBitcoinPayDeeplink({
         handled,
         params,
         url,
@@ -240,7 +240,7 @@ describe('handleMetaMaskProtocol', () => {
       // Set Platform.Version to '16' to ensure it's less than 17
       Object.defineProperty(Platform, 'Version', { get: () => '17' });
 
-      handleMetaMaskDeeplink({
+      handleBitcoinPayDeeplink({
         handled,
         params,
         origin: AppConstants.DEEPLINKS.ORIGIN_DEEPLINK,
@@ -264,7 +264,7 @@ describe('handleMetaMaskProtocol', () => {
       // Set Platform.Version to '16' to ensure it's less than 17
       Object.defineProperty(Platform, 'Version', { get: () => '17' });
 
-      handleMetaMaskDeeplink({
+      handleBitcoinPayDeeplink({
         handled,
         params,
         origin: AppConstants.DEEPLINKS.ORIGIN_DEEPLINK,
@@ -288,7 +288,7 @@ describe('handleMetaMaskProtocol', () => {
       // Set Platform.Version to '16' to ensure it's less than 17
       Object.defineProperty(Platform, 'Version', { get: () => '17' });
 
-      handleMetaMaskDeeplink({
+      handleBitcoinPayDeeplink({
         handled,
         params,
         origin: AppConstants.DEEPLINKS.ORIGIN_DEEPLINK,
@@ -309,7 +309,7 @@ describe('handleMetaMaskProtocol', () => {
       params.redirect = '';
       mockGetApprovedHosts.mockReturnValue({ ABC: true });
 
-      handleMetaMaskDeeplink({
+      handleBitcoinPayDeeplink({
         handled,
         params,
         url,
@@ -346,7 +346,7 @@ describe('handleMetaMaskProtocol', () => {
       params.hr = true;
       mockGetApprovedHosts.mockReturnValue({ ABC: true });
 
-      handleMetaMaskDeeplink({
+      handleBitcoinPayDeeplink({
         handled,
         params,
         url,
@@ -383,7 +383,7 @@ describe('handleMetaMaskProtocol', () => {
       params.hr = false;
       mockGetApprovedHosts.mockReturnValue({ ABC: true });
 
-      handleMetaMaskDeeplink({
+      handleBitcoinPayDeeplink({
         handled,
         params,
         url,
@@ -427,7 +427,7 @@ describe('handleMetaMaskProtocol', () => {
     });
 
     it('calls WC2Manager.getInstance().connect', () => {
-      handleMetaMaskDeeplink({
+      handleBitcoinPayDeeplink({
         handled,
         params,
         url,
@@ -445,7 +445,7 @@ describe('handleMetaMaskProtocol', () => {
     });
 
     it('calls handleRampUrl with BUY type', () => {
-      handleMetaMaskDeeplink({
+      handleBitcoinPayDeeplink({
         handled,
         params,
         url,
@@ -467,7 +467,7 @@ describe('handleMetaMaskProtocol', () => {
     });
 
     it('calls handleRampUrl with SELL type', () => {
-      handleMetaMaskDeeplink({
+      handleBitcoinPayDeeplink({
         handled,
         params,
         url,
@@ -489,7 +489,7 @@ describe('handleMetaMaskProtocol', () => {
     });
 
     it('does not invoke ramp or deposit navigation handlers', () => {
-      handleMetaMaskDeeplink({
+      handleBitcoinPayDeeplink({
         handled,
         params,
         url,

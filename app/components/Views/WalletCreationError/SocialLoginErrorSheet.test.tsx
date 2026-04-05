@@ -117,7 +117,7 @@ describe('SocialLoginErrorSheet', () => {
       });
     });
 
-    it('tracks support clicked event when MetaMask Support is pressed', () => {
+    it('tracks support clicked event when BitcoinPay Support is pressed', () => {
       const { getByText } = renderWithProvider(
         <SocialLoginErrorSheet error={mockError} />,
         { state: initialState },
@@ -127,7 +127,7 @@ describe('SocialLoginErrorSheet', () => {
       mockAddProperties.mockClear();
       mockTrackEvent.mockClear();
 
-      fireEvent.press(getByText('MetaMask Support'));
+      fireEvent.press(getByText('BitcoinPay Support'));
 
       expect(mockCreateEventBuilder).toHaveBeenCalled();
       expect(mockAddProperties).toHaveBeenCalledWith({
@@ -153,12 +153,12 @@ describe('SocialLoginErrorSheet', () => {
     expect(getByText('Try again')).toBeOnTheScreen();
   });
 
-  it('renders MetaMask Support link', () => {
+  it('renders BitcoinPay Support link', () => {
     const { getByText } = renderWithProvider(<SocialLoginErrorSheet />, {
       state: initialState,
     });
 
-    expect(getByText('MetaMask Support')).toBeOnTheScreen();
+    expect(getByText('BitcoinPay Support')).toBeOnTheScreen();
   });
 
   it('deletes wallet and resets navigation when try again is pressed', async () => {
@@ -180,11 +180,11 @@ describe('SocialLoginErrorSheet', () => {
     });
   });
 
-  it('opens support URL when MetaMask Support is pressed', () => {
+  it('opens support URL when BitcoinPay Support is pressed', () => {
     const { getByText } = renderWithProvider(<SocialLoginErrorSheet />, {
       state: initialState,
     });
-    const supportLink = getByText('MetaMask Support');
+    const supportLink = getByText('BitcoinPay Support');
 
     fireEvent.press(supportLink);
 

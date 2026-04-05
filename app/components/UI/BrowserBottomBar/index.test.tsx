@@ -841,7 +841,7 @@ describe('BrowserBottomBar', () => {
         expect.objectContaining({
           uniqueIdentifier: defaultProps.activeUrl,
           title: 'Test Bookmark',
-          contentDescription: 'Launch Test Bookmark on MetaMask',
+          contentDescription: 'Launch Test Bookmark on BitcoinPay',
           keywords: expect.arrayContaining([
             'Test',
             'Bookmark',
@@ -1048,7 +1048,7 @@ describe('BrowserBottomBar', () => {
 
       expect(SearchApi.indexSpotlightItem).toHaveBeenCalledWith(
         expect.objectContaining({
-          contentDescription: 'Launch https://example.com on MetaMask',
+          contentDescription: 'Launch https://example.com on BitcoinPay',
         }),
       );
     });
@@ -1071,7 +1071,7 @@ describe('BrowserBottomBar', () => {
 
       expect(SearchApi.indexSpotlightItem).toHaveBeenCalledWith(
         expect.objectContaining({
-          contentDescription: 'Launch My Bookmark on MetaMask',
+          contentDescription: 'Launch My Bookmark on BitcoinPay',
         }),
       );
     });

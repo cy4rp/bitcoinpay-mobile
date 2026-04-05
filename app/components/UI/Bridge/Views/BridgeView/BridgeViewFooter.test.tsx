@@ -329,7 +329,7 @@ describe('BridgeViewFooter', () => {
             chainId: '0x1' as Hex,
             decimals: 6,
             image: '',
-            name: 'MetaMask USD',
+            name: 'BitcoinPay USD',
             symbol: 'mUSD',
           },
         },

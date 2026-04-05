@@ -157,7 +157,7 @@ describe('PerformanceSentryPublisher', () => {
       'https://publicKey@o123.ingest.sentry.io/4567';
     process.env.E2E_PERFORMANCE_BUILD_VARIANT = 'exp';
     process.env.GITHUB_SERVER_URL = 'https://github.com';
-    process.env.GITHUB_REPOSITORY = 'MetaMask/metamask-mobile';
+    process.env.GITHUB_REPOSITORY = 'BitcoinPay/metamask-mobile';
     process.env.GITHUB_RUN_ID = '12345';
     process.env.GITHUB_JOB = 'e2e-performance-android';
     fetchMock.mockResolvedValue({
@@ -212,7 +212,7 @@ describe('PerformanceSentryPublisher', () => {
       'https://app-automate.browserstack.com/builds/build-123/sessions/sess-123',
     );
     expect(payload.extra.github_job_url).toBe(
-      'https://github.com/MetaMask/metamask-mobile/actions/runs/12345',
+      'https://github.com/BitcoinPay/metamask-mobile/actions/runs/12345',
     );
     expect(payload.extra.github_job_name).toBe('e2e-performance-android');
     expect(payload.spans).toHaveLength(2);
@@ -235,7 +235,7 @@ describe('PerformanceSentryPublisher', () => {
       'https://app-automate.browserstack.com/builds/build-123/sessions/sess-123',
     );
     expect(payload.spans[0].data.github_job_url).toBe(
-      'https://github.com/MetaMask/metamask-mobile/actions/runs/12345',
+      'https://github.com/BitcoinPay/metamask-mobile/actions/runs/12345',
     );
     expect(payload.spans[0].data.github_job_name).toBe(
       'e2e-performance-android',

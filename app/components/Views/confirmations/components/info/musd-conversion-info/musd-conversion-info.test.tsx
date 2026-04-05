@@ -148,7 +148,7 @@ describe('MusdConversionInfo', () => {
       expect(mockUseAddToken).toHaveBeenCalledWith({
         chainId: '0x1',
         decimals: 6,
-        name: 'MetaMask USD',
+        name: 'BitcoinPay USD',
         symbol: 'mUSD',
         tokenAddress: '0xaca92e438df0b2401ff60da7e4337b687a2435da',
       });

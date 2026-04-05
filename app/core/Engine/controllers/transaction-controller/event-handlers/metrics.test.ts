@@ -58,7 +58,7 @@ jest.mock('../../../Engine', () => ({
 }));
 
 jest.mock('../metrics_properties/metamask-pay', () => ({
-  getMetaMaskPayProperties: jest.fn().mockReturnValue({
+  getBitcoinPayPayProperties: jest.fn().mockReturnValue({
     properties: {
       builder_test: true,
     },

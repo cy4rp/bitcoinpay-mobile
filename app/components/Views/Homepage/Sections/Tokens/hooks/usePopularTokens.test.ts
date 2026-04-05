@@ -87,7 +87,7 @@ describe('usePopularTokens', () => {
     });
 
     expect(result.current.tokens).toHaveLength(5);
-    expect(result.current.tokens[0].name).toBe('MetaMask USD');
+    expect(result.current.tokens[0].name).toBe('BitcoinPay USD');
     expect(result.current.tokens[0].price).toBe(1.0);
     expect(result.current.tokens[0].priceChange1d).toBe(0.05);
     expect(result.current.tokens[1].name).toBe('Ethereum');

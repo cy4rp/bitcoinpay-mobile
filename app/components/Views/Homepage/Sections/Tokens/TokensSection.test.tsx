@@ -275,7 +275,7 @@ jest.mock('../../../../../core/Multichain/utils', () => ({
 const mockPopularTokens = [
   {
     assetId: 'eip155:1/erc20:0xaca92e438df0b2401ff60da7e4337b687a2435da',
-    name: 'MetaMask USD',
+    name: 'BitcoinPay USD',
     symbol: 'mUSD',
     iconUrl: 'https://example.com/musd.png',
     price: 1.0,
@@ -342,7 +342,7 @@ describe('TokensSection', () => {
       <TokensSection sectionIndex={0} totalSectionsLoaded={1} />,
     );
 
-    expect(screen.getByText('MetaMask USD')).toBeOnTheScreen();
+    expect(screen.getByText('BitcoinPay USD')).toBeOnTheScreen();
     expect(screen.getByText('Ethereum')).toBeOnTheScreen();
   });
 
@@ -493,7 +493,7 @@ describe('TokensSection', () => {
     );
 
     expect(screen.queryByTestId('error-state')).toBeNull();
-    expect(screen.getByText('MetaMask USD')).toBeOnTheScreen();
+    expect(screen.getByText('BitcoinPay USD')).toBeOnTheScreen();
   });
 
   it('renders ErrorState when refreshTokens throws for non-zero balance account', async () => {

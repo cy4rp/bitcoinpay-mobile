@@ -8,7 +8,7 @@ jest.mock('../../../../../../locales/i18n', () => ({
     const translations: Record<string, string> = {
       'rewards.referral.info.title': 'Invite Friends & Earn',
       'rewards.referral.info.description':
-        'Share your referral code with friends and earn rewards when they join MetaMask.',
+        'Share your referral code with friends and earn rewards when they join BitcoinPay.',
     };
     return translations[key] || key;
   }),
@@ -22,7 +22,7 @@ describe('ReferralInfoSection', () => {
       expect(getByText('Invite Friends & Earn')).toBeTruthy();
       expect(
         getByText(
-          'Share your referral code with friends and earn rewards when they join MetaMask.',
+          'Share your referral code with friends and earn rewards when they join BitcoinPay.',
         ),
       ).toBeTruthy();
     });
@@ -38,7 +38,7 @@ describe('ReferralInfoSection', () => {
       const { getByText } = render(<ReferralInfoSection />);
 
       const descriptionElement = getByText(
-        'Share your referral code with friends and earn rewards when they join MetaMask.',
+        'Share your referral code with friends and earn rewards when they join BitcoinPay.',
       );
       expect(descriptionElement).toBeTruthy();
     });
@@ -50,7 +50,7 @@ describe('ReferralInfoSection', () => {
 
       const titleElement = getByText('Invite Friends & Earn');
       const descriptionElement = getByText(
-        'Share your referral code with friends and earn rewards when they join MetaMask.',
+        'Share your referral code with friends and earn rewards when they join BitcoinPay.',
       );
 
       expect(titleElement).toBeTruthy();

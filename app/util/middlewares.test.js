@@ -64,7 +64,7 @@ describe('middlewares', () => {
 
     it('returns true for error message containing "user denied"', () => {
       const result = containsUserRejectedError(
-        'MetaMask Message Signature: User denied message signature.',
+        'BitcoinPay Message Signature: User denied message signature.',
       );
 
       expect(result).toBe(true);

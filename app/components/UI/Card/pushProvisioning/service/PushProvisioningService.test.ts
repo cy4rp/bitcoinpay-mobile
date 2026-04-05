@@ -152,7 +152,7 @@ describe('PushProvisioningService', () => {
           cardNetwork: 'MASTERCARD',
           cardholderName: 'John Doe',
           lastFourDigits: '1234',
-          cardDescription: 'MetaMask Card ending in 1234',
+          cardDescription: 'BitcoinPay Card ending in 1234',
           encryptedPayload: { opaquePaymentCard: 'encrypted-data' },
           userAddress: mockUserAddress,
         });

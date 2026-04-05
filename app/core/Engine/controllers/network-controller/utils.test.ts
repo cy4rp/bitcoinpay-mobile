@@ -7,7 +7,7 @@ import { QUICKNODE_ENDPOINT_URLS_BY_INFURA_NETWORK_NAME } from '../../../../util
 import {
   PRODUCTION_LIKE_ENVIRONMENTS,
   getIsQuicknodeEndpointUrl,
-  getIsMetaMaskInfuraEndpointUrl,
+  getIsBitcoinPayInfuraEndpointUrl,
   shouldCreateRpcServiceEvents,
   KNOWN_CUSTOM_ENDPOINTS,
   isPublicEndpointUrl,
@@ -42,19 +42,19 @@ const MOCK_METAMASK_INFURA_PROJECT_ID = 'metamask-infura-project-id';
 const MOCK_METAMETRICS_ID =
   '0x86bacb9b2bf9a7e8d2b147eadb95ac9aaa26842327cd24afc8bd4b3c1d136420';
 
-describe('getIsMetaMaskInfuraEndpointUrl', () => {
-  it('returns true if the URL has an Infura hostname with some subdomain whose path starts with the MetaMask API key', () => {
+describe('getIsBitcoinPayInfuraEndpointUrl', () => {
+  it('returns true if the URL has an Infura hostname with some subdomain whose path starts with the BitcoinPay API key', () => {
     expect(
-      getIsMetaMaskInfuraEndpointUrl(
+      getIsBitcoinPayInfuraEndpointUrl(
         'https://some-subdomain.infura.io/v3/the-infura-project-id',
         'the-infura-project-id',
       ),
     ).toBe(true);
   });
 
-  it('returns false if the URL has an Infura hostname with some subdomain whose path does not start with the MetaMask API key', () => {
+  it('returns false if the URL has an Infura hostname with some subdomain whose path does not start with the BitcoinPay API key', () => {
     expect(
-      getIsMetaMaskInfuraEndpointUrl(
+      getIsBitcoinPayInfuraEndpointUrl(
         'https://some-subdomain.infura.io/v3/a-different-infura-project-id',
         'the-infura-project-id',
       ),
@@ -63,7 +63,7 @@ describe('getIsMetaMaskInfuraEndpointUrl', () => {
 
   it('returns true given an Infura v3 URL with {infuraProjectId} at the end', () => {
     expect(
-      getIsMetaMaskInfuraEndpointUrl(
+      getIsBitcoinPayInfuraEndpointUrl(
         'https://some-subdomain.infura.io/v3/{infuraProjectId}',
         'the-infura-project-id',
       ),
@@ -72,7 +72,7 @@ describe('getIsMetaMaskInfuraEndpointUrl', () => {
 
   it('returns false if the URL does match an Infura URL', () => {
     expect(
-      getIsMetaMaskInfuraEndpointUrl(
+      getIsBitcoinPayInfuraEndpointUrl(
         'https://a-different-url.com',
         'the-infura-project-id',
       ),
@@ -336,7 +336,7 @@ describe('shouldCreateRpcServiceEvents', () => {
 
 const ENDPOINTS_TO_TEST: (readonly [string, () => string | undefined])[] = [
   [
-    'an Infura endpoint using the MetaMask API key',
+    'an Infura endpoint using the BitcoinPay API key',
     () => `https://mainnet.infura.io/v3/${MOCK_METAMASK_INFURA_PROJECT_ID}`,
   ],
   ...Object.entries(QUICKNODE_ENDPOINT_URLS_BY_INFURA_NETWORK_NAME).map(

@@ -1,51 +1,51 @@
-import { isInternalDeepLink, isMetaMaskUniversalLink } from './index';
+import { isInternalDeepLink, isBitcoinPayUniversalLink } from './index';
 
 describe('deeplinks utils', () => {
-  describe('isMetaMaskUniversalLink', () => {
-    it('identifies MetaMask universal links by host', () => {
-      expect(isMetaMaskUniversalLink('https://link.metamask.io/swap')).toBe(
+  describe('isBitcoinPayUniversalLink', () => {
+    it('identifies BitcoinPay universal links by host', () => {
+      expect(isBitcoinPayUniversalLink('https://link.metamask.io/swap')).toBe(
         true,
       );
       expect(
-        isMetaMaskUniversalLink('https://link.metamask.io/dapp/uniswap.org'),
+        isBitcoinPayUniversalLink('https://link.metamask.io/dapp/uniswap.org'),
       ).toBe(true);
-      expect(isMetaMaskUniversalLink('https://metamask.app.link/swap')).toBe(
+      expect(isBitcoinPayUniversalLink('https://metamask.app.link/swap')).toBe(
         true,
       );
       expect(
-        isMetaMaskUniversalLink('https://metamask.test-app.link/home'),
+        isBitcoinPayUniversalLink('https://metamask.test-app.link/home'),
       ).toBe(true);
       expect(
-        isMetaMaskUniversalLink(
+        isBitcoinPayUniversalLink(
           'https://metamask-alternate.test-app.link/swap',
         ),
       ).toBe(true);
       expect(
-        isMetaMaskUniversalLink('https://link-test.metamask.io/send'),
+        isBitcoinPayUniversalLink('https://link-test.metamask.io/send'),
       ).toBe(true);
     });
 
     it('does NOT match custom-scheme URLs', () => {
-      expect(isMetaMaskUniversalLink('ethereum://pay-0x1234')).toBe(false);
-      expect(isMetaMaskUniversalLink('dapp://app.uniswap.org')).toBe(false);
-      expect(isMetaMaskUniversalLink('metamask://connect')).toBe(false);
+      expect(isBitcoinPayUniversalLink('ethereum://pay-0x1234')).toBe(false);
+      expect(isBitcoinPayUniversalLink('dapp://app.uniswap.org')).toBe(false);
+      expect(isBitcoinPayUniversalLink('metamask://connect')).toBe(false);
     });
 
     it('does not match external URLs', () => {
-      expect(isMetaMaskUniversalLink('https://google.com')).toBe(false);
-      expect(isMetaMaskUniversalLink('https://uniswap.org')).toBe(false);
+      expect(isBitcoinPayUniversalLink('https://google.com')).toBe(false);
+      expect(isBitcoinPayUniversalLink('https://uniswap.org')).toBe(false);
     });
 
     it('handles edge cases gracefully', () => {
-      expect(isMetaMaskUniversalLink('')).toBe(false);
-      expect(isMetaMaskUniversalLink(null)).toBe(false);
-      expect(isMetaMaskUniversalLink(undefined)).toBe(false);
-      expect(isMetaMaskUniversalLink('not-a-valid-url')).toBe(false);
+      expect(isBitcoinPayUniversalLink('')).toBe(false);
+      expect(isBitcoinPayUniversalLink(null)).toBe(false);
+      expect(isBitcoinPayUniversalLink(undefined)).toBe(false);
+      expect(isBitcoinPayUniversalLink('not-a-valid-url')).toBe(false);
     });
   });
 
   describe('isInternalDeepLink', () => {
-    it('identifies MetaMask custom scheme deeplinks', () => {
+    it('identifies BitcoinPay custom scheme deeplinks', () => {
       expect(isInternalDeepLink('metamask://connect')).toBe(true);
       expect(isInternalDeepLink('metamask://wc?uri=...')).toBe(true);
       expect(isInternalDeepLink('metamask://dapp/uniswap.org')).toBe(true);
@@ -61,7 +61,7 @@ describe('deeplinks utils', () => {
       expect(isInternalDeepLink('dapp://portfolio.metamask.io')).toBe(true);
     });
 
-    it('identifies MetaMask universal links', () => {
+    it('identifies BitcoinPay universal links', () => {
       expect(isInternalDeepLink('https://link.metamask.io/swap')).toBe(true);
       expect(isInternalDeepLink('https://link.metamask.io/buy-crypto')).toBe(
         true,
@@ -71,7 +71,7 @@ describe('deeplinks utils', () => {
       ).toBe(true);
     });
 
-    it('identifies MetaMask test universal links', () => {
+    it('identifies BitcoinPay test universal links', () => {
       expect(isInternalDeepLink('https://link-test.metamask.io/swap')).toBe(
         true,
       );
@@ -80,7 +80,7 @@ describe('deeplinks utils', () => {
       );
     });
 
-    it('identifies MetaMask branch links', () => {
+    it('identifies BitcoinPay branch links', () => {
       expect(isInternalDeepLink('https://metamask.app.link/swap')).toBe(true);
       expect(isInternalDeepLink('https://metamask.test-app.link/home')).toBe(
         true,
@@ -109,7 +109,7 @@ describe('deeplinks utils', () => {
       expect(isInternalDeepLink(null)).toBe(false);
       expect(isInternalDeepLink(undefined)).toBe(false);
       expect(isInternalDeepLink('not-a-valid-url')).toBe(false);
-      expect(isInternalDeepLink('metamask://')).toBe(true); // Still a valid MetaMask scheme
+      expect(isInternalDeepLink('metamask://')).toBe(true); // Still a valid BitcoinPay scheme
     });
 
     it('handlesURLs with query parameters and fragments', () => {

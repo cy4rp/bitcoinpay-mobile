@@ -131,12 +131,12 @@ describe('SRPErrorScreen', () => {
       expect(getByText('Copy')).toBeTruthy();
     });
 
-    it('renders MetaMask Support link', () => {
+    it('renders BitcoinPay Support link', () => {
       const { getByText } = renderWithProvider(
         <SRPErrorScreen error={mockError} />,
       );
 
-      expect(getByText('MetaMask Support')).toBeTruthy();
+      expect(getByText('BitcoinPay Support')).toBeTruthy();
     });
   });
 
@@ -281,12 +281,12 @@ describe('SRPErrorScreen', () => {
   });
 
   describe('handleContactSupport', () => {
-    it('opens support URL when MetaMask Support is pressed', () => {
+    it('opens support URL when BitcoinPay Support is pressed', () => {
       const { getByText } = renderWithProvider(
         <SRPErrorScreen error={mockError} />,
       );
 
-      fireEvent.press(getByText('MetaMask Support'));
+      fireEvent.press(getByText('BitcoinPay Support'));
 
       expect(Linking.openURL).toHaveBeenCalledWith(
         AppConstants.REVIEW_PROMPT.SUPPORT,

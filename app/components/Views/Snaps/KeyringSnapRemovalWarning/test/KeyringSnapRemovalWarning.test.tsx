@@ -45,7 +45,7 @@ jest.mock('@react-navigation/native', () => {
 });
 
 describe('KeyringSnapRemovalWarning', () => {
-  const mockSnapName = 'MetaMask Simple Snap Keyring';
+  const mockSnapName = 'BitcoinPay Simple Snap Keyring';
   const mockSnap: Snap = {
     blocked: false,
     enabled: true,
@@ -66,7 +66,7 @@ describe('KeyringSnapRemovalWarning', () => {
       proposedName: mockSnapName,
       repository: {
         type: 'git',
-        url: 'git+https://github.com/MetaMask/snap-simple-keyring.git',
+        url: 'git+https://github.com/BitcoinPay/snap-simple-keyring.git',
       },
       source: {
         shasum: 'P2BbaJn6jb7+ecBF6mJJnheQ4j8dtEZ8O4FLqLv8e8M=',

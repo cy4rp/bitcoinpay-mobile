@@ -135,7 +135,7 @@ describe('useMusdCtaVisibility', () => {
       symbol: 'MUSD',
       chainId: caipChainId,
       tokenSupported,
-      name: 'MetaMask USD',
+      name: 'BitcoinPay USD',
       iconUrl: '',
       decimals: 6,
     };

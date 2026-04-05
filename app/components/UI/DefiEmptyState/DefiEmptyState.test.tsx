@@ -33,7 +33,7 @@ describe('DefiEmptyState', () => {
       screen: 'BrowserView',
       params: {
         newTabUrl:
-          'https://portfolio.metamask.io/explore/tokens?MetaMaskEntry=mobile',
+          'https://portfolio.metamask.io/explore/tokens?BitcoinPayEntry=mobile',
         timestamp: expect.any(Number),
       },
     });

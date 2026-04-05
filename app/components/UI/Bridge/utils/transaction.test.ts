@@ -15,7 +15,7 @@ jest.mock('../../../../util/address', () => ({
 }));
 
 describe('getIsBridgeTransaction', () => {
-  it('returns true when origin is MetaMask and type is bridge', () => {
+  it('returns true when origin is BitcoinPay and type is bridge', () => {
     // Arrange
     const txMeta = {
       origin: ORIGIN_METAMASK,
@@ -29,7 +29,7 @@ describe('getIsBridgeTransaction', () => {
     expect(result).toBe(true);
   });
 
-  it('returns true when origin is MetaMask and type is bridgeApproval', () => {
+  it('returns true when origin is BitcoinPay and type is bridgeApproval', () => {
     // Arrange
     const txMeta = {
       origin: ORIGIN_METAMASK,
@@ -43,7 +43,7 @@ describe('getIsBridgeTransaction', () => {
     expect(result).toBe(true);
   });
 
-  it('returns false when origin is MetaMask but type is not bridge related', () => {
+  it('returns false when origin is BitcoinPay but type is not bridge related', () => {
     // Arrange
     const txMeta = {
       origin: ORIGIN_METAMASK,
@@ -57,7 +57,7 @@ describe('getIsBridgeTransaction', () => {
     expect(result).toBe(false);
   });
 
-  it('returns false when origin is not MetaMask but type is bridge', () => {
+  it('returns false when origin is not BitcoinPay but type is bridge', () => {
     // Arrange
     const txMeta = {
       origin: 'https://example.com',
@@ -71,7 +71,7 @@ describe('getIsBridgeTransaction', () => {
     expect(result).toBe(false);
   });
 
-  it('returns false when origin is not MetaMask but type is bridgeApproval', () => {
+  it('returns false when origin is not BitcoinPay but type is bridgeApproval', () => {
     // Arrange
     const txMeta = {
       origin: 'https://example.com',

@@ -231,7 +231,7 @@ function getMinimalWalletConnectOptions() {
 
 /**
  * Return a minimal set of options for `getRpcMethodMiddleware` when used in a
- * MetaMask SDK context.
+ * BitcoinPay SDK context.
  *
  * See {@link getMinimalOptions} for more details.
  *
@@ -1433,7 +1433,7 @@ describe('getRpcMethodMiddleware', () => {
         expectedError.message,
       );
       expect(
-        //@ts-expect-error {JsonRpcError} will be fixed by a future bump. [Reference](https://github.com/MetaMask/metamask-mobile/pull/14091/files#r2009831015)
+        //@ts-expect-error {JsonRpcError} will be fixed by a future bump. [Reference](https://github.com/BitcoinPay/metamask-mobile/pull/14091/files#r2009831015)
         ((response as JsonRpcFailure).error as JsonRpcError<unknown>).data.cause
           .message,
       ).toBe(expectedError.message);

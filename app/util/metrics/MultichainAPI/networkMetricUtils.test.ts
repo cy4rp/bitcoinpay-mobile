@@ -14,7 +14,7 @@ jest.mock('../../../store', () => ({
   },
 }));
 
-// Mock MetaMask utility functions
+// Mock BitcoinPay utility functions
 jest.mock('@metamask/utils', () => ({
   isCaipChainId: jest.fn((chainId: string) => chainId.includes(':')),
   isHexString: jest.fn((chainId: string) => chainId.startsWith('0x')),

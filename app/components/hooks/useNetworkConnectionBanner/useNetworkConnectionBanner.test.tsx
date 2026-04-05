@@ -1387,7 +1387,7 @@ describe('useNetworkConnectionBanner', () => {
         variant: ToastVariants.Icon,
         labelOptions: [
           {
-            label: 'Updated to MetaMask default',
+            label: 'Updated to BitcoinPay default',
           },
         ],
         iconName: IconName.Confirmation,
@@ -1395,7 +1395,7 @@ describe('useNetworkConnectionBanner', () => {
       });
     });
 
-    it('tracks switch to MetaMask default RPC event', async () => {
+    it('tracks switch to BitcoinPay default RPC event', async () => {
       const mockConfigWithInfura = mockNetworkConfigurationWithInfura;
       mockNetworkController.getNetworkConfigurationByChainId.mockReturnValue(
         mockConfigWithInfura,

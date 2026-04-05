@@ -281,7 +281,7 @@ describe(`Migration ${migrationVersion}: update hostname keyed PermissionControl
     });
   });
 
-  it('does not migrate PermissionController subjects that are invalid hostnames, snaps, WalletConnect IDs, or MetaMask SDK IDs', () => {
+  it('does not migrate PermissionController subjects that are invalid hostnames, snaps, WalletConnect IDs, or BitcoinPay SDK IDs', () => {
     const state = {
       engine: {
         backgroundState: {
@@ -404,7 +404,7 @@ describe(`Migration ${migrationVersion}: update hostname keyed PermissionControl
     });
   });
 
-  it('does not migrate SelectedNetworkController entries that are invalid hostnames, snaps, WalletConnect IDs, or MetaMask SDK IDs', () => {
+  it('does not migrate SelectedNetworkController entries that are invalid hostnames, snaps, WalletConnect IDs, or BitcoinPay SDK IDs', () => {
     const state = {
       engine: {
         backgroundState: {

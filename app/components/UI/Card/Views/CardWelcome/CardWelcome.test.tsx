@@ -39,7 +39,7 @@ jest.mock('../../../../hooks/useAnalytics/useAnalytics', () => ({
 jest.mock('../../../../../../locales/i18n', () => ({
   strings: (key: string) => {
     const map: Record<string, string> = {
-      'card.card_onboarding.title': 'Enable MetaMask Card features',
+      'card.card_onboarding.title': 'Enable BitcoinPay Card features',
       'card.card_onboarding.description':
         'Change your spending token and network by signing in with your Crypto Life email and password.',
       'card.card_onboarding.apply_now_button': 'Sign in',

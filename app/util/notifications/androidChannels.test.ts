@@ -1,7 +1,7 @@
 import { AndroidImportance } from '@notifee/react-native';
 import {
   ChannelId,
-  MetaMaskAndroidChannel,
+  BitcoinPayAndroidChannel,
   notificationChannels,
 } from './androidChannels';
 
@@ -11,7 +11,7 @@ describe('notificationChannels', () => {
   });
 
   it('first channel has DEFAULT_NOTIFICATION_CHANNEL_ID', () => {
-    const firstChannel: MetaMaskAndroidChannel = notificationChannels[0];
+    const firstChannel: BitcoinPayAndroidChannel = notificationChannels[0];
     expect(firstChannel).toEqual({
       id: ChannelId.DEFAULT_NOTIFICATION_CHANNEL_ID,
       name: 'Transaction Complete',
@@ -24,15 +24,15 @@ describe('notificationChannels', () => {
   });
 
   it('second channel should have the correct properties for DEFAULT_NOTIFICATION_CHANNEL_ID', () => {
-    const secondChannel: MetaMaskAndroidChannel = notificationChannels[1];
+    const secondChannel: BitcoinPayAndroidChannel = notificationChannels[1];
     expect(secondChannel).toEqual({
       id: ChannelId.ANNOUNCEMENT_NOTIFICATION_CHANNEL_ID,
-      name: 'MetaMask Announcement',
+      name: 'BitcoinPay Announcement',
       lights: true,
       vibration: true,
       importance: AndroidImportance.HIGH,
       title: 'Announcement',
-      subtitle: 'MetaMask Announcement',
+      subtitle: 'BitcoinPay Announcement',
     });
   });
 

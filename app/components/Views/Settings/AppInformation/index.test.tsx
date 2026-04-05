@@ -6,7 +6,7 @@ import renderWithProvider, {
   renderScreen,
 } from '../../../../util/test/renderWithProvider';
 import AppInformation from './';
-import { AboutMetaMaskSelectorsIDs } from './AboutMetaMask.testIds';
+import { AboutBitcoinPaySelectorsIDs } from './AboutBitcoinPay.testIds';
 import { RootState } from '../../../../reducers';
 import { strings } from '../../../../../locales/i18n';
 
@@ -54,7 +54,7 @@ const MOCK_STATE = {
             status: 'running',
             manifest: {
               proposedName: 'Solana',
-              description: 'Manage Solana using MetaMask',
+              description: 'Manage Solana using BitcoinPay',
             },
             preinstalled: true,
           },
@@ -67,7 +67,7 @@ const MOCK_STATE = {
 describe('AppInformation', () => {
   beforeEach(() => {
     jest.clearAllMocks();
-    mockGetApplicationName.mockResolvedValue('MetaMask');
+    mockGetApplicationName.mockResolvedValue('BitcoinPay');
     mockGetVersion.mockResolvedValue('7.0.0');
     mockGetBuildNumber.mockResolvedValue('1000');
     mockIsProduction.mockReturnValue(true);
@@ -82,7 +82,7 @@ describe('AppInformation', () => {
       { state: MOCK_STATE },
     );
     await waitFor(() => {
-      expect(getByText('MetaMask v7.0.0 (1000)')).toBeTruthy();
+      expect(getByText('BitcoinPay v7.0.0 (1000)')).toBeTruthy();
     });
     expect(toJSON()).toMatchSnapshot();
   });
@@ -94,7 +94,7 @@ describe('AppInformation', () => {
       { state: MOCK_STATE },
     );
 
-    expect(getByTestId(AboutMetaMaskSelectorsIDs.CONTAINER)).toBeTruthy();
+    expect(getByTestId(AboutBitcoinPaySelectorsIDs.CONTAINER)).toBeTruthy();
   });
 
   describe('Header', () => {
@@ -121,7 +121,7 @@ describe('AppInformation', () => {
         false,
       );
 
-      fireEvent.press(getByTestId(AboutMetaMaskSelectorsIDs.BACK_BUTTON));
+      fireEvent.press(getByTestId(AboutBitcoinPaySelectorsIDs.BACK_BUTTON));
 
       expect(mockGoBack).toHaveBeenCalledTimes(1);
     });
@@ -138,7 +138,7 @@ describe('AppInformation', () => {
     // When the component mounts and fetches the info
     // Then it should display the formatted app information
     await waitFor(() => {
-      expect(getByText('MetaMask v7.0.0 (1000)')).toBeTruthy();
+      expect(getByText('BitcoinPay v7.0.0 (1000)')).toBeTruthy();
     });
   });
 
@@ -211,7 +211,7 @@ describe('AppInformation', () => {
   });
 
   describe('Image Rendering', () => {
-    it('renders the MetaMask fox logo', () => {
+    it('renders the BitcoinPay fox logo', () => {
       const { UNSAFE_getAllByType } = renderScreen(
         AppInformation,
         { name: 'AppInformation' },

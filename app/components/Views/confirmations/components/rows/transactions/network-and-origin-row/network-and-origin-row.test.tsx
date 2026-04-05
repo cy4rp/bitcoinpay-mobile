@@ -39,7 +39,7 @@ const networkConfigurationMock = {
   chainId: '0x1' as Hex,
 };
 
-// Mock state with transaction from MetaMask Mobile origin
+// Mock state with transaction from BitcoinPay Mobile origin
 const internalTransactionState = merge({}, transferConfirmationState, {
   engine: {
     backgroundState: {
