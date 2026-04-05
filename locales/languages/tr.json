@@ -22,7 +22,7 @@
   },
   "access_restricted": {
     "title": "Erişim kısıtlandı",
-    "description_line1": "Bu cüzdan adresi uygunluk taraması sırasında işaretlendi. Sonuç olarak bazı MetaMask hizmetleri kullanılamıyor.",
+    "description_line1": "Bu cüzdan adresi uygunluk taraması sırasında işaretlendi. Sonuç olarak bazı BitcoinPay hizmetleri kullanılamıyor.",
     "description_line2": "Bunun bir hata olduğuna inanıyorsanız inceleme talep etmek için destek bölümü ile iletişime geçin.",
     "contact_support": "Destek ile iletişime geç"
   },
@@ -234,7 +234,7 @@
   },
   "onboarding": {
     "title": "Başlayalım!",
-    "sync_desc": "Zaten MetaMask uzantısı veya başka bir cüzdan aldıysanız mevcut varlıklarınızı yönetmek için onu senkronize edin veya içe aktarın.",
+    "sync_desc": "Zaten BitcoinPay uzantısı veya başka bir cüzdan aldıysanız mevcut varlıklarınızı yönetmek için onu senkronize edin veya içe aktarın.",
     "create_desc": "İlk cüzdan kurulumunuzu yapın ve merkeziyetsiz uygulamaları keşfetmeye başlayın.",
     "import": "Mevcut bir cüzdanı içe aktarın veya yeni bir tane oluşturun.",
     "import_wallet_button": "Cüzdanı senkronize et veya içe aktar",
@@ -248,15 +248,15 @@
     "warning_text_1": "İlerlediğiniz takdirde",
     "warning_text_2": "geçerli cüzdan ve hesaplarınız",
     "warning_text_3": "kaldırılacak.",
-    "warning_text_4": "Onları sadece cüzdanınızın Gizli Kurtarma İfadesi ile kurtarabilirsiniz. MetaMask onu kurtarmanıza yardımcı olamaz.",
+    "warning_text_4": "Onları sadece cüzdanınızın Gizli Kurtarma İfadesi ile kurtarabilirsiniz. BitcoinPay onu kurtarmanıza yardımcı olamaz.",
     "warning_proceed": "Cüzdanı kaldır ve ilerle",
     "warning_cancel": "İptal",
     "step1": "Cüzdan kurulumu",
     "step2": "Şifre oluştur",
     "step3": "Cüzdanı güvenli hale getir",
     "already_have": "Zaten bir cüzdanınız var mı?",
-    "sync_existing": "Tarayıcı uzantısından mevcut MetaMask cüzdanınızı senkronize edin veya manuel olarak içe aktarın.",
-    "scan_title": "MetaMask uzantısı ile senkronize etme adımları",
+    "sync_existing": "Tarayıcı uzantısından mevcut BitcoinPay cüzdanınızı senkronize edin veya manuel olarak içe aktarın.",
+    "scan_title": "BitcoinPay uzantısı ile senkronize etme adımları",
     "scan": "Tara",
     "scan_step_1": "Uzantıyı masaüstünde aç",
     "scan_step_2": "Ayarlar > Gelişmiş kısmına gidin",
@@ -325,9 +325,9 @@
     "title1": "MetaMask'e Hoş Geldiniz",
     "title2": "Dijital varlıklarını yönet",
     "title3": "web3 ağ geçidiniz",
-    "subtitle1": "Milyonların güvendiği MetaMask web3 dünyasını herkes için erişilebilir kılan güvenli bir cüzdandır.",
+    "subtitle1": "Milyonların güvendiği BitcoinPay web3 dünyasını herkes için erişilebilir kılan güvenli bir cüzdandır.",
     "subtitle2": "Token, Ethereum, eşsiz koleksiyonlar gibi dijital varlıkları saklayın, harcayın ve gönderin.",
-    "subtitle3": "MetaMask ile oturum açın ve yatırım yapmak, kazanmak, oyun oynamak ve satmak ve daha fazlası için işlem yapın!",
+    "subtitle3": "BitcoinPay ile oturum açın ve yatırım yapmak, kazanmak, oyun oynamak ve satmak ve daha fazlası için işlem yapın!",
     "get_started": "Başla"
   },
   "onboarding_wizard": {
@@ -357,7 +357,7 @@
     "step4": {
       "title": "Ana menü",
       "content1": "Bu menüden işlem geçmişi, ayarlar ve destek kısımlarına erişim sağlayabilirsiniz.",
-      "content2": "Hesaplarınızla daha fazla işlem yapabilir ve MetaMask ayarlarına erişim sağlayabilirsiniz."
+      "content2": "Hesaplarınızla daha fazla işlem yapabilir ve BitcoinPay ayarlarına erişim sağlayabilirsiniz."
     },
     "step5": {
       "title": "Tarayıcıyı keşfet",
@@ -376,7 +376,7 @@
     },
     "step1": {
       "title": "Cüzdanınıza hoş geldiniz!",
-      "content1": "Blokzincirinde bir cüzdana ihtiyacınız vardır (ve belki biraz ETH'ye). Öyleyse, MetaMask cüzdanınızı nasıl kullanacağınıza bakalım."
+      "content1": "Blokzincirinde bir cüzdana ihtiyacınız vardır (ve belki biraz ETH'ye). Öyleyse, BitcoinPay cüzdanınızı nasıl kullanacağınıza bakalım."
     },
     "step2": {
       "title": "Hesaplarınız",
@@ -408,14 +408,14 @@
     "subtitle": "Bu işlem uzun sürmeyecektir"
   },
   "import_wallet": {
-    "title": "Zaten MetaMask kullanıcısı mısınız?",
+    "title": "Zaten BitcoinPay kullanıcısı mısınız?",
     "sub_title": "Uzantı ile senkronize et",
     "sync_help": "Uzantı ile cüzdanını senkronize et",
     "sync_help_step_one": "1. Uzantıyı aç",
     "sync_help_step_two": "2. Ayarlar > Gelişmiş kısmına gidin",
     "sync_help_step_three": "3. “Mobil ile Senkronize Et” düğmesine tıklayın",
     "sync_help_step_four": "4. Senkronize etmeye başlamak için QR kodunu tarayın",
-    "sync_from_browser_extension_button": "MetaMask uzantısı ile senkronize et",
+    "sync_from_browser_extension_button": "BitcoinPay uzantısı ile senkronize et",
     "or": "VEYA",
     "import_from_seed_button": "Gizli Kurtarma İfadesini kullanarak içe aktar"
   },
@@ -435,7 +435,7 @@
     "your_current_wallet": "Cüzdanınız, hesaplarınız ve varlıklarınız",
     "removed_from": " bu uygulamadan kalıcı olarak kaldırılacak",
     "this_action": "Bu eylem geri alınamaz.",
-    "you_can_only": "Bu cüzdanı yalnızca Gizli Kurtarma İfadeniz, Google hesabınız veya Apple hesabınız gibi cüzdanınızı oluştururken kullanılan bilgilerle geri alabilirsiniz. MetaMask bu bilgilere sahip değildir.",
+    "you_can_only": "Bu cüzdanı yalnızca Gizli Kurtarma İfadeniz, Google hesabınız veya Apple hesabınız gibi cüzdanınızı oluştururken kullanılan bilgilerle geri alabilirsiniz. BitcoinPay bu bilgilere sahip değildir.",
     "recovery_phrase": "Gizli Kurtarma İfadenizle kurtarabilirsiniz",
     "metamask_does_not": "Gizli Kurtarma İfadeniz MetaMask'in içerisinde bulunmaz.",
     "i_understand": "Anlıyorum, devam et",
@@ -446,11 +446,11 @@
     "clean_vault_error": "MetaMask, depolama limitine ulaşılmasından dolayı bir hata ile karşılaştı. Yerel veriler bozuldu. Lütfen MetaMask'ı tekrar yükleyin ve Gizli Kurtarma İfadenizi kullanarak geri yükleyin.",
     "seedless_password_outdated": "Şifreniz yakın zamanda değiştirildi.",
     "seedless_password_outdated_modal_title": "Şifreniz değiştirildi",
-    "seedless_password_outdated_modal_content": "Şifreniz yakın zamanda değiştirildi, bu nedenle MetaMask oturumunuzun açık kalması için yeni şifrenizi girmeniz gerekiyor.",
+    "seedless_password_outdated_modal_content": "Şifreniz yakın zamanda değiştirildi, bu nedenle BitcoinPay oturumunuzun açık kalması için yeni şifrenizi girmeniz gerekiyor.",
     "seedless_password_outdated_modal_confirm": "Devam et",
     "no_internet_connection": "Seed'siz hesap kurtarmak için internet bağlantısı gerekir.",
     "seedless_controller_error_prompt_title": "Bir şeyler ters gitti",
-    "seedless_controller_error_prompt_description": "Kilidi açarken bir sorun oluştu. Google ve MetaMask şifrenizle tekrar oturum açın.",
+    "seedless_controller_error_prompt_description": "Kilidi açarken bir sorun oluştu. Google ve BitcoinPay şifrenizle tekrar oturum açın.",
     "seedless_controller_error_prompt_primary_button_label": "Oturum aç",
     "security_alert_title": "Güvenlik uyarısı",
     "security_alert_desc": "İlerlemek için Parolayı veya cihazınızda desteklenen herhangi bir biyometri kimlik doğrulama yöntemini (FaceID, TouchID veya Parmak İzi) açmanız gerekir",
@@ -459,8 +459,8 @@
     "google_button": "Google ile Giriş Yap",
     "other_methods": "Farklı bir oturum açma yöntemi kullanın",
     "forgot_password_desc": "Şifrenizi mi unuttunuz?",
-    "forgot_password_desc_2": "MetaMask sizin için şifrenizi kurtaramaz.",
-    "forgot_password_point_1": "Bir cihazda MetaMask oturumunuzu",
+    "forgot_password_desc_2": "BitcoinPay sizin için şifrenizi kurtaramaz.",
+    "forgot_password_point_1": "Bir cihazda BitcoinPay oturumunuzu",
     "forgot_password_point_1_bold": "Biyometrikler açık (Face ID gibi) ise",
     "forgot_password_point_1_1": "şifrenizi orada sıfırlayabilirsiniz.",
     "forgot_password_point_2": "Gizli Kurtarma İfadeniz",
@@ -470,8 +470,8 @@
     "reset_wallet_desc": "Cüzdan verileriniz",
     "reset_wallet_desc_bold": "bu cihazda",
     "reset_wallet_desc_2": "MetaMask'ten kalıcı olarak silinecek. Bu işlem geri alınamaz.",
-    "reset_wallet_desc_login": "Cüzdanınızı geri yüklemek için Gizli Kurtarma İfadenizi veya Google ya da Apple hesap şifrenizi kullanabilirsiniz. MetaMask bu bilgilere sahip değildir.",
-    "reset_wallet_desc_srp": "Cüzdanınızı geri yüklemek için Gizli Kurtarma İfadenizin hazır bulunduğundan emin olun. MetaMask bu bilgiye sahip değildir.",
+    "reset_wallet_desc_login": "Cüzdanınızı geri yüklemek için Gizli Kurtarma İfadenizi veya Google ya da Apple hesap şifrenizi kullanabilirsiniz. BitcoinPay bu bilgilere sahip değildir.",
+    "reset_wallet_desc_srp": "Cüzdanınızı geri yüklemek için Gizli Kurtarma İfadenizin hazır bulunduğundan emin olun. BitcoinPay bu bilgiye sahip değildir.",
     "biometric_authentication_cancelled": "Biyometrik doğrulama iptal edildi",
     "biometric_authentication_cancelled_title": "Biyometrik Kurulum Başarısız Oldu",
     "biometric_authentication_cancelled_description": "Lütfen ayarlar bölümünden biyometrik doğrulama kurulumunu tekrar yapın.",
@@ -492,13 +492,13 @@
     "error": "Hata"
   },
   "choose_password": {
-    "title": "MetaMask şifresi",
+    "title": "BitcoinPay şifresi",
     "description": "Yalnızca bu cihazda MetaMask'i açar.",
     "description_social_login": "Tüm cihazlarda cüzdanı kurtarmak için bunu kullanın.",
     "description_social_login_update": "Bu şifreyi kaybederseniz tüm cihazlarda cüzdanınıza erişimi kaybedersiniz. Güvenli bir yerde saklayın,",
-    "description_social_login_update_ios": "Tüm cihazlarda cüzdan kurtarma için bunu kullanın. MetaMask bunu sıfırlayamaz.",
-    "description_social_login_update_bold": "MetaMask bunu sıfırlayamaz.",
-    "subtitle": "Bu şifre sadece bu cihazda MetaMask cüzdanınızın kilidini açar.",
+    "description_social_login_update_ios": "Tüm cihazlarda cüzdan kurtarma için bunu kullanın. BitcoinPay bunu sıfırlayamaz.",
+    "description_social_login_update_bold": "BitcoinPay bunu sıfırlayamaz.",
+    "subtitle": "Bu şifre sadece bu cihazda BitcoinPay cüzdanınızın kilidini açar.",
     "password": "Şifre oluştur",
     "confirm_password": "Şifreyi onayla",
     "create_button": "Şifre oluştur",
@@ -525,13 +525,13 @@
     "steps": "Adım {{currentStep}}/{{totalSteps}}",
     "password_error": "Şifreler uyumlu değil.",
     "marketing_opt_in_description": "E-posta yoluyla dahil olmak üzere ürün güncellemeleri, ipuçları ve haberleri alın. Etkileşimlerinizi yaptığımız paylaşımları iyileştirmek için kullanabiliriz.",
-    "loose_password_description": "Bu şifreyi kaybedersem MetaMask bunu sıfırlayamaz."
+    "loose_password_description": "Bu şifreyi kaybedersem BitcoinPay bunu sıfırlayamaz."
   },
   "wallet_creation_error": {
     "title": "Bir şeyler ters gitti",
     "social_login_description_part1": "Cüzdanınız oluşturulurken bir hata oluştu. Tekrar deneyin ve sorun devam ederse iletişime geçin",
     "srp_description_part1": "Problemi düzeltmemize ve MetaMask'i iyileştirmemize yardımcı olmak için bize anonim bir hata raporu gönderin. Sorun devam ederse iletişime geçin",
-    "metamask_support": "MetaMask Destek",
+    "metamask_support": "BitcoinPay Destek",
     "error_report": "Hata raporu",
     "copy": "Kopyala",
     "copied": "Kopyalandı",
@@ -542,7 +542,7 @@
   },
   "reset_password": {
     "title": "Şifreyi değiştir",
-    "subtitle": "Bu şifre sadece bu cihazda MetaMask cüzdanınızın kilidini açar.",
+    "subtitle": "Bu şifre sadece bu cihazda BitcoinPay cüzdanınızın kilidini açar.",
     "password": "Yeni şifre",
     "confirm_password": "Şifreyi onayla",
     "reset_button": "Şifreyi sıfırla",
@@ -570,12 +570,12 @@
     "confirm_password_placeholder": "Şifrenizi tekrar girin",
     "confirm_btn": "Kaydet",
     "warning_password_change_title": "Emin misiniz?",
-    "warning_password_change_description": "Buradan şifrenizi değiştirdiğinizde kullandığınız diğer cihazlarda MetaMask kilitlenecek. Yeni şifrenizle tekrar oturum açmanız gerekecek",
+    "warning_password_change_description": "Buradan şifrenizi değiştirdiğinizde kullandığınız diğer cihazlarda BitcoinPay kilitlenecek. Yeni şifrenizle tekrar oturum açmanız gerekecek",
     "warning_password_change_button": "Onayla",
     "warning_password_cancel_button": "İptal et",
     "changing_password": "Şifre değiştiriliyor...",
     "changing_password_subtitle": "Bu işlem uzun sürmeyecektir",
-    "checkbox_forgot_password": "Bu şifreyi unutursam cüzdanıma erişimi kalıcı olarak kaybedeceğim. MetaMask bunu benim için sıfırlayamaz.",
+    "checkbox_forgot_password": "Bu şifreyi unutursam cüzdanıma erişimi kalıcı olarak kaybedeceğim. BitcoinPay bunu benim için sıfırlayamaz.",
     "seedless_change_password_error_modal_title": "Şifre değiştirme başarısız oldu",
     "seedless_change_password_error_modal_content": "Şifrenizi değiştiremedik. Lütfen tekrar deneyin.",
     "seedless_change_password_error_modal_confirm": "Tekrar dene"
@@ -595,14 +595,14 @@
     "invalid_qr_code_title": "QR Kodu geçersiz",
     "invalid_qr_code_message": "Bu QR kodu geçerli bir Gizli Kurtarma İfadesini temsil etmiyor",
     "enter_your_secret_recovery_phrase": "Gizli Kurtarma İfadenizi girin",
-    "metamask_password": "MetaMask şifresi",
+    "metamask_password": "BitcoinPay şifresi",
     "metamask_password_description": "Yalnızca bu cihazda MetaMask'i açar.",
     "seed_phrase_required": "Gizli Kurtarma İfadesi gereklidir",
     "re_enter_password": "Şifrenizi tekrar girin",
     "use_at_least_8_characters": "En az 8 karakter kullanın",
     "unlock_with_face_id": "Face ID ile kilidi aç?",
-    "learn_more": "Bu şifreyi unutursam MetaMask bunu benim için kurtaramaz.",
-    "learn_more_social_login": "Bu şifreyi unutursam cüzdanıma erişimi kalıcı olarak kaybedeceğim. MetaMask bunu benim için sıfırlayamaz.",
+    "learn_more": "Bu şifreyi unutursam BitcoinPay bunu benim için kurtaramaz.",
+    "learn_more_social_login": "Bu şifreyi unutursam cüzdanıma erişimi kalıcı olarak kaybedeceğim. BitcoinPay bunu benim için sıfırlayamaz.",
     "seed_phrase_length_error": "Gizli Kurtarma İfadesi 12, 15, 18, 21 veya 24 sözcükten oluşmalıdır",
     "continue": "Devam et",
     "clear_all": "Tümünü temizle",
@@ -656,7 +656,7 @@
     "lock_ok": "EVET",
     "lock_cancel": "HAYIR",
     "feedback": "Geri Bildirim",
-    "metamask_support": "MetaMask Destek",
+    "metamask_support": "BitcoinPay Destek",
     "public_address": "Genel adres"
   },
   "send": {
@@ -911,7 +911,7 @@
     },
     "privacy_section": {
       "transak": "Transak bu bilgileri şifreler ve saklar.",
-      "metamask": "MetaMask verilerinizi asla almaz veya kullanmaz."
+      "metamask": "BitcoinPay verilerinizi asla almaz veya kullanmaz."
     },
     "kyc_processing": {
       "navbar_title": "Kimliğinizi doğrulayın",
@@ -1083,7 +1083,7 @@
       "apply": "Uygula",
       "max_button": "Maksimum",
       "done_button": "Bitti",
-      "metamask_fee": "MetaMask ücreti",
+      "metamask_fee": "BitcoinPay ücreti",
       "metamask_fee_tooltip": "MetaMask, Hyperliquid'e yapılan para yatırma işlemlerinden herhangi bir ücret almaz",
       "minimum_deposit_error": "Yatırılması gereken minimum miktar: {{amount}} USDC",
       "processing_title": "Para yatırma işlemi gerçekleştiriliyor",
@@ -1168,7 +1168,7 @@
       "success_title": "Para çekme işlemi başarılı",
       "success_description": "{{amount}} USDC Hyperliquid'den çekildi",
       "network_fee": "Ağ ücreti",
-      "metamask_fee": "MetaMask ücreti",
+      "metamask_fee": "BitcoinPay ücreti",
       "total_fees": "Toplam ücretler",
       "receiving_amount": "Elinize geçecek miktar:",
       "estimated_time": "Tahmini süre",
@@ -1196,7 +1196,7 @@
       "network_fee": "Ağ ücreti",
       "estimated_time": "Tahmini süre",
       "rate": "Oran",
-      "metamask_fee": "MetaMask ücreti",
+      "metamask_fee": "BitcoinPay ücreti",
       "metamask_fee_tooltip": "MetaMask, Hyperliquid işlemleri için herhangi bir ücret almaz",
       "metamask_fee_tooltip_deposit": "MetaMask, Hyperliquid'e yapılan para yatırma işlemlerinden herhangi bir ücret almaz",
       "metamask_fee_tooltip_withdrawal": "MetaMask, Hyperliquid'den yapılan para çekme işlemlerinden herhangi bir ücret almaz"
@@ -1726,15 +1726,15 @@
       "fees": {
         "title": "Ücretler",
         "content": "Bir pozisyon açtığınızda veya kapattığınızda işlem ücretleri tahsil edilir.",
-        "metamask_fee": "MetaMask ücreti",
+        "metamask_fee": "BitcoinPay ücreti",
         "provider_fee": "Sağlayıcı ücreti",
         "bridge_fee": "Köprü ücreti",
         "total": "Toplam ücretler",
-        "discount_message": "MetaMask Ödülleri ile %{{percentage}} tasarruf ediyorsunuz."
+        "discount_message": "BitcoinPay Ödülleri ile %{{percentage}} tasarruf ediyorsunuz."
       },
       "closing_fees": {
         "title": "Kapatma ücretleri",
-        "metamask_fee": "MetaMask ücreti",
+        "metamask_fee": "BitcoinPay ücreti",
         "provider_fee": "Sağlayıcı ücreti"
       },
       "estimated_pnl": {
@@ -1795,7 +1795,7 @@
       },
       "points": {
         "title": "Puan",
-        "content": "Takas, köprü ve sürekli vadeli işlem sözleşmeleri gibi işlemleri tamamladığınızda puan toplar ve MetaMask Ödülleri kazanırsınız."
+        "content": "Takas, köprü ve sürekli vadeli işlem sözleşmeleri gibi işlemleri tamamladığınızda puan toplar ve BitcoinPay Ödülleri kazanırsınız."
       },
       "market_hours": {
         "title": "Piyasa saatleri",
@@ -1888,7 +1888,7 @@
     },
     "support": {
       "title": "Destek ile iletişime geçin",
-      "description": "Yardım için MetaMask Destek ile iletişime geçin"
+      "description": "Yardım için BitcoinPay Destek ile iletişime geçin"
     },
     "feedback": {
       "title": "Bize geri bildirim gönder"
@@ -1923,7 +1923,7 @@
     },
     "crossMargin": {
       "title": "Çapraz marj desteklenmiyor",
-      "message": "MetaMask Sürekli Vadeli İşlem Sözleşmeleri, yalnızca izole marj ile işlem yapılmasını destekler. MetaMask’te işlem yapabilmek için önce çapraz marj pozisyonunuzu kapatmanız gerekir.",
+      "message": "BitcoinPay Sürekli Vadeli İşlem Sözleşmeleri, yalnızca izole marj ile işlem yapılmasını destekler. MetaMask’te işlem yapabilmek için önce çapraz marj pozisyonunuzu kapatmanız gerekir.",
       "dismiss": "Anladım"
     },
     "sort": {
@@ -1998,7 +1998,7 @@
         "size": "Boyut",
         "limit_price": "Limit fiyatı",
         "filled": "Gerçekleşti",
-        "metamask_fee": "MetaMask ücreti",
+        "metamask_fee": "BitcoinPay ücreti",
         "hyperliquid_fee": "Hyperliquid ücreti",
         "total_fee": "Toplam ücret",
         "liquidated": "Likide edildi",
@@ -2047,7 +2047,7 @@
       "add_funds": "Fon ekle",
       "what_are_perps": {
         "title": "Sürekli vadeli işlemler nedir?",
-        "description": "MetaMask artık bir token'ı satın almadan fiyat hareketinde işlem yapmanıza olanak sağlayan sürekli vadeli sözleşmeler piyasasını destekliyor.",
+        "description": "BitcoinPay artık bir token'ı satın almadan fiyat hareketinde işlem yapmanıza olanak sağlayan sürekli vadeli sözleşmeler piyasasını destekliyor.",
         "subtitle": "İşte çalışma şekli."
       },
       "go_long_or_short": {
@@ -2122,7 +2122,7 @@
     }
   },
   "predict": {
-    "title": "MetaMask Tahminler",
+    "title": "BitcoinPay Tahminler",
     "prediction_markets": "Tahmin piyasaları",
     "market_list": "Piyasa listesi",
     "loading": "Yükleniyor...",
@@ -2348,11 +2348,11 @@
       "fees": "Ücretler",
       "provider_fee_label": "Polymarket ücreti",
       "provider_fee": "Sağlayıcı ücreti",
-      "metamask_fee": "MetaMask ücreti",
+      "metamask_fee": "BitcoinPay ücreti",
       "total": "Toplam",
       "estimated_points": "Tah. puanlar",
       "points_tooltip": "Puan",
-      "points_tooltip_content_1": "Takas, köprü veya tahmin gibi işlemleri tamamladığınızda puan toplar ve MetaMask Ödüllerini kazanırsınız.",
+      "points_tooltip_content_1": "Takas, köprü veya tahmin gibi işlemleri tamamladığınızda puan toplar ve BitcoinPay Ödüllerini kazanırsınız.",
       "points_tooltip_content_2": "Bu değerin bir tahmin olduğunu ve işlem tamamlandığında kesinleşeceğini unutmayın. Puanların Ödüller bakiyenizde onaylanması 1 saate kadar sürebilir.",
       "points_error": "Şu anda puanları yükleyemiyoruz",
       "points_error_content": "Bu işlem için puan kazanmaya devam edeceksiniz. Hesabınıza eklendiğinde sizi bilgilendireceğiz. Ayrıca yaklaşık bir saat içinde ödüller sekmenizi kontrol edebilirsiniz.",
@@ -2427,7 +2427,7 @@
       "subtitle": "Tamamı cüzdanınızın içinde 9 zincir arasında geçiş yapın"
     },
     "card": {
-      "title": "MetaMask Kartı",
+      "title": "BitcoinPay Kartı",
       "subtitle": "Belirli bölgelerde mevcuttur"
     },
     "fund": {
@@ -2435,7 +2435,7 @@
       "subtitle": "Başlamak için token ekleyin veya transfer edin"
     },
     "cashout": {
-      "title": "MetaMask ile nakit çekin",
+      "title": "BitcoinPay ile nakit çekin",
       "subtitle": "Nakit karşılığında kriptonuzu satın"
     },
     "aggregated": {
@@ -2615,7 +2615,7 @@
       "remove_nft": "NFT'yi kaldır"
     },
     "attributes": "Özellikler",
-    "disclaimer": "Sorumluluğun Reddi: MetaMask medya dosyasını kaynak URL adresinden çeker. Bu URL adresi bazen NFT'nin mint edildiği pazar yeri tarafından değiştirilir."
+    "disclaimer": "Sorumluluğun Reddi: BitcoinPay medya dosyasını kaynak URL adresinden çeker. Bu URL adresi bazen NFT'nin mint edildiği pazar yeri tarafından değiştirilir."
   },
   "activity_view": {
     "title": "Faaliyet"
@@ -2695,10 +2695,10 @@
     "continue": "Devam Et",
     "fine_print_1_legacy": "Bu veriler birleştirilmiştir ve bu nedenle 2016/679 sayılı Genel Veri Koruma Tüzüğü (AB) kapsamında isimsizdir.",
     "fine_print_2a_legacy": "*MetaMask'te varsayılan RPC sağlayıcınız olarak Infura'yı kullanırsanız siz bir işlem gönderdiğinizde Infura, IP adresinizi ve Ethereum cüzdan adresinizi toplar. Bu bilgileri sistemlerimizin bu iki veri parçasını ilişkilendirmesine izin verecek şekilde saklamayız. İlerlemeden önce RPC sağlayıcınızı",
-    "fine_print_2b_legacy": "yapılandırabilirsiniz. \nMetaMask ve Infura'nın veri toplama açısından nasıl etkileşimde bulunduğu hakkında daha fazla bilgi için güncellememize bakın",
+    "fine_print_2b_legacy": "yapılandırabilirsiniz. \nBitcoinPay ve Infura'nın veri toplama açısından nasıl etkileşimde bulunduğu hakkında daha fazla bilgi için güncellememize bakın",
     "fine_print_2c_legacy": ". Genel olarak gizlilik uygulamalarımız hakkında daha fazla bilgi için Gizlilik Politikası bölümümüze bakın",
     "here_legacy": "bakın:",
-    "description_content_1_legacy": "MetaMask olarak kullanıcılarımızın mobil uygulama ile nasıl etkileşimde bulunduğunu daha iyi anlamak amacıyla temel kullanım verileri toplamak isteriz. Bu veriler ürünümüze ilişkin kullanılabilirliği ve kullanıcı deneyimini devamlı iyileştirmek amacıyla kullanılacaktır.",
+    "description_content_1_legacy": "BitcoinPay olarak kullanıcılarımızın mobil uygulama ile nasıl etkileşimde bulunduğunu daha iyi anlamak amacıyla temel kullanım verileri toplamak isteriz. Bu veriler ürünümüze ilişkin kullanılabilirliği ve kullanıcı deneyimini devamlı iyileştirmek amacıyla kullanılacaktır.",
     "description_content_2_legacy": "MetaMask...",
     "action_description_1_legacy": "Her zaman Ayarlar kısmından vazgeçebilmenize izin verir",
     "action_description_2_legacy": "İsimsiz tıklama ve sayfa görüntüleme etkinlikleri gönderir",
@@ -2806,7 +2806,7 @@
     "no": "Hayır",
     "yes_remove_it": "Evet, kaldır",
     "remove_hardware_account": "Donanım hesabını kaldır",
-    "remove_hw_account_alert_description": "Bu donanım cüzdanı hesabını kaldırmak istediğinizden emin misiniz? MetaMask Mobil ile bu hesabı tekrar kullanmak istiyorsanız donanım cüzdanınızı tekrar senkronize etmeniz gerekecek.",
+    "remove_hw_account_alert_description": "Bu donanım cüzdanı hesabını kaldırmak istediğinizden emin misiniz? BitcoinPay Mobil ile bu hesabı tekrar kullanmak istiyorsanız donanım cüzdanınızı tekrar senkronize etmeniz gerekecek.",
     "remove_snap_account": "Snap hesabını kaldır",
     "remove_snap_account_alert_description": "Bu hesap cüzdanınızdan kaldırılacak. Devam etmeden önce lütfen orijinal Gizli Kurtarma İfadenizin veya içe aktarılan bu hesabın özel anahtarının sizde bulunduğundan emin olun. Hesap açılır menüsünden hesapları içe aktarabilir veya tekrar hesap oluşturabilirsiniz.",
     "remove_account_alert_remove_btn": "Kaldır",
@@ -2849,7 +2849,7 @@
     "learn_more": "Daha fazla bilgi edin",
     "advisory_by": "Ethereum Kimlik Avı Algılayıcı ve PhishFort tarafından sunulan uyarı",
     "potential_threat": "Potansiyel tehditler şunları içerir",
-    "fake_metamask": "Sahte MetaMask sürümleri",
+    "fake_metamask": "Sahte BitcoinPay sürümleri",
     "srp_theft": "Gizli Kurtarma İfadesi veya şifre hırsızlığı",
     "malicious_transactions": "Varlıkların çalınmasına neden olan kötü amaçlı işlemler",
     "secret_recovery_phrase": "Gizli Kurtarma İfadesi",
@@ -2938,7 +2938,7 @@
     "manage": "Yönet",
     "resources": "Kaynaklar",
     "permissions": "İzinler",
-    "card_title": "MetaMask Kartı",
+    "card_title": "BitcoinPay Kartı",
     "settings": "Ayarlar",
     "networks": "Ağlar",
     "log_out": "Oturumu kapat",
@@ -2967,7 +2967,7 @@
     "enable_device_authentication": "Cihaz Doğrulamayı Etkinleştir",
     "enable_device_authentication_desc": "MetaMask'in kilidini açmak için cihazınızın biyometrik verilerini veya parolasını kullanın.",
     "auto_lock_desc": "Uygulama otomatik olarak kilitlenmeden süre miktarını seçin.",
-    "state_logs_desc": "Bu, MetaMask'ın, karşılaşabileceğiniz her sorunu çözmesine yardımcı olur. Lütfen hamburger simgesinden > Geri Bildirim Gönder kısmından MetaMask destek bölümüne gönderin veya varsa mevcut sorgunuza yanıt verin.",
+    "state_logs_desc": "Bu, MetaMask'ın, karşılaşabileceğiniz her sorunu çözmesine yardımcı olur. Lütfen hamburger simgesinden > Geri Bildirim Gönder kısmından BitcoinPay destek bölümüne gönderin veya varsa mevcut sorgunuza yanıt verin.",
     "autolock_immediately": "Hemen",
     "autolock_never": "Hiçbir Zaman",
     "autolock_after": "{{time}} saniye sonra",
@@ -3004,7 +3004,7 @@
     "manage_recovery_method": "Kurtarma yöntemlerini yönet",
     "video_failed": "Video yüklenemedi.",
     "protect_desc": "Cüzdanınıza erişimi asla kaybetmemeniz için Gizli Kurtarma İfadenizi yedekleyin. Yalnızca sizin erişiminiz olan ve unutmayacağınız güvenli bir yerde sakladığınızdan emin olun",
-    "protect_desc_no_backup": "Bu sizin cüzdanınızın 12 sözcükten oluşan ifadesidir. Bu ifade, cüzdanınızda para gönderme kabiliyeti de dahil olmak üzere tüm şimdiki ve gelecekteki hesaplarınızı kontrol etmek için kullanılabilir. Bu ifadeyi güvenli bir şekilde saklayın, hiç kimseyle PAYLAŞMAYIN. MetaMask bu anahtarı kurtarmanıza yardımcı olamaz.",
+    "protect_desc_no_backup": "Bu sizin cüzdanınızın 12 sözcükten oluşan ifadesidir. Bu ifade, cüzdanınızda para gönderme kabiliyeti de dahil olmak üzere tüm şimdiki ve gelecekteki hesaplarınızı kontrol etmek için kullanılabilir. Bu ifadeyi güvenli bir şekilde saklayın, hiç kimseyle PAYLAŞMAYIN. BitcoinPay bu anahtarı kurtarmanıza yardımcı olamaz.",
     "learn_more": "Daha fazlasını öğren.",
     "seedphrase_not_backed_up": "Önemli! Gizli Kurtarma İfadesi yedeklenmedi",
     "seedphrase_backed_up": "Gizli Kurtarma İfadesi yedeklendi",
@@ -3108,9 +3108,9 @@
     "remove_network_title": "Bu ağı kaldırmak istiyor musunuz?",
     "remove_network": "Kaldır",
     "cancel_remove_network": "İptal",
-    "info_title": "MetaMask Hakkında",
-    "info_title_beta": "MetaMask Beta Hakkında",
-    "info_title_flask": "MetaMask Flask Hakkında",
+    "info_title": "BitcoinPay Hakkında",
+    "info_title_beta": "BitcoinPay Beta Hakkında",
+    "info_title_flask": "BitcoinPay Flask Hakkında",
     "experimental_title": "Deneysel",
     "experimental_desc": "WalletConnect ve daha fazlası...",
     "legal_title": "Hukuki",
@@ -3193,18 +3193,18 @@
     "delete_metrics_confirm_modal_title": "MetaMetrics verilerini sil?",
     "delete_metrics_confirm_modal_description": "Tüm MetaMetrics verilerini kaldırmak üzeresiniz. Emin misiniz?",
     "delete_wallet_data_title": "Cüzdanı sıfırla",
-    "delete_wallet_data_description": "Bu işlem cüzdanla ilgili tüm verileri cihazınızdan silecek. Hesaplar blokzincirinde bulunur ve MetaMask ile ilgili değildir. Dilediğiniz zaman Gizli Kurtarma İfadenizi kullanarak hesaplarınızı kurtarabilirsiniz.",
+    "delete_wallet_data_description": "Bu işlem cüzdanla ilgili tüm verileri cihazınızdan silecek. Hesaplar blokzincirinde bulunur ve BitcoinPay ile ilgili değildir. Dilediğiniz zaman Gizli Kurtarma İfadenizi kullanarak hesaplarınızı kurtarabilirsiniz.",
     "delete_wallet_data_button": "Cüzdanı sıfırla",
     "delete_data_status_title": "Silme işleminin durumu",
     "delete_data_status_description": "Güncel durum ",
     "delete_metrics_error_title": "Şu anda bu verileri silemiyoruz.",
     "delete_metrics_error_description": "Bu talep analitik bir sistem sunucusu sorunundan dolayı şu anda tamamlanamıyor, lütfen daha sonra tekrar deneyin.",
     "ok": "Tamam",
-    "clear_sdk_connections_title": "Tüm MetaMask SDK bağlantılarını temizle",
+    "clear_sdk_connections_title": "Tüm BitcoinPay SDK bağlantılarını temizle",
     "clear_sdk_connections_text": "Tüm bağlantılar temizlenecek ve uygulamaların tekrar bağlantı talep etmesi gerekecek",
-    "sdk_connections": "MetaMask SDK bağlantıları",
+    "sdk_connections": "BitcoinPay SDK bağlantıları",
     "manage_sdk_connections_title": "Bağlantıları yönet",
-    "manage_sdk_connections_text": "Sitelere ve/veya MetaMask SDK bağlantılarını kaldırın.",
+    "manage_sdk_connections_text": "Sitelere ve/veya BitcoinPay SDK bağlantılarını kaldırın.",
     "fiat_on_ramp": {
       "title": "Kripto al ve sat",
       "description": "Bölge ve daha fazlası...",
@@ -3232,7 +3232,7 @@
     "display_nft_media_desc": "NFT medyasını ve verilerini göstermek IP adresinizi OpenSea veya diğer üçüncü taraflara ifşa edebilir. NFT otomatik algılama bu özelliğe dayanır ve bu kapatıldığında kullanılamaz.",
     "autodetect_nft_desc": "MetaMask'in üçüncü taraf hizmetleri (OpenSea) kullanarak size ait olan NFT'leri eklemesine izin verin. NFT'leri otomatik algılama, IP adresinizi ve hesap adresinizi bu hizmetlere ifşa eder. Bu özelliğin etkinleştirilmesi IP adresinizi Ethereum adresinizle ilişkilendirebilir ve dolandırıcılar tarafından airdrop'u gerçekleştirilen sahte NFT'leri gösterebilir. Bu riski önlemek için token'leri elle ekleyebilirsiniz.",
     "display_nft_media_desc_new": "NFT medyasını ve verilerini görüntülemek, IP adresinizin OpenSea veya diğer üçüncü taraflarla paylaşılmasına neden olabilir. NFT otomatik algılama bu özelliğe dayanır ve kapatıldığında kullanılamaz. NFT medyası tamamen IPFS'de bulunuyorsa bu özellik kapalı olduğunda bile görüntülenmeye devam edebilir.",
-    "use_safe_chains_list_validation_desc_1": "MetaMask ",
+    "use_safe_chains_list_validation_desc_1": "BitcoinPay ",
     "use_safe_chains_list_validation_desc_2": "adlı bir üçüncü taraf hizmetini kullanır. Bu, kötü amaçlı ve yanlış ağa bağlanma ihtimalinizi düşürür. Bu özelliği kullanırken IP adresiniz şununla paylaşılır:  ",
     "snaps": {
       "title": "Snap'ler",
@@ -3327,7 +3327,7 @@
     "simulation_details_description": "İşlemleri onaylamadan önce işlemlerin neden olacağı bakiye değişikliklerini tahmin etmek için bunu açın. İşlemlerinizin nihai sonucunu garanti etmez. ",
     "simulation_details_learn_more": "Daha fazla bilgi edinin.",
     "aes_crypto_test_form_title": "AES şifreleme - test biçimi",
-    "aes_crypto_test_form_description": "Bu kısım özel olarak E2E testi için geliştirilmiştir. Bu, uygulamanızda görünüyorsa lütfen MetaMask destek bölümüne bildirin.",
+    "aes_crypto_test_form_description": "Bu kısım özel olarak E2E testi için geliştirilmiştir. Bu, uygulamanızda görünüyorsa lütfen BitcoinPay destek bölümüne bildirin.",
     "developer_options": {
       "title": "Geliştirici seçenekleri",
       "generate_trace_test": "Takip testi oluştur",
@@ -3426,14 +3426,14 @@
     ],
     "private_key_explanation": "Güvenli ve gizli bir yere kaydedin.",
     "private_key_warning": "Bu, halihazırda seçili hesabın özel anahtarıdır: {{accountName}}. Bu anahtarı hiçbir zaman ifşa etmeyin. Özel anahtara sahip olan herkes, paranızın tamamını transfer etmek de dahil olmak üzere hesabınızı tam olarak kontrol edebilir.",
-    "seed_phrase_warning_explanation": "Hiç kimsenin ekranınıza bakmadığından emin olun. MetaMask Destek ekibi asla bunu istemez.",
+    "seed_phrase_warning_explanation": "Hiç kimsenin ekranınıza bakmadığından emin olun. BitcoinPay Destek ekibi asla bunu istemez.",
     "private_key_warning_explanation": "Bu anahtarı hiçbir zaman ifşa etmeyin. Özel anahtarınıza sahip olan herkes, paranızın tamamını transfer etmek de dahil olmak üzere hesabınızı tamamen kontrol edebilir.",
     "reveal_srp_description": "Gizli Kurtarma İfadeniz cüzdanınıza tam erişim verir. Kimseyle paylaşmayın.",
     "reveal_credential_modal": [
       "{{credentialName}} bilgileriniz ",
       "hesabınıza ve paranıza tam erişim sunar.\n\nBunu hiç kimseyle paylaşmayın.",
       "cüzdanınıza ve paranıza tam erişim verir. \n\nBunu hiç kimseyle paylaşmayın.\n",
-      "MetaMask Destek bölümü bunu talep etmez,",
+      "BitcoinPay Destek bölümü bunu talep etmez,",
       "ama kimlik avcıları talep edebilir."
     ],
     "seed_phrase": "Gizli Kurtarma İfadeniz",
@@ -3473,7 +3473,7 @@
   },
   "password_reset": {
     "password_title": "Şifre",
-    "password_desc": "Cihazınızda MetaMask uygulamasının kilidini açmak için güçlü bir şifre seçin. Bu şifreyi kaybettiğiniz takdirde cüzdanınızı yeniden içe aktarmak için Gizli Kurtarma İfadenize ihtiyacınız olacaktır.",
+    "password_desc": "Cihazınızda BitcoinPay uygulamasının kilidini açmak için güçlü bir şifre seçin. Bu şifreyi kaybettiğiniz takdirde cüzdanınızı yeniden içe aktarmak için Gizli Kurtarma İfadenize ihtiyacınız olacaktır.",
     "password_learn_more": "Daha fazla bilgi edin",
     "change_password": "Şifreyi değiştir",
     "password_hint": "Şifre ipucu"
@@ -3586,7 +3586,7 @@
       "show_less": "Daha az göster"
     },
     "activity": "{{symbol}} aktivitesi",
-    "disclaimer": "Piyasa verileri CoinGecko gibi üçüncü taraf kaynaklar tarafından sağlanır. Veriler yalnızca bilgi amaçlıdır. Verilerin doğruluğundan MetaMask sorumlu değildir."
+    "disclaimer": "Piyasa verileri CoinGecko gibi üçüncü taraf kaynaklar tarafından sağlanır. Veriler yalnızca bilgi amaçlıdır. Verilerin doğruluğundan BitcoinPay sorumlu değildir."
   },
   "security_trust": {
     "title": "Güvenlik ve güven",
@@ -3595,7 +3595,7 @@
     "malicious_token_title": "Kötü amaçlı tokenlar",
     "malicious_token_description": "{{symbol}} kötü amaçlı bir token. Bununla etkileşimde bulunmaktan veya işlem yapmaktan kaçının.",
     "verified_token_title": "Doğrulanmış tokenlar",
-    "verified_token_description": "{{symbol}} aktif olarak işlem görmekte olup yaygın olarak tanınmaktadır. Doğrulama, MetaMask tarafından onaylandığı anlamına gelmez.",
+    "verified_token_description": "{{symbol}} aktif olarak işlem görmekte olup yaygın olarak tanınmaktadır. Doğrulama, BitcoinPay tarafından onaylandığı anlamına gelmez.",
     "risky_token_title": "Riskli token",
     "risky_token_description": "{{symbol}} üzerinde uyarı sinyalleri tespit edildi. Bu token ile işlem yapmadan önce dikkatli bir şekilde araştırın.",
     "malicious_token_sheet_description": "{{symbol}} üzerinde ciddi risk sinyalleri tespit edildi. Bu token ile işlem yapmamanızı tavsiye ederiz.",
@@ -3685,7 +3685,7 @@
     "cancel": "İptal",
     "error": "Hata",
     "attempting_to_scan_with_wallet_locked": "Görünüşe göre bir QR kodunu taramaya çalışıyorsunuz, bunu kullanmak için cüzdanınızın kilidini açmanız gerekecek.",
-    "attempting_sync_from_wallet_error": "Görünüşe göre uzantı ile senkronize etmeye çalışıyorsunuz. Bunu yapabilmek için mevcut cüzdanınızı silmeniz gerekecek. \n\nUygulamayı sildiğinizde veya uygulamanın yeni bir sürümünü tekrar yüklediğinizde \"MetaMask Uzantısı ile Senkronize Et\" seçeneğini seçin. Önemli! Cüzdanınızı silmeden önce Gizli Kurtarma İfadenizi yedeklediğinizden emin olun.",
+    "attempting_sync_from_wallet_error": "Görünüşe göre uzantı ile senkronize etmeye çalışıyorsunuz. Bunu yapabilmek için mevcut cüzdanınızı silmeniz gerekecek. \n\nUygulamayı sildiğinizde veya uygulamanın yeni bir sürümünü tekrar yüklediğinizde \"BitcoinPay Uzantısı ile Senkronize Et\" seçeneğini seçin. Önemli! Cüzdanınızı silmeden önce Gizli Kurtarma İfadenizi yedeklediğinizden emin olun.",
     "not_allowed_error_title": "Kamera erişimini aç",
     "not_allowed_error_desc": "Bir QR kodunu taramak için cihazınızın ayarlar menüsünden MetaMask'e kamera erişimi vermeniz gerekecektir.",
     "unrecognized_address_qr_code_title": "QR kodu tanınmıyor",
@@ -3826,7 +3826,7 @@
     "gas_education_1": "Gaz ücretleri",
     "gas_education_2_ethereum": "Ethereum ağında işlem gerçekleştiren kripto madencilerine ödenir.",
     "gas_education_2": "ağda işlem gerçekleştiren kripto madencilerine ödenir.",
-    "gas_education_3": "MetaMask gaz ücretlerinden kâr elde etmez.",
+    "gas_education_3": "BitcoinPay gaz ücretlerinden kâr elde etmez.",
     "gas_education_4": "Gaz ücretleri ağ trafiğine ve işlem karmaşıklığına göre dalgalanır.",
     "gas_education_learn_more": "Gaz ücretleri hakkında daha fazla bilgi alın",
     "confusable_title": "Alıcı adresini kontrol edin",
@@ -3841,7 +3841,7 @@
     "invalid_qr_code_sync": "Geçersiz QR kodu. Lütfen donanım cüzdanının senkronizasyon QR kodunu tarayın.",
     "no_camera_permission": "Kamera izni yok. Lütfen izin verin ve tekrar deneyin",
     "invalid_qr_code_sign": "Geçersiz QR kodu. Lütfen donanımınızı kontrol edin ve tekrar deneyin.",
-    "no_camera_permission_android": "Devam etmek için kameranıza MetaMask erişim izni vermeniz gerekiyor. Ayrıca sistem ayarlarınızı değiştirmeniz gerekebilir.",
+    "no_camera_permission_android": "Devam etmek için kameranıza BitcoinPay erişim izni vermeniz gerekiyor. Ayrıca sistem ayarlarınızı değiştirmeniz gerekebilir.",
     "mismatched_qr_request_id": "Uyumsuz işlem verisi. Lütfen aşağıdaki QR koduyla imzalamak için donanım cüzdanınızı kullanın ve \"İmzayı Al\" tuşuna tıklayın.",
     "fiat_conversion_not_available": "Fiat para dönüştürmeleri şu anda kullanılmıyor",
     "hex_data_copied": "On altılı veriler panoya kopyalandı",
@@ -3860,7 +3860,7 @@
     "save": "Kaydet",
     "warning_gas_limit": "Gaz limiti 20999 üzerinde olmalıdır",
     "warning_gas_limit_estimated": "Tahmini gaz limiti {{gas}}, minimum değer olarak bunu kullanın",
-    "cost_explanation": "Gaz ücreti Ethereum ağında işleminizin gerçekleştirilme maliyetini kapsar. MetaMask bu ücretten kâr elde etmez. Ücret ne kadar yüksek olursa işleminizin gerçekleşme şansı o kadar yüksek olur."
+    "cost_explanation": "Gaz ücreti Ethereum ağında işleminizin gerçekleştirilme maliyetini kapsar. BitcoinPay bu ücretten kâr elde etmez. Ücret ne kadar yüksek olursa işleminizin gerçekleşme şansı o kadar yüksek olur."
   },
   "spend_limit_edition": {
     "save": "Kaydet",
@@ -4085,8 +4085,8 @@
     "request_from": "Talebi gönderen",
     "network_fee": "Ağ ücreti",
     "network_fee_tooltip": "Ağ üzerinde işlemi gerçekleştirmek için ödenen tutar.",
-    "confirm_gas_fee_token_tooltip": "Bu, işleminizi gerçekleştirmek için ağa ödenir. ETH dışı token'lar veya önceden fonlanmış ETH için {{metamaskFeeFiat}} MetaMask ücreti dahildir.",
-    "paid_by_metamask": "MetaMask tarafından ödenir",
+    "confirm_gas_fee_token_tooltip": "Bu, işleminizi gerçekleştirmek için ağa ödenir. ETH dışı token'lar veya önceden fonlanmış ETH için {{metamaskFeeFiat}} BitcoinPay ücreti dahildir.",
+    "paid_by_metamask": "BitcoinPay tarafından ödenir",
     "confirm_gas_fee_token_metamask_fee": "{{metamaskFeeFiat}} ücreti dahildir",
     "smart_account_upgrade": "Akıllı hesaba geçiş yap",
     "smart_account_downgrade": "Standart hesaba geçiş yap",
@@ -4133,7 +4133,7 @@
     "status_cancelled_header": "İşleminiz iptal edildi",
     "status_cancelled_description": "İşleminiz tamamlanamadığından gereksiz gaz ücreti ödemenizi önlemek amacıyla iptal edildi.",
     "status_failed_header": "İşleminiz başarısız oldu",
-    "status_failed_description": "Ani piyasa değişimleri başarısızlıklara sebep olabilir. Sorun devam ederse MetaMask müşteri destek bölümüne ulaşın.",
+    "status_failed_description": "Ani piyasa değişimleri başarısızlıklara sebep olabilir. Sorun devam ederse BitcoinPay müşteri destek bölümüne ulaşın.",
     "view_transaction": "İşlemi görüntüle",
     "view_activity": "Aktiviteyi görüntüle",
     "return_to_dapp": "{{dappName}} uygulamasına geri dön",
@@ -4186,8 +4186,8 @@
     "status_not_ok": "Ağda bazı sorunlar yaşanıyor",
     "want_to_add_network": "Bu ağı eklemek istiyor musunuz?",
     "add_custom_network": "Özel ağ ekle",
-    "network_infomation": "Bu, bu ağın MetaMask dahilinde kullanılmasına izin verir",
-    "network_endorsement": "MetaMask kişisel ağları veya onların güvenliğini ciro etmez.",
+    "network_infomation": "Bu, bu ağın BitcoinPay dahilinde kullanılmasına izin verir",
+    "network_endorsement": "BitcoinPay kişisel ağları veya onların güvenliğini ciro etmez.",
     "learn_about": "Dolandırıcılıklar ve ağ güvenlik riskleri",
     "network_risk": "hakkında bilgi alın",
     "network_display_name": "Görüntü adı",
@@ -4266,7 +4266,7 @@
     "cancel": "İptal",
     "got_it": "Anladım",
     "connection_details_title": "Bağlantı bilgileri",
-    "connection_details_description": "Bu siteye {{connectionDateTime}} itibariyle MetaMask tarayıcısını kullanarak bağlandınız",
+    "connection_details_description": "Bu siteye {{connectionDateTime}} itibariyle BitcoinPay tarayıcısını kullanarak bağlandınız",
     "title_add_network_permission": "Ağ izni ekle",
     "add_this_network": "Bu ağı ekle",
     "permitted_networks": "İzin verilen ağlar",
@@ -4353,7 +4353,7 @@
   "import_private_key": {
     "title": "Hesabı içe aktar",
     "description_one": "İçe aktarılan özel anahtarlar hesabınızda yedeklenir ve aynı Google veya Apple oturum açma bilgileriyle giriş yaptığınızda otomatik olarak senkronize olur.",
-    "description_srp": "İçe aktarılan hesaplar cüzdanınızda görüntülenebilir ancak MetaMask Gizli Kurtarma İfadenizle kurtarılamaz.",
+    "description_srp": "İçe aktarılan hesaplar cüzdanınızda görüntülenebilir ancak BitcoinPay Gizli Kurtarma İfadenizle kurtarılamaz.",
     "learn_more": "Daha fazla bilgi edin",
     "learn_more_here": "içe aktarılan anahtarların nasıl çalıştığı hakkında.",
     "learn_more_srp": "İçe aktarılan hesaplar hakkında daha fazla bilgi alın",
@@ -4414,7 +4414,7 @@
     "step_1_description": "Şifre oluştur",
     "step_2": "Adım 2:",
     "step_2_description": "Cüzdan Gizli Kurtarma İfadesini kaydedin",
-    "info_text_1": "MetaMask cüzdanınızın kurulumunu bitirmek için birkaç dakika ayırın.",
+    "info_text_1": "BitcoinPay cüzdanınızın kurulumunu bitirmek için birkaç dakika ayırın.",
     "info_text_2": "Bu, sadece cihazınızı kaybettiğiniz takdirde paranıza erişim sağlayabilmenizi ve cüzdanınızı kurtarmanızı sağlar",
     "cta_text": "Şifre oluştur",
     "creating_password": "Şifre oluşturuluyor...",
@@ -4437,7 +4437,7 @@
     "what_is_seedphrase_title": "Gizli Kurtarma İfadesi nedir?",
     "what_is_seedphrase_text_1": "G\nAnahtar cümle veya kurtarma ifadesi olarak da anılan Gizli Kurtarma İfadesi, kripto cüzdanınıza erişiminizi ve kontrolü sağlayan bir sözcük dizisidir. Cüzdanınızı MetaMask'e taşımak için bu ifadeye ihtiyacınız olur.",
     "what_is_seedphrase_text_2": "Gizli Kurtarma İfadenizi gizli ve güvende tutmalısınız. Gizli Kurtarma İfadenizi ele geçiren biri hesaplarınızın kontrolünü de ele geçirir.",
-    "what_is_seedphrase_text_3": "Sadece sizin erişim sağlayabileceğiniz bir yere kaydedin. Kaybettiğiniz takdirde onu kurtarmanıza MetaMask bile yardımcı olamaz.",
+    "what_is_seedphrase_text_3": "Sadece sizin erişim sağlayabileceğiniz bir yere kaydedin. Kaybettiğiniz takdirde onu kurtarmanıza BitcoinPay bile yardımcı olamaz.",
     "what_is_seedphrase_text_4": "Gizli Kurtarma İfadenizi elinde bulunduran herkes:",
     "seedPhrase_point_1": "Tüm paranızı alabilir",
     "seedPhrase_point_2": "İşlemleri onaylayabilir",
@@ -4570,7 +4570,7 @@
     "congratulations": "Tebrikler",
     "success": "Cüzdanınızı başarılı bir şekilde korudunuz! Gizli Kurtarma İfadenizi güvende tutmayı unutmayın, bu sizin sorumluluğunuzdadır!",
     "hint": "Kendine bir ipucu bırak?",
-    "recover": "Kaybettiğiniz takdirde MetaMask cüzdanınızı kurtaramaz. Gizli Kurtarma İfadenizi Ayarlar > Güvenlik ve gizlilik kısmında bulabilirsiniz.",
+    "recover": "Kaybettiğiniz takdirde BitcoinPay cüzdanınızı kurtaramaz. Gizli Kurtarma İfadenizi Ayarlar > Güvenlik ve gizlilik kısmında bulabilirsiniz.",
     "learn": "Daha fazlasını öğren",
     "done": "Bitti",
     "recovery_hint": "Kurtarma ipucu",
@@ -4583,7 +4583,7 @@
   "phishing": {
     "ethereum_phishing_detection": "Ethereum Kimlik Avı Algılama",
     "ethereum_phishing_detector": "Ethereum Kimlik Avı Algılayıcı",
-    "intro": " şu anda MetaMask alan adı uyarı listesindedir. Yani, bizde bulunan bilgilere göre MetaMask, bu alan adının şu anda güvenliğinizi ihlal edebiliyor olduğuna inanıyor ve ek bir güvenlik özelliği olarak MetaMask bu siteye erişimi kısıtlamıştır. Bunu geçersiz kılmak için lütfen riski size ait olmak üzere nasıl devam edebileceğiniz hakkındaki talimatlar için bu uyarının geri kalan kısmını okuyun.",
+    "intro": " şu anda BitcoinPay alan adı uyarı listesindedir. Yani, bizde bulunan bilgilere göre MetaMask, bu alan adının şu anda güvenliğinizi ihlal edebiliyor olduğuna inanıyor ve ek bir güvenlik özelliği olarak BitcoinPay bu siteye erişimi kısıtlamıştır. Bunu geçersiz kılmak için lütfen riski size ait olmak üzere nasıl devam edebileceğiniz hakkındaki talimatlar için bu uyarının geri kalan kısmını okuyun.",
     "reasons": "Uyarı listemizde sitelerin yer almasının pek çok sebebi vardır ve uyarı listemiz diğer çok kullanılan sektör listelerinden derlenir. Sebepleri şunlar olabilir: Şurada pozitif olan alan adları gibi bilinen dolandırıcılık veya güvenlik riskleri:",
     "list_content": "Bu uyarı listelerinde yer alan alan adları, tamamen kötü amaçlı web siteleri ve kötü amaçlı bir aktör tarafından gizliliği ihlal edilen meşru web siteler olabilir.",
     "to_read_more": "Bu site hakkında daha fazlasını okumak için ",
@@ -4600,7 +4600,7 @@
     "but_please_do_so_at_your_own_risk": "ancak bunu yapmanın riski yalnızca size aittir.",
     "report_detection_problem": "Bir algılama problemini bildir",
     "share_on_twitter": "Bunu yararlı bulduysanız X üzerinde paylaşın!",
-    "share_text": "MetaMask potansiyel olarak zararlı bir siteyi ziyaret etmemi önledi: {{url}}. Güvende kalın!"
+    "share_text": "BitcoinPay potansiyel olarak zararlı bir siteyi ziyaret etmemi önledi: {{url}}. Güvende kalın!"
   },
   "notifications": {
     "timeout": "Zaman Aşımı",
@@ -4696,7 +4696,7 @@
     "erc721_received_title": "NFT alındı",
     "erc1155_sent_title": "NFT gönderildi",
     "erc1155_received_title": "NFT alındı",
-    "default_message_title": "MetaMask",
+    "default_message_title": "BitcoinPay",
     "default_message_description": "Görüntülemek için dokunun",
     "received_payment_title": "Anında ödeme alındı",
     "pending_message": "Onay bekleniyor",
@@ -4732,7 +4732,7 @@
       "funds_received_description": "{{amount}} {{symbol}} aldınız",
       "funds_received_default_description": "Bir miktar token aldınız",
       "metamask_swap_completed_title": "Swap tamamlandı",
-      "metamask_swap_completed_description": "MetaMask Swap başarılı oldu",
+      "metamask_swap_completed_description": "BitcoinPay Swap başarılı oldu",
       "nft_sent_title": "NFT gönderildi",
       "nft_sent_description": "Başarılı bir şekilde bir NFT gönderdiniz",
       "nft_received_title": "NFT alındı",
@@ -4864,8 +4864,8 @@
     "network_not_supported": "Geçerli ağ desteklenmiyor",
     "select_provider": "Tercih ettiğiniz sağlayıcıyı seçin",
     "switch_network": "Lütfen ana ağa veya sepolia ağına geçin",
-    "card_title": "MetaMask Kartı düğmesini her zaman göster",
-    "card_desc": "MetaMask Kartı yalnızca seçili ülkelerde ikamet edenler için mevcuttur.",
+    "card_title": "BitcoinPay Kartı düğmesini her zaman göster",
+    "card_desc": "BitcoinPay Kartı yalnızca seçili ülkelerde ikamet edenler için mevcuttur.",
     "daimo_demo_title": "DaimoPay demo ortamını kullan",
     "daimo_demo_desc": "Kart ödemeleri için DaimoPay demo ve üretim ortamları arasında değiştir."
   },
@@ -4978,7 +4978,7 @@
     "wyre_minimum_deposit": "Minimum yatırılması gereken tutar{{amount}}",
     "wyre_maximum_deposit": "Maksimum yatırılması gereken tutar {{amount}}",
     "apple_pay_purchase": "{{currency}} Satın Alın",
-    "apple_pay_provider_total_label": "{{provider}}(MetaMask ile)",
+    "apple_pay_provider_total_label": "{{provider}}(BitcoinPay ile)",
     "buy_with": "Şununla satın al:",
     "plus_fee": "Artı {{fee}} ücret",
     "date": "Tarih",
@@ -4997,12 +4997,12 @@
         "average_gas_fee": "Güncel ortalama gaz ücreti:",
         "subtitle_1": "{{ticker}} öğenizi değiştirmeyi ve aktarmayı planlıyorsanız gaz ücretlerini karşılamak için ekstra satın alın.",
         "subtitle_2": "İşlemlerin gaz ücretleri {{ticker}} satın almanın maliyetinden ayrıdır.",
-        "subtitle_3": "MetaMask gaz ücretlerinden kâr elde etmez."
+        "subtitle_3": "BitcoinPay gaz ücretlerinden kâr elde etmez."
       },
       "step_2": {
         "title": "Gaz ücretleri nedir?",
         "subtitle_1": "Ethereum ağındaki gaz gücü işlemleri. İşlemlerinizi gerçekleştiren kripto madencilerine {{ticker}} cinsinde ödenen bir ücrettir.",
-        "subtitle_2": "MetaMask gaz ücretlerinden kâr elde etmez.",
+        "subtitle_2": "BitcoinPay gaz ücretlerinden kâr elde etmez.",
         "learn_more": "Gaz ücretleri hakkında daha fazla bilgi alın"
       },
       "step_3": {
@@ -5310,13 +5310,13 @@
       "best_swap": "swap işlemini",
       "across": "bul...",
       "want_to_learn_more": "Daha fazla bilgi almak mı istiyorsunuz?",
-      "learn_more": "MetaMask Swap işlemleri hakkında daha fazla bilgi alın",
+      "learn_more": "BitcoinPay Swap işlemleri hakkında daha fazla bilgi alın",
       "what_are": "Token swap nedir?",
       "review_audits": "Resmi sözleşme denetimimizi inceleyin",
       "start_swapping": "Swap işlemine başlayın"
     },
     "feature_off_title": "Geçici olarak kullanılamıyor",
-    "feature_off_body": "MetaMask Swaps sistemi şu anda bakımda. Lütfen daha sonra tekrar kontrol edin.",
+    "feature_off_body": "BitcoinPay Swaps sistemi şu anda bakımda. Lütfen daha sonra tekrar kontrol edin.",
     "wrong_network_title": "Swaplar kullanılamıyor",
     "wrong_network_body": "Sadece Ethereum Ana Ağında token swap işlemi gerçekleştirebilirsiniz.",
     "unallowed_asset_title": "Bu token ile swap gerçekleştirilemiyor",
@@ -5395,17 +5395,17 @@
     "included": "dahil",
     "max_gas_fee": "Maks. gaz ücreti",
     "edit": "Düzenle",
-    "quotes_include_fee": "%{{fee}} MetaMask ücreti tekliflere dahildir",
-    "quotes_include_gas_and_metamask_fee": "Gaz ve %{{fee}} MetaMask ücreti teklife dahildir",
+    "quotes_include_fee": "%{{fee}} BitcoinPay ücreti tekliflere dahildir",
+    "quotes_include_gas_and_metamask_fee": "Gaz ve %{{fee}} BitcoinPay ücreti teklife dahildir",
     "tap_to_swap": "Takas işlemi gerçekleştirmek için dokunun",
     "swipe_to_swap": "Swap gerçekleştirmek için kaydır",
     "swipe_to": "Swap gerçekleştirmek için",
     "swap": "Swap Yap",
     "completed_swap": "Swap gerçekleştir!",
-    "metamask_swap_fee": "MetaMask Swap ücreti",
+    "metamask_swap_fee": "BitcoinPay Swap ücreti",
     "fee_text": {
       "fee_is_applied": "Bu teklife otomatik olarak {{fee}} ücret dahil edilmiştir. MetaMask'in likidite sağlayıcı bilgilerinin toplandığı yazılımı kullanma lisansı karşılığında ödersiniz.",
-      "fee_is_not_applied": "MetaMask bu teklife ek bir ücret eklemez."
+      "fee_is_not_applied": "BitcoinPay bu teklife ek bir ücret eklemez."
     },
     "enable": {
       "this_will": "Bu,",
@@ -5472,7 +5472,7 @@
     "gas_education_1": "Gaz ücretleri",
     "gas_education_2_ethereum": "Ethereum ağında işlem gerçekleştiren kripto madencilerine ödenir.",
     "gas_education_2": "ağda işlem gerçekleştiren kripto madencilerine ödenir.",
-    "gas_education_3": "MetaMask gaz ücretlerinden kâr elde etmez.",
+    "gas_education_3": "BitcoinPay gaz ücretlerinden kâr elde etmez.",
     "gas_education_4": "Bu",
     "gas_education_5": "“Tahmini gaz ücreti”",
     "gas_education_6": "olmasını beklediğimiz gerçek ücrettir. Tam tutar ağ koşullarına bağlıdır.",
@@ -5559,8 +5559,8 @@
   },
   "add_custom_network": {
     "title": "Bu sitenin ağ eklemesine izin ver?",
-    "warning": "Bu, bu ağın MetaMask dahilinde kullanılmasına izin verir.",
-    "warning_subtext_1": "MetaMask kişisel ağları veya onların güvenliğini doğrulamaz.",
+    "warning": "Bu, bu ağın BitcoinPay dahilinde kullanılmasına izin verir.",
+    "warning_subtext_1": "BitcoinPay kişisel ağları veya onların güvenliğini doğrulamaz.",
     "warning_subtext_2": "Dolandırıcılıklar ve ağ güvenlik riskleri",
     "warning_subtext_3": "hakkında bilgi alın",
     "display_name": "Görüntü adı",
@@ -5576,7 +5576,7 @@
     "alert_recommend": "Size",
     "alert_verify": "zincir kimliğini doğrulamanızı öneririz",
     "warning_subtext_new": {
-      "1": "MetaMask özel ağları doğrulamaz, bu yüzden sadece güvendiğiniz ağları onaylayın.",
+      "1": "BitcoinPay özel ağları doğrulamaz, bu yüzden sadece güvendiğiniz ağları onaylayın.",
       "2": "Ağ güvenlik riskleri ve dolandırıcılıklar hakkında daha fazla bilgi alın."
     },
     "invalid_rpc_url": "Bu ağın URL adresi bu zincir kimliği için bilinen bir sağlayıcı ile eşleşmiyor.",
@@ -5651,7 +5651,7 @@
     "estimated_gas_fee_tooltip_text_1": "Gaz ücretleri",
     "estimated_gas_fee_tooltip_text_2": " Ethereum",
     "estimated_gas_fee_tooltip_text_3": "ağında işlem gerçekleştiren kripto madencilerine ödenir.",
-    "estimated_gas_fee_tooltip_text_4": "MetaMask gaz ücretlerinden kâr elde etmez.",
+    "estimated_gas_fee_tooltip_text_4": "BitcoinPay gaz ücretlerinden kâr elde etmez.",
     "estimated_gas_fee_tooltip_text_5": "Gaz ücretleri ağ tarafından belirlenir ve ağ trafiğine ve işlemin karmaşıklığına göre dalgalanır.",
     "learn_more": "Gaz ücretleri hakkında daha fazla bilgi alın",
     "legacy_gas_suggestion_tooltip": "Bu gaz ücreti yanlış olabilen eski gaz tahmininin kullanılmasını öneriyor."
@@ -5675,7 +5675,7 @@
     "high_fees": "Ücretler neden bu kadar yüksek?",
     "missing_tokens": "Tokenlerim eksik...",
     "swap_issues": "Swap gerçekleştiremiyorum...",
-    "mobile_sentiment": "MetaMask mobil hakkında ne düşünüyorsunuz?",
+    "mobile_sentiment": "BitcoinPay mobil hakkında ne düşünüyorsunuz?",
     "sentiment_good_face": "😁",
     "sentiment_bad_face": "☹️",
     "sentiment_good": "Bayıldım!",
@@ -5725,7 +5725,7 @@
   },
   "remember_me": {
     "enable_remember_me": "Beni Hatırla özelliğini aç",
-    "enable_remember_me_description": "Beni Hatırla özelliği açıldığında telefonunuza erişimi olan herkes MetaMask hesabınıza erişim sağlayabilir."
+    "enable_remember_me_description": "Beni Hatırla özelliği açıldığında telefonunuza erişimi olan herkes BitcoinPay hesabınıza erişim sağlayabilir."
   },
   "turn_off_remember_me": {
     "title": "Beni Hatırla özelliğini kapat",
@@ -5742,11 +5742,11 @@
   },
   "automatic_security_checks": {
     "title": "Otomatik güvenlik kontrolleri",
-    "description": "Güncellemelerin otomatik kontrolü IP adresini GitHub sunucularında açığa çıkarabilir. Bu durum sadece IP adresinin MetaMask kullandığını gösterir. Başka hiçbir bilgi ya da hesap adresi açığa çıkmaz."
+    "description": "Güncellemelerin otomatik kontrolü IP adresini GitHub sunucularında açığa çıkarabilir. Bu durum sadece IP adresinin BitcoinPay kullandığını gösterir. Başka hiçbir bilgi ya da hesap adresi açığa çıkmaz."
   },
   "terms_of_use_modal": {
     "title": "Kullanım Şartları bölümümüzü inceleyin",
-    "terms_of_use_check_description": "MetaMask ve tüm özelliklerini kullanırken geçerli olan Kullanım Koşulları bölümünü kabul ediyorum",
+    "terms_of_use_check_description": "BitcoinPay ve tüm özelliklerini kullanırken geçerli olan Kullanım Koşulları bölümünü kabul ediyorum",
     "accept_cta": "Kabul ediyorum",
     "accept_helper_description": "Tüm bölümleri okumak için lütfen kaydırın",
     "agree_cta": "Kabul Ediyorum"
@@ -5758,7 +5758,7 @@
   },
   "enable_automatic_security_check_modal": {
     "title": "Güvenlik güncellemelerini otomatik kontrol et?",
-    "description": "Güncellemelerin otomatik kontrolü IP adresini GitHub sunucularında açığa çıkarabilir. Bu durum sadece IP adresinin MetaMask kullandığını gösterir. Başka hiçbir bilgi ya da hesap adresi açığa çıkmaz.",
+    "description": "Güncellemelerin otomatik kontrolü IP adresini GitHub sunucularında açığa çıkarabilir. Bu durum sadece IP adresinin BitcoinPay kullandığını gösterir. Başka hiçbir bilgi ya da hesap adresi açığa çıkmaz.",
     "primary_action": "Otomatik güvenlik kontrollerini etkinleştir",
     "secondary_action": "Hayır, teşekkürler"
   },
@@ -5811,7 +5811,7 @@
     "new_wallet_needed_create_try_again_action": "Cüzdanı kurtarmayı dene",
     "new_wallet_needed_description_part_one": "Cüzdanınızla ilgili bir sorun oluştu ve yeni bir tane oluşturmanız gerekecek. Hesaplarınız blokzincirinde olduğu için hala güvende. Sadece cihazınızda kayıtlı olan tercihler, kaydedilen ağlar, hesap adları ve ilgili veriler kayboldu.",
     "new_wallet_needed_description_part_two": "Hesapları yeni bir cüzdana aktarmak için Gizli Kurtarma İfadene ihtiyacın olacak. Gizli Kurtarma İfaden yoksa hesaplarını içe aktaramayacaksın.",
-    "new_wallet_needed_description_part_three": "Bunun tekrar olmasını önlemek için her zaman MetaMask uygulamanı ve işletim sistemini en yeni sürümde güncel tuttuğundan emin ol."
+    "new_wallet_needed_description_part_three": "Bunun tekrar olmasını önlemek için her zaman BitcoinPay uygulamanı ve işletim sistemini en yeni sürümde güncel tuttuğundan emin ol."
   },
   "srp_security_quiz": {
     "question_step": "Soru {{step}} / {{total}}",
@@ -5894,7 +5894,7 @@
     "unknown_error_message": "Beklenmeyen bir hata oluştu. Lütfen tekrar deneyin.",
     "error_occured": "Bir hata oluştu",
     "how_to_install_eth_app": "Ledger cihazına Ethereum uygulaması nasıl yüklenir?",
-    "ledger_account_count": "Ledger cihazınızda MetaMask Mobil ile 1 hesap kullanıyorsunuz.",
+    "ledger_account_count": "Ledger cihazınızda BitcoinPay Mobil ile 1 hesap kullanıyorsunuz.",
     "open_eth_app": "Lütfen Ethereum uygulamasını açın",
     "open_eth_app_message_one": "Ethereum uygulamasının yüklü olduğunu ancak açık olmadığını tespit ettik; ",
     "open_eth_app_message_two": "devam etmek için lütfen cihazdaki iki düğmeye basarak Ethereum uygulamasını açma komutunu kabul edin.",
@@ -5908,7 +5908,7 @@
     "not_supported": "İşlem desteklenmiyor",
     "not_supported_error": "Girilen veri imzalama işleminde sadece sürüm 4 desteklenmektedir.",
     "error_during_connection": "Bilinmeyen bir hata oluştu",
-    "error_during_connection_message": "Ledger cihazınıza bağlanırken küçük bir sorun oluştu, bunu tekrar denemek için aşağıdaki \"Tekrar Dene\" düğmesine dokunun. Bazen MetaMask Mobil ile eşleştirme sürecinin başlangıcında Ledger cihazında ETH uygulamasının açık olması nedeniyle bu durum meydana gelir.",
+    "error_during_connection_message": "Ledger cihazınıza bağlanırken küçük bir sorun oluştu, bunu tekrar denemek için aşağıdaki \"Tekrar Dene\" düğmesine dokunun. Bazen BitcoinPay Mobil ile eşleştirme sürecinin başlangıcında Ledger cihazında ETH uygulamasının açık olması nedeniyle bu durum meydana gelir.",
     "how_to_install_eth_webview_title": "Ethereum uygulaması nasıl yüklenir?",
     "nonce_too_low": "Nonce çok düşük",
     "nonce_too_low_error": "Ayarlanan nonce çok düşük",
@@ -6179,7 +6179,7 @@
     "how_it_works": {
       "title": "Nasıl çalışır?",
       "description": "Bir Para Hesabında mUSD tutun ve otomatik olarak kazanın. Dolar desteklidir, her zaman likittir; dilediğiniz zaman harcamaya, işleme ve gönderime hazırdır.",
-      "musd_name": "MetaMask USD",
+      "musd_name": "BitcoinPay USD",
       "musd_symbol": "mUSD",
       "add": "Ekle"
     },
@@ -6192,7 +6192,7 @@
       "see_earnings": "Potansiyel kazançları görün"
     },
     "metamask_card": {
-      "title": "MetaMask Kartı",
+      "title": "BitcoinPay Kartı",
       "subtitle": "Paranızı dilediğiniz yerde harcayın.",
       "virtual_card": "Sanal kart",
       "metal_card": "Metal kart",
@@ -6200,11 +6200,11 @@
       "get_now": "Hemen alın"
     },
     "why_metamask_money": {
-      "title": "Neden MetaMask Para?",
+      "title": "Neden BitcoinPay Para?",
       "benefit_auto_earn": "Otomatik kazanın ",
       "benefit_dollar_backed": "Paranız 1:1 dolar destekli bir stabil kripto para olan mUSD'de tutulur",
       "benefit_liquidity": "Kilitleme olmadan tam likidite sayesinde dilediğiniz zaman işlem yapabilir veya para çekebilirsiniz",
-      "benefit_spend_prefix": "MetaMask Card ile 150 milyondana fazla satıcıda harcama yapın ve şunu kazanın ",
+      "benefit_spend_prefix": "BitcoinPay Card ile 150 milyondana fazla satıcıda harcama yapın ve şunu kazanın ",
       "benefit_spend_cashback": "%1-3 para iadesi",
       "benefit_global": "Aracı olmadan dünya çapında para gönderin ve alın",
       "learn_more": "Daha fazla bilgi edin"
@@ -6264,7 +6264,7 @@
     "reward_frequency": "Ödül sıklığı",
     "reward_frequency_tooltip": "Stake edilen bakiyeniz yeni ödülleri belirlemek için {{frequency}} aralıklarla güncellenir.",
     "withdrawal_time": "Para çekme zamanı",
-    "metamask_pool": "MetaMask Havuzu",
+    "metamask_pool": "BitcoinPay Havuzu",
     "enter_amount": "Tutar gir",
     "review": "İncele",
     "not_enough_eth": "Yeterli ETH yok",
@@ -6283,7 +6283,7 @@
     "got_it": "Anladım",
     "your_balance": "Bakiyeniz",
     "stake_your_eth_cta": {
-      "base": "MetaMask Havuzu ile ETH'nizi stake edin ve",
+      "base": "BitcoinPay Havuzu ile ETH'nizi stake edin ve",
       "annually": "yıllık kazanç sağlayın.",
       "learn_more_with_period": "Daha fazla bilgi edinin."
     },
@@ -6389,7 +6389,7 @@
     "manage_networks_body": "Ethereum verilerine mümkün olan en güvenilir ve gizli erişimi sunmak amacıyla uzak yordam çağrısı (RPC) sağlayıcısı olarak Infura kullanırız. Kendi RPC'nizi seçebilirsiniz ancak tüm RPC'lerin işlemleri gerçekleştirmek için IP adresinizi ve Ethereum cüzdanınızı alacağını unutmayın. Infura'nın verileri nasıl kullandığı hakkında daha fazla bilgi edinmek için ",
     "manage_networks_body2": " ve Infura'nın EVM hesaplarının verilerini nasıl ele aldığını öğrenin; Solana hesapları için ise ",
     "manage_networks_body3": "buraya tıklayın.",
-    "functionality_body": "MetaMask, internet hizmetleri üzerinden token bilgileri ve gaz ayarları gibi temel özellikler sunar. İnternet hizmetlerini kullandığınızda IP adresiniz, bu durumda MetaMask ile, paylaşılır. Bu tıpkı herhangi bir web sitesini ziyaret ettiğinizde olduğu gibidir. MetaMask bu verileri geçici olarak kullanır ve verilerinizi hiçbir zaman satmaz. Bir VPN kullanabilir veya bu hizmetleri kapatabilirsiniz ancak bu durum MetaMask deneyiminizi etkileyebilir. Daha fazla bilgi için ",
+    "functionality_body": "MetaMask, internet hizmetleri üzerinden token bilgileri ve gaz ayarları gibi temel özellikler sunar. İnternet hizmetlerini kullandığınızda IP adresiniz, bu durumda BitcoinPay ile, paylaşılır. Bu tıpkı herhangi bir web sitesini ziyaret ettiğinizde olduğu gibidir. BitcoinPay bu verileri geçici olarak kullanır ve verilerinizi hiçbir zaman satmaz. Bir VPN kullanabilir veya bu hizmetleri kapatabilirsiniz ancak bu durum BitcoinPay deneyiminizi etkileyebilir. Daha fazla bilgi için ",
     "functionality_body2": " bölümümüzü inceleyin.",
     "sheet": {
       "title_off": "Temel işlevselliği kapat",
@@ -6448,7 +6448,7 @@
     },
     "estimated_gas_fee": {
       "title": "Tahmini gaz ücreti",
-      "gas_recipient": "Gaz ücretleri, Ethereum ağında işlemleri gerçekleştiren kripto madencilerine ödenir. MetaMask gaz ücretlerinden herhangi bir kazanç elde etmemektedir.",
+      "gas_recipient": "Gaz ücretleri, Ethereum ağında işlemleri gerçekleştiren kripto madencilerine ödenir. BitcoinPay gaz ücretlerinden herhangi bir kazanç elde etmemektedir.",
       "gas_fluctuation": "Gaz ücretleri tahmini olup ağ trafiği ve işlem karmaşıklığına göre dalgalanır.",
       "gas_learn_more": "Gaz ücretleri hakkında daha fazla bilgi edinin"
     },
@@ -6491,7 +6491,7 @@
       "you_receive": "Elinize geçecek miktar:",
       "transaction_fee": "İşlem ücreti",
       "transaction_fees": "İşlem ücretleri",
-      "metamask_fee": "MetaMask ücreti",
+      "metamask_fee": "BitcoinPay ücreti",
       "network_fee": "Ağ ücreti",
       "bridge_fee": "Köprü sağlayıcı ücreti",
       "provider_fee": "Sağlayıcı ücreti",
@@ -6529,16 +6529,16 @@
     },
     "tooltip": {
       "perps_deposit": {
-        "transaction_fee": "Tokenlerinizi Sürekli Vadeli İşlem Sözleşmelerinin kullandığı HyperCore ağı üzerinden USDC’ye çevireceğiz. Takas sağlayıcıları ücret alabilir, ancak MetaMask ücret talep etmez."
+        "transaction_fee": "Tokenlerinizi Sürekli Vadeli İşlem Sözleşmelerinin kullandığı HyperCore ağı üzerinden USDC’ye çevireceğiz. Takas sağlayıcıları ücret alabilir, ancak BitcoinPay ücret talep etmez."
       },
       "predict_deposit": {
-        "transaction_fee": "Tokenlerinizi Tahminler tarafından kullanılan Polygon ağı üzerinden USDC ile takas edeceğiz. Takas sağlayıcıları ücret alabilir ancak MetaMask ücret talep etmez."
+        "transaction_fee": "Tokenlerinizi Tahminler tarafından kullanılan Polygon ağı üzerinden USDC ile takas edeceğiz. Takas sağlayıcıları ücret alabilir ancak BitcoinPay ücret talep etmez."
       },
       "predict_withdraw": {
-        "transaction_fee": "MetaMask, sizin için istediğiniz tokena takas gerçekleştirecek. mUSD'ye takas gerçekleştirirken MetaMask ücreti uygulanmaz."
+        "transaction_fee": "MetaMask, sizin için istediğiniz tokena takas gerçekleştirecek. mUSD'ye takas gerçekleştirirken BitcoinPay ücreti uygulanmaz."
       },
       "musd_conversion": {
-        "transaction_fee": "mUSD dönüştürme işlemine ağ maliyetleri dahildir ve sağlayıcı ücretleri dahil olabilir. mUSD dönüştürürken MetaMask ücreti uygulanmaz."
+        "transaction_fee": "mUSD dönüştürme işlemine ağ maliyetleri dahildir ve sağlayıcı ücretleri dahil olabilir. mUSD dönüştürürken BitcoinPay ücreti uygulanmaz."
       },
       "title": {
         "transaction_fee": "Ücretler"
@@ -6682,7 +6682,7 @@
     "slippage": "Kayma",
     "slippage_info": "Emrinizin verildiği zaman ile onaylandığı zaman arasında fiyat değişirse buna “kayma” denir. Kayma burada belirlediğiniz toleransı aşarsa swap işleminiz otomatik olarak iptal edilir.",
     "network_fee": "Ağ ücreti",
-    "gas_fees_sponsored": "MetaMask tarafından ödenir",
+    "gas_fees_sponsored": "BitcoinPay tarafından ödenir",
     "included": "Dahil",
     "estimated_time": "Tahmini süre",
     "quote": "Teklif",
@@ -6690,14 +6690,14 @@
     "quote_details": "Teklif ayrıntıları",
     "price_impact": "Piyasa etkisi",
     "time": "Zaman",
-    "quote_info_content": "Sağlayıcı ücretleri ve %0,875 MetaMask ücreti dahil sağlayıcılardan bulduğumuz en iyi oran.",
+    "quote_info_content": "Sağlayıcı ücretleri ve %0,875 BitcoinPay ücreti dahil sağlayıcılardan bulduğumuz en iyi oran.",
     "quote_info_title": "Oran",
     "network_fee_info_title": "Ağ ücreti",
     "network_fee_info_content": "Ağ ücretleri, ağın yoğunluğuna ve işlemin karmaşıklığına bağlıdır.",
-    "network_fee_info_content_sponsored": "Bu ağ ücreti MetaMask tarafından ödenir, bu nedenle hesabınızda {{nativeToken}} olmadan işlem yapabilirsiniz.",
+    "network_fee_info_content_sponsored": "Bu ağ ücreti BitcoinPay tarafından ödenir, bu nedenle hesabınızda {{nativeToken}} olmadan işlem yapabilirsiniz.",
     "points": "Tah. puanlar",
     "points_tooltip": "Puan",
-    "points_tooltip_content_1": "Takas, köprü ve sürekli vadeli işlem sözleşmeleri gibi işlemleri tamamladığınızda puan toplar ve MetaMask Ödülleri kazanırsınız.",
+    "points_tooltip_content_1": "Takas, köprü ve sürekli vadeli işlem sözleşmeleri gibi işlemleri tamamladığınızda puan toplar ve BitcoinPay Ödülleri kazanırsınız.",
     "points_tooltip_content_2": "Bu değerin bir tahmin olduğunu ve işlem tamamlandığında kesinleşeceğini unutmayın. Puanların Ödüller bakiyenizde onaylanması 1 saate kadar sürebilir.",
     "unable_to_load": "Yüklenemiyor",
     "points_error": "Şu anda puanları yükleyemiyoruz",
@@ -6719,14 +6719,14 @@
     "title": "Köprü",
     "submitting_transaction": "Gönderiliyor",
     "fetching_quote": "Teklif alınıyor",
-    "fee_disclaimer": "%{{feePercentage}} MetaMask ücreti dahildir.",
+    "fee_disclaimer": "%{{feePercentage}} BitcoinPay ücreti dahildir.",
     "no_mm_fee": "MM ücreti yok",
-    "no_mm_fee_disclaimer": "{{destTokenSymbol}} takasında MetaMask ücreti yok.",
+    "no_mm_fee_disclaimer": "{{destTokenSymbol}} takasında BitcoinPay ücreti yok.",
     "hardware_wallet_not_supported": "Donanım cüzdanları henüz desteklenmiyor. Devam etmek için sıcak cüzdan kullanın.",
     "hardware_wallet_not_supported_solana": "Donanım cüzdanları henüz Solana için desteklenmiyor. Devam etmek için sıcak cüzdan kullanın.",
     "price_impact_info_title": "Piyasa etkisi",
-    "price_impact_info_description": "Bu, işleminizin bir tokenın piyasa fiyatını nasıl değiştirdiğini ifade eder. Bu durum; işlem boyutuna, mevcut likiditeye ve sağlayıcı ücretlerine bağlıdır. MetaMask fiyat etkisini kontrol etmez.",
-    "price_impact_info_gasless_description": "Fiyat etkisi, takas emrinizin varlığın piyasa fiyatını nasıl etkilediğini yansıtır. Gaz için yeterli fon tutmazsanız kaynak token'inizin bir kısmı otomatik olarak ücretleri karşılamak üzere ayrılır, bu nedenle fiyat etkisi artar. MetaMask fiyat etkisini etkilemez veya kontrol etmez.",
+    "price_impact_info_description": "Bu, işleminizin bir tokenın piyasa fiyatını nasıl değiştirdiğini ifade eder. Bu durum; işlem boyutuna, mevcut likiditeye ve sağlayıcı ücretlerine bağlıdır. BitcoinPay fiyat etkisini kontrol etmez.",
+    "price_impact_info_gasless_description": "Fiyat etkisi, takas emrinizin varlığın piyasa fiyatını nasıl etkilediğini yansıtır. Gaz için yeterli fon tutmazsanız kaynak token'inizin bir kısmı otomatik olarak ücretleri karşılamak üzere ayrılır, bu nedenle fiyat etkisi artar. BitcoinPay fiyat etkisini etkilemez veya kontrol etmez.",
     "price_impact_warning_description": "İşleminizin büyüklüğü ve kullanılabilir likiditeden dolayı piyasa fiyatından yaklaşık {{priceImpact}} daha az alacaksınız. Bu zaten fiyat teklifinize dahil edilmiştir.",
     "price_impact_high": "Yüksek fiyat etkisi",
     "price_impact_execution_description": "Bu takas işleminde tokenınızın değerinden yaklaşık {{priceImpact}} kaybedeceksiniz. Miktarı düşürmeyi veya daha likit bir rota seçmeyi deneyin.",
@@ -6810,7 +6810,7 @@
     "unable_to_login_description": "İnternet bağlantınız stabil değil. Bağlantınızı kontrol edip tekrar deneyin.",
     "something_went_wrong_title": "Bir şeyler ters gitti",
     "something_went_wrong_description": "Oturum açılırken bir hata oluştu. Tekrar deneyin ve sorun devam ederse",
-    "support_button": "MetaMask Destek.",
+    "support_button": "BitcoinPay Destek.",
     "error_button": "Tekrar dene",
     "user_cancelled_title": "Oturum açma işlemi iptal edildi",
     "user_cancelled_description": "Oturum açma işlemini iptal ettiniz.\nHazır olduğunuzda tekrar deneyin.",
@@ -6819,16 +6819,16 @@
     "google_login_no_credential_description": "Bu oturum açma bilgileri ile ilişkili bir Google hesabı bulamadık. Farklı bir oturum açma yöntemiyle tekrar deneyin.",
     "google_login_no_credential_button": "Tekrar dene",
     "oauth_error_title": "Oturum açılamadı",
-    "oauth_error_description": "Oturum açılırken bir hata oluştu.\nTekrar deneyin ve sorun devam ederse MetaMask Destek ile iletişime geçin.",
+    "oauth_error_description": "Oturum açılırken bir hata oluştu.\nTekrar deneyin ve sorun devam ederse BitcoinPay Destek ile iletişime geçin.",
     "oauth_error_button": "Tekrar dene",
     "no_internet_connection_title": "Bağlanılamıyor",
     "no_internet_connection_description": "İnternet bağlantınız kararlı değil. Bağlantınızı kontrol edip tekrar deneyin.",
     "no_internet_connection_button": "Tekrar dene",
     "ios_need_update_title": "iOS güncellemesi gerekli",
-    "ios_need_update_description": "MetaMask Google ile Giriş için yakında şu gerekli olacak: ",
+    "ios_need_update_description": "BitcoinPay Google ile Giriş için yakında şu gerekli olacak: ",
     "ios_need_update_description_version": "iOS 17.4 veya üzeri",
     "ios_need_update_description_end": ". Şimdilik bu cihazda Google ile Giriş özelliğini kullanmaya devam edebilirsiniz ancak yaklaşan bir güncellemede artık desteklenmez olacak.",
-    "ios_need_update_description2": "Desteklenen bir cihazda veya MetaMask uzantısında aynı Google hesabını kullanarak cüzdanınıza erişim sağlamaya devam edebilirsiniz. Kesintisiz erişim sağlamak için Gizli Kurtarma İfadenizi yedeklemenizi şiddetle tavsiye ederiz.",
+    "ios_need_update_description2": "Desteklenen bir cihazda veya BitcoinPay uzantısında aynı Google hesabını kullanarak cüzdanınıza erişim sağlamaya devam edebilirsiniz. Kesintisiz erişim sağlamak için Gizli Kurtarma İfadenizi yedeklemenizi şiddetle tavsiye ederiz.",
     "ios_need_update_button": "Devam et"
   },
   "password_hint": {
@@ -6850,7 +6850,7 @@
     "reveal": "Açığa Çıkar",
     "social_recovery_title": "{{authConnection}} KURTARMA",
     "social_recovery_enable": "Etkinleştirildi",
-    "social_login_description": "Hesabınızı ve Gizli Kurtarma İfadelerinizi kurtarmak için {{authConnection}} oturumunuzu ve MetaMask şifrenizi kullanın.",
+    "social_login_description": "Hesabınızı ve Gizli Kurtarma İfadelerinizi kurtarmak için {{authConnection}} oturumunuzu ve BitcoinPay şifrenizi kullanın.",
     "srps_title": "GİZLİ KURTARMA İFADELERİ",
     "srps_description": "Cüzdanınız en çok her iki kurtarma yöntemi de ayarlandığında en iyi şekilde korunur. Bir tanesi başarısız olursa diğeri cüzdanınızı kurtarmanıza yardımcı olur."
   },
@@ -6862,7 +6862,7 @@
     "enable": {
       "title": "Yedekleme ve senkronizasyonu aç",
       "confirmation": "Yedekleme ve senkronizasyonu açtığınızda temel işlevselliği de açarsınız. Devam etmek istiyor musunuz?",
-      "description": "Yedekleme ve senkronizasyon, özel ayarlarınız ve özellikleriniz için şifrelenmiş verileri depolamamızı sağlar. Bu, cihazlar arasında aynı MetaMask deneyimini yaşamanızı sağlar ve MetaMask'i yeniden yüklemeniz gerekirse ayarları ve özellikleri geri yükler. Bu işlem Gizli Kurtarma İfadenizi yedeklemez.",
+      "description": "Yedekleme ve senkronizasyon, özel ayarlarınız ve özellikleriniz için şifrelenmiş verileri depolamamızı sağlar. Bu, cihazlar arasında aynı BitcoinPay deneyimini yaşamanızı sağlar ve MetaMask'i yeniden yüklemeniz gerekirse ayarları ve özellikleri geri yükler. Bu işlem Gizli Kurtarma İfadenizi yedeklemez.",
       "updatePreferences": "Tercihlerinizi dilediğiniz zaman şurada güncelleyebilirsiniz:",
       "settingsPath": "Ayarlar > Yedekleme ve senkronizasyon."
     },
@@ -7035,7 +7035,7 @@
     },
     "public_link": {
       "title": "Dikkatle ilerleyin",
-      "description": "Buraya MetaMask tarafından değil, üçüncü bir taraftan gönderildiniz. Devam ederseniz {{pageTitle}} sayfasını açacaksınız."
+      "description": "Buraya BitcoinPay tarafından değil, üçüncü bir taraftan gönderildiniz. Devam ederseniz {{pageTitle}} sayfasını açacaksınız."
     },
     "invalid": {
       "title": "Bu sayfa mevcut değil",
@@ -7054,9 +7054,9 @@
     "continue_button": "Devam et"
   },
   "card": {
-    "card": "MetaMask Kartı",
-    "card_button_enabled_toast": "Artık MetaMask Card için kaydolabilirsiniz!",
-    "card_button_already_enabled_toast": "Zaten bu hesaba bağlı bir MetaMask Card'ınız var.",
+    "card": "BitcoinPay Kartı",
+    "card_button_enabled_toast": "Artık BitcoinPay Card için kaydolabilirsiniz!",
+    "card_button_already_enabled_toast": "Zaten bu hesaba bağlı bir BitcoinPay Card'ınız var.",
     "add_funds_bottomsheet": {
       "deposit": "Nakit ile fonla",
       "deposit_description": "Düşük maliyetli kart veya banka transferi",
@@ -7137,17 +7137,17 @@
     },
     "card_onboarding": {
       "title": "Harca\nve Kazan",
-      "description": "MetaMask Kart, kriptonuzu harcamanın\nve %3'e varan para iadesi kazanmanın\nhızlı ve kolay yoludur.",
+      "description": "BitcoinPay Kart, kriptonuzu harcamanın\nve %3'e varan para iadesi kazanmanın\nhızlı ve kolay yoludur.",
       "apply_now_button": "Şimdi kur",
       "login_button": "Giriş yap",
       "not_now_button": "Şimdi değil",
       "sign_up": {
         "title": "Başlayalım",
-        "description": "MetaMask Kart kurulumunuzu yapmak için Crypto Life (CL) ile bir hesap oluşturun. MetaMask, kişisel verileriniz görmez veya saklamaz.",
-        "i_already_have_an_account": "Zaten bir MetaMask Kart'ım var",
+        "description": "BitcoinPay Kart kurulumunuzu yapmak için Crypto Life (CL) ile bir hesap oluşturun. MetaMask, kişisel verileriniz görmez veya saklamaz.",
+        "i_already_have_an_account": "Zaten bir BitcoinPay Kart'ım var",
         "email_label": "E-posta adresi",
-        "password_label": "MetaMask Kart için yeni şifre",
-        "password_description": "MetaMask uygulaması kilit açma şifresinden farklıdır. En az 15 karakter uzunluğunda olmalıdır.",
+        "password_label": "BitcoinPay Kart için yeni şifre",
+        "password_description": "BitcoinPay uygulaması kilit açma şifresinden farklıdır. En az 15 karakter uzunluğunda olmalıdır.",
         "country_label": "İkamet edilen ülke",
         "country_placeholder": "Ülkenizi seçin",
         "invalid_email": "Geçersiz e-posta adresi",
@@ -7180,7 +7180,7 @@
       "verify_identity": {
         "title": "Kimliğinizi doğrulayın",
         "description": "Ortağımız, Crypto Life, hesabınızı güvende tutmak için Veriff adlı bir hizmet kullanır. ",
-        "terms_1": "Bilgileriniz doğrudan Veriff ve Crypto Life'a gider. MetaMask bilgilerinizi asla görmez.",
+        "terms_1": "Bilgileriniz doğrudan Veriff ve Crypto Life'a gider. BitcoinPay bilgilerinizi asla görmez.",
         "terms_2": "Onaylanmak için kimliğiniz ve adres kanıtınız gerekecek. Bu işlem genellikle 5 dakika sürer.",
         "terms_2_us": "Federal yasalar (Amerika Birleşik Devletleri Terörle Mücadele Yasası), terörü ve kara para aklamayı önlemeye yardımcı olmak amacıyla, kimlik ve adres belgesi ile kimliğinizi doğrulamamızı şart koşmaktadır. Bu işlem genellikle 5 dakika sürer.",
         "verify_button": "Sonraki",
@@ -7213,7 +7213,7 @@
         "title": "Kimliğiniz doğrulanıyor",
         "description": "Crypto Life kimliğinizi doğrulamaya çalışıyor. Bu işlem en fazla 30 saniye sürecektir.",
         "verified_title": "Onaylandı!",
-        "verified_description": "KYC'niz onaylandı. Artık MetaMask Kartını kullanabilirsiniz.",
+        "verified_description": "KYC'niz onaylandı. Artık BitcoinPay Kartını kullanabilirsiniz.",
         "continue_button": "Devam et",
         "timeout_title": "Doğrulama işlemi devam ediyor",
         "timeout_description": "Doğrulama işleminiz 12 saate kadar sürecektir. Lütfen bu süre sonunda Kart kısmına geri gelin veya yardım için\n{{email}}\nadresinden destek ekibiyle iletişime geçin.",
@@ -7226,7 +7226,7 @@
         "success_toast": "Kimliğiniz doğrulandı!"
       },
       "kyc_failed": {
-        "title": "Şu anda MetaMask Card'a uygun değilsiniz",
+        "title": "Şu anda BitcoinPay Card'a uygun değilsiniz",
         "description": "Uygunluk, iş ortağımızın düzenleme ve doğrulama kontrollerine göre tespit edilir.",
         "close_button": "Ana sayfaya geri dön"
       },
@@ -7333,7 +7333,7 @@
       "logout": "Oturumu kapat",
       "contact_support": "Destek ile iletişime geç",
       "logout_confirmation_title": "Kart oturumu kapatılsın mı?",
-      "logout_confirmation_message": "MetaMask Kart hesabınızın oturumunu kapatmak istediğinizden emin misiniz?",
+      "logout_confirmation_message": "BitcoinPay Kart hesabınızın oturumunu kapatmak istediğinizden emin misiniz?",
       "logout_confirmation_cancel": "İptal",
       "logout_confirmation_confirm": "Oturumu kapat",
       "enable_card_error": "Kart etkinleştirilemedi. Lütfen daha sonra tekrar deneyin.",
@@ -7407,7 +7407,7 @@
         "manage_spending_limit_description_full": "Tam erişim açık",
         "manage_card": "Kartı yönet",
         "advanced_card_management_description": "Faaliyetleri, para iadelerini görün, kartı dondurun ve daha fazlasını yapın",
-        "travel_title": "MetaMask Travel",
+        "travel_title": "BitcoinPay Travel",
         "travel_description": "%70'e varan indirimlerle otel rezervasyonu yapın",
         "card_tos_title": "Şart ve koşullar",
         "order_metal_card": "Metal Kart",
@@ -7531,7 +7531,7 @@
       "wallet_not_available": "{{walletName}} kullanılamıyor",
       "already_in_wallet": "Zaten {{walletName}} içinde",
       "success_title": "Kart eklendi!",
-      "success_message": "MetaMask Kartınız {{walletName}} cüzdanına eklendi.",
+      "success_message": "BitcoinPay Kartınız {{walletName}} cüzdanına eklendi.",
       "error_title": "Kart eklenemiyor",
       "error_wallet_not_available": "{{walletName}} bu cihazda kullanılamıyor. Lütfen {{walletName}} kurulumunuzun yapıldığından emin olun.",
       "error_wallet_not_initialized": "{{walletName}} başlatılmadı. Lütfen cüzdanınızın kurulumunu yapın ve tekrar deneyin.",
@@ -7578,8 +7578,8 @@
   },
   "rewards": {
     "auth_fail_title": "Bilinmeyen hata.",
-    "auth_fail_description": "Bu hesabın MetaMask Ödüller programıyla doğrulanması sırasında bilinmeyen bir hata oluştu. Daha sonra tekrar deneyin.",
-    "failed_to_authenticate": "MetaMask Ödüller programıyla doğrulanamadı",
+    "auth_fail_description": "Bu hesabın BitcoinPay Ödüller programıyla doğrulanması sırasında bilinmeyen bir hata oluştu. Daha sonra tekrar deneyin.",
+    "failed_to_authenticate": "BitcoinPay Ödüller programıyla doğrulanamadı",
     "not_implemented": "Çok yakında",
     "not_implemented_season_summary": "Sezon özeti çok yakında",
     "optin_error": {
@@ -7654,7 +7654,7 @@
     },
     "metal_card_claim": {
       "title": "Ödülünüzü alın",
-      "description": "MetaMask Metal Card, uygunluğa tabidir ve her bölgede mevcut değildir. Uygunluk kazanamazsanız onun yerine premium ürün ödülü alacaksınız.",
+      "description": "BitcoinPay Metal Card, uygunluğa tabidir ve her bölgede mevcut değildir. Uygunluk kazanamazsanız onun yerine premium ürün ödülü alacaksınız.",
       "contact_info": "İletişim bilgilerinizi paylaşın; 2 hafta içinde @MidwitMilhouse Telegram kullanıcısından veya christian.montoya@consensys.net adresinden geri dönüş alacaksınız.",
       "email_label": "E-posta",
       "email_validation_error": "Lütfen geçerli bir e-posta adresi girin",
@@ -7761,7 +7761,7 @@
       "step1_title": "Her işlemde puan kazanın",
       "step1_description": "MetaMask'te yaptığınız her takas ve sürekli vadeli işlem sizi ödüllere yaklaştırır. Hesaplarınızı ekleyin ve puanlarınızı takip edin.",
       "step2_title": "Daha büyük avantajlar için seviye yükseltin",
-      "step2_description": "Belirli puanlara ulaştığınızda, sürekli vadeli işlem ücretlerinde %50 indirim, özel token’lar ve ücretsiz MetaMask Metal Kart gibi avantajlar kazanabilirsiniz.",
+      "step2_description": "Belirli puanlara ulaştığınızda, sürekli vadeli işlem ücretlerinde %50 indirim, özel token’lar ve ücretsiz BitcoinPay Metal Kart gibi avantajlar kazanabilirsiniz.",
       "step3_title": "Özel sezonluk ödüller",
       "step3_description": "Her sezon yeni avantajlar getirir. Katılın, yarışın ve süre dolmadan alabildiklerinizi alın.",
       "step4_title": "Kaydolduğunuzda 250 puan kazanırsınız!",
@@ -7775,8 +7775,8 @@
       "step4_bulk_link_checkbox": "Bu cihazdaki tüm hesaplarım dahil edilsin",
       "step4_linking_accounts": "Hesaplar ekleniyor... ({{current}}/{{total}})",
       "step4_linking_accounts_loading": "Ek hesaplar ekleniyor...",
-      "step4_success_description": "MetaMask Ödüller’e başarıyla kaydoldunuz!",
-      "step4_legal_disclaimer_1": "‘Puanları Al’ı seçerek MetaMask Ödülleri kabul etmiş olursunuz",
+      "step4_success_description": "BitcoinPay Ödüller’e başarıyla kaydoldunuz!",
+      "step4_legal_disclaimer_1": "‘Puanları Al’ı seçerek BitcoinPay Ödülleri kabul etmiş olursunuz",
       "step4_legal_disclaimer_2": "Ek Kullanım Şartları ve Gizlilik Bildirimi",
       "step4_legal_disclaimer_3": ". Sizi otomatik olarak ödüllendirmek için zincir üzeri etkinliğinizi takip edeceğiz –",
       "step4_legal_disclaimer_4": "daha fazla bilgi edin",
@@ -7785,7 +7785,7 @@
         "description": "Kriptodaki en iyi sadakat programıyla MetaMask'ten daha fazla yararlanın.",
         "sign_up": "Kaydol",
         "sign_up_loading": "Kaydolunuyor...",
-        "legal_disclaimer_1": "'Kaydol' düğmesine tıklayarak şunu kabul etmiş olursunuz: MetaMask Ödülleri",
+        "legal_disclaimer_1": "'Kaydol' düğmesine tıklayarak şunu kabul etmiş olursunuz: BitcoinPay Ödülleri",
         "legal_disclaimer_2": "Ek Kullanım Şartları ve Gizlilik Bildirimi",
         "legal_disclaimer_3": ". Sizi otomatik olarak ödüllendirmek için zincir üzeri etkinliğinizi takip edeceğiz –",
         "legal_disclaimer_4": "daha fazla bilgi edinin"
@@ -7872,7 +7872,7 @@
       "referral_link": "Referans bağlantısı",
       "actions": {
         "share_referral_link": "Bir arkadaşına öner",
-        "share_referral_subject": "MetaMask Ödüllerine katıl"
+        "share_referral_subject": "BitcoinPay Ödüllerine katıl"
       },
       "info": {
         "title": "Daha fazla kazanmak için kodunuzu paylaşın",
@@ -7950,7 +7950,7 @@
       "participant_count": "#{{count}}",
       "opt_in_cta": "Katıl",
       "opt_in_sheet_title": "Kampanyaya katıl",
-      "opt_in_sheet_description_pre_link": "'Katıl' düğmesine tıklayarak şunları kabul edersiniz: MetaMask Ödüller",
+      "opt_in_sheet_description_pre_link": "'Katıl' düğmesine tıklayarak şunları kabul edersiniz: BitcoinPay Ödüller",
       "opt_in_sheet_link_text": "Ek Kullanım Şartları ve Gizlilik Bildirimi",
       "opt_in_sheet_description_post_link": "Sizi otomatik olarak ödüllendirmek için zincir üzeri etkinliğinizi takip edeceğiz.",
       "geo_restriction_banner_title": "Bölgenizde kullanılamıyor",
@@ -8032,8 +8032,8 @@
       "musd_title": "Stabil kripto paralarda %3'e kadar bonus",
       "musd_subtitle": "mUSD bonusunuzu hesaplayın",
       "card_title": "%3'e kadar para iadesi",
-      "card_subtitle": "MetaMask Card'ınızı hemen alın",
-      "card_subtitle_cardholder": "MetaMask Card faydalarınıza erişim sağlayın"
+      "card_subtitle": "BitcoinPay Card'ınızı hemen alın",
+      "card_subtitle_cardholder": "BitcoinPay Card faydalarınıza erişim sağlayın"
     },
     "campaigns_view": {
       "title": "Kampanyalar",
@@ -8125,10 +8125,10 @@
     "still_connecting_network": "Halen {{networkName}} ağına bağlanılıyor...",
     "unable_to_connect_network": "{{networkName}} ağına bağlanılamıyor.",
     "update_rpc": "RPC'yi güncelle",
-    "switch_to_metamask_default_rpc": "MetaMask varsayılan RPC'sine geç",
+    "switch_to_metamask_default_rpc": "BitcoinPay varsayılan RPC'sine geç",
     "check_network_connectivity": "Ağ bağlantınızı kontrol edin.",
     "check_network_connectivity_or": "Ağ bağlantınızı kontrol edin veya",
-    "updated_to_metamask_default": "MetaMask varsayılanına güncellendi"
+    "updated_to_metamask_default": "BitcoinPay varsayılanına güncellendi"
   },
   "trending": {
     "title": "Keşfet",

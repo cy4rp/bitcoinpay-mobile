@@ -90,28 +90,28 @@
 				<category android:name="android.intent.category.DEFAULT" />
 				<category android:name="android.intent.category.BROWSABLE" />
 				<data android:scheme="https" />
-				<data android:host="metamask.app.link" />
+				<data android:host="bitcoinpay.app.link" />
 			</intent-filter>
 			<intent-filter android:autoVerify="true">
 				<action android:name="android.intent.action.VIEW" />
 				<category android:name="android.intent.category.DEFAULT" />
 				<category android:name="android.intent.category.BROWSABLE" />
 				<data android:scheme="https" />
-				<data android:host="metamask-alternate.app.link" />
+				<data android:host="bitcoinpay-alternate.app.link" />
 			</intent-filter>
 			<intent-filter android:autoVerify="true">
 				<action android:name="android.intent.action.VIEW" />
 				<category android:name="android.intent.category.DEFAULT" />
 				<category android:name="android.intent.category.BROWSABLE" />
 				<data android:scheme="https" />
-				<data android:host="metamask.test-app.link" />
+				<data android:host="bitcoinpay.test-app.link" />
 			</intent-filter>
 			<intent-filter android:autoVerify="true">
 				<action android:name="android.intent.action.VIEW" />
 				<category android:name="android.intent.category.DEFAULT" />
 				<category android:name="android.intent.category.BROWSABLE" />
 				<data android:scheme="https" />
-				<data android:host="metamask-alternate.test-app.link" />
+				<data android:host="bitcoinpay-alternate.test-app.link" />
 			</intent-filter>
 			<!-- MM App Links -->
 			<intent-filter android:autoVerify="true">
@@ -119,24 +119,24 @@
 				<category android:name="android.intent.category.DEFAULT" />
 				<category android:name="android.intent.category.BROWSABLE" />
 				<data android:scheme="https" />
-				<data android:host="link.metamask.io" />
+				<data android:host="link.bitcoinpay.io" />
 			</intent-filter>
 			<intent-filter android:autoVerify="true">
 				<action android:name="android.intent.action.VIEW" />
 				<category android:name="android.intent.category.DEFAULT" />
 				<category android:name="android.intent.category.BROWSABLE" />
 				<data android:scheme="https" />
-				<data android:host="link-test.metamask.io" />
+				<data android:host="link-test.bitcoinpay.io" />
 			</intent-filter>
 			<intent-filter android:autoVerify="true">
 				<action android:name="android.intent.action.VIEW" />
 				<category android:name="android.intent.category.DEFAULT" />
 				<category android:name="android.intent.category.BROWSABLE" />
-				<data android:scheme="expo-metamask" />
-			</intent-filter>
-			<!-- Branch URI Scheme -->
-			<intent-filter>
-				<data android:scheme="metamask" />
+							<data android:scheme="expo-bitcoinpay" />
+						</intent-filter>
+						<!-- Branch URI Scheme -->
+						<intent-filter>
+							<data android:scheme="bitcoinpay" />
 				<action android:name="android.intent.action.VIEW" />
 				<category android:name="android.intent.category.DEFAULT" />
 				<category android:name="android.intent.category.BROWSABLE" />
@@ -172,8 +172,8 @@
 				<category android:name="android.intent.category.BROWSABLE" />
 			</intent-filter>
       		<intent-filter android:autoVerify="true">
-				<data android:scheme="expo-metamask" />
-				<action android:name="android.intent.action.VIEW" />
+								<data android:scheme="expo-bitcoinpay" />
+								<action android:name="android.intent.action.VIEW" />
 				<category android:name="android.intent.category.DEFAULT" />
 				<category android:name="android.intent.category.BROWSABLE" />
 			</intent-filter>
@@ -185,9 +185,9 @@
 		<meta-data android:name="io.branch.sdk.BranchKey.test" android:value="${MM_BRANCH_KEY_TEST}" />
 		<!-- PUSH NOTIFICATIONS -->
 		<meta-data	android:name="com.dieam.reactnativepushnotification.notification_channel_name"
-		android:value="io.metamask"/>
-		<meta-data	android:name="com.dieam.reactnativepushnotification.notification_channel_description"
-		android:value="io.metamask"/>
+				android:value="com.bitcoinpay.wallet"/>
+				<meta-data	android:name="com.dieam.reactnativepushnotification.notification_channel_description"
+				android:value="com.bitcoinpay.wallet"/>
 		<meta-data	android:name="com.dieam.reactnativepushnotification.notification_color"
 		android:resource="@color/notificationColor"/>
 		<meta-data  android:name="com.google.firebase.messaging.default_notification_color"

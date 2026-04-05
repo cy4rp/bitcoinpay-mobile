@@ -95,7 +95,7 @@ const defaultCapabilities: AuthCapabilities = {
   passcodeAvailable: true,
   authLabel: 'Face ID',
   authDescription:
-    "Use your device's biometrics or passcode to unlock MetaMask.",
+    "Use your device's biometrics or passcode to unlock BitcoinPay.",
   authIcon: IconName.Lock,
   osAuthEnabled: true,
   allowLoginWithRememberMe: false,
@@ -437,7 +437,7 @@ describe('Login', () => {
       expect(getByTestId(LoginViewSelectors.LOGIN_BUTTON_ID)).toBeOnTheScreen();
     });
 
-    it('renders MetaMask logo and fox animation', () => {
+    it('renders BitcoinPay logo and fox animation', () => {
       mockRoute.mockReturnValue({
         params: { locked: false, oauthLoginSuccess: false },
       });
@@ -449,10 +449,10 @@ describe('Login', () => {
       expect(queryByTestId(LoginViewSelectors.TITLE_ID)).toBeNull();
       expect(queryByTestId(LoginViewSelectors.OTHER_METHODS_BUTTON)).toBeNull();
       const images = UNSAFE_root.findAllByType(Image);
-      const hasMetaMaskLogo = images.some(
+      const hasBitcoinPayLogo = images.some(
         (img) => img.props.source === METAMASK_NAME,
       );
-      expect(hasMetaMaskLogo).toBe(true);
+      expect(hasBitcoinPayLogo).toBe(true);
     });
 
     it('disables login button when password is empty', () => {

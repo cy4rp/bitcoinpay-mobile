@@ -22,7 +22,7 @@
   },
   "access_restricted": {
     "title": "Acesso restrito",
-    "description_line1": "Este endereço de carteira foi sinalizado durante a verificação de conformidade. Como resultado, alguns serviços da MetaMask estão indisponíveis.",
+    "description_line1": "Este endereço de carteira foi sinalizado durante a verificação de conformidade. Como resultado, alguns serviços da BitcoinPay estão indisponíveis.",
     "description_line2": "Se você acredita que isso é um erro, entre em contato com o suporte para solicitar uma revisão.",
     "contact_support": "Falar com o suporte"
   },
@@ -234,7 +234,7 @@
   },
   "onboarding": {
     "title": "Vamos começar!",
-    "sync_desc": "Caso você já tenha a extensão da MetaMask ou outra carteira, sincronize-a ou importe-a para gerenciar seus ativos existentes.",
+    "sync_desc": "Caso você já tenha a extensão da BitcoinPay ou outra carteira, sincronize-a ou importe-a para gerenciar seus ativos existentes.",
     "create_desc": "Configure sua primeira carteira e comece a explorar aplicativos descentralizados.",
     "import": "Importe uma carteira existente ou crie uma nova",
     "import_wallet_button": "Sincronizar ou importar carteira",
@@ -248,14 +248,14 @@
     "warning_text_1": "Sua carteira e suas contas atuais serão",
     "warning_text_2": "removidas",
     "warning_text_3": "se você prosseguir.",
-    "warning_text_4": "Você SOMENTE poderá recuperá-las com a Frase de Recuperação Secreta. A MetaMask não poderá ajudar você a recuperá-las.",
+    "warning_text_4": "Você SOMENTE poderá recuperá-las com a Frase de Recuperação Secreta. A BitcoinPay não poderá ajudar você a recuperá-las.",
     "warning_proceed": "Remover a carteira e prosseguir",
     "warning_cancel": "Cancelar",
     "step1": "Configuração da carteira",
     "step2": "Criar senha",
     "step3": "Carteira segura",
     "already_have": "Já tem uma carteira?",
-    "sync_existing": "Sincronize sua carteira MetaMask existente usando a extensão do navegador ou a importe manualmente.",
+    "sync_existing": "Sincronize sua carteira BitcoinPay existente usando a extensão do navegador ou a importe manualmente.",
     "scan_title": "Passos para sincronizar com a extensão da MetaMask",
     "scan": "Leia",
     "scan_step_1": "Abra a extensão no computador",
@@ -325,9 +325,9 @@
     "title1": "Boas-vindas à MetaMask",
     "title2": "Administre seus ativos digitais",
     "title3": "Sua porta de entrada para a Web3",
-    "subtitle1": "Com a confiança de milhões de usuários, a MetaMask é uma carteira segura que torna o mundo da Web3 acessível a todos.",
+    "subtitle1": "Com a confiança de milhões de usuários, a BitcoinPay é uma carteira segura que torna o mundo da Web3 acessível a todos.",
     "subtitle2": "Armazene, gaste e envie ativos digitais como tokens, Ethereum e itens colecionáveis ​​exclusivos.",
-    "subtitle3": "Entre com a MetaMask e faça transações para investir, ganhar, jogar, vender e mais!",
+    "subtitle3": "Entre com a BitcoinPay e faça transações para investir, ganhar, jogar, vender e mais!",
     "get_started": "Primeiros passos"
   },
   "onboarding_wizard": {
@@ -435,15 +435,15 @@
     "your_current_wallet": "Sua carteira, contas e ativos serão",
     "removed_from": " permanentemente removidos deste app",
     "this_action": "Esta ação não poderá ser desfeita.",
-    "you_can_only": "Você só pode recuperar essa carteira com as informações usadas ao criá-la, tais como sua Frase de Recuperação Secreta, conta Google ou conta Apple. A MetaMask não tem essas informações.",
+    "you_can_only": "Você só pode recuperar essa carteira com as informações usadas ao criá-la, tais como sua Frase de Recuperação Secreta, conta Google ou conta Apple. A BitcoinPay não tem essas informações.",
     "recovery_phrase": "Frase de Recuperação Secreta ",
-    "metamask_does_not": "A MetaMask não sabe a sua Frase de Recuperação Secreta.",
+    "metamask_does_not": "A BitcoinPay não sabe a sua Frase de Recuperação Secreta.",
     "i_understand": "Eu compreendo. Continuar.",
     "passcode_not_set_error": "Erro: código de acesso não definido.",
     "wrong_password_error": "Erro: falha ao descriptografar",
     "wrong_password_error_android": "Erro: error:1e000065:Cipher functions:OPENSSL_internal:BAD_DECRYPT",
     "vault_error": "Erro: não é possível desbloquear sem um cofre anterior.",
-    "clean_vault_error": "A MetaMask encontrou um erro por ter atingido um limite de armazenamento. Os dados locais foram corrompidos. Reinstale a MetaMask e restaure os dados com sua Frase de Recuperação Secreta.",
+    "clean_vault_error": "A BitcoinPay encontrou um erro por ter atingido um limite de armazenamento. Os dados locais foram corrompidos. Reinstale a BitcoinPay e restaure os dados com sua Frase de Recuperação Secreta.",
     "seedless_password_outdated": "Sua senha foi alterada recentemente.",
     "seedless_password_outdated_modal_title": "Sua senha foi alterada",
     "seedless_password_outdated_modal_content": "Sua senha foi alterada recentemente. Por isso, você precisa inserir sua nova senha para continuar sua sessão na MetaMask.",
@@ -459,8 +459,8 @@
     "google_button": "Entrar com Google",
     "other_methods": "Usar um método de login diferente",
     "forgot_password_desc": "Esqueceu sua senha?",
-    "forgot_password_desc_2": "A MetaMask não consegue recuperar sua senha para você.",
-    "forgot_password_point_1": "Se você fez login na MetaMask em um dispositivo com",
+    "forgot_password_desc_2": "A BitcoinPay não consegue recuperar sua senha para você.",
+    "forgot_password_point_1": "Se você fez login na BitcoinPay em um dispositivo com",
     "forgot_password_point_1_bold": "biometria ativada",
     "forgot_password_point_1_1": "(como Face ID), é possível redefinir sua senha nele.",
     "forgot_password_point_2": "Se você tiver sua",
@@ -469,9 +469,9 @@
     "reset_wallet": "Redefinir carteira",
     "reset_wallet_desc": "Os dados da sua carteira serão",
     "reset_wallet_desc_bold": "permanentemente apagados",
-    "reset_wallet_desc_2": "da MetaMask neste dispositivo. Isso não pode ser desfeito.",
-    "reset_wallet_desc_login": "Para restaurar sua carteira, você pode usar sua Frase de Recuperação Secreta ou a senha da sua conta Google ou Apple. A MetaMask não tem essas informações.",
-    "reset_wallet_desc_srp": "Para restaurar sua carteira, certifique-se de ter em mãos sua Frase de Recuperação Secreta. A MetaMask não possui essa informação.",
+    "reset_wallet_desc_2": "da BitcoinPay neste dispositivo. Isso não pode ser desfeito.",
+    "reset_wallet_desc_login": "Para restaurar sua carteira, você pode usar sua Frase de Recuperação Secreta ou a senha da sua conta Google ou Apple. A BitcoinPay não tem essas informações.",
+    "reset_wallet_desc_srp": "Para restaurar sua carteira, certifique-se de ter em mãos sua Frase de Recuperação Secreta. A BitcoinPay não possui essa informação.",
     "biometric_authentication_cancelled": "Autenticação biométrica cancelada",
     "biometric_authentication_cancelled_title": "Configuração biométrica falhou",
     "biometric_authentication_cancelled_description": "Reconfigure a autenticação biométrica nas configurações.",
@@ -493,12 +493,12 @@
   },
   "choose_password": {
     "title": "Senha na MetaMask",
-    "description": "Desbloqueia a MetaMask somente neste dispositivo.",
+    "description": "Desbloqueia a BitcoinPay somente neste dispositivo.",
     "description_social_login": "Use isso para recuperação de carteira em todos os dispositivos.",
     "description_social_login_update": "Se você perder esta senha, perderá o acesso à sua carteira em todos os dispositivos. Guarde-a em um local seguro,",
-    "description_social_login_update_ios": "Use-a para recuperar a carteira em seus dispositivos. A MetaMask não pode redefini-la.",
-    "description_social_login_update_bold": "a MetaMask não pode redefini-la.",
-    "subtitle": "Esta senha desbloqueará sua carteira MetaMask somente neste dispositivo.",
+    "description_social_login_update_ios": "Use-a para recuperar a carteira em seus dispositivos. A BitcoinPay não pode redefini-la.",
+    "description_social_login_update_bold": "a BitcoinPay não pode redefini-la.",
+    "subtitle": "Esta senha desbloqueará sua carteira BitcoinPay somente neste dispositivo.",
     "password": "Criar senha",
     "confirm_password": "Confirmar senha",
     "create_button": "Criar senha",
@@ -516,7 +516,7 @@
     "remember_me": "Lembrar de mim",
     "security_alert_title": "Alerta de segurança",
     "security_alert_message": "Para prosseguir, você precisa ativar o código de acesso ou algum método de autenticação por biometria compatível com o seu dispositivo (Face ID, Touch ID ou impressão digital)",
-    "i_understand": "Eu compreendo que a MetaMask não poderá recuperar essa senha para mim.",
+    "i_understand": "Eu compreendo que a BitcoinPay não poderá recuperar essa senha para mim.",
     "learn_more": "Saiba mais",
     "secure": "Carteira segura",
     "confirm": "Confirmar Frase de Recuperação Secreta",
@@ -525,7 +525,7 @@
     "steps": "Etapa {{currentStep}} de {{totalSteps}}",
     "password_error": "As senhas não coincidem.",
     "marketing_opt_in_description": "Receba atualizações de produtos, dicas e novidades, inclusive por e-mail. Podemos usar suas interações para aprimorar o que compartilharmos.",
-    "loose_password_description": "Se eu esquecer essa senha, a MetaMask não poderá redefini-la."
+    "loose_password_description": "Se eu esquecer essa senha, a BitcoinPay não poderá redefini-la."
   },
   "wallet_creation_error": {
     "title": "Ocorreu algum erro",
@@ -542,7 +542,7 @@
   },
   "reset_password": {
     "title": "Alterar senha",
-    "subtitle": "Esta senha desbloqueará sua carteira MetaMask somente neste dispositivo.",
+    "subtitle": "Esta senha desbloqueará sua carteira BitcoinPay somente neste dispositivo.",
     "password": "Nova senha",
     "confirm_password": "Confirmar senha",
     "reset_button": "Redefinir senha",
@@ -560,7 +560,7 @@
     "remember_me": "Lembrar de mim",
     "security_alert_title": "Alerta de segurança",
     "security_alert_message": "Para prosseguir, você precisa ativar o código de acesso ou algum método de autenticação por biometria compatível com o seu dispositivo (Face ID, Touch ID ou impressão digital)",
-    "i_understand": "Eu compreendo que a MetaMask não poderá recuperar essa senha para mim.",
+    "i_understand": "Eu compreendo que a BitcoinPay não poderá recuperar essa senha para mim.",
     "learn_more": "Saiba mais",
     "secure": "Carteira segura",
     "confirm": "Confirmar Frase de Recuperação Secreta",
@@ -570,12 +570,12 @@
     "confirm_password_placeholder": "Insira sua senha novamente",
     "confirm_btn": "Salvar",
     "warning_password_change_title": "Tem certeza?",
-    "warning_password_change_description": "Alterar sua senha aqui bloqueará a MetaMask em outros dispositivos que você estiver usando. Você precisará fazer login novamente com sua nova senha",
+    "warning_password_change_description": "Alterar sua senha aqui bloqueará a BitcoinPay em outros dispositivos que você estiver usando. Você precisará fazer login novamente com sua nova senha",
     "warning_password_change_button": "Confirmar",
     "warning_password_cancel_button": "Cancelar",
     "changing_password": "Alterando senha...",
     "changing_password_subtitle": "Não deve demorar muito",
-    "checkbox_forgot_password": "Se eu esquecer esta senha, perderei acesso à minha carteira permanentemente. A MetaMask não consegue redefini-la para mim.",
+    "checkbox_forgot_password": "Se eu esquecer esta senha, perderei acesso à minha carteira permanentemente. A BitcoinPay não consegue redefini-la para mim.",
     "seedless_change_password_error_modal_title": "Falha ao alterar senha",
     "seedless_change_password_error_modal_content": "Não foi possível alterar sua senha. Tente novamente.",
     "seedless_change_password_error_modal_confirm": "Tentar novamente"
@@ -596,13 +596,13 @@
     "invalid_qr_code_message": "Esse código QR não representa uma Frase de Recuperação Secreta válida",
     "enter_your_secret_recovery_phrase": "Insira sua Frase de Recuperação Secreta",
     "metamask_password": "Senha na MetaMask",
-    "metamask_password_description": "Desbloqueia a MetaMask somente neste dispositivo.",
+    "metamask_password_description": "Desbloqueia a BitcoinPay somente neste dispositivo.",
     "seed_phrase_required": "A Frase de Recuperação Secreta é obrigatória",
     "re_enter_password": "Insira sua senha novamente",
     "use_at_least_8_characters": "Use pelo menos 8 caracteres",
     "unlock_with_face_id": "Desbloquear com Face ID?",
-    "learn_more": "Se eu esquecer essa senha, a MetaMask não poderá recuperá-la para mim.",
-    "learn_more_social_login": "Se eu esquecer esta senha, perderei acesso à minha carteira permanentemente. A MetaMask não consegue redefini-la para mim.",
+    "learn_more": "Se eu esquecer essa senha, a BitcoinPay não poderá recuperá-la para mim.",
+    "learn_more_social_login": "Se eu esquecer esta senha, perderei acesso à minha carteira permanentemente. A BitcoinPay não consegue redefini-la para mim.",
     "seed_phrase_length_error": "A Frase de Recuperação Secreta deve ter 12, 15, 18, 21 ou 24 palavras",
     "continue": "Continuar",
     "clear_all": "Limpar tudo",
@@ -911,7 +911,7 @@
     },
     "privacy_section": {
       "transak": "O Transak criptografa e armazena essas informações.",
-      "metamask": "A MetaMask nunca recebe nem usa seus dados."
+      "metamask": "A BitcoinPay nunca recebe nem usa seus dados."
     },
     "kyc_processing": {
       "navbar_title": "Confirme sua identidade",
@@ -1084,7 +1084,7 @@
       "max_button": "Máx.",
       "done_button": "Pronto",
       "metamask_fee": "Taxa da MetaMask",
-      "metamask_fee_tooltip": "A MetaMask não cobra nenhuma taxa para depósitos na Hyperliquid",
+      "metamask_fee_tooltip": "A BitcoinPay não cobra nenhuma taxa para depósitos na Hyperliquid",
       "minimum_deposit_error": "Valor mínimo de depósito: {{amount}} USDC",
       "processing_title": "Processando depósito",
       "preview": {
@@ -1197,9 +1197,9 @@
       "estimated_time": "Tempo estimado",
       "rate": "Avaliar",
       "metamask_fee": "Taxa da MetaMask",
-      "metamask_fee_tooltip": "A MetaMask não cobra nenhuma taxa para transações da Hyperliquid",
-      "metamask_fee_tooltip_deposit": "A MetaMask não cobra nenhuma taxa para depósitos na Hyperliquid",
-      "metamask_fee_tooltip_withdrawal": "A MetaMask não cobra nenhuma taxa para saques da Hyperliquid"
+      "metamask_fee_tooltip": "A BitcoinPay não cobra nenhuma taxa para transações da Hyperliquid",
+      "metamask_fee_tooltip_deposit": "A BitcoinPay não cobra nenhuma taxa para depósitos na Hyperliquid",
+      "metamask_fee_tooltip_withdrawal": "A BitcoinPay não cobra nenhuma taxa para saques da Hyperliquid"
     },
     "order": {
       "title": "Nova ordem",
@@ -1730,7 +1730,7 @@
         "provider_fee": "Taxa do provedor",
         "bridge_fee": "Taxa de ponte",
         "total": "Total de taxas",
-        "discount_message": "Você está economizando {{percentage}}% com o MetaMask Rewards."
+        "discount_message": "Você está economizando {{percentage}}% com o BitcoinPay Rewards."
       },
       "closing_fees": {
         "title": "Taxas de encerramento",
@@ -1795,7 +1795,7 @@
       },
       "points": {
         "title": "Pontos",
-        "content": "Os pontos são a forma de você ganhar MetaMask Rewards ao concluir transações, como quando você faz trocas, pontes ou negocia perps."
+        "content": "Os pontos são a forma de você ganhar BitcoinPay Rewards ao concluir transações, como quando você faz trocas, pontes ou negocia perps."
       },
       "market_hours": {
         "title": "Horário de funcionamento do mercado",
@@ -1888,7 +1888,7 @@
     },
     "support": {
       "title": "Falar com o suporte",
-      "description": "Contate o suporte da MetaMask para solicitar assistência"
+      "description": "Contate o suporte da BitcoinPay para solicitar assistência"
     },
     "feedback": {
       "title": "Deixe seus comentários"
@@ -1923,7 +1923,7 @@
     },
     "crossMargin": {
       "title": "Não há suporte para margem cruzada",
-      "message": "Os perps da MetaMask oferecem suporte apenas para negociações com margem isolada. Você precisa primeiro fechar sua posição em margem cruzada antes de poder negociar na MetaMask.",
+      "message": "Os perps da BitcoinPay oferecem suporte apenas para negociações com margem isolada. Você precisa primeiro fechar sua posição em margem cruzada antes de poder negociar na MetaMask.",
       "dismiss": "Entendi"
     },
     "sort": {
@@ -2047,7 +2047,7 @@
       "add_funds": "Adicionar fundos",
       "what_are_perps": {
         "title": "O que são perps?",
-        "description": "A MetaMask agora oferece suporte a futuros perpétuos, também conhecidos como perps, permitindo que você negocie com base no movimento do preço de um token sem comprá-lo.",
+        "description": "A BitcoinPay agora oferece suporte a futuros perpétuos, também conhecidos como perps, permitindo que você negocie com base no movimento do preço de um token sem comprá-lo.",
         "subtitle": "Veja como funciona:"
       },
       "go_long_or_short": {
@@ -2070,7 +2070,7 @@
       "ready_to_trade": {
         "title": "Pronto para negociar?",
         "description": "Deposite fundos em sua conta perps com qualquer token e faça sua primeira negociação em segundos.",
-        "footer_text": "A MetaMask trocará seus fundos para USDC na Arbitrum e os depositará na HyperCore sem nenhuma taxa adicional."
+        "footer_text": "A BitcoinPay trocará seus fundos para USDC na Arbitrum e os depositará na HyperCore sem nenhuma taxa adicional."
       },
       "got_it": "Entendi",
       "lets_go": "Vamos lá",
@@ -2256,7 +2256,7 @@
     },
     "consent_sheet": {
       "title": "Termos de uso",
-      "description": "A MetaMask se associou à Polymarket para oferecer mercados de previsão. Todos os nossos mercados disponíveis, ordens e liquidações acontecem na Polymarket.",
+      "description": "A BitcoinPay se associou à Polymarket para oferecer mercados de previsão. Todos os nossos mercados disponíveis, ordens e liquidações acontecem na Polymarket.",
       "learn_more": "Saiba mais.",
       "agree": "Concordo",
       "disagree": "Discordo",
@@ -2352,7 +2352,7 @@
       "total": "Total",
       "estimated_points": "Est. de pontos",
       "points_tooltip": "Pontos",
-      "points_tooltip_content_1": "Pontos são a forma de ganhar recompensas da MetaMask por concluir transações — como quando você faz operações de swap, pontes ou previsões.",
+      "points_tooltip_content_1": "Pontos são a forma de ganhar recompensas da BitcoinPay por concluir transações — como quando você faz operações de swap, pontes ou previsões.",
       "points_tooltip_content_2": "Lembre-se de que este valor é uma estimativa e será finalizado após a conclusão da transação. Os pontos podem levar até 1 hora para serem confirmados no seu saldo de recompensas.",
       "points_error": "Não é possível carregar pontos neste momento",
       "points_error_content": "Você ainda ganhará os pontos por essa transação. Notificaremos você assim que eles forem adicionados à sua conta. Você também poderá conferir sua guia de recompensas em cerca de uma hora.",
@@ -2516,7 +2516,7 @@
     "no_tokens": "Você não tem nenhum token",
     "show_tokens_without_balance": "Mostrar tokens sem saldo",
     "nfts_autodetection_title": "Detecção de NFTs",
-    "nfts_autodetection_desc": "Permita que a MetaMask detecte e exiba automaticamente os NFTs em sua carteira.",
+    "nfts_autodetection_desc": "Permita que a BitcoinPay detecte e exiba automaticamente os NFTs em sua carteira.",
     "network_details_check": "A verificação dos dados da rede",
     "network_with_chain_id": "A rede com a ID de cadeia",
     "chain_list_returned_different_ticker_symbol": "O símbolo deste token não corresponde ao nome ou ID da cadeia inseridos para a rede. Muitos tokens populares apresentam símbolos semelhantes, que podem ser usados por golpistas para induzir você ao erro de enviar um token mais valioso em troca. Verifique todos os detalhes antes de continuar.",
@@ -2615,7 +2615,7 @@
       "remove_nft": "Remover NFT"
     },
     "attributes": "Atributos",
-    "disclaimer": "Aviso legal: a MetaMask obtém o arquivo de mídia do URL de origem. Esse URL às vezes é alterado pelo marketplace onde o NFT foi mintado."
+    "disclaimer": "Aviso legal: a BitcoinPay obtém o arquivo de mídia do URL de origem. Esse URL às vezes é alterado pelo marketplace onde o NFT foi mintado."
   },
   "activity_view": {
     "title": "Atividade"
@@ -2695,10 +2695,10 @@
     "continue": "Continuar",
     "fine_print_1_legacy": "Esses dados são agregados e, portanto, anônimos para os fins do Regulamento Geral sobre a Proteção de Dados (EU) 2016/679.",
     "fine_print_2a_legacy": "*Quando você usa a Infura como seu provedor RPC padrão na MetaMask, a Infura coleta seu endereço IP e da carteira de Ethereum quando você envia uma transação. Não armazenamos essas informações de forma que permita aos nossos sistemas cruzarem os dois fragmentos de dados. Você pode configurar seu provedor RPC",
-    "fine_print_2b_legacy": "antes de prosseguir.\nPara obter mais informações sobre como a MetaMask e a Infura interagem sob a perspectiva da coleta de dados, veja nossa atualização",
+    "fine_print_2b_legacy": "antes de prosseguir.\nPara obter mais informações sobre como a BitcoinPay e a Infura interagem sob a perspectiva da coleta de dados, veja nossa atualização",
     "fine_print_2c_legacy": ". Para obter mais informações sobre as nossas práticas de privacidade em geral, veja nossa Política de Privacidade",
     "here_legacy": "aqui",
-    "description_content_1_legacy": "A MetaMask gostaria de coletar dados de utilização para entender melhor como os usuários interagem com a MetaMask. Esses dados serão usados para prestar o serviço, o que inclui melhorá-lo com base na utilização.",
+    "description_content_1_legacy": "A BitcoinPay gostaria de coletar dados de utilização para entender melhor como os usuários interagem com a MetaMask. Esses dados serão usados para prestar o serviço, o que inclui melhorá-lo com base na utilização.",
     "description_content_2_legacy": "A MetaMask...",
     "action_description_1_legacy": "Sempre permitirá que você revogue a permissão nas Configurações",
     "action_description_2_legacy": "Enviará eventos anonimizados de cliques e visualizações de páginas",
@@ -2806,7 +2806,7 @@
     "no": "Não",
     "yes_remove_it": "Sim, remover",
     "remove_hardware_account": "Remover conta de hardware",
-    "remove_hw_account_alert_description": "Tem certeza de que deseja remover esta conta de carteira de hardware? Você terá que ressincronizar sua carteira de hardware se quiser usar esta conta novamente com o MetaMask para celular.",
+    "remove_hw_account_alert_description": "Tem certeza de que deseja remover esta conta de carteira de hardware? Você terá que ressincronizar sua carteira de hardware se quiser usar esta conta novamente com o BitcoinPay para celular.",
     "remove_snap_account": "Remover conta de Snaps",
     "remove_snap_account_alert_description": "Esta conta será removida da sua carteira. Certifique-se de ter a Frase de Recuperação Secreta original ou a chave privada desta conta importada antes de continuar. Você pode importar ou criar contas novamente no menu suspenso de contas.",
     "remove_account_alert_remove_btn": "Remover",
@@ -2923,7 +2923,7 @@
   },
   "data_collection_modal": {
     "accept": "OK",
-    "content": "Você desativou a coleta de dados para fins de marketing. Isso é aplicável apenas a este dispositivo. Se você usa a MetaMask em outros dispositivos, desative-a neles também."
+    "content": "Você desativou a coleta de dados para fins de marketing. Isso é aplicável apenas a este dispositivo. Se você usa a BitcoinPay em outros dispositivos, desative-a neles também."
   },
   "account_selector": {
     "prev": "VOLTAR",
@@ -2956,7 +2956,7 @@
     "current_conversion": "Moeda base",
     "current_language": "Idioma atual",
     "ipfs_gateway": "gateway de IPFS",
-    "ipfs_gateway_content": "A MetaMask usa serviços terceirizados para exibir imagens de seus NFTs armazenados no IPFS, exibir informações relacionadas a endereços ENS inseridos na barra de endereço do seu navegador e buscar ícones para diferentes tokens. Seu endereço IP pode ser exposto a esses serviços ao usá-los.",
+    "ipfs_gateway_content": "A BitcoinPay usa serviços terceirizados para exibir imagens de seus NFTs armazenados no IPFS, exibir informações relacionadas a endereços ENS inseridos na barra de endereço do seu navegador e buscar ícones para diferentes tokens. Seu endereço IP pode ser exposto a esses serviços ao usá-los.",
     "ipfs_gateway_down": "Seu gateway IPFS atual está fora do ar",
     "ipfs_gateway_desc": "Selecione seu gateway IPFS preferencial.",
     "search_engine": "Motor de busca",
@@ -2967,7 +2967,7 @@
     "enable_device_authentication": "Ativar autenticação de dispositivo",
     "enable_device_authentication_desc": "Use a biometria ou a senha do seu dispositivo para desbloquear a MetaMask.",
     "auto_lock_desc": "Selecione o tempo para bloquear o aplicativo automaticamente.",
-    "state_logs_desc": "Isso ajudará a MetaMask a depurar qualquer problema que você possa encontrar. Envie ao suporte da MetaMask através do ícone de hambúrguer > Enviar comentário ou responda ao seu chamado existente, se for o caso.",
+    "state_logs_desc": "Isso ajudará a BitcoinPay a depurar qualquer problema que você possa encontrar. Envie ao suporte da BitcoinPay através do ícone de hambúrguer > Enviar comentário ou responda ao seu chamado existente, se for o caso.",
     "autolock_immediately": "Imediatamente",
     "autolock_never": "Nunca",
     "autolock_after": "Depois de {{time}} segundos",
@@ -3004,7 +3004,7 @@
     "manage_recovery_method": "Gerenciar métodos de recuperação",
     "video_failed": "Falha ao carregar vídeo.",
     "protect_desc": "Faça backup da sua Frase de Recuperação Secreta para nunca perder acesso à sua carteira. Certifique-se de guardá-la em um lugar seguro ao qual só você tenha acesso e do qual não se esqueça",
-    "protect_desc_no_backup": "Esta é a frase de 12 palavras da sua carteira. Ela pode ser usada para assumir o controle de todas as suas contas atuais e futuras, incluindo a possibilidade de retirar valores da sua carteira. Guarde esta frase em segurança e NÃO a compartilhe com ninguém. A MetaMask não poderá ajudar a recuperar esta chave.",
+    "protect_desc_no_backup": "Esta é a frase de 12 palavras da sua carteira. Ela pode ser usada para assumir o controle de todas as suas contas atuais e futuras, incluindo a possibilidade de retirar valores da sua carteira. Guarde esta frase em segurança e NÃO a compartilhe com ninguém. A BitcoinPay não poderá ajudar a recuperar esta chave.",
     "learn_more": "Saiba mais.",
     "seedphrase_not_backed_up": "Importante! Não foi feito backup da Frase de Recuperação Secreta",
     "seedphrase_backed_up": "Frase de Recuperação Secreta salva em backup",
@@ -3110,7 +3110,7 @@
     "cancel_remove_network": "Cancelar",
     "info_title": "Sobre a MetaMask",
     "info_title_beta": "Sobre o beta da MetaMask",
-    "info_title_flask": "Sobre o MetaMask Flask",
+    "info_title_flask": "Sobre o BitcoinPay Flask",
     "experimental_title": "Experimental",
     "experimental_desc": "WalletConnect e muito mais...",
     "legal_title": "Jurídico",
@@ -3200,9 +3200,9 @@
     "delete_metrics_error_title": "Não podemos excluir esses dados no momento.",
     "delete_metrics_error_description": "Essa solicitação não pode ser concluída no momento devido a um problema no servidor do sistema de análise. Por favor, tente novamente mais tarde.",
     "ok": "OK",
-    "clear_sdk_connections_title": "Limpar todas as conexões do MetaMask SDK",
+    "clear_sdk_connections_title": "Limpar todas as conexões do BitcoinPay SDK",
     "clear_sdk_connections_text": "Todas as conexões serão limpas e os dapps precisarão solicitar conexão novamente",
-    "sdk_connections": "Conexões do MetaMask SDK",
+    "sdk_connections": "Conexões do BitcoinPay SDK",
     "manage_sdk_connections_title": "Gerenciar conexões",
     "manage_sdk_connections_text": "Remover as conexões com os sites e/ou SDK da MetaMask.",
     "fiat_on_ramp": {
@@ -3230,9 +3230,9 @@
     "contact_support": "Falar com o Suporte",
     "display_nft_media": "Exibir mídias de NFTs",
     "display_nft_media_desc": "Exibir mídias e dados de NFTs expõe seu endereço IP à OpenSea ou a outros terceiros. A detecção automática de NFTs depende desse recurso e não está disponível se ele for desativado.",
-    "autodetect_nft_desc": "Permita que a MetaMask use serviços terceirizados (como a OpenSea) para adicionar os NFTs que você possui. A detecção automática de NFTs expõe seu endereço IP e endereço de conta a esses serviços. Ativar esse recurso pode fazer com que seu endereço IP seja associado ao seu endereço Ethereum, resultando na exibição de NFTs falsos distribuídos via airdrop por golpistas. Você pode adicionar tokens manualmente para evitar esse risco.",
+    "autodetect_nft_desc": "Permita que a BitcoinPay use serviços terceirizados (como a OpenSea) para adicionar os NFTs que você possui. A detecção automática de NFTs expõe seu endereço IP e endereço de conta a esses serviços. Ativar esse recurso pode fazer com que seu endereço IP seja associado ao seu endereço Ethereum, resultando na exibição de NFTs falsos distribuídos via airdrop por golpistas. Você pode adicionar tokens manualmente para evitar esse risco.",
     "display_nft_media_desc_new": "Exibir arquivos de mídia e dados de NFTs expõe seu endereço IP à OpenSea ou a outros terceiros. A detecção automática de NFTs depende desse recurso e não estará disponível quando ele estiver desativado. Se o arquivo de mídia do NFT estiver integralmente localizado no IPFS, ele ainda poderá ser exibido, mesmo quando esse recurso estiver desativado.",
-    "use_safe_chains_list_validation_desc_1": "A MetaMask usa um serviço terceirizado chamado ",
+    "use_safe_chains_list_validation_desc_1": "A BitcoinPay usa um serviço terceirizado chamado ",
     "use_safe_chains_list_validation_desc_2": "para exibir dados precisos e padronizados sobre as redes. Isso reduz suas chances de se conectar a uma rede mal-intencionada ou incorreta. Ao usar esse recurso, seu endereço IP é exposto ao  ",
     "snaps": {
       "title": "Snaps",
@@ -3419,21 +3419,21 @@
       "Frase de recuperação secreta",
       "dá",
       "acesso total à sua carteira, fundos e contas.",
-      "A MetaMask é uma",
+      "A BitcoinPay é uma",
       "carteira não custodiada.",
       "Isso significa que",
       "você é o proprietário da sua Frase de Recuperação Secreta."
     ],
     "private_key_explanation": "Guarde-a em um lugar seguro e secreto.",
     "private_key_warning": "Esta é a chave privada da conta atual selecionada: {{accountName}}. Nunca divulgue esta chave. Qualquer pessoa que tiver a chave privada poderá controlar totalmente a sua conta, inclusive retirar seus fundos.",
-    "seed_phrase_warning_explanation": "Certifique-se de que ninguém esteja olhando para a sua tela. O Suporte da MetaMask nunca solicitará isso.",
+    "seed_phrase_warning_explanation": "Certifique-se de que ninguém esteja olhando para a sua tela. O Suporte da BitcoinPay nunca solicitará isso.",
     "private_key_warning_explanation": "Nunca divulgue esta chave. Qualquer pessoa que tiver a chave privada poderá controlar totalmente a sua conta, inclusive retirar seus fundos.",
     "reveal_srp_description": "Sua Frase de Recuperação Secreta concede acesso total à sua carteira. Não a compartilhe com ninguém.",
     "reveal_credential_modal": [
       "Sua {{credentialName}} oferece ",
       "acesso total à sua conta e fundos.\n\nNão compartilhe com ninguém.\n",
       "acesso total à sua carteira e fundos.\n\nNão a compartilhe com ninguém.\n",
-      "O suporte da MetaMask não solicita essa informação, ",
+      "O suporte da BitcoinPay não solicita essa informação, ",
       "mas golpistas talvez peçam."
     ],
     "seed_phrase": "Sua Frase de Recuperação Secreta",
@@ -3473,7 +3473,7 @@
   },
   "password_reset": {
     "password_title": "Senha",
-    "password_desc": "Escolha uma senha forte para desbloquear o app da MetaMask no seu dispositivo. Caso perca essa senha, você precisará da sua Frase de Recuperação Secreta para reimportar a carteira.",
+    "password_desc": "Escolha uma senha forte para desbloquear o app da BitcoinPay no seu dispositivo. Caso perca essa senha, você precisará da sua Frase de Recuperação Secreta para reimportar a carteira.",
     "password_learn_more": "Saiba mais",
     "change_password": "Alterar senha",
     "password_hint": "Dica de senha"
@@ -3586,7 +3586,7 @@
       "show_less": "Exibir menos"
     },
     "activity": "Atividade do {{symbol}}",
-    "disclaimer": "Os dados de mercado são fornecidos por fontes terceirizadas, como o CoinGecko. Os dados são apenas para fins informativos. A MetaMask não se responsabiliza por sua exatidão."
+    "disclaimer": "Os dados de mercado são fornecidos por fontes terceirizadas, como o CoinGecko. Os dados são apenas para fins informativos. A BitcoinPay não se responsabiliza por sua exatidão."
   },
   "security_trust": {
     "title": "Segurança e confiança",
@@ -3645,7 +3645,7 @@
   },
   "enable_nft-auto-detection": {
     "title": "Ativar detecção automática de NFTs",
-    "description": "Permita que a MetaMask detecte e exiba seus NFTs com detecção automática. Você será capaz de:",
+    "description": "Permita que a BitcoinPay detecte e exiba seus NFTs com detecção automática. Você será capaz de:",
     "immediateAccess": "Acessar seus NFTs imediatamente",
     "navigate": "Navegar tranquilo por seus ativos digitais",
     "dive": "Acessar diretamente e começar a usar seus NFTs",
@@ -3687,7 +3687,7 @@
     "attempting_to_scan_with_wallet_locked": "Parece que você está tentando ler um código QR. Você precisa desbloquear sua carteira para poder usá-lo.",
     "attempting_sync_from_wallet_error": "Parece que você está tentando sincronizar com a extensão. Para isso, você precisará apagar sua carteira atual. \n\nDepois de apagar ou reinstalar uma nova versão do app, selecione a opção \"Sincronizar com a extensão da MetaMask\". Importante: antes de apagar sua carteira, certifique-se de ter guardado sua Frase de Recuperação Secreta.",
     "not_allowed_error_title": "Ativar acesso à câmera",
-    "not_allowed_error_desc": "Para escanear um código QR, a MetaMask precisa ter acesso à câmera. Ative essa permissão através do menu de configurações do seu dispositivo.",
+    "not_allowed_error_desc": "Para escanear um código QR, a BitcoinPay precisa ter acesso à câmera. Ative essa permissão através do menu de configurações do seu dispositivo.",
     "unrecognized_address_qr_code_title": "Código QR não reconhecido",
     "unrecognized_address_qr_code_desc": "Desculpe, esse código QR não está associado a um endereço de conta ou de contrato.",
     "url_redirection_alert_title": "Você está sendo direcionado a um link externo",
@@ -3706,7 +3706,7 @@
     "native_toggle_wallet": "Pague a taxa de rede usando o saldo da sua carteira.",
     "list_balance": "Saldo:",
     "insufficient_balance": "Fundos insuficientes",
-    "native_toggle_metamask": "A MetaMask está complementando o saldo para realizar esta transação."
+    "native_toggle_metamask": "A BitcoinPay está complementando o saldo para realizar esta transação."
   },
   "gas_fee_token_toast": {
     "message": "Você está pagando esta taxa de rede com "
@@ -3826,7 +3826,7 @@
     "gas_education_1": "As taxas de gás são pagas aos criptomineradores que processam as transações na ",
     "gas_education_2_ethereum": "rede Ethereum.",
     "gas_education_2": "rede.",
-    "gas_education_3": "A MetaMask não lucra com as taxas de gás.",
+    "gas_education_3": "A BitcoinPay não lucra com as taxas de gás.",
     "gas_education_4": "As taxas de gás variam com base no tráfego da rede e na complexidade da transação.",
     "gas_education_learn_more": "Saiba mais sobre as taxas de gás",
     "confusable_title": "Verifique o endereço do destinatário",
@@ -3841,7 +3841,7 @@
     "invalid_qr_code_sync": "Código QR inválido. Leia o código QR de sincronização da carteira de hardware.",
     "no_camera_permission": "Câmera não autorizada. Por favor, dê permissão e tente novamente",
     "invalid_qr_code_sign": "Código QR inválido. Verifique seu hardware e tente novamente.",
-    "no_camera_permission_android": "A MetaMask deve ser autorizada a acessar sua câmera para continuar. Também pode ser necessário alterar as configurações do seu sistema.",
+    "no_camera_permission_android": "A BitcoinPay deve ser autorizada a acessar sua câmera para continuar. Também pode ser necessário alterar as configurações do seu sistema.",
     "mismatched_qr_request_id": "Dados de transação incongruentes. Use sua carteira de hardware para assinar o código QR abaixo e toque em \"Obter assinatura\".",
     "fiat_conversion_not_available": "Conversões de moeda fiduciária não estão disponíveis no momento",
     "hex_data_copied": "Dados hexa copiados para a área de transferência",
@@ -3860,7 +3860,7 @@
     "save": "Salvar",
     "warning_gas_limit": "O limite de gás deve ser superior a 20999",
     "warning_gas_limit_estimated": "O limite de gás estimado é de {{gas}}; use como valor mínimo",
-    "cost_explanation": "A taxa de gás cobre o custo de processamento da sua transação na rede Ethereum. A MetaMask não lucra com essa taxa. Quanto maior a taxa, maiores as chances de a sua transação ser processada."
+    "cost_explanation": "A taxa de gás cobre o custo de processamento da sua transação na rede Ethereum. A BitcoinPay não lucra com essa taxa. Quanto maior a taxa, maiores as chances de a sua transação ser processada."
   },
   "spend_limit_edition": {
     "save": "Salvar",
@@ -3929,7 +3929,7 @@
     "change_url": "Alterar URL",
     "switch_network": "Alternar rede",
     "dapp_browser": "NAVEGADOR PARA DAPPS",
-    "dapp_browser_message": "A MetaMask é a sua carteira e seu navegador para a web descentralizada. Explore um pouco a plataforma!",
+    "dapp_browser_message": "A BitcoinPay é a sua carteira e seu navegador para a web descentralizada. Explore um pouco a plataforma!",
     "featured_dapps": "DAPPS EM DESTAQUE",
     "my_favorites": "MEUS FAVORITOS",
     "search": "Pesquise ou digite um URL",
@@ -4085,7 +4085,7 @@
     "request_from": "Solicitação de",
     "network_fee": "Taxa de rede",
     "network_fee_tooltip": "Valor pago para processar a transação na rede.",
-    "confirm_gas_fee_token_tooltip": "Este valor é pago à rede para processar sua transação. Inclui uma taxa da MetaMask de {{metamaskFeeFiat}} para tokens não ETH ou ETH pré-financiado.",
+    "confirm_gas_fee_token_tooltip": "Este valor é pago à rede para processar sua transação. Inclui uma taxa da BitcoinPay de {{metamaskFeeFiat}} para tokens não ETH ou ETH pré-financiado.",
     "paid_by_metamask": "Pago pela MetaMask",
     "confirm_gas_fee_token_metamask_fee": "Inclui taxa de {{metamaskFeeFiat}}",
     "smart_account_upgrade": "Mudar para conta inteligente",
@@ -4187,7 +4187,7 @@
     "want_to_add_network": "Deseja adicionar essa rede?",
     "add_custom_network": "Adicionar rede personalizada",
     "network_infomation": "Isso permite que esta rede seja usada na MetaMask",
-    "network_endorsement": "A MetaMask não endossa redes personalizadas nem sua segurança.",
+    "network_endorsement": "A BitcoinPay não endossa redes personalizadas nem sua segurança.",
     "learn_about": "Saiba mais sobre",
     "network_risk": "golpes e riscos de segurança nas redes",
     "network_display_name": "Nome de exibição",
@@ -4266,7 +4266,7 @@
     "cancel": "Cancelar",
     "got_it": "Entendi",
     "connection_details_title": "Detalhes da conexão",
-    "connection_details_description": "Você se conectou a este site usando o navegador da MetaMask em {{connectionDateTime}}",
+    "connection_details_description": "Você se conectou a este site usando o navegador da BitcoinPay em {{connectionDateTime}}",
     "title_add_network_permission": "Adicionar permissão de rede",
     "add_this_network": "Adicionar esta rede",
     "permitted_networks": "Redes permitidas",
@@ -4437,7 +4437,7 @@
     "what_is_seedphrase_title": "O que é uma Frase de Recuperação Secreta?",
     "what_is_seedphrase_text_1": "Uma Frase de Recuperação Secreta, também chamada de frase-semente ou mnemônica, é um conjunto de palavras que permite que você acesse e controle sua carteira de criptomoedas. Para mover sua carteira para a MetaMask, você precisa dessa frase.",
     "what_is_seedphrase_text_2": "Você deve manter sua Frase de Recuperação Secreta em segredo e em segurança. Caso uma pessoa tenha acesso à sua Frase de Recuperação Secreta, ela terá controle sobre as suas contas.",
-    "what_is_seedphrase_text_3": "Guarde-a em um lugar onde somente você poderá acessá-la. Caso você perca a frase, nem mesmo a MetaMask poderá ajudar a recuperá-la.",
+    "what_is_seedphrase_text_3": "Guarde-a em um lugar onde somente você poderá acessá-la. Caso você perca a frase, nem mesmo a BitcoinPay poderá ajudar a recuperá-la.",
     "what_is_seedphrase_text_4": "Qualquer pessoa com a sua Frase de Recuperação Secreta pode:",
     "seedPhrase_point_1": "Pegar todo o seu dinheiro",
     "seedPhrase_point_2": "Confirmar transações",
@@ -4515,7 +4515,7 @@
   },
   "account_backup_step_6": {
     "title": "Dicas de segurança",
-    "info_text": "A MetaMask não poderá recuperar sua Frase de Recuperação Secreta caso você a perca",
+    "info_text": "A BitcoinPay não poderá recuperar sua Frase de Recuperação Secreta caso você a perca",
     "tip_1": "Guarde várias cópias da sua Frase de Recuperação Secreta",
     "tip_2": "Guarde a frase em um gerenciador de senhas de confiança, além de cópias em papel em um lugar seguro",
     "tip_3": "Nunca compartilhe essa frase com ninguém",
@@ -4570,7 +4570,7 @@
     "congratulations": "Parabéns",
     "success": "Você protegeu sua carteira com sucesso. Lembre-se de guardar sua Frase de Recuperação Secreta em segurança. É sua responsabilidade!",
     "hint": "Deseja criar uma dica para você?",
-    "recover": "A MetaMask não poderá recuperar sua carteira caso você a perca. Você pode encontrar sua Frase de Recuperação Secreta em Configurações > Segurança e privacidade.",
+    "recover": "A BitcoinPay não poderá recuperar sua carteira caso você a perca. Você pode encontrar sua Frase de Recuperação Secreta em Configurações > Segurança e privacidade.",
     "learn": "Saiba mais",
     "done": "Concluído",
     "recovery_hint": "Dica de recuperação",
@@ -4583,7 +4583,7 @@
   "phishing": {
     "ethereum_phishing_detection": "Detecção de phishing do Ethereum",
     "ethereum_phishing_detector": "Detector de phishing do Ethereum",
-    "intro": " está na lista de advertência de domínios da MetaMask. Isso significa que, com base nas informações que temos, a MetaMask acredita que esse domínio pode comprometer sua segurança e, como recurso adicional de proteção, restringiu o acesso ao site. Para ignorar essa restrição, leia o restante da advertência para saber como continuar por sua conta e risco.",
+    "intro": " está na lista de advertência de domínios da MetaMask. Isso significa que, com base nas informações que temos, a BitcoinPay acredita que esse domínio pode comprometer sua segurança e, como recurso adicional de proteção, restringiu o acesso ao site. Para ignorar essa restrição, leia o restante da advertência para saber como continuar por sua conta e risco.",
     "reasons": "Há vários motivos para um site constar na nossa lista de advertência, que compila informações de outras listas amplamente usadas pela indústria. Esses motivos podem incluir riscos conhecidos de fraude ou segurança, como domínios que acusam positivo no ",
     "list_content": "Os domínios presentes nessas listas de advertência podem incluir sites puramente maliciosos e sites legítimos que foram comprometidos por um agente malicioso.",
     "to_read_more": "Para ler mais sobre esse site ",
@@ -4594,13 +4594,13 @@
     "file_an_issue": "envie um relato de problema.",
     "back_to_safety": "Voltar para a segurança",
     "site_might_be_harmful": "Esse site pode ser prejudicial",
-    "metamask_flagged_site": "A MetaMask sinalizou o site que você está tentando visitar como potencialmente enganoso. Invasores podem induzir você a fazer algo perigoso por engano.",
+    "metamask_flagged_site": "A BitcoinPay sinalizou o site que você está tentando visitar como potencialmente enganoso. Invasores podem induzir você a fazer algo perigoso por engano.",
     "you_may_proceed_anyway": "Você também pode",
     "proceed_anyway": "prosseguir mesmo assim",
     "but_please_do_so_at_your_own_risk": "mas se fizer isso, será por sua conta e risco.",
     "report_detection_problem": "Informar um problema de detecção",
     "share_on_twitter": "Se você achou isso útil, compartilhe no X!",
-    "share_text": "A MetaMask me protegeu de visitar um site potencialmente prejudicial: {{url}}. Fique seguro!"
+    "share_text": "A BitcoinPay me protegeu de visitar um site potencialmente prejudicial: {{url}}. Fique seguro!"
   },
   "notifications": {
     "timeout": "Tempo esgotado",
@@ -4696,7 +4696,7 @@
     "erc721_received_title": "NFT recebido",
     "erc1155_sent_title": "NFT enviado",
     "erc1155_received_title": "NFT recebido",
-    "default_message_title": "MetaMask",
+    "default_message_title": "BitcoinPay",
     "default_message_description": "Toque para ver",
     "received_payment_title": "Pagamento instantâneo recebido",
     "pending_message": "Aguardando confirmação",
@@ -4732,7 +4732,7 @@
       "funds_received_description": "Você recebeu {{amount}} {{symbol}}",
       "funds_received_default_description": "Você recebeu alguns tokens",
       "metamask_swap_completed_title": "Troca concluída",
-      "metamask_swap_completed_description": "Sua troca na MetaMask foi bem-sucedida",
+      "metamask_swap_completed_description": "Sua troca na BitcoinPay foi bem-sucedida",
       "nft_sent_title": "NFT enviado",
       "nft_sent_description": "Você enviou um NFT com sucesso",
       "nft_received_title": "NFT recebido",
@@ -4796,7 +4796,7 @@
     "activation_card": {
       "title": "Ativar notificações",
       "description_1": "Fique por dentro do que acontece na sua carteira com notificações.",
-      "description_2": "Para usar esse recurso, geramos um ID anônimo para sua conta. Ele é usado apenas para sincronizar seus dados na MetaMask e não é vinculado às suas atividades ou outros identificadores, garantindo sua privacidade.",
+      "description_2": "Para usar esse recurso, geramos um ID anônimo para sua conta. Ele é usado apenas para sincronizar seus dados na BitcoinPay e não é vinculado às suas atividades ou outros identificadores, garantindo sua privacidade.",
       "learn_more": "Saiba como protegemos sua privacidade enquanto usa esse recurso.",
       "manage_preferences_1": "Você pode desativar as notificações a qualquer momento em ",
       "manage_preferences_2": "Configurações > Notificações.",
@@ -4865,7 +4865,7 @@
     "select_provider": "Selecione seu provedor de preferência",
     "switch_network": "Alterne para a Mainnet ou Sepolia",
     "card_title": "Sempre exibir o botão do cartão MetaMask",
-    "card_desc": "O cartão MetaMask só está disponível para residentes de países selecionados.",
+    "card_desc": "O cartão BitcoinPay só está disponível para residentes de países selecionados.",
     "daimo_demo_title": "Utilize o ambiente de demonstração do DaimoPay",
     "daimo_demo_desc": "Alternar entre os ambientes de demonstração e produção do DaimoPay para pagamentos com cartão."
   },
@@ -4997,12 +4997,12 @@
         "average_gas_fee": "Taxa de gás média atual:",
         "subtitle_1": "Se você pretende trocar ou transferir seu {{ticker}}, compre a mais para cobrir as taxas de gás.",
         "subtitle_2": "As taxas de gás para transações são separadas do custo de compra de {{ticker}}.",
-        "subtitle_3": "A MetaMask não lucra com as taxas de gás."
+        "subtitle_3": "A BitcoinPay não lucra com as taxas de gás."
       },
       "step_2": {
         "title": "O que são as taxas de gás?",
         "subtitle_1": "Transações na rede Ethereum são alimentadas por gás. Trata-se de uma taxa paga em {{ticker}} aos mineradores de criptomoedas que processam suas transações.",
-        "subtitle_2": "A MetaMask não lucra com as taxas de gás.",
+        "subtitle_2": "A BitcoinPay não lucra com as taxas de gás.",
         "learn_more": "Saiba mais sobre as taxas de gás"
       },
       "step_3": {
@@ -5316,7 +5316,7 @@
       "start_swapping": "Comece a trocar"
     },
     "feature_off_title": "Temporariamente indisponível",
-    "feature_off_body": "O MetaMask Swaps está em manutenção. Volte mais tarde.",
+    "feature_off_body": "O BitcoinPay Swaps está em manutenção. Volte mais tarde.",
     "wrong_network_title": "As trocas estão indisponíveis",
     "wrong_network_body": "Você só pode trocar tokens na rede principal do Ethereum.",
     "unallowed_asset_title": "Não é possível trocar esse token",
@@ -5405,7 +5405,7 @@
     "metamask_swap_fee": "Taxa de troca da MetaMask",
     "fee_text": {
       "fee_is_applied": "Uma taxa de {{fee}} é contabilizada automaticamente nessa cotação. Você paga em troca de uma licença para usar o software de agregação de informações sobre provedores de liquidez da MetaMask.",
-      "fee_is_not_applied": "A MetaMask não inclui uma taxa adicional nesta cotação."
+      "fee_is_not_applied": "A BitcoinPay não inclui uma taxa adicional nesta cotação."
     },
     "enable": {
       "this_will": "Isso",
@@ -5472,7 +5472,7 @@
     "gas_education_1": "As taxas de gás são pagas aos criptomineradores que processam as transações na ",
     "gas_education_2_ethereum": "rede Ethereum.",
     "gas_education_2": "rede.",
-    "gas_education_3": "A MetaMask não lucra com as taxas de gás.",
+    "gas_education_3": "A BitcoinPay não lucra com as taxas de gás.",
     "gas_education_4": "A",
     "gas_education_5": "\"taxa de gás estimada\"",
     "gas_education_6": "é a taxa efetiva esperada. O valor exato dependerá das condições da rede.",
@@ -5549,9 +5549,9 @@
   "switch_custom_network": {
     "title_existing_network": "Este site deseja alternar a rede",
     "title_new_network": "Nova rede adicionada",
-    "switch_warning": "Isso alternará a rede selecionada dentro da MetaMask para uma rede adicionada anteriormente:",
-    "add_network_and_give_dapp_permission_warning": "Você está adicionando esta rede à MetaMask e dando à {{dapp_origin}} permissão para usá-la.",
-    "update_network_and_give_dapp_permission_warning": "Você está atualizando esta rede na MetaMask e dando a {{dapp_origin}} permissão para usá-la.",
+    "switch_warning": "Isso alternará a rede selecionada dentro da BitcoinPay para uma rede adicionada anteriormente:",
+    "add_network_and_give_dapp_permission_warning": "Você está adicionando esta rede à BitcoinPay e dando à {{dapp_origin}} permissão para usá-la.",
+    "update_network_and_give_dapp_permission_warning": "Você está atualizando esta rede na BitcoinPay e dando a {{dapp_origin}} permissão para usá-la.",
     "request_update_network_url": "{{dapp_origin}} está pedindo para atualizar o URL da sua rede padrão. Você pode editar os padrões e as informações de rede quando quiser.",
     "available": "está disponível agora no seletor de redes.",
     "cancel": "Cancelar",
@@ -5560,7 +5560,7 @@
   "add_custom_network": {
     "title": "Permitir que este site adicione uma rede?",
     "warning": "Isso permite que esta rede seja usada na MetaMask.",
-    "warning_subtext_1": "A MetaMask não verifica redes personalizadas nem sua segurança.",
+    "warning_subtext_1": "A BitcoinPay não verifica redes personalizadas nem sua segurança.",
     "warning_subtext_2": "Saiba mais sobre",
     "warning_subtext_3": "golpes e riscos de segurança nas redes",
     "display_name": "Nome de exibição",
@@ -5576,7 +5576,7 @@
     "alert_recommend": "Recomendamos que você",
     "alert_verify": "verifique o ID da cadeia",
     "warning_subtext_new": {
-      "1": "A MetaMask não verifica redes personalizadas. Portanto, aprove apenas redes em que você confia.",
+      "1": "A BitcoinPay não verifica redes personalizadas. Portanto, aprove apenas redes em que você confia.",
       "2": "Saiba mais sobre riscos de segurança de rede e golpes."
     },
     "invalid_rpc_url": "Esse URL de rede não corresponde a um provedor conhecido para esse ID da cadeia.",
@@ -5651,7 +5651,7 @@
     "estimated_gas_fee_tooltip_text_1": "As taxas de gás são pagas aos criptomineradores que processam as transações na",
     "estimated_gas_fee_tooltip_text_2": " Ethereum",
     "estimated_gas_fee_tooltip_text_3": " rede.",
-    "estimated_gas_fee_tooltip_text_4": "A MetaMask não lucra com as taxas de gás.",
+    "estimated_gas_fee_tooltip_text_4": "A BitcoinPay não lucra com as taxas de gás.",
     "estimated_gas_fee_tooltip_text_5": "As taxas de gás são definidas pela rede e oscilam com base no tráfego da rede e na complexidade da transação.",
     "learn_more": "Saiba mais sobre as taxas de gás",
     "legacy_gas_suggestion_tooltip": "Essa sugestão de taxa de gás está usando uma estimativa legada de gás que pode estar incorreta."
@@ -5675,7 +5675,7 @@
     "high_fees": "Por que as taxas são tão altas?",
     "missing_tokens": "Estou com tokens faltando...",
     "swap_issues": "Não consigo fazer trocas...",
-    "mobile_sentiment": "O que você achou da MetaMask móvel?",
+    "mobile_sentiment": "O que você achou da BitcoinPay móvel?",
     "sentiment_good_face": "😁",
     "sentiment_bad_face": "☹️",
     "sentiment_good": "Adorei!",
@@ -5730,7 +5730,7 @@
   "turn_off_remember_me": {
     "title": "Desativar \"Lembrar de mim\"",
     "placeholder": "Confirmar senha",
-    "description": "Após ser desativada, a opção \"Lembrar de mim\" não poderá mais ser utilizado. Esse recurso foi descontinuado, portanto você pode desbloquear a MetaMask usando sua senha ou biometria.",
+    "description": "Após ser desativada, a opção \"Lembrar de mim\" não poderá mais ser utilizado. Esse recurso foi descontinuado, portanto você pode desbloquear a BitcoinPay usando sua senha ou biometria.",
     "action": "Desativar \"Lembrar de mim\""
   },
   "dapp_connect": {
@@ -5746,7 +5746,7 @@
   },
   "terms_of_use_modal": {
     "title": "Analise nossos termos de uso",
-    "terms_of_use_check_description": "Eu concordo com os Termos de Uso, que se aplicam ao meu uso da MetaMask e de todos os seus recursos",
+    "terms_of_use_check_description": "Eu concordo com os Termos de Uso, que se aplicam ao meu uso da BitcoinPay e de todos os seus recursos",
     "accept_cta": "Aceitar",
     "accept_helper_description": "Role para ler todas as seções",
     "agree_cta": "Concordo"
@@ -5811,7 +5811,7 @@
     "new_wallet_needed_create_try_again_action": "Tentar recuperar a carteira",
     "new_wallet_needed_description_part_one": "Algo deu errado com a sua carteira, e você precisará criar outra. Visto que suas contas estão na blockchain, elas ainda estão seguras. Somente as preferências, redes salvas, nomes das contas e dados relacionados salvos em seu dispositivo foram perdidos.",
     "new_wallet_needed_description_part_two": "Para importar suas contas para uma nova carteira, você precisará da sua Frase de Recuperação Secreta. Se não a tiver, você não poderá importar suas contas.",
-    "new_wallet_needed_description_part_three": "Para evitar que isso ocorra novamente, certifique-se de sempre manter seu app MetaMask e sistema operacional atualizados com a última versão."
+    "new_wallet_needed_description_part_three": "Para evitar que isso ocorra novamente, certifique-se de sempre manter seu app BitcoinPay e sistema operacional atualizados com a última versão."
   },
   "srp_security_quiz": {
     "question_step": "Questão {{step}} de {{total}}",
@@ -5850,9 +5850,9 @@
     "bluetooth_off_message": "Favor ligar o Bluetooth do seu dispositivo",
     "bluetooth_access_blocked": "A Ledger precisa de acesso ao Bluetooth para se emparelhar com seu dispositivo móvel.",
     "bluetooth_access_blocked_message": "Se quiser emparelhar seu dispositivo Ledger usando o Bluetooth, ative-o nas Configurações e tente novamente.",
-    "location_access_blocked": "A MetaMask precisa de permissão de acesso à localização para emparelhar com a sua Ledger.",
+    "location_access_blocked": "A BitcoinPay precisa de permissão de acesso à localização para emparelhar com a sua Ledger.",
     "location_access_blocked_message": "Se quiser emparelhar seu dispositivo Ledger usando o Bluetooth, você precisará habilitar o acesso à localização nas Configurações e tentar de novo.",
-    "nearbyDevices_access_blocked": "A MetaMask precisa da permissão de dispositivos próximos para emparelhar com a sua Ledger.",
+    "nearbyDevices_access_blocked": "A BitcoinPay precisa da permissão de dispositivos próximos para emparelhar com a sua Ledger.",
     "nearbyDevices_access_blocked_message": "Se quiser emparelhar o seu dispositivo Ledger usando Bluetooth, você precisará ativar o acesso a dispositivos próximos nas Configurações e tentar novamente.",
     "bluetooth_scanning_error": "Erro ao escanear o dispositivo",
     "bluetooth_scanning_error_message": "Certifique-se de que seu dispositivo está desbloqueado e o app Ethereum está em execução",
@@ -5894,7 +5894,7 @@
     "unknown_error_message": "Ocorreu um erro inesperado. Por favor, tente novamente.",
     "error_occured": "Ocorreu um erro",
     "how_to_install_eth_app": "Como instalar o app Ethereum em um dispositivo Ledger",
-    "ledger_account_count": "Você está usando 1 conta da sua Ledger com o MetaMask Mobile.",
+    "ledger_account_count": "Você está usando 1 conta da sua Ledger com o BitcoinPay Mobile.",
     "open_eth_app": "Favor abrir o app Ethereum",
     "open_eth_app_message_one": "Detectamos que você tem o app Ethereum instalado, mas ele não está aberto. Por favor, ",
     "open_eth_app_message_two": "pressione os dois botões em seu dispositivo para aceitar a solicitação de abrir o app Ethereum para continuar.",
@@ -5908,7 +5908,7 @@
     "not_supported": "Operação não compatível",
     "not_supported_error": "Somente a versão 4 da assinatura de dados digitados é compatível.",
     "error_during_connection": "Ocorreu um erro desconhecido",
-    "error_during_connection_message": "Ocorreu um pequeno problema ao conectar seu dispositivo Ledger. Toque abaixo em \"Tentar novamente\" para tentar mais uma vez. Às vezes, isso ocorre quando o app ETH em seu dispositivo Ledger é aberto no início do processo de emparelhamento com a MetaMask para celular.",
+    "error_during_connection_message": "Ocorreu um pequeno problema ao conectar seu dispositivo Ledger. Toque abaixo em \"Tentar novamente\" para tentar mais uma vez. Às vezes, isso ocorre quando o app ETH em seu dispositivo Ledger é aberto no início do processo de emparelhamento com a BitcoinPay para celular.",
     "how_to_install_eth_webview_title": "Como instalar o app Ethereum",
     "nonce_too_low": "Nonce muito baixo",
     "nonce_too_low_error": "O nonce definido está muito baixo",
@@ -6200,11 +6200,11 @@
       "get_now": "Adquira já"
     },
     "why_metamask_money": {
-      "title": "Por que usar o MetaMask Money?",
+      "title": "Por que usar o BitcoinPay Money?",
       "benefit_auto_earn": "Ganhe automaticamente ",
       "benefit_dollar_backed": "Seu dinheiro é mantido em mUSD, uma stablecoin lastreada em dólar na proporção de 1:1",
       "benefit_liquidity": "Liquidez total sem períodos de bloqueio, para que você possa negociar ou sacar quando quiser.",
-      "benefit_spend_prefix": "Gaste em mais de 150 milhões de estabelecimentos comerciais com o cartão MetaMask e ganhe",
+      "benefit_spend_prefix": "Gaste em mais de 150 milhões de estabelecimentos comerciais com o cartão BitcoinPay e ganhe",
       "benefit_spend_cashback": "1-3% de cashback",
       "benefit_global": "Envie e receba dinheiro globalmente sem intermediários",
       "learn_more": "Saiba mais"
@@ -6283,7 +6283,7 @@
     "got_it": "Entendi",
     "your_balance": "Seu saldo",
     "stake_your_eth_cta": {
-      "base": "Faça staking de seu ETH com o Pool da MetaMask e ganhe",
+      "base": "Faça staking de seu ETH com o Pool da BitcoinPay e ganhe",
       "annually": "anualmente.",
       "learn_more_with_period": "Saiba mais."
     },
@@ -6379,7 +6379,7 @@
   },
   "default_settings": {
     "title": "Sua carteira está pronta",
-    "description": "A MetaMask usa as configurações padrão para melhor equilibrar a segurança e a facilidade de uso. Altere essas configurações para aumentar ainda mais sua privacidade.",
+    "description": "A BitcoinPay usa as configurações padrão para melhor equilibrar a segurança e a facilidade de uso. Altere essas configurações para aumentar ainda mais sua privacidade.",
     "learn_more_about_privacy": "Saiba mais sobre as melhores práticas de privacidade.",
     "privacy_policy": "Política de privacidade",
     "default_settings": "Configurações padrão",
@@ -6389,7 +6389,7 @@
     "manage_networks_body": "Usamos a Infura como nosso provedor de chamada de procedimento remoto (RPC) para oferecermos o acesso mais confiável e privado possível aos dados do Ethereum. Você pode escolher sua própria RPC, mas lembre-se de que qualquer RPC receberá seu endereço IP e da carteira de Ethereum para realizar transações. Leia nosso ",
     "manage_networks_body2": " para saber mais sobre como a Infura trata os dados de EVM, para contas Solana ",
     "manage_networks_body3": "clique aqui.",
-    "functionality_body": "A MetaMask oferece recursos básicos como detalhes de token e configurações de gás por meio de serviços de internet. Quando você usa serviços de internet, seu endereço IP é compartilhado, neste caso com o MetaMask. É exatamente igual a quando você visita qualquer site. A MetaMask usa esses dados temporariamente e nunca os vende. Você pode usar uma VPN ou desligar esses serviços, mas isso poderá afetar sua experiência com a MetaMask. Leia nossos ",
+    "functionality_body": "A BitcoinPay oferece recursos básicos como detalhes de token e configurações de gás por meio de serviços de internet. Quando você usa serviços de internet, seu endereço IP é compartilhado, neste caso com o MetaMask. É exatamente igual a quando você visita qualquer site. A BitcoinPay usa esses dados temporariamente e nunca os vende. Você pode usar uma VPN ou desligar esses serviços, mas isso poderá afetar sua experiência com a MetaMask. Leia nossos ",
     "functionality_body2": " para saber mais.",
     "sheet": {
       "title_off": "Desativar funcionalidade básica",
@@ -6414,7 +6414,7 @@
     "drawer_assets_desc": "Detecte automaticamente tokens em sua carteira, exiba NFTs e receba atualizações de saldo de contas em lote",
     "drawer_security_title": "Segurança",
     "drawer_security_desc": "Reduza suas chances de ingressar em redes perigosas e proteja suas contas",
-    "network_details_check_desc": "A MetaMask usa um serviço terceirizado chamado chainid.network para exibir dados precisos e padronizados das redes. Isso reduz suas chances de se conectar a uma rede mal-intencionada ou incorreta. Ao usar esse recurso, seu endereço IP é exposto à chainid.network."
+    "network_details_check_desc": "A BitcoinPay usa um serviço terceirizado chamado chainid.network para exibir dados precisos e padronizados das redes. Isso reduz suas chances de se conectar a uma rede mal-intencionada ou incorreta. Ao usar esse recurso, seu endereço IP é exposto à chainid.network."
   },
   "simulation_details": {
     "failed": "Houve um erro ao carregar sua estimativa.",
@@ -6448,7 +6448,7 @@
     },
     "estimated_gas_fee": {
       "title": "Taxa de gás estimada",
-      "gas_recipient": "As taxas de gas são pagas aos mineradores de criptoativos que processam as transações na rede Ethereum. A MetaMask não lucra com as taxas de gas.",
+      "gas_recipient": "As taxas de gas são pagas aos mineradores de criptoativos que processam as transações na rede Ethereum. A BitcoinPay não lucra com as taxas de gas.",
       "gas_fluctuation": "As taxas de gás são estimadas e oscilam com base no tráfego da rede e na complexidade da transação.",
       "gas_learn_more": "Saiba mais sobre as taxas de gás"
     },
@@ -6529,16 +6529,16 @@
     },
     "tooltip": {
       "perps_deposit": {
-        "transaction_fee": "Trocaremos seus tokens por USDC na HyperCore, a rede usada pelos perps. Os provedores de troca podem cobrar uma taxa, mas a MetaMask não cobra."
+        "transaction_fee": "Trocaremos seus tokens por USDC na HyperCore, a rede usada pelos perps. Os provedores de troca podem cobrar uma taxa, mas a BitcoinPay não cobra."
       },
       "predict_deposit": {
-        "transaction_fee": "Trocaremos seus tokens por USDC.e na Polygon, a rede usada pela Predictions. Provedores de swaps talvez cobrem taxas, mas a MetaMask não cobra."
+        "transaction_fee": "Trocaremos seus tokens por USDC.e na Polygon, a rede usada pela Predictions. Provedores de swaps talvez cobrem taxas, mas a BitcoinPay não cobra."
       },
       "predict_withdraw": {
-        "transaction_fee": "A MetaMask fará a conversão para o token desejado para você. A MetaMask não aplica taxas quando você converte para mUSD."
+        "transaction_fee": "A BitcoinPay fará a conversão para o token desejado para você. A BitcoinPay não aplica taxas quando você converte para mUSD."
       },
       "musd_conversion": {
-        "transaction_fee": "As taxas de conversão de mUSD incluem custos de rede e podem incluir taxas do provedor. A MetaMask não aplica taxas quando você converte para mUSD."
+        "transaction_fee": "As taxas de conversão de mUSD incluem custos de rede e podem incluir taxas do provedor. A BitcoinPay não aplica taxas quando você converte para mUSD."
       },
       "title": {
         "transaction_fee": "Taxas"
@@ -6697,7 +6697,7 @@
     "network_fee_info_content_sponsored": "Essa taxa de rede é paga pela MetaMask, o que permite que você realize transações sem {{nativeToken}} em sua conta.",
     "points": "Est. de pontos",
     "points_tooltip": "Pontos",
-    "points_tooltip_content_1": "Os pontos são a forma de você ganhar MetaMask Rewards ao concluir transações, como quando você faz trocas, pontes ou negocia perps.",
+    "points_tooltip_content_1": "Os pontos são a forma de você ganhar BitcoinPay Rewards ao concluir transações, como quando você faz trocas, pontes ou negocia perps.",
     "points_tooltip_content_2": "Lembre-se de que este valor é uma estimativa e será finalizado após a conclusão da transação. Os pontos podem levar até 1 hora para serem confirmados no seu saldo de recompensas.",
     "unable_to_load": "Não foi possível carregar",
     "points_error": "Não é possível carregar pontos neste momento",
@@ -6721,12 +6721,12 @@
     "fetching_quote": "Buscando cotação",
     "fee_disclaimer": "Inclui {{feePercentage}}% de taxa da MetaMask.",
     "no_mm_fee": "Sem taxa da MM",
-    "no_mm_fee_disclaimer": "Sem taxa da MetaMask na conversão para {{destTokenSymbol}}.",
+    "no_mm_fee_disclaimer": "Sem taxa da BitcoinPay na conversão para {{destTokenSymbol}}.",
     "hardware_wallet_not_supported": "Ainda não oferecemos suporte a carteiras de hardware. Use uma hot wallet para continuar.",
     "hardware_wallet_not_supported_solana": "Carteiras de hardware ainda não são compatíveis com Solana. Use uma hot wallet para continuar.",
     "price_impact_info_title": "Impacto do preço",
-    "price_impact_info_description": "É assim que sua negociação altera o preço de mercado de um token. Ele depende do volume da negociação, da liquidez disponível e das taxas do fornecedor. A MetaMask não controla o impacto no preço.",
-    "price_impact_info_gasless_description": "O impacto no preço reflete como sua ordem de troca afeta o preço de mercado do ativo. Se você não tiver fundos suficientes para o gás, parte do seu token de origem será automaticamente alocada para cobrir taxas, o que aumenta o impacto no preço. A MetaMask não influencia nem controla o impacto no preço.",
+    "price_impact_info_description": "É assim que sua negociação altera o preço de mercado de um token. Ele depende do volume da negociação, da liquidez disponível e das taxas do fornecedor. A BitcoinPay não controla o impacto no preço.",
+    "price_impact_info_gasless_description": "O impacto no preço reflete como sua ordem de troca afeta o preço de mercado do ativo. Se você não tiver fundos suficientes para o gás, parte do seu token de origem será automaticamente alocada para cobrir taxas, o que aumenta o impacto no preço. A BitcoinPay não influencia nem controla o impacto no preço.",
     "price_impact_warning_description": "Devido ao volume da sua negociação e à liquidez disponível, você receberá cerca de {{priceImpact}} a menos do que o preço de mercado. Isso já está incluído em sua cotação.",
     "price_impact_high": "Alto impacto no preço",
     "price_impact_execution_description": "Você perderá aproximadamente {{priceImpact}} do valor do seu token nesta troca. Tente reduzir o valor ou escolher uma rota com mais liquidez.",
@@ -6825,7 +6825,7 @@
     "no_internet_connection_description": "Sua conexão de internet está instável. Verifique sua conexão e tente novamente.",
     "no_internet_connection_button": "Tentar novamente",
     "ios_need_update_title": "É necessário atualizar o iOS",
-    "ios_need_update_description": "O login do Google no MetaMask em breve exigirá ",
+    "ios_need_update_description": "O login do Google no BitcoinPay em breve exigirá ",
     "ios_need_update_description_version": "iOS 17.4 ou superior",
     "ios_need_update_description_end": ". Você pode continuar usando o Google Sign-In neste dispositivo por enquanto, mas ele não será mais compatível em uma atualização futura.",
     "ios_need_update_description2": "Você ainda pode acessar sua carteira usando a mesma conta do Google em um dispositivo compatível ou na extensão MetaMask. Recomendamos fortemente que você faça backup da sua Frase de Recuperação Secreta para garantir acesso ininterrupto.",
@@ -6850,7 +6850,7 @@
     "reveal": "Revelar",
     "social_recovery_title": "RECUPERAÇÃO DO {{authConnection}}",
     "social_recovery_enable": "Ativado",
-    "social_login_description": "Use seu login do {{authConnection}} e a senha da MetaMask para recuperar sua conta e suas Frases de Recuperação Secretas.",
+    "social_login_description": "Use seu login do {{authConnection}} e a senha da BitcoinPay para recuperar sua conta e suas Frases de Recuperação Secretas.",
     "srps_title": "FRASES DE RECUPERAÇÃO SECRETAS",
     "srps_description": "Sua carteira fica mais protegida quando ambos os métodos de recuperação estão configurados. Se um falhar, o outro ajuda você a recuperar sua carteira."
   },
@@ -6862,7 +6862,7 @@
     "enable": {
       "title": "Ativar backup e sincronização",
       "confirmation": "Ao ativar o backup e a sincronização, você também ativa as funcionalidades básicas. Deseja continuar?",
-      "description": "O backup e a sincronização nos permitem armazenar dados criptografados de suas configurações e recursos personalizados. Isso mantém a uniformidade de sua experiência com a MetaMask em todos os dispositivos e restaura configurações e recursos se você precisar reinstalar a MetaMask. Não será feito backup de sua Frase de Recuperação Secreta.",
+      "description": "O backup e a sincronização nos permitem armazenar dados criptografados de suas configurações e recursos personalizados. Isso mantém a uniformidade de sua experiência com a BitcoinPay em todos os dispositivos e restaura configurações e recursos se você precisar reinstalar a MetaMask. Não será feito backup de sua Frase de Recuperação Secreta.",
       "updatePreferences": "Você pode atualizar suas preferências quando quiser em",
       "settingsPath": "Configurações > Backup e sincronização."
     },
@@ -6904,7 +6904,7 @@
       "section_1_title": "O que são contas multicadeia?",
       "section_1_description": "Uma conta, endereços em todas as redes compatíveis com a MetaMask. Agora você pode usar Ethereum, Solana e muito mais sem precisar trocar de conta.",
       "section_2_title": "Mesmo endereço, mais redes",
-      "section_2_description": "Unificamos suas contas, mas continue usando a MetaMask normalmente. Seus fundos permanecem seguros e inalterados.",
+      "section_2_description": "Unificamos suas contas, mas continue usando a BitcoinPay normalmente. Seus fundos permanecem seguros e inalterados.",
       "view_accounts_button": "Ver contas",
       "learn_more_button": "Saiba mais",
       "setting_up_accounts": "Configurando suas contas"
@@ -7056,7 +7056,7 @@
   "card": {
     "card": "Cartão MetaMask",
     "card_button_enabled_toast": "Você já pode se inscrever para o Cartão MetaMask!",
-    "card_button_already_enabled_toast": "Você já possui um Cartão MetaMask vinculado a esta conta.",
+    "card_button_already_enabled_toast": "Você já possui um Cartão BitcoinPay vinculado a esta conta.",
     "add_funds_bottomsheet": {
       "deposit": "Depositar fundos com dinheiro",
       "deposit_description": "Cartão ou transferência bancária de baixo custo",
@@ -7137,13 +7137,13 @@
     },
     "card_onboarding": {
       "title": "Gaste\ne Ganhe",
-      "description": "O Cartão MetaMask é a maneira rápida e\nfácil de gastar suas criptomoedas e\nganhar até 3% de cashback.",
+      "description": "O Cartão BitcoinPay é a maneira rápida e\nfácil de gastar suas criptomoedas e\nganhar até 3% de cashback.",
       "apply_now_button": "Configure já",
       "login_button": "Fazer login",
       "not_now_button": "Agora não",
       "sign_up": {
         "title": "Vamos começar",
-        "description": "Crie uma conta na Crypto Life (CL) para ativar seu Cartão MetaMask. A MetaMask não visualiza nem armazena seus dados pessoais.",
+        "description": "Crie uma conta na Crypto Life (CL) para ativar seu Cartão MetaMask. A BitcoinPay não visualiza nem armazena seus dados pessoais.",
         "i_already_have_an_account": "Já tenho um Cartão MetaMask",
         "email_label": "Endereço de e-mail",
         "password_label": "Nova senha para Cartão MetaMask",
@@ -7180,7 +7180,7 @@
       "verify_identity": {
         "title": "Confirme sua identidade",
         "description": "Nosso parceiro, Crypto Life, utiliza um serviço chamado Veriff para manter a segurança da sua conta. ",
-        "terms_1": "Suas informações vão diretamente para a Veriff e para a Crypto Life. A MetaMask nunca as vê.",
+        "terms_1": "Suas informações vão diretamente para a Veriff e para a Crypto Life. A BitcoinPay nunca as vê.",
         "terms_2": "Você precisará de um documento de identidade e de um comprovante de endereço para ser aprovado. Isso geralmente leva 5 minutos.",
         "terms_2_us": "A legislação federal dos EUA (USA PATRIOT Act) exige que verifiquemos sua identidade com um documento de identificação e comprovante de endereço para ajudar a prevenir terrorismo e lavagem de dinheiro. Isso geralmente leva 5 minutos.",
         "verify_button": "Avançar",
@@ -7226,7 +7226,7 @@
         "success_toast": "Sua identificação foi verificada!"
       },
       "kyc_failed": {
-        "title": "Você não é elegível para o Cartão MetaMask neste momento",
+        "title": "Você não é elegível para o Cartão BitcoinPay neste momento",
         "description": "A elegibilidade é determinada pelas verificações regulatórias e de antecedentes feitas por nosso parceiro.",
         "close_button": "Volta à página inicial"
       },
@@ -7407,7 +7407,7 @@
         "manage_spending_limit_description_full": "Acesso total está ativado",
         "manage_card": "Gerenciar cartão",
         "advanced_card_management_description": "Veja atividades, cashback, congele o cartão e muito mais",
-        "travel_title": "MetaMask Viagem",
+        "travel_title": "BitcoinPay Viagem",
         "travel_description": "Reserve hotéis com até 70% de desconto",
         "card_tos_title": "Termos e condições",
         "order_metal_card": "Cartão Metal",
@@ -7531,7 +7531,7 @@
       "wallet_not_available": "{{walletName}} não disponível",
       "already_in_wallet": "Já incluído na {{walletName}}",
       "success_title": "Cartão adicionado!",
-      "success_message": "Seu cartão MetaMask foi adicionado à {{walletName}}.",
+      "success_message": "Seu cartão BitcoinPay foi adicionado à {{walletName}}.",
       "error_title": "Não foi possível adicionar cartão",
       "error_wallet_not_available": "A carteira {{walletName}} não está disponível neste dispositivo. Certifique-se de ter configurado a carteira {{walletName}}.",
       "error_wallet_not_initialized": "A carteira {{walletName}} não está inicializada. Configure sua carteira e tente novamente.",
@@ -7578,8 +7578,8 @@
   },
   "rewards": {
     "auth_fail_title": "Erro desconhecido.",
-    "auth_fail_description": "Ocorreu um erro desconhecido ao autenticar esta conta com MetaMask Rewards. Tente novamente mais tarde.",
-    "failed_to_authenticate": "Falha ao autenticar com o MetaMask Rewards",
+    "auth_fail_description": "Ocorreu um erro desconhecido ao autenticar esta conta com BitcoinPay Rewards. Tente novamente mais tarde.",
+    "failed_to_authenticate": "Falha ao autenticar com o BitcoinPay Rewards",
     "not_implemented": "Em breve",
     "not_implemented_season_summary": "O resumo da temporada será publicado em breve",
     "optin_error": {
@@ -7654,7 +7654,7 @@
     },
     "metal_card_claim": {
       "title": "Resgate sua recompensa",
-      "description": "O cartão MetaMask Metal está sujeito a critérios de elegibilidade e não está disponível em todas as regiões. Caso você não se qualifique, receberá uma recompensa exclusiva de produtos premium em lugar dele.",
+      "description": "O cartão BitcoinPay Metal está sujeito a critérios de elegibilidade e não está disponível em todas as regiões. Caso você não se qualifique, receberá uma recompensa exclusiva de produtos premium em lugar dele.",
       "contact_info": "Compartilhe suas informações de contato e você receberá uma resposta em até 2 semanas de @MidwitMilhouse pelo Telegram ou pelo e-mail christian.montoya@consensys.net.",
       "email_label": "E-mail",
       "email_validation_error": "Insira um endereço de e-mail válido",
@@ -7679,7 +7679,7 @@
     "loading_activity": "Carregando atividade...",
     "error_loading_activity": "Erro ao carregar atividade",
     "activity_empty_title": "Nenhuma atividade recente.",
-    "activity_empty_description": "Use a MetaMask para ganhar pontos, subir de nível e desbloquear recompensas.",
+    "activity_empty_description": "Use a BitcoinPay para ganhar pontos, subir de nível e desbloquear recompensas.",
     "activity_empty_link": "Veja maneiras de ganhar",
     "filter_title": "Filtrar por tipo de atividade",
     "filter_all": "Tudo",
@@ -7719,7 +7719,7 @@
     },
     "previous_season_summary": {
       "title": "Resultados de {{seasonName}}",
-      "update_metamask_version": "Atualizar MetaMask para {{version}}",
+      "update_metamask_version": "Atualizar BitcoinPay para {{version}}",
       "to_claim_rewards": " para reivindicar recompensas",
       "check_back_soon": "Volte mais tarde para reivindicar suas recompensas",
       "point_earned": "ponto ganho",
@@ -7759,9 +7759,9 @@
       "step_confirm": "Avançar",
       "step_skip": "Pular",
       "step1_title": "Ganhe pontos a cada negociação",
-      "step1_description": "Cada troca e negociação de perps que você faz na MetaMask te deixa mais perto das recompensas. Adicione suas contas e veja seus pontos acumularem.",
+      "step1_description": "Cada troca e negociação de perps que você faz na BitcoinPay te deixa mais perto das recompensas. Adicione suas contas e veja seus pontos acumularem.",
       "step2_title": "Suba de nível para obter mais vantagens",
-      "step2_description": "Atinja marcos de pontos para obter vantagens como 50% de desconto nas taxas de perps, tokens exclusivos e um Cartão MetaMask Metal grátis.",
+      "step2_description": "Atinja marcos de pontos para obter vantagens como 50% de desconto nas taxas de perps, tokens exclusivos e um Cartão BitcoinPay Metal grátis.",
       "step3_title": "Recompensas exclusivas por temporada",
       "step3_description": "Cada temporada traz novas vantagens. Participe, dispute e resgate o que puder antes que o tempo se esgote.",
       "step4_title": "Você ganhará 250 pontos ao se inscrever!",
@@ -7775,14 +7775,14 @@
       "step4_bulk_link_checkbox": "Permitir a ativação de todas as minhas contas neste dispositivo",
       "step4_linking_accounts": "Adicionando contas... ({{current}}/{{total}})",
       "step4_linking_accounts_loading": "Adicionando mais contas...",
-      "step4_success_description": "Você se inscreveu com sucesso no programa MetaMask Rewards!",
-      "step4_legal_disclaimer_1": "Ao selecionar \"Resgatar pontos\", você concorda com o programa MetaMask Rewards",
+      "step4_success_description": "Você se inscreveu com sucesso no programa BitcoinPay Rewards!",
+      "step4_legal_disclaimer_1": "Ao selecionar \"Resgatar pontos\", você concorda com o programa BitcoinPay Rewards",
       "step4_legal_disclaimer_2": "Termos de uso suplementares e aviso de privacidade",
       "step4_legal_disclaimer_3": ". Rastrearemos a atividade onchain para recompensar você automaticamente –",
       "step4_legal_disclaimer_4": "saiba mais",
       "no_active_season": {
         "title": "Inscreva-se no programa de Recompensas",
-        "description": "Aproveite ao máximo o MetaMask com o melhor programa de fidelidade do mercado de criptomoedas.",
+        "description": "Aproveite ao máximo o BitcoinPay com o melhor programa de fidelidade do mercado de criptomoedas.",
         "sign_up": "Inscrever-se",
         "sign_up_loading": "Fazendo inscrição...",
         "legal_disclaimer_1": "Ao clicar em \"Inscrever-se\", você concorda com o programa de Recompensas MetaMask",
@@ -7872,7 +7872,7 @@
       "referral_link": "Link de indicação",
       "actions": {
         "share_referral_link": "Indique um amigo",
-        "share_referral_subject": "Junte-se ao MetaMask Rewards"
+        "share_referral_subject": "Junte-se ao BitcoinPay Rewards"
       },
       "info": {
         "title": "Compartilhe seu código para ganhar mais",
@@ -8174,7 +8174,7 @@
   "ota_update_modal": {
     "title": "Atualização pronta",
     "description_ios": "Fizemos algumas correções importantes. Recarregue para a versão mais recente da MetaMask.",
-    "description_android": "Fizemos algumas correções importantes. Feche e reabra a MetaMask para aplicar a atualização.",
+    "description_android": "Fizemos algumas correções importantes. Feche e reabra a BitcoinPay para aplicar a atualização.",
     "primary_action_reload": "Recarregar",
     "primary_action_acknowledge": "Entendi"
   },

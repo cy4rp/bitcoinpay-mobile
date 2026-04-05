@@ -181,10 +181,10 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace"io.metamask"
+    namespace"com.bitcoinpay.wallet"
 
     defaultConfig {
-        applicationId "io.metamask"
+        applicationId "com.bitcoinpay.wallet"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionName "7.74.0"
@@ -314,12 +314,12 @@ android {
           qa {
             dimension "version"
             applicationIdSuffix ".qa"
-            applicationId "io.metamask"
+            applicationId "com.bitcoinpay.wallet"
             signingConfig signingConfigs.qaProd
           }
           prod {
             dimension "version"
-            applicationId "io.metamask"
+            applicationId "com.bitcoinpay.wallet"
             // Use appropriate signing config based on environment
             def env = System.getenv("METAMASK_ENVIRONMENT")
             def isE2E = System.getenv("E2E")
@@ -345,7 +345,7 @@ android {
           flask {
             dimension "version"
             applicationIdSuffix ".flask"
-            applicationId "io.metamask"
+            applicationId "com.bitcoinpay.wallet"
             // Use the appropriate signing config based on environment
             if (System.getenv("METAMASK_ENVIRONMENT") == 'test') {
               signingConfig signingConfigs.flaskTest

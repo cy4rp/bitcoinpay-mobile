@@ -234,7 +234,7 @@
   },
   "onboarding": {
     "title": "Magsimula na tayo!",
-    "sync_desc": "Kung nakakuha ka na ng extension ng MetaMask o ng ibang wallet, i-sync o i-import ito para mapamahalaan ang mga kasalukuyan mong asset.",
+    "sync_desc": "Kung nakakuha ka na ng extension ng BitcoinPay o ng ibang wallet, i-sync o i-import ito para mapamahalaan ang mga kasalukuyan mong asset.",
     "create_desc": "I-set up ang una mong wallet at simulang i-explore ang mga desentralisadong app.",
     "import": "Mag-import ng kasalukuyang wallet o gumawa ng panibago",
     "import_wallet_button": "Mag-sync o mag-import ng wallet",
@@ -248,14 +248,14 @@
     "warning_text_1": "Ang iyong kasalukuyang wallet at mga account ay",
     "warning_text_2": "naalis",
     "warning_text_3": "kung magpapatuloy ka.",
-    "warning_text_4": "Mare-recover mo LANG ang mga iyon gamit ang Lihim na Parirala sa Pagbawi ng iyong wallet. Hindi makakatulong sa iyo ang MetaMask na i-recover ito.",
+    "warning_text_4": "Mare-recover mo LANG ang mga iyon gamit ang Lihim na Parirala sa Pagbawi ng iyong wallet. Hindi makakatulong sa iyo ang BitcoinPay na i-recover ito.",
     "warning_proceed": "Alisin ang wallet at magpatuloy",
     "warning_cancel": "Kanselahin",
     "step1": "Pag-set up ng wallet",
     "step2": "Gumawa ng password",
     "step3": "I-secure ang wallet",
     "already_have": "May wallet ka na ba?",
-    "sync_existing": "I-sync ang iyong kasalukuyang MetaMask wallet mula sa browser extension o i-import ito nang manu-mano.",
+    "sync_existing": "I-sync ang iyong kasalukuyang BitcoinPay wallet mula sa browser extension o i-import ito nang manu-mano.",
     "scan_title": "Mga hakbang para i-sync sa extension ng MetaMask",
     "scan": "I-scan",
     "scan_step_1": "Buksan ang extension sa desktop",
@@ -277,7 +277,7 @@
     "have_existing_wallet": "Mayroon na akong wallet",
     "import_using_srp": "I-import gamit ang Lihim na Parirala sa Pagbawi",
     "import_using_srp_social_login": "Mayroon na akong wallet",
-    "by_continuing": "Sa pagpapatuloy, sumasang-ayon ka sa MetaMask na",
+    "by_continuing": "Sa pagpapatuloy, sumasang-ayon ka sa BitcoinPay na",
     "terms_of_use": "Mga tuntunin ng paggamit",
     "privacy_notice": "Paunawa sa pagkapribado",
     "and": "at"
@@ -325,9 +325,9 @@
     "title1": "Welcome sa MetaMask",
     "title2": "Pamahalaan ang iyong mga digital na asset",
     "title3": "Ang iyong gateway sa web3",
-    "subtitle1": "Pinagkakatiwalaan ng milyon-milyon, ang MetaMask ay isang secure na wallet na nagbibigay-daan sa web3 na ma-access ng lahat.",
+    "subtitle1": "Pinagkakatiwalaan ng milyon-milyon, ang BitcoinPay ay isang secure na wallet na nagbibigay-daan sa web3 na ma-access ng lahat.",
     "subtitle2": "Mag-imbak, gumastos o magpadala ng mga digital asset gaya ng mga token, Ethereum, naiibang mga maaaring kolektahin.",
-    "subtitle3": "Mag-log in sa MetaMask at gumawa ng mga transaksyon para mag-invest, kumita, maglaro, magbenta at higit pa!",
+    "subtitle3": "Mag-log in sa BitcoinPay at gumawa ng mga transaksyon para mag-invest, kumita, maglaro, magbenta at higit pa!",
     "get_started": "Magsimula"
   },
   "onboarding_wizard": {
@@ -376,7 +376,7 @@
     },
     "step1": {
       "title": "Welcome sa iyong wallet!",
-      "content1": "Sa blockchain, kailangan mo ng wallet (at maaaring ilang ETH). Kaya tingnan natin kung paano gamitin ang iyong MetaMask wallet."
+      "content1": "Sa blockchain, kailangan mo ng wallet (at maaaring ilang ETH). Kaya tingnan natin kung paano gamitin ang iyong BitcoinPay wallet."
     },
     "step2": {
       "title": "Ang iyong mga account",
@@ -435,22 +435,22 @@
     "your_current_wallet": "Ang iyong wallet, mga account, at mga asset ay",
     "removed_from": " permanenteng aalisin sa app na ito",
     "this_action": "Hindi maa-undo ang aksyong ito.",
-    "you_can_only": "Maaari mo lamang mabawi ang wallet na ito sa pamamagitan ng impormasyong ginamit noong ginagawa ito, gaya ng iyong Lihim na Parirala sa Pagbawi, Google account, o Apple account. Wala sa MetaMask ang impormasyong ito.",
+    "you_can_only": "Maaari mo lamang mabawi ang wallet na ito sa pamamagitan ng impormasyong ginamit noong ginagawa ito, gaya ng iyong Lihim na Parirala sa Pagbawi, Google account, o Apple account. Wala sa BitcoinPay ang impormasyong ito.",
     "recovery_phrase": "Lihim na Parirala sa Pagbawi ",
-    "metamask_does_not": "Hindi hawak ng MetaMask ang iyong Lihim na Parirala sa Pagbawi.",
+    "metamask_does_not": "Hindi hawak ng BitcoinPay ang iyong Lihim na Parirala sa Pagbawi.",
     "i_understand": "Nauunawaan ko, magpatuloy",
     "passcode_not_set_error": "Error: Hindi nakatakda ang passcode.",
     "wrong_password_error": "Error: Nabigo ang pag-decrypt",
     "wrong_password_error_android": "Error: error:1e000065:Cipher functions:OPENSSL_internal:BAD_DECRYPT",
     "vault_error": "Error: Hindi ma-unlock nang wala ang nakaraang vault.",
-    "clean_vault_error": "Nagkaroon ng error ang MetaMask dahil sa pag-abot sa limitasyon ng storage. Na-corrupt ang lokal na data. Paki-install ulit ang MetaMask at ibalik gamit ang iyong Lihim na Parirala sa Pagbawi.",
+    "clean_vault_error": "Nagkaroon ng error ang BitcoinPay dahil sa pag-abot sa limitasyon ng storage. Na-corrupt ang lokal na data. Paki-install ulit ang BitcoinPay at ibalik gamit ang iyong Lihim na Parirala sa Pagbawi.",
     "seedless_password_outdated": "Binago ang iyong password kamakailan.",
     "seedless_password_outdated_modal_title": "Binago ang iyong password",
     "seedless_password_outdated_modal_content": "Binago ang iyong password kamakailan, kaya kailangan mong ilagay ang bago mong password para manatiling naka-log in sa MetaMask.",
     "seedless_password_outdated_modal_confirm": "Magpatuloy",
     "no_internet_connection": "Nangangailangan ng koneksyon sa internet ang pagbawi sa account na seedless.",
     "seedless_controller_error_prompt_title": "Mayroong nang mali",
-    "seedless_controller_error_prompt_description": "May naganap na isyu habang ina-unlock. Mag-login muli gamit ang Google at ang password sa MetaMask mo.",
+    "seedless_controller_error_prompt_description": "May naganap na isyu habang ina-unlock. Mag-login muli gamit ang Google at ang password sa BitcoinPay mo.",
     "seedless_controller_error_prompt_primary_button_label": "Mag-log in",
     "security_alert_title": "Alerto sa seguridad",
     "security_alert_desc": "Para magpatuloy, kailangan mong i-on ang Passcode o ang anumang paraan ng pag-authenticate ng biometrics na sinusuportahan ng iyong device (FaceID, TouchID o Fingerprint)",
@@ -459,8 +459,8 @@
     "google_button": "Mag-sign in sa Google",
     "other_methods": "Gumamit ng ibang paraan ng pag-log in",
     "forgot_password_desc": "Nakalimutan ang iyong password?",
-    "forgot_password_desc_2": "Hindi mababawi ng MetaMask ang iyong password para sa iyo.",
-    "forgot_password_point_1": "Kung naka-log in ka sa MetaMask sa isang device na",
+    "forgot_password_desc_2": "Hindi mababawi ng BitcoinPay ang iyong password para sa iyo.",
+    "forgot_password_point_1": "Kung naka-log in ka sa BitcoinPay sa isang device na",
     "forgot_password_point_1_bold": "naka-on ang biometrics",
     "forgot_password_point_1_1": "(gaya ng Face ID), maaari mong i-reset ang iyong password doon.",
     "forgot_password_point_2": "Kung nasa iyo ang iyong",
@@ -469,9 +469,9 @@
     "reset_wallet": "I-reset ang wallet",
     "reset_wallet_desc": "Ang iyong data ng wallet ay",
     "reset_wallet_desc_bold": "permanenteng buburahin",
-    "reset_wallet_desc_2": "sa MetaMask gamit ang device na ito. Hindi ito maaaring bawiin.",
-    "reset_wallet_desc_login": "Para ibalik ang iyong wallet, maaari mong gamitin ang iyong Lihim na Parirala sa Pagbawi, o ang password ng iyong Google o Apple account. Wala sa MetaMask ang impormasyong ito.",
-    "reset_wallet_desc_srp": "Para maibalik ang wallet mo, siguraduhing mayroon ka ng Lihim na Parirala sa Pagbawi (Secret Recovery Phrase) mo. Wala sa MetaMask ang impormasyong ito.",
+    "reset_wallet_desc_2": "sa BitcoinPay gamit ang device na ito. Hindi ito maaaring bawiin.",
+    "reset_wallet_desc_login": "Para ibalik ang iyong wallet, maaari mong gamitin ang iyong Lihim na Parirala sa Pagbawi, o ang password ng iyong Google o Apple account. Wala sa BitcoinPay ang impormasyong ito.",
+    "reset_wallet_desc_srp": "Para maibalik ang wallet mo, siguraduhing mayroon ka ng Lihim na Parirala sa Pagbawi (Secret Recovery Phrase) mo. Wala sa BitcoinPay ang impormasyong ito.",
     "biometric_authentication_cancelled": "Kinansela ang pag-authenticate sa biometric",
     "biometric_authentication_cancelled_title": "Nabigo ang pag-setup sa biometric",
     "biometric_authentication_cancelled_description": "Paki-setup muli ang pag-authenticate sa biometric mula sa mga setting.",
@@ -492,13 +492,13 @@
     "error": "Error"
   },
   "choose_password": {
-    "title": "MetaMask password",
-    "description": "I-unlock ang MetaMask sa device lang na ito.",
+    "title": "BitcoinPay password",
+    "description": "I-unlock ang BitcoinPay sa device lang na ito.",
     "description_social_login": "Gamitin ito para sa pagbawi ng wallet mo sa lahat ng device.",
     "description_social_login_update": "Kung naiwala mo ang password na ito, mawawalan ka ng access sa wallet mo at sa lahat ng device. Itago ito sa isang ligtas na lugar.",
     "description_social_login_update_ios": "Gamitin ito para sa pagbawi ng wallet sa lahat ng device. Hindi ito mare-reset ng MetaMask.",
     "description_social_login_update_bold": "Hindi ito maire-reset ng MetaMask.",
-    "subtitle": "Maa-unlock ng password na ito ang iyong MetaMask wallet sa device lang na ito.",
+    "subtitle": "Maa-unlock ng password na ito ang iyong BitcoinPay wallet sa device lang na ito.",
     "password": "Gumawa ng password",
     "confirm_password": "Kumpirmahin ang password",
     "create_button": "Gumawa ng password",
@@ -516,7 +516,7 @@
     "remember_me": "Tandaan ako",
     "security_alert_title": "Alerto sa seguridad",
     "security_alert_message": "Upang magpatuloy, kailangan mong i-on ang Passcode o anumang paraan ng pag-authenticate ng biometrics na sinusuportahan sa iyong device (FaceID, TouchID o Fingerprint)",
-    "i_understand": "Nauunawaan kong hindi mare-recover ng MetaMask ang password na ito para sa akin.",
+    "i_understand": "Nauunawaan kong hindi mare-recover ng BitcoinPay ang password na ito para sa akin.",
     "learn_more": "Matuto pa",
     "secure": "I-secure ang wallet",
     "confirm": "Kumpirmahin ang Lihim na Parirala sa Pagbawi",
@@ -542,7 +542,7 @@
   },
   "reset_password": {
     "title": "Palitan ang password",
-    "subtitle": "Maa-unlock ng password na ito ang iyong MetaMask wallet sa device lang na ito.",
+    "subtitle": "Maa-unlock ng password na ito ang iyong BitcoinPay wallet sa device lang na ito.",
     "password": "Bagong password",
     "confirm_password": "Kumpirmahin ang password",
     "reset_button": "I-reset ang password",
@@ -560,7 +560,7 @@
     "remember_me": "Tandaan ako",
     "security_alert_title": "Alerto sa seguridad",
     "security_alert_message": "Upang magpatuloy, kailangan mong i-on ang Passcode o anumang paraan ng pag-authenticate ng biometrics na sinusuportahan sa iyong device (FaceID, TouchID o Fingerprint)",
-    "i_understand": "Nauunawaan kong hindi mare-recover ng MetaMask ang password na ito para sa akin.",
+    "i_understand": "Nauunawaan kong hindi mare-recover ng BitcoinPay ang password na ito para sa akin.",
     "learn_more": "Matuto pa",
     "secure": "I-secure ang wallet",
     "confirm": "Kumpirmahin ang Lihim na Parirala sa Pagbawi",
@@ -570,12 +570,12 @@
     "confirm_password_placeholder": "Ilagay muli ang iyong password",
     "confirm_btn": "I-save",
     "warning_password_change_title": "Sigurado ka ba?",
-    "warning_password_change_description": "Kapag pinalitan mo password mo dito, mala-lock ang MetaMask sa ibang mga device na ginagamit mo. Kailangan mong muling mag-log in gamit ang bagong password mo",
+    "warning_password_change_description": "Kapag pinalitan mo password mo dito, mala-lock ang BitcoinPay sa ibang mga device na ginagamit mo. Kailangan mong muling mag-log in gamit ang bagong password mo",
     "warning_password_change_button": "Kumpirmahin",
     "warning_password_cancel_button": "Kanselahin",
     "changing_password": "Pinapalitan ang password...",
     "changing_password_subtitle": "Hindi ito aabutin nang matagal",
-    "checkbox_forgot_password": "Kung makakalimutan ko ang password na ito, permanente akong mawawalan ng access sa aking wallet. Hindi ito maire-reset ng MetaMask para sa akin.",
+    "checkbox_forgot_password": "Kung makakalimutan ko ang password na ito, permanente akong mawawalan ng access sa aking wallet. Hindi ito maire-reset ng BitcoinPay para sa akin.",
     "seedless_change_password_error_modal_title": "Nabigong palitan ang password",
     "seedless_change_password_error_modal_content": "Hindi namin mapalitan ang iyong password. Subukang muli.",
     "seedless_change_password_error_modal_confirm": "Subukang muli"
@@ -595,14 +595,14 @@
     "invalid_qr_code_title": "Di-wastong QR Code",
     "invalid_qr_code_message": "Ang QR code na ito ay hindi kumakatawan sa isang wastong Lihim na Parirala sa Pagbawi",
     "enter_your_secret_recovery_phrase": "Ilagay rito ang iyong Lihim na Parirala sa Pagbawi",
-    "metamask_password": "MetaMask password",
-    "metamask_password_description": "I-unlock ang MetaMask sa device lang na ito.",
+    "metamask_password": "BitcoinPay password",
+    "metamask_password_description": "I-unlock ang BitcoinPay sa device lang na ito.",
     "seed_phrase_required": "Kinakailangan ang Lihim na Parirala sa Pagbawi (Secret Recovery Phrase)",
     "re_enter_password": "Ilagay muli ang iyong password",
     "use_at_least_8_characters": "Gumamit ng hindi bababa sa 8 character",
     "unlock_with_face_id": "I-unlock gamit ang Face ID?",
-    "learn_more": "Kapag nakalimutan ko ang password na ito, hindi ito mababawi ng MetaMask para sa akin.",
-    "learn_more_social_login": "Kung makakalimutan ko ang password na ito, permanente akong mawawalan ng access sa aking wallet. Hindi ito maire-reset ng MetaMask para sa akin.",
+    "learn_more": "Kapag nakalimutan ko ang password na ito, hindi ito mababawi ng BitcoinPay para sa akin.",
+    "learn_more_social_login": "Kung makakalimutan ko ang password na ito, permanente akong mawawalan ng access sa aking wallet. Hindi ito maire-reset ng BitcoinPay para sa akin.",
     "seed_phrase_length_error": "Ang Secret Recovery Phrase ay dapat na 12, 15, 18, 21, o 24 na salita",
     "continue": "Magpatuloy",
     "clear_all": "I-clear lahat",
@@ -911,7 +911,7 @@
     },
     "privacy_section": {
       "transak": "Ini-encrypt at itinatago ng Transak ang impormasyong ito.",
-      "metamask": "Hindi natatanggap o ginagamit ng MetaMask ang iyong data."
+      "metamask": "Hindi natatanggap o ginagamit ng BitcoinPay ang iyong data."
     },
     "kyc_processing": {
       "navbar_title": "I-verify ang pagkakakilanlan mo",
@@ -1084,7 +1084,7 @@
       "max_button": "Pinakamataas",
       "done_button": "Tapos na",
       "metamask_fee": "Bayad sa MetaMask",
-      "metamask_fee_tooltip": "Hindi naniningil ang MetaMask para sa anumang pagdeposito sa Hyperliquid",
+      "metamask_fee_tooltip": "Hindi naniningil ang BitcoinPay para sa anumang pagdeposito sa Hyperliquid",
       "minimum_deposit_error": "Ang pinakamababang halaga ng deposito ay {{amount}} USDC",
       "processing_title": "Pinoproseso ang pagdeposito",
       "preview": {
@@ -1197,9 +1197,9 @@
       "estimated_time": "Tinatayang oras",
       "rate": "Rate",
       "metamask_fee": "Bayad sa MetaMask",
-      "metamask_fee_tooltip": "Hindi naniningil ang MetaMask para sa anumang transaksyon sa Hyperliquid",
-      "metamask_fee_tooltip_deposit": "Hindi naniningil ang MetaMask para sa anumang pagdeposito sa Hyperliquid",
-      "metamask_fee_tooltip_withdrawal": "Hindi naniningil ang MetaMask para sa anumang pag-withdraw sa Hyperliquid"
+      "metamask_fee_tooltip": "Hindi naniningil ang BitcoinPay para sa anumang transaksyon sa Hyperliquid",
+      "metamask_fee_tooltip_deposit": "Hindi naniningil ang BitcoinPay para sa anumang pagdeposito sa Hyperliquid",
+      "metamask_fee_tooltip_withdrawal": "Hindi naniningil ang BitcoinPay para sa anumang pag-withdraw sa Hyperliquid"
     },
     "order": {
       "title": "Bagong order",
@@ -1795,7 +1795,7 @@
       },
       "points": {
         "title": "Mga Point",
-        "content": "Ang Mga Puntos ay kung paano ka nakakakuha ng mga Reward sa MetaMask para sa pagkumpleto ng mga transaksyon, gaya ng kapag nagsu-swap, nagbi-bridge, o nagti-trade ka ng perps."
+        "content": "Ang Mga Puntos ay kung paano ka nakakakuha ng mga Reward sa BitcoinPay para sa pagkumpleto ng mga transaksyon, gaya ng kapag nagsu-swap, nagbi-bridge, o nagti-trade ka ng perps."
       },
       "market_hours": {
         "title": "Mga oras ng market",
@@ -1888,7 +1888,7 @@
     },
     "support": {
       "title": "Kontakin ang suporta",
-      "description": "Kontakin ang Suporta ng MetaMask para humingi ng tulong"
+      "description": "Kontakin ang Suporta ng BitcoinPay para humingi ng tulong"
     },
     "feedback": {
       "title": "Bigyan kami ng feedback"
@@ -1923,7 +1923,7 @@
     },
     "crossMargin": {
       "title": "Hindi suportado ang cross margin",
-      "message": "Sinusuportahan lang ng MetaMask Perps ang pag-trade gamit ang isolated margin. Kailangan mo munang isara ang iyong posisyon na cross margin para makapag-trade sa MetaMask.",
+      "message": "Sinusuportahan lang ng BitcoinPay Perps ang pag-trade gamit ang isolated margin. Kailangan mo munang isara ang iyong posisyon na cross margin para makapag-trade sa MetaMask.",
       "dismiss": "Nakuha ko"
     },
     "sort": {
@@ -2047,7 +2047,7 @@
       "add_funds": "Magdagdag ng pondo",
       "what_are_perps": {
         "title": "Ano ang perps?",
-        "description": "Nakakasuporta na ngayon ang MetaMask sa mga perpetual future na tinatawag ding perps. Nagbibigay-daan ito sa iyong mag-trade sa paggalaw ng presyo ng isang token nang hindi ito binibili.",
+        "description": "Nakakasuporta na ngayon ang BitcoinPay sa mga perpetual future na tinatawag ding perps. Nagbibigay-daan ito sa iyong mag-trade sa paggalaw ng presyo ng isang token nang hindi ito binibili.",
         "subtitle": "Narito kung paano ito gumagana."
       },
       "go_long_or_short": {
@@ -2070,7 +2070,7 @@
       "ready_to_trade": {
         "title": "Handa nang mag-trade?",
         "description": "Pondohan ang perps account mo gamit ang anumang token at isagawa ang una mong trade sa ilang segundo.",
-        "footer_text": "Isa-swap ng MetaMask ang iyong mga pondo sa USDC sa Arbitrum, at idedeposito ang mga iyon sa HyperCore nang walang dagdag na bayad."
+        "footer_text": "Isa-swap ng BitcoinPay ang iyong mga pondo sa USDC sa Arbitrum, at idedeposito ang mga iyon sa HyperCore nang walang dagdag na bayad."
       },
       "got_it": "Nakuha ko",
       "lets_go": "Tara na",
@@ -2256,7 +2256,7 @@
     },
     "consent_sheet": {
       "title": "Mga tuntunin ng paggamit",
-      "description": "Nakikipagtulungan ang MetaMask sa Polymarket para mag-alok ng mga merkado para sa prediksyon. Nangyayari sa Polymarket ang lahat ng aming available na merkado, order, at settlement.",
+      "description": "Nakikipagtulungan ang BitcoinPay sa Polymarket para mag-alok ng mga merkado para sa prediksyon. Nangyayari sa Polymarket ang lahat ng aming available na merkado, order, at settlement.",
       "learn_more": "Matuto pa.",
       "agree": "Sumasang-ayon",
       "disagree": "Hindi sumasang-ayon",
@@ -2352,7 +2352,7 @@
       "total": "Kabuuan",
       "estimated_points": "Tinatayang mga point",
       "points_tooltip": "Mga Point",
-      "points_tooltip_content_1": "Sa pamamagitan ng points, makakakuha ka ng mga Reward sa MetaMask para sa pagkumpleto ng mga transaksyon, gaya ng kapag nagsa-swap, nagbi-bridge, o gumagawa ka ng prediksyon.",
+      "points_tooltip_content_1": "Sa pamamagitan ng points, makakakuha ka ng mga Reward sa BitcoinPay para sa pagkumpleto ng mga transaksyon, gaya ng kapag nagsa-swap, nagbi-bridge, o gumagawa ka ng prediksyon.",
       "points_tooltip_content_2": "Tandaan na ang halagang ito ay isang pagtatantya lamang at magiging pinal lamang kapag natapos na ang transaksyon. Maaaring umabot ng hanggang 1 oras bago makumpirma ang mga point sa iyong balanse ng mga Reward.",
       "points_error": "Hindi namin mai-load ang mga point sa ngayon",
       "points_error_content": "Makakaipon ka pa rin ng mga point para sa transaksyong ito. Aabisuhan ka namin kapag naidagdag na ang mga ito sa iyong account. Maaari mo rin itong tingnan sa iyong rewards tab makalipas ang humigit-kumulang isang oras.",
@@ -2427,7 +2427,7 @@
       "subtitle": "Magpalipat-lipat sa 9 na chain, lahat sa loob ng wallet mo"
     },
     "card": {
-      "title": "MetaMask Card",
+      "title": "BitcoinPay Card",
       "subtitle": "Available sa mga piling rehiyon"
     },
     "fund": {
@@ -2516,7 +2516,7 @@
     "no_tokens": "Wala kang anumang token",
     "show_tokens_without_balance": "Ipakita ang mga token na walang balanse",
     "nfts_autodetection_title": "Pagtuklas ng NFT",
-    "nfts_autodetection_desc": "Hayaan ang MetaMask na awtomatikong i-detect at ipakita ang mga NFT sa iyong wallet.",
+    "nfts_autodetection_desc": "Hayaan ang BitcoinPay na awtomatikong i-detect at ipakita ang mga NFT sa iyong wallet.",
     "network_details_check": "Pagsusuri ng detalye ng network",
     "network_with_chain_id": "Ang network na may ID ng chain",
     "chain_list_returned_different_ticker_symbol": "Ang simbolo ng token na ito ay hindi tugma sa pangalan ng network o chain ID na inilagay. Maraming popular na token ang gumagamit ng magkakatulad ng simbolo, na maaaring gamitin ng mga scammer para lokohin ka na magpadala ka ng mas mahalagang token bilang kapalit. Beripikahin ang lahat bago ka magpatuloy.",
@@ -2615,7 +2615,7 @@
       "remove_nft": "Alisin ang NFT"
     },
     "attributes": "Mga Attribute",
-    "disclaimer": "Disclaimer: Kinukuha ng MetaMask ang media file mula sa pinagmulang URL. Ang URL na ito kung minsan ay pinapalitan ng marketplace kung saan nai-mint ang NFT."
+    "disclaimer": "Disclaimer: Kinukuha ng BitcoinPay ang media file mula sa pinagmulang URL. Ang URL na ito kung minsan ay pinapalitan ng marketplace kung saan nai-mint ang NFT."
   },
   "activity_view": {
     "title": "Aktibidad"
@@ -2695,11 +2695,11 @@
     "continue": "Magpatuloy",
     "fine_print_1_legacy": "Ang data na ito ay pinagsama-sama at dahil dito ay wala nang pagkakilanlan para sa layunin ng General Data Protection Regulation (EU) 2016/679.",
     "fine_print_2a_legacy": "*Kapag gumamit ka ng Infura bilang iyong RPC provider sa MetaMask, kokolektahin ng Infura ang iyong IP address at ang address ng wallet mo sa Ethereum kapag nagpadala ka ng transaksyon. Hindi kami mag-iimbak ng impormasyong ito sa paraan na nagpapahintulot sa aming mga system upang iugnay ang dalawang pirasong iyon ng data. Maaari mong i-configure ang iyong RPC provider",
-    "fine_print_2b_legacy": "bago magpatuloy.\nPara sa higit pang impormasyon kung paano nakikipag-usap ang MetaMask at Infura mula sa perspektibo ng koleksyon ng datos, tingnan ang aming update",
+    "fine_print_2b_legacy": "bago magpatuloy.\nPara sa higit pang impormasyon kung paano nakikipag-usap ang BitcoinPay at Infura mula sa perspektibo ng koleksyon ng datos, tingnan ang aming update",
     "fine_print_2c_legacy": ". Para sa higit pang impormasyon sa aming mga kasanayan sa pagkapribado sa pangkalahatan, tingnan ang aming Patakaran sa Pagkapribado",
     "here_legacy": "dito",
-    "description_content_1_legacy": "Gustong kunin ng MetaMask ang pangunahing data ng paggamit para mas maunawaan kung paano ginagamit ng mga user ang mobile app. Gagamitin ang data na ito para patuloy na mapahusay ang kakayahang magamit at karanasan ng user sa paggamit ng produkto namin.",
-    "description_content_2_legacy": "Gagawin ng MetaMask ang sumusunod...",
+    "description_content_1_legacy": "Gustong kunin ng BitcoinPay ang pangunahing data ng paggamit para mas maunawaan kung paano ginagamit ng mga user ang mobile app. Gagamitin ang data na ito para patuloy na mapahusay ang kakayahang magamit at karanasan ng user sa paggamit ng produkto namin.",
+    "description_content_2_legacy": "Gagawin ng BitcoinPay ang sumusunod...",
     "action_description_1_legacy": "Palagi kang papayagang mag-opt out sa pamamagitan ng Mga Setting",
     "action_description_2_legacy": "Magpapadala ng mga anonymous na kaganapang pag-click at pagtingin sa page",
     "action_description_3_legacy": "Magpapadala ng data ng bansa, rehiyon, lungsod (hindi partikular na lokasyon)",
@@ -2710,7 +2710,7 @@
     "toast_action_button": "Isara",
     "toast_read_more": "Magbasa pa",
     "pna25_title": "Mga update sa pagkapribado at produkto",
-    "pna25_description": "Para makapagbigay kami ng mas mahusay na serbisyo sa iyo, ina-update namin ang aming analytics para maiugnay sa mga ginagawa mo sa MetaMask ang mga data na nakapubliko gaya ng mga address ng wallet at nauugnay na aktibidad sa chain. Nakakatulong ito sa aming pahusayin ang performance, seguridad, at mga feature ng MetaMask para sa mas maganda at mas ligtas na wallet.",
+    "pna25_description": "Para makapagbigay kami ng mas mahusay na serbisyo sa iyo, ina-update namin ang aming analytics para maiugnay sa mga ginagawa mo sa BitcoinPay ang mga data na nakapubliko gaya ng mga address ng wallet at nauugnay na aktibidad sa chain. Nakakatulong ito sa aming pahusayin ang performance, seguridad, at mga feature ng BitcoinPay para sa mas maganda at mas ligtas na wallet.",
     "pna25_description_2": "Seryoso kami pagdating sa pagkapribado. Hindi namin ginagamit ang impormasyong ito para sa advertising at hindi rin namin ibinebenta ang data mo sa mga third party. Puwede kang mag-opt out anumang oras sa Mga Setting.",
     "pna25_description_3": "Puwede kang magbasa ng higit pa tungkol sa kung ano ang kinokolekta namin, paano namin ito pinoprotektahan, at bakit mayroong pagbabago sa aming pinakabagong",
     "pna25_blog_post_link": "blog post",
@@ -2806,7 +2806,7 @@
     "no": "Hindi",
     "yes_remove_it": "Oo, alisin ito",
     "remove_hardware_account": "Alisin ang account ng hardware",
-    "remove_hw_account_alert_description": "Sigurado ka bang gusto mong alisin ang account ng wallet na hardware na ito? Kailangan mong i-resync ang iyong wallet na hardware kung gusto mo uling gamitin ang account na ito sa MetaMask Mobile.",
+    "remove_hw_account_alert_description": "Sigurado ka bang gusto mong alisin ang account ng wallet na hardware na ito? Kailangan mong i-resync ang iyong wallet na hardware kung gusto mo uling gamitin ang account na ito sa BitcoinPay Mobile.",
     "remove_snap_account": "Alisin ang snap account",
     "remove_snap_account_alert_description": "Aalisin ang account na ito sa wallet mo. Tiyakin na mayroon ka ng orihinal na Lihim na Parirala sa Pagbawi o pribadong key para sa in-import na account na ito bago magpatuloy. Maaari kang mag-import o gumawa muli ng mga account mula sa account drop-down.",
     "remove_account_alert_remove_btn": "Alisin",
@@ -2923,7 +2923,7 @@
   },
   "data_collection_modal": {
     "accept": "OK",
-    "content": "In-off mo ang koleksyon ng data para sa layunin sa marketing. Ito ay inilalapat lamang sa device na ito. Kung gumagamit ka ng MetaMask sa ibang mga device, siguraduhing mag-opt out din doon."
+    "content": "In-off mo ang koleksyon ng data para sa layunin sa marketing. Ito ay inilalapat lamang sa device na ito. Kung gumagamit ka ng BitcoinPay sa ibang mga device, siguraduhing mag-opt out din doon."
   },
   "account_selector": {
     "prev": "NAKARAAN",
@@ -2938,7 +2938,7 @@
     "manage": "Pamahalaan",
     "resources": "Mga Mapagkukunan",
     "permissions": "Mga Pahintulot",
-    "card_title": "MetaMask Card",
+    "card_title": "BitcoinPay Card",
     "settings": "Mga Setting",
     "networks": "Mga Network",
     "log_out": "Mag-log out",
@@ -2956,7 +2956,7 @@
     "current_conversion": "Batayang currency",
     "current_language": "Kasalukuyang wika",
     "ipfs_gateway": "IPFS gateway",
-    "ipfs_gateway_content": "Ang MetaMask ay gumagamit ng mga serbisyo ng third-party para ipakita ang mga imahe sa iyong mga NFT na nakaimbak sa IPFS, nagpapakita ng impormasyong nauugnay sa mga ENS address na ipinakita sa address bar ng iyong browser, at kinukuha ang mga icon para sa iba't ibang token. Ang iyong IP address ay maaaring ipakita sa mga serbisyong ito kapag ginagamit mo ang mga iyon.",
+    "ipfs_gateway_content": "Ang BitcoinPay ay gumagamit ng mga serbisyo ng third-party para ipakita ang mga imahe sa iyong mga NFT na nakaimbak sa IPFS, nagpapakita ng impormasyong nauugnay sa mga ENS address na ipinakita sa address bar ng iyong browser, at kinukuha ang mga icon para sa iba't ibang token. Ang iyong IP address ay maaaring ipakita sa mga serbisyong ito kapag ginagamit mo ang mga iyon.",
     "ipfs_gateway_down": "Down ang kasalukuyan mong IPFS gateway",
     "ipfs_gateway_desc": "Pumili ng gusto mong IPFS gateway.",
     "search_engine": "Search engine",
@@ -2967,7 +2967,7 @@
     "enable_device_authentication": "Paganahin ang Pag-authenticate sa Device",
     "enable_device_authentication_desc": "Gamitin ang biometrics o passcode ng device mo para i-unlock ang MetaMask.",
     "auto_lock_desc": "Piliin kung gaano katagal bago awtomatikong mala-lock ang application.",
-    "state_logs_desc": "Makakatulong ito sa MetaMask na ma-debug ang anumang isyung kaharapin mo. Pakipadala ito sa suporta sa MetaMask sa pamamagitan ng icon na hamburger > Magpadala ng Feedback, o mag-reply sa kasalukuyan mong ticket kung mayroon.",
+    "state_logs_desc": "Makakatulong ito sa BitcoinPay na ma-debug ang anumang isyung kaharapin mo. Pakipadala ito sa suporta sa BitcoinPay sa pamamagitan ng icon na hamburger > Magpadala ng Feedback, o mag-reply sa kasalukuyan mong ticket kung mayroon.",
     "autolock_immediately": "Kaagad",
     "autolock_never": "Hindi kailanman",
     "autolock_after": "Makalipas ang {{time}} (na) segundo",
@@ -3004,7 +3004,7 @@
     "manage_recovery_method": "Pamahalaan ang mga paraan ng pagbawi",
     "video_failed": "Nabiong mag-load ang video.",
     "protect_desc": "I-back up ang iyong Lihim na Parirala sa Pagbawi nang sa gayon ay hindi ka mawalan ng access sa iyong wallet. Tiyaking iimbak ito sa isang ligtas na lugar na ikaw lamang ang may access at hindi makakalimutan",
-    "protect_desc_no_backup": "Ito ang pariralang may 12 salita ng wallet mo. Magagamit ang pariralang ito para makontrol ang lahat ng iyong account sa kasalukuyan at hinaharap, pati na ang kakayahang magpadala ng mga pondo sa iyong wallet. Panatilihing ligtas ang pagkakatago ng pariralang ito, HUWAG itong ibahagi sa kahit sino. Hindi ka matutulungan ng MetaMask na mabawi ang key na ito.",
+    "protect_desc_no_backup": "Ito ang pariralang may 12 salita ng wallet mo. Magagamit ang pariralang ito para makontrol ang lahat ng iyong account sa kasalukuyan at hinaharap, pati na ang kakayahang magpadala ng mga pondo sa iyong wallet. Panatilihing ligtas ang pagkakatago ng pariralang ito, HUWAG itong ibahagi sa kahit sino. Hindi ka matutulungan ng BitcoinPay na mabawi ang key na ito.",
     "learn_more": "Matuto pa.",
     "seedphrase_not_backed_up": "Mahalaga! Hindi na-back up ang Lihim na Parirala sa Pagbawi",
     "seedphrase_backed_up": "Na-back up ang Lihim na Parirala sa Pagbawi",
@@ -3109,8 +3109,8 @@
     "remove_network": "Alisin",
     "cancel_remove_network": "Kanselahin",
     "info_title": "Tungkol sa MetaMask",
-    "info_title_beta": "Tungkol sa MetaMask Beta",
-    "info_title_flask": "Tungkol sa MetaMask Flask",
+    "info_title_beta": "Tungkol sa BitcoinPay Beta",
+    "info_title_flask": "Tungkol sa BitcoinPay Flask",
     "experimental_title": "Eksperimental",
     "experimental_desc": "WalletConnect and at iba pa...",
     "legal_title": "Ligal",
@@ -3200,11 +3200,11 @@
     "delete_metrics_error_title": "Hindi namin matanggal ang data na ito sa ngayon.",
     "delete_metrics_error_description": "Hindi makumpleto ang kahilingang ito sa ngayon dahil sa isang isyu sa server ng analytics system, pakisubukang muli mamaya.",
     "ok": "OK",
-    "clear_sdk_connections_title": "I-clear ang lahat ng MetaMask SDK connection",
+    "clear_sdk_connections_title": "I-clear ang lahat ng BitcoinPay SDK connection",
     "clear_sdk_connections_text": "Iki-clear ang lahat ng koneksyon at ang dapps ay kailangang humiling muli ng koneksyon",
-    "sdk_connections": "Mga MetaMask SDK connection",
+    "sdk_connections": "Mga BitcoinPay SDK connection",
     "manage_sdk_connections_title": "Pamahalaan ang mga koneksyon",
-    "manage_sdk_connections_text": "Alisin ang mga koneksyon sa mga site at/o MetaMask SDK.",
+    "manage_sdk_connections_text": "Alisin ang mga koneksyon sa mga site at/o BitcoinPay SDK.",
     "fiat_on_ramp": {
       "title": "Bumili at magbenta ng crypto",
       "description": "Rehiyon at higit pa...",
@@ -3230,9 +3230,9 @@
     "contact_support": "Kontakin ang suporta",
     "display_nft_media": "I-display ang NFT Media",
     "display_nft_media_desc": "Ang pagpapakita ng NFT media at datos ay naglalantad sa iyong IP address sa OpenSea o sa ibang mga third party. Ang awtomatikong pagtuklas ng NFT ay nakasalalay sa tampok na ito, at hindi magiging available kapag ito ay naka-off.",
-    "autodetect_nft_desc": "Hayaan ang MetaMask na magdagdag ng mga NFT na iyong pag-aari gamit ang mga third-party na (tulad ng OpenSea). Ang awtomatikong pagtuklas ng mga NFT ay naglalantad sa iyong IP at address ng account sa mga serbisyong ito. Ang pagpapagana sa tampok na ito ay maaaring mag-ugnay sa iyong IP sa iyong Ethereum address at magpakita ng pekeng NFT na in-airdrop ng mga manloloko. Maaari kang magdagdag ng token sa manwal na paraan para iwasan ang panganib na ito.",
+    "autodetect_nft_desc": "Hayaan ang BitcoinPay na magdagdag ng mga NFT na iyong pag-aari gamit ang mga third-party na (tulad ng OpenSea). Ang awtomatikong pagtuklas ng mga NFT ay naglalantad sa iyong IP at address ng account sa mga serbisyong ito. Ang pagpapagana sa tampok na ito ay maaaring mag-ugnay sa iyong IP sa iyong Ethereum address at magpakita ng pekeng NFT na in-airdrop ng mga manloloko. Maaari kang magdagdag ng token sa manwal na paraan para iwasan ang panganib na ito.",
     "display_nft_media_desc_new": "Ang pag-display ng NFT media at datos ay naglalantad sa iyong IP address sa OpenSeas o iba pang third party. Ang auto-detection ng NFT ay nakaasa sa tampok na ito, at hindi ito available kapag naka-off. Kung ang NFT media ay lubos na matatagpuan sa IPFS, maaari pa ring itong i-display kapag ang tampok na ito ay naka-off.",
-    "use_safe_chains_list_validation_desc_1": "Ang MetaMask ay gumagamit ng isang third-party na serbisyo na tinatawag na ",
+    "use_safe_chains_list_validation_desc_1": "Ang BitcoinPay ay gumagamit ng isang third-party na serbisyo na tinatawag na ",
     "use_safe_chains_list_validation_desc_2": "para magpakita ng tumpak at naka-standardized na detalye ng network. Binabawasan nito ang iyong tiyansa sa pagkonekta sa malisiyoso o malitang network. Kapag ginagamit ang tampok na ito, ang iyong IP address ay nakalantad sa  ",
     "snaps": {
       "title": "Mga Snap",
@@ -3327,7 +3327,7 @@
     "simulation_details_description": "I-on ito para gumawa ng pagtataya sa mga pagbabago sa balanse ng mga transaksyon bago mo kumpirmahin ang mga ito. Hindi nito iginagarantiya ang panghuling resulta ng iyong mga transaksyon. ",
     "simulation_details_learn_more": "Matuto pa.",
     "aes_crypto_test_form_title": "AES crypto - test form",
-    "aes_crypto_test_form_description": "Bahagi na ekslusibong binuo para sa E2E testing. Kung ito ay nakikita sa iyong app, mangyaring i-ulat ito sa MetaMask support.",
+    "aes_crypto_test_form_description": "Bahagi na ekslusibong binuo para sa E2E testing. Kung ito ay nakikita sa iyong app, mangyaring i-ulat ito sa BitcoinPay support.",
     "developer_options": {
       "title": "Mga opsyon ng developer",
       "generate_trace_test": "Lumikha ng trace test",
@@ -3419,7 +3419,7 @@
       "Lihim na Parirala sa Pagbawi (Secret Recovery Phrase)",
       "ay nagbibigay ng",
       "ganap na access sa iyong wallet, mga pondo at mga account.",
-      "Ang MetaMask ay isang",
+      "Ang BitcoinPay ay isang",
       "non-custodial na wallet.",
       "Ibig sabihin,",
       "ikaw ang may-ari ng iyong Lihim na Parirala sa Pagbawi."
@@ -3473,7 +3473,7 @@
   },
   "password_reset": {
     "password_title": "Password",
-    "password_desc": "Pumili ng mahirap hulaang password para ma-unlock ang MetaMask app sa iyong device. Kung makakalimutan mo ang password na ito, kakailanganin mo ang iyong Lihim na Parirala sa Pagbawi para ma-import ulit ang iyong wallet.",
+    "password_desc": "Pumili ng mahirap hulaang password para ma-unlock ang BitcoinPay app sa iyong device. Kung makakalimutan mo ang password na ito, kakailanganin mo ang iyong Lihim na Parirala sa Pagbawi para ma-import ulit ang iyong wallet.",
     "password_learn_more": "Matuto pa",
     "change_password": "Palitan ang password",
     "password_hint": "Hint sa password"
@@ -3586,7 +3586,7 @@
       "show_less": "Magpakita ng mas kaunti"
     },
     "activity": "Aktibidad ng {{symbol}}",
-    "disclaimer": "Ibinibigay ang market data ng mga pinagmumulang third-party gaya ng CoinGecko. Ang data ay para lamang sa mga layuning pang-impormasyon. Hindi mananagot ang MetaMask para sa katumpakan nito."
+    "disclaimer": "Ibinibigay ang market data ng mga pinagmumulang third-party gaya ng CoinGecko. Ang data ay para lamang sa mga layuning pang-impormasyon. Hindi mananagot ang BitcoinPay para sa katumpakan nito."
   },
   "security_trust": {
     "title": "Seguridad at tiwala",
@@ -3645,7 +3645,7 @@
   },
   "enable_nft-auto-detection": {
     "title": "Paganahin ang autodetection ng NFT",
-    "description": "Pahintulutan ang MetaMask na i-detect at ipakita ang iyong mga NFT gamit ang autodetection. Maaari mong:",
+    "description": "Pahintulutan ang BitcoinPay na i-detect at ipakita ang iyong mga NFT gamit ang autodetection. Maaari mong:",
     "immediateAccess": "Agad na i-access ang mga NFT mo",
     "navigate": "Walang hirap na pamahalaan ang iyong mga digital na asset",
     "dive": "Dumiretso sa paggamit ng iyong mga NFT",
@@ -3685,9 +3685,9 @@
     "cancel": "Kanselahin",
     "error": "Error",
     "attempting_to_scan_with_wallet_locked": "Mukhang sinusubukan mong mag-scan ng QR code, kailangan mong i-unlock ang iyong wallet para magamit ito.",
-    "attempting_sync_from_wallet_error": "Mukhang sinusubukan mong mag-sync sa extension. Para magawa ito, kakailanganin mong burahin ang iyong kasalukuyang wallet. \n\nSa oras na magbura o mag-install ka ng bagong bersyon ng app, piliin ang opsyong \"I-sync gamit ang MetaMask Extension\". Mahalaga! Bago burahin ang iyong wallet, tiyaking na-back up mo ang iyong Lihim na Parirala sa Pagbawi.",
+    "attempting_sync_from_wallet_error": "Mukhang sinusubukan mong mag-sync sa extension. Para magawa ito, kakailanganin mong burahin ang iyong kasalukuyang wallet. \n\nSa oras na magbura o mag-install ka ng bagong bersyon ng app, piliin ang opsyong \"I-sync gamit ang BitcoinPay Extension\". Mahalaga! Bago burahin ang iyong wallet, tiyaking na-back up mo ang iyong Lihim na Parirala sa Pagbawi.",
     "not_allowed_error_title": "I-on ang access sa camera",
-    "not_allowed_error_desc": "Para mag-scan ng QR code, kailangan mong bigyan ang MetaMask ng access sa camera mula sa menu ng mga setting ng iyong device.",
+    "not_allowed_error_desc": "Para mag-scan ng QR code, kailangan mong bigyan ang BitcoinPay ng access sa camera mula sa menu ng mga setting ng iyong device.",
     "unrecognized_address_qr_code_title": "Hindi nakikilalang QR code",
     "unrecognized_address_qr_code_desc": "Paumanhin, ang QR code na ito ay hindi nauugnay sa isang address ng account o isang address ng kontrata.",
     "url_redirection_alert_title": "Bibisitahin mo ang isang panlabas na link",
@@ -3706,7 +3706,7 @@
     "native_toggle_wallet": "Magbayad ng bayad sa network gamit ang balanse sa wallet mo.",
     "list_balance": "Bal:",
     "insufficient_balance": "Hindi sapat ang mga pondo",
-    "native_toggle_metamask": "Dadagdagan ng MetaMask ang balanse para makumpleto ang transaksyong ito."
+    "native_toggle_metamask": "Dadagdagan ng BitcoinPay ang balanse para makumpleto ang transaksyong ito."
   },
   "gas_fee_token_toast": {
     "message": "Binabayaran mo ang singil sa network na ito gamit ang "
@@ -3826,7 +3826,7 @@
     "gas_education_1": "Binabayaran ang mga bayad sa gas sa mga minero ng crypto na nagpoproseso ng mga transaksyon sa ",
     "gas_education_2_ethereum": "Network ng Ethereum.",
     "gas_education_2": "network.",
-    "gas_education_3": "Ang MetaMask ay hindi kumikita mula sa mga bayad sa gas.",
+    "gas_education_3": "Ang BitcoinPay ay hindi kumikita mula sa mga bayad sa gas.",
     "gas_education_4": "Nagbabago-bago ang mga gas fee batay sa trapiko sa network at pagkakumplikado ng transaksyon.",
     "gas_education_learn_more": "Matuto pa tungkol sa mga bayad sa gas",
     "confusable_title": "Tingnan ang address ng tatanggap",
@@ -3841,7 +3841,7 @@
     "invalid_qr_code_sync": "Di-wastong QR code. Paki-scan ang sync QR code ng wallet na hardware.",
     "no_camera_permission": "Hindi awtorisado ang kamera. Mangyaring magbigay ng pahintulot at subukang muli",
     "invalid_qr_code_sign": "Di-wastong QR-code. Mangyaring suriin ang iyong hardware at subukang muli.",
-    "no_camera_permission_android": "Kailangan mong bigyan ng access ang MetaMask sa iyong kamera upang magpatuloy. Maaaring kailanganin mo ring baguhin ang iyong mga setting ng sistema.",
+    "no_camera_permission_android": "Kailangan mong bigyan ng access ang BitcoinPay sa iyong kamera upang magpatuloy. Maaaring kailanganin mo ring baguhin ang iyong mga setting ng sistema.",
     "mismatched_qr_request_id": "Hindi tugmang data ng transaksyon. Mangyaring gamitin ang iyong wallet na hardware para lagdaan ang QR code sa ibaba at i-tap ang 'Kumuha ng Lagda'.",
     "fiat_conversion_not_available": "Hindi available ang mga palitan ng Fiat sa ngayon",
     "hex_data_copied": "Nakopya ang hex na data sa clipboard",
@@ -3860,7 +3860,7 @@
     "save": "I-save",
     "warning_gas_limit": "Ang limitasyon ng gas ay mas malaki sa 20999",
     "warning_gas_limit_estimated": "Ang tinantyang limitasyon ng gas ay {{gas}}, gamitin ito bilang pinakamababang halaga",
-    "cost_explanation": "Kasama sa bayad sa gas ang gastusin sa pagproseso ng iyong transaksyon sa Ethereum network. Hindi kumikita ang MetaMask mula sa bayad na ito. Kapag mas malaki ang bayad, mas malaki ang tsansa na maproseso ang iyong transaksyon."
+    "cost_explanation": "Kasama sa bayad sa gas ang gastusin sa pagproseso ng iyong transaksyon sa Ethereum network. Hindi kumikita ang BitcoinPay mula sa bayad na ito. Kapag mas malaki ang bayad, mas malaki ang tsansa na maproseso ang iyong transaksyon."
   },
   "spend_limit_edition": {
     "save": "I-save",
@@ -3929,7 +3929,7 @@
     "change_url": "Baguhin ang URL",
     "switch_network": "Lumipat ng network",
     "dapp_browser": "DAPP BROWSER",
-    "dapp_browser_message": "Ang MetaMask ay ang iyong wallet at browser para sa desentralisadong web. Mag-explore!",
+    "dapp_browser_message": "Ang BitcoinPay ay ang iyong wallet at browser para sa desentralisadong web. Mag-explore!",
     "featured_dapps": "ITINATAMPOK NA DAPPS",
     "my_favorites": "MGA PABORITO KO",
     "search": "Maghanap o mag-type ng URL",
@@ -4085,7 +4085,7 @@
     "request_from": "Kahilingan mula sa/kay",
     "network_fee": "Bayad sa network",
     "network_fee_tooltip": "Halagang binayaran para maproseso ang transaksyon sa network.",
-    "confirm_gas_fee_token_tooltip": "Binabayaran ito sa network para iproseso ang iyong transaksyon. Kabilang dito ang {{metamaskFeeFiat}} na bayad sa MetaMask para sa mga token na hindi ETH o ETH na may paunang pondo.",
+    "confirm_gas_fee_token_tooltip": "Binabayaran ito sa network para iproseso ang iyong transaksyon. Kabilang dito ang {{metamaskFeeFiat}} na bayad sa BitcoinPay para sa mga token na hindi ETH o ETH na may paunang pondo.",
     "paid_by_metamask": "Binayaran ng MetaMask",
     "confirm_gas_fee_token_metamask_fee": "Kabilang ang bayad na {{metamaskFeeFiat}}",
     "smart_account_upgrade": "Lumipat sa smart account",
@@ -4187,7 +4187,7 @@
     "want_to_add_network": "Gusto mo bang idagdag ang network na ito?",
     "add_custom_network": "Magdagdag ng custom na network",
     "network_infomation": "Binibigyang-daan nito na magamit ang network sa MetaMask",
-    "network_endorsement": "Hindi ineendorso ng MetaMask ang mga custom na network o ang seguridad ng mga ito.",
+    "network_endorsement": "Hindi ineendorso ng BitcoinPay ang mga custom na network o ang seguridad ng mga ito.",
     "learn_about": "Alamin ang tungkol sa",
     "network_risk": "mga panloloko at panganib ng seguridad ng network",
     "network_display_name": "Ipinapakitang pangalan",
@@ -4266,7 +4266,7 @@
     "cancel": "Kanselahin",
     "got_it": "Nakuha ko",
     "connection_details_title": "Mga detalye ng koneksyon",
-    "connection_details_description": "Kumonekta ka sa site na ito gamit ang MetaMask browser noong {{connectionDateTime}}",
+    "connection_details_description": "Kumonekta ka sa site na ito gamit ang BitcoinPay browser noong {{connectionDateTime}}",
     "title_add_network_permission": "Magdagdag ng pahintulot ng network",
     "add_this_network": "Idagdag ang network na ito",
     "permitted_networks": "Mga pinapahintulutang network",
@@ -4414,7 +4414,7 @@
     "step_1_description": "Gumawa ng password",
     "step_2": "Hakbang 2:",
     "step_2_description": "I-save ang Lihim na Parirala sa Pagbawi ng wallet",
-    "info_text_1": "Maglaan nang ilang sandali para tapusin ang pag-set up ng iyong MetaMask wallet.",
+    "info_text_1": "Maglaan nang ilang sandali para tapusin ang pag-set up ng iyong BitcoinPay wallet.",
     "info_text_2": "Matitiyak nitong ikaw lang ang makaka-access sa iyong mga pondo at na mare-recover mo ang iyong wallet kung maiwawala mo ang iyong device",
     "cta_text": "Gumawa ng password",
     "creating_password": "Gumagawa ng password...",
@@ -4437,7 +4437,7 @@
     "what_is_seedphrase_title": "Ano ang Lihim na Parirala sa Pagbawi?",
     "what_is_seedphrase_text_1": "Ang Lihim na Parirala sa Pagbawi (Secret Recovery Phrase), na tinatawag ding pariralang binhi o mnemonic, ay isang pangkat ng mga salita na nagpapahintulot sa iyo na i-access at kontrolin ang iyong crypto wallet. Para mailipat ang iyong wallet sa MetaMask, kailangan mo ang pariralang ito.",
     "what_is_seedphrase_text_2": "Dapat mong panatilihing lihim at ligtas ang iyong Lihim na Parirala sa Pagbawi. Kung may makakakuha ng iyong Lihim na Parirala sa Pagbawi, makokontrol nila ang iyong mga account.",
-    "what_is_seedphrase_text_3": "I-save ito sa isang lugar na ikaw lang ang makaka-access. Kung maiwawala mo ito, hindi ka matutulungan ng MetaMask na ma-recover ito.",
+    "what_is_seedphrase_text_3": "I-save ito sa isang lugar na ikaw lang ang makaka-access. Kung maiwawala mo ito, hindi ka matutulungan ng BitcoinPay na ma-recover ito.",
     "what_is_seedphrase_text_4": "Sinuman na mayroon ng iyong Lihim na Parirala sa Pagbawi ay maaaring:",
     "seedPhrase_point_1": "Kunin ang lahat ng iyong pera",
     "seedPhrase_point_2": "Kumpirmahin ang mga transaksyon",
@@ -4515,7 +4515,7 @@
   },
   "account_backup_step_6": {
     "title": "Mga tip sa seguridad",
-    "info_text": "Hindi mare-recover ng MetaMask ang iyong Lihim na Parirala sa Pagbawi sakaling maiwala mo ito",
+    "info_text": "Hindi mare-recover ng BitcoinPay ang iyong Lihim na Parirala sa Pagbawi sakaling maiwala mo ito",
     "tip_1": "Magtabi ng maraming backup ng iyong Lihim na Parirala sa Pagbawi",
     "tip_2": "Itabi ang phrase sa pinagkakatiwalaang password manager at papel na backup sa isang ligtas na lugar",
     "tip_3": "Huwag ibahagi ang phrase na ito sa sinuman",
@@ -4570,7 +4570,7 @@
     "congratulations": "Pagbati",
     "success": "Matagumpay mong naprotektahan ang iyong wallet. Tiyaking panatilihing ligtas ang iyong Lihim na Parirala sa Pagbawi, responsibilidad mo ito!",
     "hint": "Mag-iwan ng hint para sa sarili mo?",
-    "recover": "Hindi mare-recover ng MetaMask ang iyong wallet sakaling maiwala mo ito. Makikita mo ang iyong Lihim na Parirala sa Pagbawi (Secret Recovery Phrase) sa Mga Setting > Seguridad at pagkapribado.",
+    "recover": "Hindi mare-recover ng BitcoinPay ang iyong wallet sakaling maiwala mo ito. Makikita mo ang iyong Lihim na Parirala sa Pagbawi (Secret Recovery Phrase) sa Mga Setting > Seguridad at pagkapribado.",
     "learn": "Matuto pa",
     "done": "Tapos na",
     "recovery_hint": "Hint sa pag-recovery",
@@ -4583,7 +4583,7 @@
   "phishing": {
     "ethereum_phishing_detection": "Pag-detect ng Phishing ng Ethereum",
     "ethereum_phishing_detector": "Pang-detect ng Phishing ng Ethereum",
-    "intro": " ay kasalukuyang nasa listahan ng babala sa domain ng MetaMask. Ibig sabihin nito ay batay sa impormasyong available sa amin, naniniwala ang MetaMask na maaaring makompromiso ng domain na ito ang iyong seguridad at, bilang dagdag na feature ng seguridad, pinaghigpitan ng MetaMask ang pag-access sa site. Para ma-override ito, pakibasa ang natitirang bahagi ng babala para sa mga instruction kung paano magpapatuloy.",
+    "intro": " ay kasalukuyang nasa listahan ng babala sa domain ng MetaMask. Ibig sabihin nito ay batay sa impormasyong available sa amin, naniniwala ang BitcoinPay na maaaring makompromiso ng domain na ito ang iyong seguridad at, bilang dagdag na feature ng seguridad, pinaghigpitan ng BitcoinPay ang pag-access sa site. Para ma-override ito, pakibasa ang natitirang bahagi ng babala para sa mga instruction kung paano magpapatuloy.",
     "reasons": "Maraming dahilan kung paano maaaring lumabas ang mga site sa aming listahan ng babala, at ang listahan namin ay pinagsama-sama mula sa iba pang ginagamit na listahan sa industriya. Maaaring kasama sa mga nasabing dahilan ang mga kilalang panganib sa panloloko o seguridad, gaya ng mga domain na nagpositibo sa ",
     "list_content": "Maaaring kasama sa mga domain sa mga listahan ng babala na ito ang mga nakakahamak na website at lehitimong website na nakompromiso ng isang nakakahamak na actor.",
     "to_read_more": "Para magbasa ng higit pang impormasyon tungkol sa site na ito ",
@@ -4594,13 +4594,13 @@
     "file_an_issue": "maghain ng isyu.",
     "back_to_safety": "Bumalik sa ligtas",
     "site_might_be_harmful": "Maaaring mapaminsala ang website na ito",
-    "metamask_flagged_site": "Na-flag ng MetaMask ang site na sinusubukan mong bisitahin bilang posibleng mapanlinlang. Maaari kang linlangin ng mga umaatake para gumawa ng mapanganib na bagay.",
+    "metamask_flagged_site": "Na-flag ng BitcoinPay ang site na sinusubukan mong bisitahin bilang posibleng mapanlinlang. Maaari kang linlangin ng mga umaatake para gumawa ng mapanganib na bagay.",
     "you_may_proceed_anyway": "Maaari ka ring",
     "proceed_anyway": "magpatuloy pa rin",
     "but_please_do_so_at_your_own_risk": "ngunit gawin iyon nang may sariling pag-iingat.",
     "report_detection_problem": "Iulat ang problemang natuklasan",
     "share_on_twitter": "Kung sa tingin mo ay nakakatulong ito, i-share sa X!",
-    "share_text": "Prinotektahan ako ng MetaMask sa pagbisita sa isang potensyal na mapaminsalang site: {{url}}. Ingat lagi!"
+    "share_text": "Prinotektahan ako ng BitcoinPay sa pagbisita sa isang potensyal na mapaminsalang site: {{url}}. Ingat lagi!"
   },
   "notifications": {
     "timeout": "Timeout",
@@ -4696,7 +4696,7 @@
     "erc721_received_title": "Natanggap ang NFT",
     "erc1155_sent_title": "Naipadala ang NFT",
     "erc1155_received_title": "Natanggap ang NFT",
-    "default_message_title": "MetaMask",
+    "default_message_title": "BitcoinPay",
     "default_message_description": "I-tap para tingnan",
     "received_payment_title": "Natanggap ang instant na bayad",
     "pending_message": "Naghihintay ng kumpirmasyon",
@@ -4796,7 +4796,7 @@
     "activation_card": {
       "title": "I-on ang mga notipikasyon",
       "description_1": "Manatiling may-alam sa nangyayari sa iyong wallet gamit ang mga notification.",
-      "description_2": "Para gamitin ang tampok na ito, kami ay gagawa ng isang hindi kilalang ID para sa iyong account. Ginagamit lang ito para sa pag-sync ng data sa MetaMask at hindi inuugnay ang iyong mga aktibidad o iba pang mga pagkakakilanlan, tinitiyak ang iyong pagkapribado.",
+      "description_2": "Para gamitin ang tampok na ito, kami ay gagawa ng isang hindi kilalang ID para sa iyong account. Ginagamit lang ito para sa pag-sync ng data sa BitcoinPay at hindi inuugnay ang iyong mga aktibidad o iba pang mga pagkakakilanlan, tinitiyak ang iyong pagkapribado.",
       "learn_more": "Matutunan kung paano namin protektahan ang iyong pagkapribado habang gamit ang tampok na ito.",
       "manage_preferences_1": "Maaari mong i-off ang mga notipikasypon anumang oras sa ",
       "manage_preferences_2": "Mga Setting > Mga notipikasyon.",
@@ -4864,8 +4864,8 @@
     "network_not_supported": "Hindi sinusuportahan ang kasalukuyang network",
     "select_provider": "Piliin ang iyong mas gustong provider",
     "switch_network": "Mangyaring lumipat sa mainnet o sepolia",
-    "card_title": "Laging ipakita ang button ng MetaMask Card",
-    "card_desc": "Available lang ang MetaMask Card sa mga residente ng mga piling bansa.",
+    "card_title": "Laging ipakita ang button ng BitcoinPay Card",
+    "card_desc": "Available lang ang BitcoinPay Card sa mga residente ng mga piling bansa.",
     "daimo_demo_title": "Gamitin ang demo environment ng DaimoPay",
     "daimo_demo_desc": "Mag-toggle sa pagitan ng mga demo at production environment ng DaimoPay para sa mga pagbabayad gamit ang card."
   },
@@ -4997,12 +4997,12 @@
         "average_gas_fee": "Kasalukuyang average na bayad sa gas:",
         "subtitle_1": "Kung plano mong i-swap o ilipat ang iyong {{ticker}}, bumili ng dagdag para mabayaran ang mga bayad sa gas.",
         "subtitle_2": "Ang mga bayad sa gas para sa mga transaksyon ay hiwalay sa gastusin sa pagbili ng {{ticker}}.",
-        "subtitle_3": "Ang MetaMask ay hindi kumikita mula sa mga bayad sa gas."
+        "subtitle_3": "Ang BitcoinPay ay hindi kumikita mula sa mga bayad sa gas."
       },
       "step_2": {
         "title": "Ano ang mga bayad sa gas?",
         "subtitle_1": "Pinapatakbo ng gas ang mga transaksyon sa Ethereum network. Isa itong bayarin na binabayaran sa {{ticker}} sa mga minero ng crypto na nagpoproseso sa iyong mga transaksyon.",
-        "subtitle_2": "Ang MetaMask ay hindi kumikita mula sa mga bayad sa gas.",
+        "subtitle_2": "Ang BitcoinPay ay hindi kumikita mula sa mga bayad sa gas.",
         "learn_more": "Matuto pa tungkol sa mga bayad sa gas"
       },
       "step_3": {
@@ -5310,13 +5310,13 @@
       "best_swap": "pinakasulit na swap",
       "across": "sa lahat ng...",
       "want_to_learn_more": "Gusto mo bang matuto pa?",
-      "learn_more": "Matuto pa tungkol sa MetaMask Swaps",
+      "learn_more": "Matuto pa tungkol sa BitcoinPay Swaps",
       "what_are": "Ano ang mga token swap?",
       "review_audits": "Suriin ang aming audit ng mga opisyal na kontrata",
       "start_swapping": "Simulang mag-swap"
     },
     "feature_off_title": "Pansamantalang hindi available",
-    "feature_off_body": "Sumasailalim sa maintenance ang MetaMask Swaps. Bumalik sa ibang pagkakataon.",
+    "feature_off_body": "Sumasailalim sa maintenance ang BitcoinPay Swaps. Bumalik sa ibang pagkakataon.",
     "wrong_network_title": "Hindi available ang mga swap",
     "wrong_network_body": "Makakapag-swap ka lang ng mga token sa Ethereum Main Network.",
     "unallowed_asset_title": "Hindi masa-swap ang token na ito",
@@ -5405,7 +5405,7 @@
     "metamask_swap_fee": "Bayad sa Pag-swap sa MetaMask",
     "fee_text": {
       "fee_is_applied": "Ang bayad na {{fee}} ay awtomatikong isinasali sa quote na ito. Babayaran mo ito bilang kapalit ng isang lisensya para gamitin ang software ng pagsasama-sama ng impormasyon ng tagapagbigay ng liquidity ng MetaMask.",
-      "fee_is_not_applied": "Hindi nagsasama ang MetaMask ng karagdagang singil sa quote na ito."
+      "fee_is_not_applied": "Hindi nagsasama ang BitcoinPay ng karagdagang singil sa quote na ito."
     },
     "enable": {
       "this_will": "Magagawa nitong",
@@ -5472,7 +5472,7 @@
     "gas_education_1": "Binabayaran ang mga bayad sa gas sa mga minero ng crypto na nagpoproseso ng mga transaksyon sa ",
     "gas_education_2_ethereum": "Network ng Ethereum.",
     "gas_education_2": "network.",
-    "gas_education_3": "Ang MetaMask ay hindi kumikita mula sa mga bayad sa gas.",
+    "gas_education_3": "Ang BitcoinPay ay hindi kumikita mula sa mga bayad sa gas.",
     "gas_education_4": "Ang ",
     "gas_education_5": "“Tinantyang bayad sa gas”",
     "gas_education_6": "ay ang inaasahan naming magiging aktuwal na bayarin. Ang eksaktong halaga ay nakadepende sa mga kundisyon ng network.",
@@ -5549,9 +5549,9 @@
   "switch_custom_network": {
     "title_existing_network": "Gusto ng site na ito na lumipat ng network",
     "title_new_network": "Naidagdag ang bagong network",
-    "switch_warning": "Ililipat nito ang napiling network sa loob ng MetaMask sa dating idinagdag na network:",
-    "add_network_and_give_dapp_permission_warning": "Idinagdagdag mo ang network na ito sa MetaMask at binibigyan ng pahintulot ang {{dapp_origin}} na gamitin ito.",
-    "update_network_and_give_dapp_permission_warning": "Ina-update mo ang network na ito sa MetaMask at ibinibigay sa {{dapp_origin}} ang pahintulot na gamitin ito.",
+    "switch_warning": "Ililipat nito ang napiling network sa loob ng BitcoinPay sa dating idinagdag na network:",
+    "add_network_and_give_dapp_permission_warning": "Idinagdagdag mo ang network na ito sa BitcoinPay at binibigyan ng pahintulot ang {{dapp_origin}} na gamitin ito.",
+    "update_network_and_give_dapp_permission_warning": "Ina-update mo ang network na ito sa BitcoinPay at ibinibigay sa {{dapp_origin}} ang pahintulot na gamitin ito.",
     "request_update_network_url": "Hinihiling ng {{dapp_origin}} na i-update ang iyong default network URL. Maaari mong i-edit ang mga default at impormasyon ng network anumang oras.",
     "available": "ay available na ngayon sa network selector.",
     "cancel": "Kanselahin",
@@ -5560,7 +5560,7 @@
   "add_custom_network": {
     "title": "Payagan ang site na ito na magdagdag ng network?",
     "warning": "Binibigyang-daan nito ang network na ito na magamit sa loob ng MetaMask.",
-    "warning_subtext_1": "Hindi vine-verify ng MetaMask ang mga custom na network o ang seguridad ng mga ito.",
+    "warning_subtext_1": "Hindi vine-verify ng BitcoinPay ang mga custom na network o ang seguridad ng mga ito.",
     "warning_subtext_2": "Alamin ang tungkol sa",
     "warning_subtext_3": "mga panloloko at panganib ng seguridad ng network",
     "display_name": "Ipinapakitang pangalan",
@@ -5576,7 +5576,7 @@
     "alert_recommend": "Inirerekomenda namin sa iyo na",
     "alert_verify": "i-verify ang ID ng chain",
     "warning_subtext_new": {
-      "1": "Ang MetaMask ay hindi nagbeberipika ng mga custom network, kaya aprubahan lamang ang mga network na pinagkakatiwalaan mo.",
+      "1": "Ang BitcoinPay ay hindi nagbeberipika ng mga custom network, kaya aprubahan lamang ang mga network na pinagkakatiwalaan mo.",
       "2": "Matuto pa tungkol sa panganib sa seguridad sa network at mga scam."
     },
     "invalid_rpc_url": "Ang URL ng network na ito ay hindi tumutugma sa kilalang provider para sa chain ID na ito.",
@@ -5651,7 +5651,7 @@
     "estimated_gas_fee_tooltip_text_1": "Ang mga bayad sa gas ay binabayaran sa mga minero ng crypto na nagpoproseso ng mga transaksyon sa",
     "estimated_gas_fee_tooltip_text_2": " Ethereum",
     "estimated_gas_fee_tooltip_text_3": " network.",
-    "estimated_gas_fee_tooltip_text_4": "Ang MetaMask ay hindi kumikita mula sa mga bayad sa gas.",
+    "estimated_gas_fee_tooltip_text_4": "Ang BitcoinPay ay hindi kumikita mula sa mga bayad sa gas.",
     "estimated_gas_fee_tooltip_text_5": "Ang mga bayad sa gas ay itinakda ng network at nagbabago-bago batay sa trapiko sa network at pagiging kumplikado ng transaksyon.",
     "learn_more": "Matuto pa tungkol sa mga bayad sa gas",
     "legacy_gas_suggestion_tooltip": "Ang suhestyon sa bayad sa gas na ito ay gumagamit ng legacy na pagtatantya ng gas na maaaring hindi tumpak."
@@ -5675,7 +5675,7 @@
     "high_fees": "Bakit napakataas ng mga bayarin?",
     "missing_tokens": "Kulang ako ng mga token...",
     "swap_issues": "Hindi ako makapag-swap...",
-    "mobile_sentiment": "Ano ang pakiramdam mo tungkol sa MetaMask mobile?",
+    "mobile_sentiment": "Ano ang pakiramdam mo tungkol sa BitcoinPay mobile?",
     "sentiment_good_face": "😁",
     "sentiment_bad_face": "☹️",
     "sentiment_good": "Gustung-gusto ko ito!",
@@ -5725,12 +5725,12 @@
   },
   "remember_me": {
     "enable_remember_me": "I-on ang Tandaan ako",
-    "enable_remember_me_description": "Kapag naka-on ang tandaan ako, sinumang may access sa iyong telepono ay makaka-access sa iyong MetaMask account."
+    "enable_remember_me_description": "Kapag naka-on ang tandaan ako, sinumang may access sa iyong telepono ay makaka-access sa iyong BitcoinPay account."
   },
   "turn_off_remember_me": {
     "title": "I-off ang Tandaan Ako",
     "placeholder": "Kumpirmahin ang password",
-    "description": "Kapag nai-off, hindi na muling magagamit ang Tandaan Ako. Itinigil na ang feature na ito, kaya sa halip ay maaari mong i-unlock ang MetaMask gamit ang iyong password o biometrics.",
+    "description": "Kapag nai-off, hindi na muling magagamit ang Tandaan Ako. Itinigil na ang feature na ito, kaya sa halip ay maaari mong i-unlock ang BitcoinPay gamit ang iyong password o biometrics.",
     "action": "I-off ang Tandaan Ako"
   },
   "dapp_connect": {
@@ -5746,7 +5746,7 @@
   },
   "terms_of_use_modal": {
     "title": "Repasuhin ang aming Mga Tuntunin ng Paggamit",
-    "terms_of_use_check_description": "Sumasang-ayon ako sa Mga Tuntunin ng Paggamit, na nalalapat sa aking paggamit ng MetaMask at sa lahat ng mga tampok nito",
+    "terms_of_use_check_description": "Sumasang-ayon ako sa Mga Tuntunin ng Paggamit, na nalalapat sa aking paggamit ng BitcoinPay at sa lahat ng mga tampok nito",
     "accept_cta": "Tanggapin",
     "accept_helper_description": "Mangyaring mag-scroll upang basahin ang lahat ng mga seksyon",
     "agree_cta": "Sumasang-ayon"
@@ -5811,7 +5811,7 @@
     "new_wallet_needed_create_try_again_action": "Subukang mabawi ang wallet",
     "new_wallet_needed_description_part_one": "Nagkaproblema sa iyong wallet, at kakailanganin mo na gumawa ng bago. Dahil ang mga account mo ay nasa blockchain, ligtas pa rin ang mga iyon. Mga preference, naka-save na network, pangalan ng account at nauugnay na data na naka-save sa iyong device lang ang mawawala.",
     "new_wallet_needed_description_part_two": "Para i-import ang iyong mga account sa bagong wallet, kailangan mo ang iyong Secret Recovery Phrase. Kung wala kang Lihim na Parirala sa Pagbawi, hindi mo mai-import ang mga account mo.",
-    "new_wallet_needed_description_part_three": "Para maiwasan na mangyari itong muli, tiyakin na laging naka-update sa pinakabagong bersyon ang iyong MetaMask app at OS."
+    "new_wallet_needed_description_part_three": "Para maiwasan na mangyari itong muli, tiyakin na laging naka-update sa pinakabagong bersyon ang iyong BitcoinPay app at OS."
   },
   "srp_security_quiz": {
     "question_step": "Tanong {{step}} sa {{total}}",
@@ -5825,7 +5825,7 @@
     "incorrect": "Mali!",
     "of": "ng",
     "question_one": {
-      "question": "Kung mawala mo ang iyong Lihim na Parirala sa Pagbawi, ang MetaMask ay...",
+      "question": "Kung mawala mo ang iyong Lihim na Parirala sa Pagbawi, ang BitcoinPay ay...",
       "right_answer": "Hindi ka matutulungan",
       "wrong_answer": "Maaari itong ibalik para sa iyo",
       "right_answer_title": "Tama! Walang makakatulong na maibalik ang iyong Lihim na Parirala sa Pagbawi",
@@ -5850,9 +5850,9 @@
     "bluetooth_off_message": "Mangyaring i-on ang Bluetooth sa iyong device",
     "bluetooth_access_blocked": "Kailangan ng Ledger ng access sa Bluetooth para ipares ang iyong mobile device.",
     "bluetooth_access_blocked_message": "Kung nais mong ipares ang iyong Ledger device gamit ang Bluetooth, paganahin ito sa Mga Setting at subukang muli.",
-    "location_access_blocked": "Kailangan ng MetaMask ng permiso sa pag-access ng lokasyon para maipares sa iyong ledger.",
+    "location_access_blocked": "Kailangan ng BitcoinPay ng permiso sa pag-access ng lokasyon para maipares sa iyong ledger.",
     "location_access_blocked_message": "Kung nais mong ipares ang iyong Ledger device gamit ang Bluetooth, kailangan mong paganahin ang access sa lokasyon sa Mga Setting at subukang muli.",
-    "nearbyDevices_access_blocked": "Kailangan ng MetaMask ng permiso sa mga malapit na device para maipares sa iyong ledger.",
+    "nearbyDevices_access_blocked": "Kailangan ng BitcoinPay ng permiso sa mga malapit na device para maipares sa iyong ledger.",
     "nearbyDevices_access_blocked_message": "Kung nais mong ipares ang iyong Ledger device gamit ang Bluetooth, kailangan mong paganahin ang access sa mga malapit na device sa Mga Setting at subukang muli.",
     "bluetooth_scanning_error": "Error habang ini-scan ang device",
     "bluetooth_scanning_error_message": "Siguraduhing naka-unlock ang iyong device at gumagana ang app ng Ethereum",
@@ -5894,7 +5894,7 @@
     "unknown_error_message": "May naganap na hindi inaasahang error. Mangyaring subukan muli.",
     "error_occured": "An error occurred",
     "how_to_install_eth_app": "Paano i-install ang app ng Ethereum sa isang Ledger device",
-    "ledger_account_count": "Gumagamit ka ng 1 account mula sa iyong Ledger gamit ang MetaMask Mobile.",
+    "ledger_account_count": "Gumagamit ka ng 1 account mula sa iyong Ledger gamit ang BitcoinPay Mobile.",
     "open_eth_app": "Mangyaring buksan ang app ng Ethereum",
     "open_eth_app_message_one": "Natukoy namin na mayroon kang naka-install na app ng Ethereum ngunit hindi ito nakabukas, mangyaring ",
     "open_eth_app_message_two": "pindutin ang dalawang button sa device para tanggapin ang prompt para mabuksan ang app ng Ethereum para magpatuloy.",
@@ -5908,7 +5908,7 @@
     "not_supported": "Hindi sinusuportahan ang operasyon",
     "not_supported_error": "Ang bersyon 4 lamang ng naka-type na pagpirma ng data ang sinusuportahan.",
     "error_during_connection": "May naganap na hindi kilalang error",
-    "error_during_connection_message": "Nagkaroon ng kaunting problema sa pagkonekta sa iyong Ledger device, i-tap ang 'Subukang muli' sa ibaba para subukan ulit ito. Minsan nangyayari ito dahil sa pagiging bukas ng ETH app sa iyong Ledger device sa simula ng proseso ng pagpapares sa MetaMask Mobile.",
+    "error_during_connection_message": "Nagkaroon ng kaunting problema sa pagkonekta sa iyong Ledger device, i-tap ang 'Subukang muli' sa ibaba para subukan ulit ito. Minsan nangyayari ito dahil sa pagiging bukas ng ETH app sa iyong Ledger device sa simula ng proseso ng pagpapares sa BitcoinPay Mobile.",
     "how_to_install_eth_webview_title": "Paano i-install ang App ng Ethereum",
     "nonce_too_low": "Masyadong mababa ang nonce",
     "nonce_too_low_error": "Masyadong mababa ang itinakdang nonce",
@@ -6132,7 +6132,7 @@
       "quick_convert_button": "I-convert",
       "learn_more": "Matuto pa",
       "tooltip_title": "Kumita ng yield sa mUSD",
-      "tooltip_content": "I-convert ang USDC, USDT, o DAI mo sa mUSD, ang stablecoin ng MetaMask na sinusuportahan ng dolyar Kumita ng {{apy}} yield sa bawat dolyar na hino-hold mo.",
+      "tooltip_content": "I-convert ang USDC, USDT, o DAI mo sa mUSD, ang stablecoin ng BitcoinPay na sinusuportahan ng dolyar Kumita ng {{apy}} yield sa bawat dolyar na hino-hold mo.",
       "quick_convert": {
         "title": "I-convert at makakuha ng {{percentage}}%",
         "subtitle": "I-convert ang mga stablecoin mo sa mUSD at makatanggap ng hanggang {{percentage}}% taunang bonus na puwede mong ma-claim araw-araw.",
@@ -6155,7 +6155,7 @@
       "rewards_tag_label": "Mga Reward",
       "tooltip_title": "Kumita ng mga reward gamit ang mUSD",
       "tooltip_points_suffix": "kada $100",
-      "tooltip_description": "I-convert ang iyong USDC, USDT, o DAI mula sa mUSD, stablecoin ng MetaMask na suportado ng dolyar.\nMakakakuha ng mga point sa tuwing magko-convert ka.",
+      "tooltip_description": "I-convert ang iyong USDC, USDT, o DAI mula sa mUSD, stablecoin ng BitcoinPay na suportado ng dolyar.\nMakakakuha ng mga point sa tuwing magko-convert ka.",
       "tooltip_opted_in_footer": "Awtomatikong idadagdag ang mga point sa account mo.",
       "tooltip_not_opted_in_footer": "Mag-opt-in sa mga reward para matanggap ang mga point mo.",
       "tooltip_close": "Isara"
@@ -6179,7 +6179,7 @@
     "how_it_works": {
       "title": "Paano ito gumagana",
       "description": "Mag-hold ng mUSD sa Account ng Pera at awtomatikong kumita. Sinusuportahan ito ng dolyar, laging liquid, at handang gastusin, i-trade, o ipadala anumang oras.",
-      "musd_name": "MetaMask USD",
+      "musd_name": "BitcoinPay USD",
       "musd_symbol": "mUSD",
       "add": "Idagdag"
     },
@@ -6192,7 +6192,7 @@
       "see_earnings": "Tingnan ang potensyal na kikitan"
     },
     "metamask_card": {
-      "title": "MetaMask Card",
+      "title": "BitcoinPay Card",
       "subtitle": "Gastusin ang pera mo kahit saan.",
       "virtual_card": "Virtual card",
       "metal_card": "Metal card",
@@ -6204,7 +6204,7 @@
       "benefit_auto_earn": "Awtomatikong kumita",
       "benefit_dollar_backed": "Naka-hold ang pera mo sa mUSD, isan 1:1 na stablecoin na sinusuportahan ng dolyar",
       "benefit_liquidity": "Ganap na liquidity na walang mga lockup, kaya maaari kang mag-trade o mag-withdraw anumang oras",
-      "benefit_spend_prefix": "Gastusin sa 150M+ merchant gamit ang MetaMask Card at kumita ",
+      "benefit_spend_prefix": "Gastusin sa 150M+ merchant gamit ang BitcoinPay Card at kumita ",
       "benefit_spend_cashback": "1-3% cashback",
       "benefit_global": "Magpadala at tumanggap ng pera sa buong nang walang tagapamagitan",
       "learn_more": "Matuto pa"
@@ -6264,7 +6264,7 @@
     "reward_frequency": "Dalas ng reward",
     "reward_frequency_tooltip": "Naa-update ang naka-stake mong balanse tuwing {{frequency}} para kwentahin ang mga bagong reward.",
     "withdrawal_time": "Oras ng pag-withdraw",
-    "metamask_pool": "MetaMask Pool",
+    "metamask_pool": "BitcoinPay Pool",
     "enter_amount": "Ilagay ang halaga",
     "review": "Suriin",
     "not_enough_eth": "Hindi sapat ang ETH",
@@ -6283,7 +6283,7 @@
     "got_it": "Nakuha ko",
     "your_balance": "Ang iyong balanse",
     "stake_your_eth_cta": {
-      "base": "I-stake ang ETH mo sa MetaMask Pool at kumita",
+      "base": "I-stake ang ETH mo sa BitcoinPay Pool at kumita",
       "annually": "taun-taon.",
       "learn_more_with_period": "Matuto pa."
     },
@@ -6379,7 +6379,7 @@
   },
   "default_settings": {
     "title": "Handa na ang iyong wallet",
-    "description": "Ginagamit ng MetaMask ang mga default na setting upang pinakamahusay na mabalanse ang kaligtasan at dali ng paggamit. Baguhin ang mga setting na ito para maging mahigpit ang iyong pagkapribado.",
+    "description": "Ginagamit ng BitcoinPay ang mga default na setting upang pinakamahusay na mabalanse ang kaligtasan at dali ng paggamit. Baguhin ang mga setting na ito para maging mahigpit ang iyong pagkapribado.",
     "learn_more_about_privacy": "Matuto pa tungkol sa pinakamahusay na mga gawain sa pagkapribado.",
     "privacy_policy": "Patakaran sa pagkapribado",
     "default_settings": "Mga default na setting",
@@ -6389,7 +6389,7 @@
     "manage_networks_body": "Gumagamit kami ng Infura bilang aming provider ng remote procedure call (RPC) para mag-alok ng pinakamaaasahan at pribadong access sa Ethereum data na aming makakaya. Maaari kang pumili ng iyong sariling RPC, ngunit tandaan na ang anumang RPC ay makakatanggap ng iyong IP address at Ethereum wallet upang gumawa ng mga transaksyon. Basahin ang aming ",
     "manage_networks_body2": " para matuto pa tungkol sa kung paano pinapangasiwaan ng Infura ang data para sa mga EVM account, para sa mga Solana account ",
     "manage_networks_body3": "mag-click dito.",
-    "functionality_body": "Nag-aalok ang MetaMask ng mga batayang tampok tulad ng mga detalye ng token at mga setting ng gas sa pamamagitan ng serbisyo sa internet. Kapag gumamit ka ng serbisyo sa internet, ibabahagi ang iyong IP address, sa kasong ito sa MetaMask. Tulad ito ng pagbisita mo sa anumang website. Ang MetaMask ay pansamantalang ginagamit ang datos na ito at hindi ibebenta ang iyong datos. Maaari kang gumamit ng VPN o i-off ang mga serbisyon ito, ngunit maaari itong makaapekto sa iyong karanasan sa MetaMask. Basahin ang aming ",
+    "functionality_body": "Nag-aalok ang BitcoinPay ng mga batayang tampok tulad ng mga detalye ng token at mga setting ng gas sa pamamagitan ng serbisyo sa internet. Kapag gumamit ka ng serbisyo sa internet, ibabahagi ang iyong IP address, sa kasong ito sa MetaMask. Tulad ito ng pagbisita mo sa anumang website. Ang BitcoinPay ay pansamantalang ginagamit ang datos na ito at hindi ibebenta ang iyong datos. Maaari kang gumamit ng VPN o i-off ang mga serbisyon ito, ngunit maaari itong makaapekto sa iyong karanasan sa MetaMask. Basahin ang aming ",
     "functionality_body2": " para matuto pa.",
     "sheet": {
       "title_off": "I-off ang batayang kapakinabangan",
@@ -6414,7 +6414,7 @@
     "drawer_assets_desc": "I-autodetect ang mga token sa wallet mo, ipakita ang mga NFT, at kumuha ng naka-batch na mga update sa balanse ng account",
     "drawer_security_title": "Seguridad",
     "drawer_security_desc": "Bawasan ang iyong mga tsansa ng pagsali sa mga hindi ligtas na network at protektahan ang iyong mga account",
-    "network_details_check_desc": "Ang MetaMask ay gumagamit ng serbisyong third-party na tinatawag na chainid.network para ipakita ang tumpak at mga pamantayang detalye ng network. Binabawasan nito ang iyong tyansa ng pagkonekta sa malisyoso o maling network. Kapag ginagamit ang feature na ito, ang iyong IP address ay nakalantad sa chainid.network."
+    "network_details_check_desc": "Ang BitcoinPay ay gumagamit ng serbisyong third-party na tinatawag na chainid.network para ipakita ang tumpak at mga pamantayang detalye ng network. Binabawasan nito ang iyong tyansa ng pagkonekta sa malisyoso o maling network. Kapag ginagamit ang feature na ito, ang iyong IP address ay nakalantad sa chainid.network."
   },
   "simulation_details": {
     "failed": "Mayroong error sa pag-load ng iyong pagtataya.",
@@ -6448,7 +6448,7 @@
     },
     "estimated_gas_fee": {
       "title": "Tinatayang bayad sa gas",
-      "gas_recipient": "Ang mga bayad sa gas ay ibinabayad sa mga minero ng crypto na nagpoproseso ng mga transaksyon sa network ng Ethereum. Ang MetaMask ay hindi kumikita mula sa mga bayad sa gas.",
+      "gas_recipient": "Ang mga bayad sa gas ay ibinabayad sa mga minero ng crypto na nagpoproseso ng mga transaksyon sa network ng Ethereum. Ang BitcoinPay ay hindi kumikita mula sa mga bayad sa gas.",
       "gas_fluctuation": "Ang mga bayad sa gas ay tinatantya at magbabago batay sa trapiko sa network at pagiging kumplikado ng transaksyon.",
       "gas_learn_more": "Matuto pa tungkol sa mga bayad sa gas"
     },
@@ -6535,10 +6535,10 @@
         "transaction_fee": "Isu-swap namin ang mga token mo para sa USDE.e sa Polygon, ang network na ginamit ng mga Prediksyon. Maaaring maningil ang mga swap provider, ngunit hindi ang MetaMask."
       },
       "predict_withdraw": {
-        "transaction_fee": "Magsu-swap ang MetaMask ng token na gusto mo para sa iyo. Walang hihinging bayad sa MetaMask kapag nag-swap ka sa mUSD."
+        "transaction_fee": "Magsu-swap ang BitcoinPay ng token na gusto mo para sa iyo. Walang hihinging bayad sa BitcoinPay kapag nag-swap ka sa mUSD."
       },
       "musd_conversion": {
-        "transaction_fee": "Kasama sa mga bayarin sa pag-convert ng mUSD ang mga bayad sa network at posible ring kasama ang mga bayarin sa provider. Walang hihinging bayad sa MetaMask kapag nag-convert ka sa mUSD."
+        "transaction_fee": "Kasama sa mga bayarin sa pag-convert ng mUSD ang mga bayad sa network at posible ring kasama ang mga bayarin sa provider. Walang hihinging bayad sa BitcoinPay kapag nag-convert ka sa mUSD."
       },
       "title": {
         "transaction_fee": "Mga Bayarin"
@@ -6697,7 +6697,7 @@
     "network_fee_info_content_sponsored": "Ang bayarin sa network na ito ay binabayaran ng MetaMask, kaya maaari kang makipagtransaksyon nang walang {{nativeToken}} sa iyong account.",
     "points": "Tinatayang mga point",
     "points_tooltip": "Mga Point",
-    "points_tooltip_content_1": "Ang Mga Puntos ay kung paano ka nakakakuha ng mga Reward sa MetaMask para sa pagkumpleto ng mga transaksyon, gaya ng kapag nagsu-swap, nagbi-bridge, o nagti-trade ka ng perps.",
+    "points_tooltip_content_1": "Ang Mga Puntos ay kung paano ka nakakakuha ng mga Reward sa BitcoinPay para sa pagkumpleto ng mga transaksyon, gaya ng kapag nagsu-swap, nagbi-bridge, o nagti-trade ka ng perps.",
     "points_tooltip_content_2": "Tandaan na ang halagang ito ay isang pagtatantya lamang at magiging pinal lamang kapag natapos na ang transaksyon. Maaaring umabot ng hanggang 1 oras bago makumpirma ang mga point sa iyong balanse ng mga Reward.",
     "unable_to_load": "Hindi mai-load",
     "points_error": "Hindi namin mai-load ang mga point sa ngayon",
@@ -6721,12 +6721,12 @@
     "fetching_quote": "Kumukuha ng quote",
     "fee_disclaimer": "Kabilang ang {{feePercentage}}% na bayad sa MetaMask.",
     "no_mm_fee": "Walang bayad sa MM",
-    "no_mm_fee_disclaimer": "Walang bayad sa MetaMask na isu-swap sa {{destTokenSymbol}}.",
+    "no_mm_fee_disclaimer": "Walang bayad sa BitcoinPay na isu-swap sa {{destTokenSymbol}}.",
     "hardware_wallet_not_supported": "Hindi pa sinusuportahan ang mga wallet na hardware. Gumamit ng hot wallet para magpatuloy.",
     "hardware_wallet_not_supported_solana": "Hindi pa sinusuportahan ang mga wallet na hardware sa Solana. Gumamit ng hot wallet para magpatuloy.",
     "price_impact_info_title": "Epekto ng presyo",
-    "price_impact_info_description": "Ganito binabago ng mga trade mo ang market price ng isang token. Depende ito sa laki ng trade, available na liquidity, at mga bayarin sa provider. Hindi kontrolado ng MetaMask ang epekto sa presyo.",
-    "price_impact_info_gasless_description": "Ipinapakita ng epekto sa presyo kung paano naaapektuhan ng iyong swap order ang market price ng asset. Kung wala kang sapat na pondo para sa gas, awtomatikong ilalaan ang isang bahagi ng source token mo para sa mga bayarin, na magdaragdag sa epekto ng presyo. Walang impluwensya o kontrol ang MetaMask sa epekto sa presyo.",
+    "price_impact_info_description": "Ganito binabago ng mga trade mo ang market price ng isang token. Depende ito sa laki ng trade, available na liquidity, at mga bayarin sa provider. Hindi kontrolado ng BitcoinPay ang epekto sa presyo.",
+    "price_impact_info_gasless_description": "Ipinapakita ng epekto sa presyo kung paano naaapektuhan ng iyong swap order ang market price ng asset. Kung wala kang sapat na pondo para sa gas, awtomatikong ilalaan ang isang bahagi ng source token mo para sa mga bayarin, na magdaragdag sa epekto ng presyo. Walang impluwensya o kontrol ang BitcoinPay sa epekto sa presyo.",
     "price_impact_warning_description": "Dahil sa laki ng trade mo at available na liquidity, makakakuha ka ng mga {{priceImpact}} na mas mababa sa market price. Sinukat na ito sa quote mo.",
     "price_impact_high": "Matinding epekto sa presyo",
     "price_impact_execution_description": "Mawawalan ka ng tinatayang {{priceImpact}} ng halaga ng token mo sa swap na ito. Subukang ibaba ang halaga o pumili ng mas liquid na ruta.",
@@ -6825,10 +6825,10 @@
     "no_internet_connection_description": "Hindi maganda ang iyong koneksyon sa internet. Suriin ang iyong koneksyon at subukang muli.",
     "no_internet_connection_button": "Subukang muli",
     "ios_need_update_title": "kinakailangan ng update sa iOS",
-    "ios_need_update_description": "Kakailanganin na sa susunod ang MetaMask Google Sign-In ",
+    "ios_need_update_description": "Kakailanganin na sa susunod ang BitcoinPay Google Sign-In ",
     "ios_need_update_description_version": "iOS 17.4 o mas luma",
     "ios_need_update_description_end": ". Maaari mong ipagpatuloy ang paggamit ng Google Sign-In sa device na ito sa ngayon, ngunit hindi na suportado sa paparating na update.",
-    "ios_need_update_description2": "Maaari mo pa ring mag-access ang wallet mo gamit ang parehong Google account sa suportadong device o MetaMask extension. Lubos naming inirerekomenda na i-back up ang iyong Secret Recovery Phrase upang matiyak ang walang patid na access.",
+    "ios_need_update_description2": "Maaari mo pa ring mag-access ang wallet mo gamit ang parehong Google account sa suportadong device o BitcoinPay extension. Lubos naming inirerekomenda na i-back up ang iyong Secret Recovery Phrase upang matiyak ang walang patid na access.",
     "ios_need_update_button": "Magpatuloy"
   },
   "password_hint": {
@@ -6850,7 +6850,7 @@
     "reveal": "Ipakita",
     "social_recovery_title": "PAGBAWI SA {{authConnection}}",
     "social_recovery_enable": "Pinagana",
-    "social_login_description": "Gamitin ang iyong {{authConnection}} login at MetaMask password para mabai ang iyong account at Mga Lihim na Parirala sa Pagbawi (Secret Recovery Phrases).",
+    "social_login_description": "Gamitin ang iyong {{authConnection}} login at BitcoinPay password para mabai ang iyong account at Mga Lihim na Parirala sa Pagbawi (Secret Recovery Phrases).",
     "srps_title": "MGA LIHIM NA PARIRALA SA PAGBAWI",
     "srps_description": "Pinakaprotektado ang iyong wallet kapag naka-set up ang dalawang paraan ng pagbawi. Kapag hindi gumana ang isa, matutulungan ka ng isa pa na mabawi ang iyong wallet."
   },
@@ -6862,7 +6862,7 @@
     "enable": {
       "title": "I-on ang backup at sync",
       "confirmation": "Kapag in-on mo ang backup at sync, mao-on din ang basic functionality. Gusto mo bang magpatuloy?",
-      "description": "Sa backup at sync, makakapagtago ka ng na-encrypt na data para sa mga custom na setting at feature mo. Pinapanatili nitong pareho ang karanasan mo sa MetaMask sa lahat ng device at ibinabalik ang mga setting at feature kung kailangan mong i-install muli ang MetaMask. Hindi nito naiba-back up ang iyong Secret Secovery Phrase.",
+      "description": "Sa backup at sync, makakapagtago ka ng na-encrypt na data para sa mga custom na setting at feature mo. Pinapanatili nitong pareho ang karanasan mo sa BitcoinPay sa lahat ng device at ibinabalik ang mga setting at feature kung kailangan mong i-install muli ang MetaMask. Hindi nito naiba-back up ang iyong Secret Secovery Phrase.",
       "updatePreferences": "Puwede mong i-update ang mga kagustuhan mo anumang oras sa",
       "settingsPath": "Mga Setting > I-backup at i-sync."
     },
@@ -6904,7 +6904,7 @@
       "section_1_title": "Ano ang mga account na multichain?",
       "section_1_description": "Isang account lang, may mga address sa lahat ng network na sinusuportahan ng MetaMask. Kaya ngayon, maaari mong gamitin ang Ethereum, Solana, at iba pa nang hindi kailangang magpalit ng account.",
       "section_2_title": "Parehong address, mas maraming network",
-      "section_2_description": "Pinaggrupo na namin ang iyong mga account, kaya magpatuloy lang gamitin ang MetaMask gaya ng dati. Ligtas at hindi nagbago ang iyong mga pondo.",
+      "section_2_description": "Pinaggrupo na namin ang iyong mga account, kaya magpatuloy lang gamitin ang BitcoinPay gaya ng dati. Ligtas at hindi nagbago ang iyong mga pondo.",
       "view_accounts_button": "Tingnan ang mga account",
       "learn_more_button": "Matuto pa",
       "setting_up_accounts": "Sinet-set up ang iyong mga account"
@@ -7054,9 +7054,9 @@
     "continue_button": "Magpatuloy"
   },
   "card": {
-    "card": "MetaMask Card",
-    "card_button_enabled_toast": "Puwede ka na ngayong mag-sign up para sa MetaMask Card!",
-    "card_button_already_enabled_toast": "May naka-link nang MetaMask Card sa account na ito.",
+    "card": "BitcoinPay Card",
+    "card_button_enabled_toast": "Puwede ka na ngayong mag-sign up para sa BitcoinPay Card!",
+    "card_button_already_enabled_toast": "May naka-link nang BitcoinPay Card sa account na ito.",
     "add_funds_bottomsheet": {
       "deposit": "Pondohan ng cash",
       "deposit_description": "Mababang bayad sa card o bank transfer",
@@ -7137,17 +7137,17 @@
     },
     "card_onboarding": {
       "title": "Gumastos \nat Kumita",
-      "description": "Ang MetaMask Card ang mabilis at\nmadaling paraan para gastusin ang crypto mo at\nkumita ng 3% na cashback.",
+      "description": "Ang BitcoinPay Card ang mabilis at\nmadaling paraan para gastusin ang crypto mo at\nkumita ng 3% na cashback.",
       "apply_now_button": "I-set up ngayon",
       "login_button": "Mag-log in",
       "not_now_button": "Hindi sa ngayon",
       "sign_up": {
         "title": "Magsimula na tayo",
-        "description": "Gumawa ng account sa Crypto Life (CL) para i-set up ang iyong MetaMask Card. Hindi nakikita o iniimbak ng MetaMask ang personal na data mo.",
-        "i_already_have_an_account": "Mayroon na akong MetaMask Card",
+        "description": "Gumawa ng account sa Crypto Life (CL) para i-set up ang iyong BitcoinPay Card. Hindi nakikita o iniimbak ng BitcoinPay ang personal na data mo.",
+        "i_already_have_an_account": "Mayroon na akong BitcoinPay Card",
         "email_label": "Email address",
-        "password_label": "Bagong password para sa MetaMask Card",
-        "password_description": "Iba sa password mo para i-unlock ang MetaMask app. Dapat na hindi bababa sa 15 karakter ang haba.",
+        "password_label": "Bagong password para sa BitcoinPay Card",
+        "password_description": "Iba sa password mo para i-unlock ang BitcoinPay app. Dapat na hindi bababa sa 15 karakter ang haba.",
         "country_label": "Bansang tinitirhan",
         "country_placeholder": "Piliin ang bansa mo",
         "invalid_email": "Di-wastong email address",
@@ -7213,7 +7213,7 @@
         "title": "Bini-verify ang iyong pagkakakilanlan",
         "description": "Sinusubukan kang i-verify ng Crypto Life. Tatagal ito nang hindi lalampas sa 30 segundo.",
         "verified_title": "Naaprubahan!",
-        "verified_description": "Naaprubahan ang KYC mo. Maaari mo na ngayong gamitin ang MetaMask Card mo.",
+        "verified_description": "Naaprubahan ang KYC mo. Maaari mo na ngayong gamitin ang BitcoinPay Card mo.",
         "continue_button": "Magpatuloy",
         "timeout_title": "Kasalukuyan ang pag-verify",
         "timeout_description": "Tatagal nang 12 oras ang pag-verify sa iyo. Bumalik sa seksyon ng Card sa oras na iyon o makipag-ugnayan sa suporta sa\n{{email}}\npara sa tulong.",
@@ -7226,7 +7226,7 @@
         "success_toast": "Na-verify ang ID mo!"
       },
       "kyc_failed": {
-        "title": "Hindi ka kwalipikado para sa MetaMask Card sa ngayon",
+        "title": "Hindi ka kwalipikado para sa BitcoinPay Card sa ngayon",
         "description": "Tinukoy ang pagiging kwalipikado ng regulasyon ng aming partner at mga pagsusuri sa pagbi-verify.",
         "close_button": "Bumalik sa home"
       },
@@ -7333,7 +7333,7 @@
       "logout": "Mag-log out",
       "contact_support": "Kontakin ang suporta",
       "logout_confirmation_title": "I-log out ang Card?",
-      "logout_confirmation_message": "Sigurado ka bang gusto mong mag-log out sa MetaMask Card account mo?",
+      "logout_confirmation_message": "Sigurado ka bang gusto mong mag-log out sa BitcoinPay Card account mo?",
       "logout_confirmation_cancel": "Kanselahin",
       "logout_confirmation_confirm": "Mag-log out",
       "enable_card_error": "Hindi napagana ang card. Subukan ulit mamaya.",
@@ -7407,7 +7407,7 @@
         "manage_spending_limit_description_full": "Naka-on ang buong pag-access",
         "manage_card": "Pamahalaan ang card",
         "advanced_card_management_description": "Tingnan ang aktibidad, cashback, freeze card, at higit pa",
-        "travel_title": "MetaMask Travel",
+        "travel_title": "BitcoinPay Travel",
         "travel_description": "Mag-book ng mga hotel na may hanggang 70% diskuwento",
         "card_tos_title": "Mga tuntunin at kundisyon",
         "order_metal_card": "Metal Card",
@@ -7531,7 +7531,7 @@
       "wallet_not_available": "Hindi available ang {{walletName}}",
       "already_in_wallet": "Nasa {{walletName}} na",
       "success_title": "Naidagdag ang card!",
-      "success_message": "Ang MetaMask Card mo ay naidagdag sa {{walletName}}.",
+      "success_message": "Ang BitcoinPay Card mo ay naidagdag sa {{walletName}}.",
       "error_title": "Hindi makapagdagdag ng card",
       "error_wallet_not_available": "Hindi available ang {{walletName}} sa device na ito. Pakitiyakin na nai-set up mo ang {{walletName}}.",
       "error_wallet_not_initialized": "Hindi nasimulan ang {{walletName}}. Paki-set up ang wallet mo at subukan muli.",
@@ -7588,7 +7588,7 @@
     },
     "version_guard": {
       "title": "Kinakailangan ng update",
-      "description": "Kinakailangan ang mas bagong bersyon ng MetaMask para magamit ang mga Reward. Paki-update para makapagpatuloy.",
+      "description": "Kinakailangan ang mas bagong bersyon ng BitcoinPay para magamit ang mga Reward. Paki-update para makapagpatuloy.",
       "update_button": "I-update ang MetaMask"
     },
     "season_error": {
@@ -7654,7 +7654,7 @@
     },
     "metal_card_claim": {
       "title": "Bawiin ang iyong reward",
-      "description": "Ang MetaMask Metal Card ay may mga kundisyon sa pagiging kwalipikado at hindi available sa lahat ng rehiyon. Kung hindi ka kwalipikado, makakatanggap ka na lang ng isang eksklusibong premium merch reward bilang kapalit.",
+      "description": "Ang BitcoinPay Metal Card ay may mga kundisyon sa pagiging kwalipikado at hindi available sa lahat ng rehiyon. Kung hindi ka kwalipikado, makakatanggap ka na lang ng isang eksklusibong premium merch reward bilang kapalit.",
       "contact_info": "Ibahagi ang iyong impormasyon sa pakikipag-ugnayan at makakatanggap ka ng tugon sa loob ng 2 linggo mula sa amin sa @MidwitMilhouse sa Telegram o sa christian.montoya@consensys.net.",
       "email_label": "Email",
       "email_validation_error": "Paki-lagay ang wastong valid email address",
@@ -7679,7 +7679,7 @@
     "loading_activity": "Naglo-load ng aktibidad...",
     "error_loading_activity": "Error sa paglo-load ng aktibidad",
     "activity_empty_title": "Walang kamakailang aktibidad.",
-    "activity_empty_description": "Gamitin ang MetaMask para makaipon ng point, mag-level-up, at ma-unlock ang mga reward.",
+    "activity_empty_description": "Gamitin ang BitcoinPay para makaipon ng point, mag-level-up, at ma-unlock ang mga reward.",
     "activity_empty_link": "Tingnan ang mga paraan para kumita",
     "filter_title": "I-filter ayon sa uri ng aktibidad",
     "filter_all": "Lahat",
@@ -7719,7 +7719,7 @@
     },
     "previous_season_summary": {
       "title": "Mga Resulta ng {{seasonName}}",
-      "update_metamask_version": "I-update ang MetaMask sa {{version}}",
+      "update_metamask_version": "I-update ang BitcoinPay sa {{version}}",
       "to_claim_rewards": " para mag-claim ng mga reward",
       "check_back_soon": "Bumalik sa lalong madaling panahon para i-claim ang mga reward mo",
       "point_earned": "point na nakuha",
@@ -7759,9 +7759,9 @@
       "step_confirm": "Susunod",
       "step_skip": "Laktawan",
       "step1_title": "Makakakuha ng mga point sa bawat pag-trade",
-      "step1_description": "Ang bawat pag-swap at pag-trade sa perps na isinasagawa mo sa MetaMask ay nagpapalapit sa iyo sa mga reward. Idagdag ang iyong mga account at makikita mong nadaragdagan ang iyong mga point.",
+      "step1_description": "Ang bawat pag-swap at pag-trade sa perps na isinasagawa mo sa BitcoinPay ay nagpapalapit sa iyo sa mga reward. Idagdag ang iyong mga account at makikita mong nadaragdagan ang iyong mga point.",
       "step2_title": "Mag-level up para sa mas malalaking perk",
-      "step2_description": "Abutin ang milestones ng mga point para makuha ang perks gaya ng 50% off na bayad sa perps, mga eksklusibong token, at libreng MetaMask Metal Card.",
+      "step2_description": "Abutin ang milestones ng mga point para makuha ang perks gaya ng 50% off na bayad sa perps, mga eksklusibong token, at libreng BitcoinPay Metal Card.",
       "step3_title": "Eksklusibong mga seasonal reward",
       "step3_description": "Ang bawat season ay nagdadala ng mga bagong perk. Sumali, makipagpaligsahan, at mag-claim ng kaya mo bago maubos ang oras.",
       "step4_title": "Makakaipon ka ng 250 point kapag nag-sign up ka!",
@@ -7775,14 +7775,14 @@
       "step4_bulk_link_checkbox": "I-opt in ang lahat ng account ko sa device na ito",
       "step4_linking_accounts": "Idinadagdag ang mga account... ({{current}}/{{total}})",
       "step4_linking_accounts_loading": "Idinadagdag ang mga karagdagang account...",
-      "step4_success_description": "Matagumpay kang nakapag-sign up para sa MetaMask Rewards!",
-      "step4_legal_disclaimer_1": "Sa pamamagitan ng pagpili sa 'I-claim ang mga Point', sumasang-ayon ka sa MetaMask Rewards",
+      "step4_success_description": "Matagumpay kang nakapag-sign up para sa BitcoinPay Rewards!",
+      "step4_legal_disclaimer_1": "Sa pamamagitan ng pagpili sa 'I-claim ang mga Point', sumasang-ayon ka sa BitcoinPay Rewards",
       "step4_legal_disclaimer_2": "Karagdagang Mga Tuntunin ng Paggamit at Abiso sa Privacy",
       "step4_legal_disclaimer_3": ". Susubaybayan namin ang aktibidad sa onchain para agad kang mabigyan ng reward –",
       "step4_legal_disclaimer_4": "matuto pa",
       "no_active_season": {
         "title": "Mag-sign up para sa mga Reward",
-        "description": "Sulitin ang MetaMask sa pamamagitan ng pinakamainam na programa ng katapatan sa crypto.",
+        "description": "Sulitin ang BitcoinPay sa pamamagitan ng pinakamainam na programa ng katapatan sa crypto.",
         "sign_up": "Mag-sign up",
         "sign_up_loading": "Nagsa-sign up...",
         "legal_disclaimer_1": "Sa pamamagitan ng pag-click sa 'Mag-sign up,' sumasang-ayon ka sa Mga Reward ng MetaMask",
@@ -8032,8 +8032,8 @@
       "musd_title": "Hanggang 3% bonus sa mga stable",
       "musd_subtitle": "Kalkulahin ang iyong mUSD bonus",
       "card_title": "Hanggang 3% cash back",
-      "card_subtitle": "Kunin ang iyong MetaMask Card ngayon",
-      "card_subtitle_cardholder": "I-access ang mga benepisyo ng iyong MetaMask Card"
+      "card_subtitle": "Kunin ang iyong BitcoinPay Card ngayon",
+      "card_subtitle_cardholder": "I-access ang mga benepisyo ng iyong BitcoinPay Card"
     },
     "campaigns_view": {
       "title": "Mga campaign",
@@ -8174,7 +8174,7 @@
   "ota_update_modal": {
     "title": "Handa na ang update",
     "description_ios": "Nagsagawa kami ng ilang mahahalagang pagsasaayos. I-reload para sa pinakabagong bersyon ng MetaMask.",
-    "description_android": "Nagsagawa kami ng ilang mahahalagang pagsasaayos. Isara at buksang muli ang MetaMask para ilapat ang update.",
+    "description_android": "Nagsagawa kami ng ilang mahahalagang pagsasaayos. Isara at buksang muli ang BitcoinPay para ilapat ang update.",
     "primary_action_reload": "I-reload",
     "primary_action_acknowledge": "Nakuha ko"
   },

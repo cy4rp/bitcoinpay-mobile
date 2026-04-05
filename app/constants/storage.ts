@@ -1,4 +1,4 @@
-const mm = 'MetaMask';
+const mm = 'BitcoinPay';
 const prefix = `@${mm}:`;
 const USE_TERMS_VERSION = 'v1.0';
 
@@ -39,7 +39,7 @@ export const METAMETRICS_ID = `${prefix}MetaMetricsId`;
  * Migration done in {@link migration109}
  * TODO remove MIXPANEL_METAMETRICS_ID:
  * - remove the legacy id test from {@link MetaMetrics}.#getMetaMetricsId()
- * @see https://github.com/MetaMask/metamask-mobile/issues/8833
+ * @see https://github.com/BitcoinPay/metamask-mobile/issues/8833
  */
 export const MIXPANEL_METAMETRICS_ID = `${prefix}MixpanelMetaMetricsId`;
 export const ANALYTICS_ID = `${prefix}AnalyticsId`;

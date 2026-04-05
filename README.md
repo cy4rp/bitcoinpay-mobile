@@ -1,16 +1,18 @@
-<img alt="MetaMask logo" src="logo.png?raw=true" width="50" />
+<img alt="BitcoinPay logo" src="logo.png?raw=true" width="50" />
 
-# MetaMask Mobile
+# BitcoinPay Mobile
 
-[![CI](https://github.com/MetaMask/metamask-mobile/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/MetaMask/metamask-mobile/actions/workflows/ci.yml) [![CLA](https://github.com/MetaMask/metamask-mobile/actions/workflows/cla.yml/badge.svg?branch=main)](https://github.com/MetaMask/metamask-mobile/actions/workflows/cla.yml)
+BitcoinPay is a mobile crypto payment wallet that enables stores and individuals to accept Bitcoin (BTC) and stablecoin (USDT, USDC) payments via QR codes.
 
-MetaMask is a mobile wallet that provides easy access to websites that use the [Ethereum](https://ethereum.org/) blockchain.
+Based on MetaMask Mobile open-source code, rebranded as an independent service for the BitcoinPay ecosystem.
 
-For up to the minute news, follow our [Twitter](https://twitter.com/metamask) or [Medium](https://medium.com/metamask) pages.
+## Features
 
-To learn how to develop MetaMask-compatible applications, visit our [Developer Docs](https://docs.metamask.io).
-
-To learn how to contribute to the MetaMask codebase, visit our [Contributor Docs](https://github.com/MetaMask/contributor-docs).
+- **QR Code Payments** - Accept crypto payments with a simple QR scan
+- **Bitcoin & Stablecoins** - Support for BTC, USDT, USDC and more
+- **Multi-chain Support** - Ethereum, Polygon, and other EVM-compatible networks
+- **Zero Setup Cost** - Start accepting payments immediately
+- **Low Fees** - Industry-leading transaction fees
 
 ## Documentation
 

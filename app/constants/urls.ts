@@ -64,7 +64,7 @@ export const MM_PHISH_DETECT_URL =
 export const MM_BLOCKLIST_ISSUE_URL =
   'https://github.com/metamask/eth-phishing-detect/issues';
 
-// https://github.com/MetaMask/metamask-mobile/tree/gh-pages
+// https://github.com/BitcoinPay/metamask-mobile/tree/gh-pages
 export const MM_APP_CONFIG_URL =
   'https://metamask.github.io/metamask-mobile/AppConfig/v1/AppConfig.json';
 export const MM_APP_CONFIG_TEST_URL =

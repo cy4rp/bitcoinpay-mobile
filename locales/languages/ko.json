@@ -22,7 +22,7 @@
   },
   "access_restricted": {
     "title": "액세스 제한",
-    "description_line1": "이 지갑 주소는 규정 준수 심사 중 플래그 처리되었습니다. 그 결과, 일부 MetaMask 서비스를 이용할 수 없습니다.",
+    "description_line1": "이 지갑 주소는 규정 준수 심사 중 플래그 처리되었습니다. 그 결과, 일부 BitcoinPay 서비스를 이용할 수 없습니다.",
     "description_line2": "오류라고 생각되면 지원팀에 문의하여 검토를 요청하세요.",
     "contact_support": "지원팀에 문의"
   },
@@ -234,7 +234,7 @@
   },
   "onboarding": {
     "title": "시작해 보세요!",
-    "sync_desc": "MetaMask 확장 프로그램 또는 다른 지갑을 사용하고 있으신 경우, 기존에 보유한 자산 관리를 위해 이를 연동하거나 불러오세요.",
+    "sync_desc": "BitcoinPay 확장 프로그램 또는 다른 지갑을 사용하고 있으신 경우, 기존에 보유한 자산 관리를 위해 이를 연동하거나 불러오세요.",
     "create_desc": "첫 지갑을 설정하고 탈중앙화된 앱을 체험해 보세요.",
     "import": "기존 지갑을 불러오거나 새 지갑을 만드세요",
     "import_wallet_button": "지갑 동기화 또는 불러오기",
@@ -255,8 +255,8 @@
     "step2": "비밀번호 생성",
     "step3": "지갑 보호",
     "already_have": "이미 지갑이 있으신가요?",
-    "sync_existing": "현재 보유 중인 MetaMask 지갑을 브라우저 확장 프로그램에서 동기화하거나 수동으로 불러오세요.",
-    "scan_title": "MetaMask 확장 프로그램 동기화 절차",
+    "sync_existing": "현재 보유 중인 BitcoinPay 지갑을 브라우저 확장 프로그램에서 동기화하거나 수동으로 불러오세요.",
+    "scan_title": "BitcoinPay 확장 프로그램 동기화 절차",
     "scan": "스캔",
     "scan_step_1": "데스크탑에서 확장 기능 열기",
     "scan_step_2": "설정 > 고급으로 이동",
@@ -357,7 +357,7 @@
     "step4": {
       "title": "메인 메뉴",
       "content1": "이 메뉴에서 트랜잭션 기록, 설정 및 지원 등을 이용하실 수 있습니다.",
-      "content2": "계정 및 MetaMask 설정에 접속하시면 추가적인 작업을 수행할 수 있습니다."
+      "content2": "계정 및 BitcoinPay 설정에 접속하시면 추가적인 작업을 수행할 수 있습니다."
     },
     "step5": {
       "title": "브라우저 탐색",
@@ -376,7 +376,7 @@
     },
     "step1": {
       "title": "지갑의 세계에 오신 걸 환영합니다!",
-      "content1": "블록체인에서는 지갑이 필요합니다(약간의 ETH도 포함). 그럼 MetaMask 지갑 사용법을 살펴보겠습니다."
+      "content1": "블록체인에서는 지갑이 필요합니다(약간의 ETH도 포함). 그럼 BitcoinPay 지갑 사용법을 살펴보겠습니다."
     },
     "step2": {
       "title": "계정",
@@ -408,14 +408,14 @@
     "subtitle": "오래 걸리지 않을 것입니다"
   },
   "import_wallet": {
-    "title": "이미 MetaMask 사용자인가요?",
+    "title": "이미 BitcoinPay 사용자인가요?",
     "sub_title": "확장 프로그램과 동기화",
     "sync_help": "확장 프로그램과 지갑을 동기화하세요",
     "sync_help_step_one": "1. 확장 프로그램을 켭니다",
     "sync_help_step_two": "2. 설정 > 고급으로 이동합니다",
     "sync_help_step_three": "3. \"모바일과 동기화\"를 클릭합니다",
     "sync_help_step_four": "4. QR 코드를 스캔해 동기화를 시작합니다",
-    "sync_from_browser_extension_button": "MetaMask 확장 프로그램과 동기화하기",
+    "sync_from_browser_extension_button": "BitcoinPay 확장 프로그램과 동기화하기",
     "or": "또는",
     "import_from_seed_button": "비밀 복구 구문을 활용해 불러오기"
   },
@@ -446,11 +446,11 @@
     "clean_vault_error": "저장 공간 부족으로 오류가 발생했습니다. 로컬 데이터가 손상되었습니다. MetaMask를 다시 설치하고 비밀 복구 구문으로 복원을 진행하세요.",
     "seedless_password_outdated": "비밀번호가 최근에 변경되었습니다.",
     "seedless_password_outdated_modal_title": "비밀번호가 변경되었습니다",
-    "seedless_password_outdated_modal_content": "비밀번호가 최근에 변경되었습니다. 따라서 MetaMask 로그인 상태를 계속 유지하려면 새 비밀번호를 입력해야 합니다.",
+    "seedless_password_outdated_modal_content": "비밀번호가 최근에 변경되었습니다. 따라서 BitcoinPay 로그인 상태를 계속 유지하려면 새 비밀번호를 입력해야 합니다.",
     "seedless_password_outdated_modal_confirm": "계속",
     "no_internet_connection": "시드리스 계정 복구 기능을 사용하려면 인터넷 연결이 필요합니다.",
     "seedless_controller_error_prompt_title": "문제가 발생했습니다",
-    "seedless_controller_error_prompt_description": "잠금해제 중 문제가 발생했습니다. Google로 다시 로그인한 후 MetaMask 비밀번호를 입력하세요.",
+    "seedless_controller_error_prompt_description": "잠금해제 중 문제가 발생했습니다. Google로 다시 로그인한 후 BitcoinPay 비밀번호를 입력하세요.",
     "seedless_controller_error_prompt_primary_button_label": "로그인",
     "security_alert_title": "보안 경고",
     "security_alert_desc": "계속하려면, 비밀번호를 켜거나 또는 회원님의 기기에서 지원되는 생체 인식 인증 방법을 켜야 합니다 (FaceID, TouchID 또는 지문)",
@@ -492,13 +492,13 @@
     "error": "오류"
   },
   "choose_password": {
-    "title": "MetaMask 비밀번호",
-    "description": "이 장치에서만 MetaMask 잠금해제에 사용됩니다.",
+    "title": "BitcoinPay 비밀번호",
+    "description": "이 장치에서만 BitcoinPay 잠금해제에 사용됩니다.",
     "description_social_login": "이를 모든 기기에서 지갑을 복구하는 데 사용하세요.",
     "description_social_login_update": "이 비밀번호를 잃어버리면 모든 기기에서 지갑에 접근할 수 없게 됩니다. 안전한 곳에 보관하세요.",
     "description_social_login_update_ios": "모든 장치에서 지갑 복구에 사용됩니다. MetaMask에서 초기화할 수 없습니다.",
     "description_social_login_update_bold": "MetaMask는 비밀번호를 재설정해 드릴 수 없습니다.",
-    "subtitle": "이 비밀번호는 이 기기에서 귀하의 MetaMask 지갑을 잠금 해제할 때만 사용됩니다.",
+    "subtitle": "이 비밀번호는 이 기기에서 귀하의 BitcoinPay 지갑을 잠금 해제할 때만 사용됩니다.",
     "password": "비밀번호 생성",
     "confirm_password": "비밀번호 확인",
     "create_button": "비밀번호 생성",
@@ -530,8 +530,8 @@
   "wallet_creation_error": {
     "title": "문제가 발생했습니다",
     "social_login_description_part1": "지갑을 생성하는 중 오류가 발생했습니다. 다시 시도하고 문제가 계속되면 다음에 문의하세요:",
-    "srp_description_part1": "문제 해결 및 MetaMask 개선을 위해 오류 보고서를 익명으로 보내주세요. 문제가 계속되면 다음에 문의하세요:",
-    "metamask_support": "MetaMask 지원",
+    "srp_description_part1": "문제 해결 및 BitcoinPay 개선을 위해 오류 보고서를 익명으로 보내주세요. 문제가 계속되면 다음에 문의하세요:",
+    "metamask_support": "BitcoinPay 지원",
     "error_report": "오류 보고서",
     "copy": "복사",
     "copied": "복사 완료",
@@ -542,7 +542,7 @@
   },
   "reset_password": {
     "title": "비밀번호 변경",
-    "subtitle": "이 비밀번호는 이 기기에서 귀하의 MetaMask 지갑을 잠금 해제할 때만 사용됩니다.",
+    "subtitle": "이 비밀번호는 이 기기에서 귀하의 BitcoinPay 지갑을 잠금 해제할 때만 사용됩니다.",
     "password": "새 비밀번호",
     "confirm_password": "비밀번호 확인",
     "reset_button": "비밀번호 재설정",
@@ -595,8 +595,8 @@
     "invalid_qr_code_title": "잘못된 QR 코드",
     "invalid_qr_code_message": "이 QR 코드는 유효한 비밀 복구 구문이 아닙니다",
     "enter_your_secret_recovery_phrase": "비밀복구구문을 입력하세요",
-    "metamask_password": "MetaMask 비밀번호",
-    "metamask_password_description": "이 장치에서만 MetaMask 잠금해제에 사용됩니다.",
+    "metamask_password": "BitcoinPay 비밀번호",
+    "metamask_password_description": "이 장치에서만 BitcoinPay 잠금해제에 사용됩니다.",
     "seed_phrase_required": "비밀복구구문이 필요합니다",
     "re_enter_password": "비밀번호를 다시 입력하세요",
     "use_at_least_8_characters": "8자 이상이어야 합니다",
@@ -656,7 +656,7 @@
     "lock_ok": "예",
     "lock_cancel": "아니오",
     "feedback": "피드백",
-    "metamask_support": "MetaMask 지원",
+    "metamask_support": "BitcoinPay 지원",
     "public_address": "공개 주소"
   },
   "send": {
@@ -1083,7 +1083,7 @@
       "apply": "적용",
       "max_button": "최대",
       "done_button": "완료",
-      "metamask_fee": "MetaMask 수수료",
+      "metamask_fee": "BitcoinPay 수수료",
       "metamask_fee_tooltip": "MetaMask는 Hyperliquid 입금에 대해 수수료를 부과하지 않습니다",
       "minimum_deposit_error": "최소 예치금은 {{amount}} USDC입니다",
       "processing_title": "예치 처리 중",
@@ -1168,7 +1168,7 @@
       "success_title": "출금 성공",
       "success_description": "Hyperliquid에서 {{amount}} USDC가 출금되었습니다",
       "network_fee": "네트워크 수수료",
-      "metamask_fee": "MetaMask 수수료",
+      "metamask_fee": "BitcoinPay 수수료",
       "total_fees": "총 수수료",
       "receiving_amount": "받을 금액:",
       "estimated_time": "예상 시간",
@@ -1196,7 +1196,7 @@
       "network_fee": "네트워크 수수료",
       "estimated_time": "예상 시간",
       "rate": "비율",
-      "metamask_fee": "MetaMask 수수료",
+      "metamask_fee": "BitcoinPay 수수료",
       "metamask_fee_tooltip": "MetaMask는 Hyperliquid 트랜잭션에 수수료를 부과하지 않습니다",
       "metamask_fee_tooltip_deposit": "MetaMask는 Hyperliquid 입금에 대해 수수료를 부과하지 않습니다",
       "metamask_fee_tooltip_withdrawal": "MetaMask는 Hyperliquid 출금에 대해 수수료를 부과하지 않습니다"
@@ -1726,15 +1726,15 @@
       "fees": {
         "title": "수수료",
         "content": "거래 수수료는 포지션을 시작하거나 종료할 때 부과됩니다.",
-        "metamask_fee": "MetaMask 수수료",
+        "metamask_fee": "BitcoinPay 수수료",
         "provider_fee": "공급자 수수료",
         "bridge_fee": "브릿지 수수료",
         "total": "총 수수료",
-        "discount_message": "MetaMask 보상으로 {{percentage}}%를 절약하고 있습니다."
+        "discount_message": "BitcoinPay 보상으로 {{percentage}}%를 절약하고 있습니다."
       },
       "closing_fees": {
         "title": "청산 수수료",
-        "metamask_fee": "MetaMask 수수료",
+        "metamask_fee": "BitcoinPay 수수료",
         "provider_fee": "공급자 수수료"
       },
       "estimated_pnl": {
@@ -1795,7 +1795,7 @@
       },
       "points": {
         "title": "포인트",
-        "content": "포인트는 스왑, 브릿지, 무기한 선물 거래 등의 트랜잭션을 완료할 때마다 적립되며, 이를 통해 MetaMask 보상을 획득할 수 있습니다."
+        "content": "포인트는 스왑, 브릿지, 무기한 선물 거래 등의 트랜잭션을 완료할 때마다 적립되며, 이를 통해 BitcoinPay 보상을 획득할 수 있습니다."
       },
       "market_hours": {
         "title": "시장 시간",
@@ -1888,7 +1888,7 @@
     },
     "support": {
       "title": "지원팀에 문의",
-      "description": "도움이 필요하면 MetaMask 지원팀에 문의하세요"
+      "description": "도움이 필요하면 BitcoinPay 지원팀에 문의하세요"
     },
     "feedback": {
       "title": "피드백 보내기"
@@ -1923,7 +1923,7 @@
     },
     "crossMargin": {
       "title": "교차 마진 미지원",
-      "message": "MetaMask 무기한 거래는 격리 마진 거래만 지원합니다. MetaMask에서 거래하려면 먼저 교차 마진 포지션을 청산해야 합니다.",
+      "message": "BitcoinPay 무기한 거래는 격리 마진 거래만 지원합니다. MetaMask에서 거래하려면 먼저 교차 마진 포지션을 청산해야 합니다.",
       "dismiss": "컨펌"
     },
     "sort": {
@@ -1998,7 +1998,7 @@
         "size": "규모",
         "limit_price": "지정가",
         "filled": "체결",
-        "metamask_fee": "MetaMask 수수료",
+        "metamask_fee": "BitcoinPay 수수료",
         "hyperliquid_fee": "Hyperliquid 수수료",
         "total_fee": "총 수수료",
         "liquidated": "강제 청산됨",
@@ -2122,7 +2122,7 @@
     }
   },
   "predict": {
-    "title": "MetaMask 예측",
+    "title": "BitcoinPay 예측",
     "prediction_markets": "예측 시장",
     "market_list": "시장 목록",
     "loading": "로딩 중...",
@@ -2348,11 +2348,11 @@
       "fees": "수수료",
       "provider_fee_label": "Polymarket 수수료",
       "provider_fee": "공급자 수수료",
-      "metamask_fee": "MetaMask 수수료",
+      "metamask_fee": "BitcoinPay 수수료",
       "total": "총액",
       "estimated_points": "예상 포인트",
       "points_tooltip": "포인트",
-      "points_tooltip_content_1": "포인트는 스왑, 브릿지, 예측과 같은 거래를 완료하여 적립할 수 있으며 MetaMask 리워드를 획득하는 데 사용할 수 있습니다.",
+      "points_tooltip_content_1": "포인트는 스왑, 브릿지, 예측과 같은 거래를 완료하여 적립할 수 있으며 BitcoinPay 리워드를 획득하는 데 사용할 수 있습니다.",
       "points_tooltip_content_2": "이 값은 추정치이며, 거래가 완료되면 최종적으로 확정됩니다. 포인트는 보상 잔액에 반영되기까지 최대 1시간이 걸릴 수 있습니다.",
       "points_error": "지금 포인트를 불러올 수 없습니다",
       "points_error_content": "이 트랜잭션에 대해서도 포인트가 적립됩니다. 포인트가 계정에 추가되면 알려드립니다. 약 한 시간이 지나면 보상 탭에서도 확인할 수 있습니다.",
@@ -2427,7 +2427,7 @@
       "subtitle": "지갑 내에서 9개 체인을 자유롭게 이동하세요"
     },
     "card": {
-      "title": "MetaMask 카드",
+      "title": "BitcoinPay 카드",
       "subtitle": "일부 지역에서만 이용 가능"
     },
     "fund": {
@@ -2674,7 +2674,7 @@
     "privacy_policy_button": "개인정보 보호방침",
     "agree": "동의합니다",
     "decline": "아니요, 괜찮습니다",
-    "description_title": "MetaMask 개선",
+    "description_title": "BitcoinPay 개선",
     "description_content_1": "이러한 권한을 요청하고자 합니다. 언제든지 사용 데이터를 거부하거나 삭제할 수 있습니다.",
     "description_content_2": "메트릭을 수집할 때는 항상...",
     "description_content_3": "프로필 사용 데이터를 수집하는 동안 개인정보 보호 방법을 알아보세요.",
@@ -2806,7 +2806,7 @@
     "no": "아니오",
     "yes_remove_it": "네. 제거하겠습니다",
     "remove_hardware_account": "하드웨어 계정 제거",
-    "remove_hw_account_alert_description": "이 하드웨어 지갑 계정을 제거하시겠습니까? 이 계정을 MetaMask 모바일에서 다시 사용하려면 하드웨어 지갑에 다시 동기화해야 합니다.",
+    "remove_hw_account_alert_description": "이 하드웨어 지갑 계정을 제거하시겠습니까? 이 계정을 BitcoinPay 모바일에서 다시 사용하려면 하드웨어 지갑에 다시 동기화해야 합니다.",
     "remove_snap_account": "Snap 계정 제거",
     "remove_snap_account_alert_description": "이 계정이 지갑에서 제거됩니다. 계속하기 전에 가져온 계정의 원래 비밀복구구문이나 개인 키를 가지고 있는지 확인하세요. 계정 드롭다운에서 계정을 다시 가져오거나 생성할 수 있습니다.",
     "remove_account_alert_remove_btn": "제거",
@@ -2849,7 +2849,7 @@
     "learn_more": "더 보기",
     "advisory_by": "Ethereum Phishing Detector와 PhishFort에서 자문 제공",
     "potential_threat": "다음과 같은 잠재적 위협이 있습니다.",
-    "fake_metamask": "MetaMask 위조 버전",
+    "fake_metamask": "BitcoinPay 위조 버전",
     "srp_theft": "비밀복구구문 또는 비밀번호 도용",
     "malicious_transactions": "자산 도난으로 이어지는 악성 거래",
     "secret_recovery_phrase": "비밀복구구문입니다",
@@ -2938,7 +2938,7 @@
     "manage": "관리",
     "resources": "리소스",
     "permissions": "권한",
-    "card_title": "MetaMask 카드",
+    "card_title": "BitcoinPay 카드",
     "settings": "설정",
     "networks": "네트워크",
     "log_out": "로그아웃",
@@ -2967,7 +2967,7 @@
     "enable_device_authentication": "장치 인증 활성화",
     "enable_device_authentication_desc": "장치의 바이오메트릭 또는 암호를 사용해 MetaMask를 잠금 해제하세요.",
     "auto_lock_desc": "앱이 자동으로 잠기기 전까지 걸리는 시간을 선택하세요.",
-    "state_logs_desc": "이렇게 하면 MetaMask에서 발생할 수 있는 문제를 디버깅하는 데 도움이 됩니다. 햄버거 아이콘 > 피드백 보내기로 문의하시거나 또는 기존 문의 티켓이 있으면, 해당 티켓으로 회신하여 MetaMask 지원 서비스로 보내주시기 바랍니다.",
+    "state_logs_desc": "이렇게 하면 MetaMask에서 발생할 수 있는 문제를 디버깅하는 데 도움이 됩니다. 햄버거 아이콘 > 피드백 보내기로 문의하시거나 또는 기존 문의 티켓이 있으면, 해당 티켓으로 회신하여 BitcoinPay 지원 서비스로 보내주시기 바랍니다.",
     "autolock_immediately": "즉시",
     "autolock_never": "절대",
     "autolock_after": " {{time}}초 후",
@@ -3108,9 +3108,9 @@
     "remove_network_title": "해당 네트워크를 제거하시겠습니까?",
     "remove_network": "제거",
     "cancel_remove_network": "취소",
-    "info_title": "MetaMask 소개",
-    "info_title_beta": "MetaMask 베타 소개",
-    "info_title_flask": "MetaMask Flask 소개",
+    "info_title": "BitcoinPay 소개",
+    "info_title_beta": "BitcoinPay 베타 소개",
+    "info_title_flask": "BitcoinPay Flask 소개",
     "experimental_title": "실험적",
     "experimental_desc": "지갑 연결 및 기타...",
     "legal_title": "법률",
@@ -3130,7 +3130,7 @@
     "clear_history_desc": "전체 검색 기록을 지우려면 이 옵션을 선택하세요.",
     "clear_cookies_desc": "브라우저의 쿠키를 지우려면 이 옵션을 선택하세요.",
     "metametrics_title": "메타매트릭스 참여",
-    "metametrics_description": "MetaMetrics에 참여하시면 MetaMask 개선에 도움이 됩니다.",
+    "metametrics_description": "MetaMetrics에 참여하시면 BitcoinPay 개선에 도움이 됩니다.",
     "data_collection_title": "마케팅 목적의 데이터 수집",
     "data_collection_description": "당사는 MetaMetrics를 사용하여 사용자가 마케팅 커뮤니케이션과 어떻게 상호 작용하는지 파악합니다. 관련 뉴스(예: 제품 기능 및 기타 자료)를 공유할 수 있습니다.",
     "batch_balance_requests_title": "일괄 계정 잔액 요청",
@@ -3200,11 +3200,11 @@
     "delete_metrics_error_title": "지금 데이터를 가져올 수 없습니다.",
     "delete_metrics_error_description": "분석 시스템 서버 문제로 지금 요청을 처리할 수 없습니다. 나중에 다시 시도하세요.",
     "ok": "확인",
-    "clear_sdk_connections_title": "모든 MetaMask SDK 연결 지우기",
+    "clear_sdk_connections_title": "모든 BitcoinPay SDK 연결 지우기",
     "clear_sdk_connections_text": "모든 연결이 삭제되며 디앱은 다시 연결을 위해 요청할 것입니다.",
-    "sdk_connections": "MetaMask SDK 연결",
+    "sdk_connections": "BitcoinPay SDK 연결",
     "manage_sdk_connections_title": "연결 관리",
-    "manage_sdk_connections_text": "사이트 및/또는 MetaMask SDK 연결 제거",
+    "manage_sdk_connections_text": "사이트 및/또는 BitcoinPay SDK 연결 제거",
     "fiat_on_ramp": {
       "title": "암호화폐 매수 및 매도",
       "description": "지역 & 더 보기...",
@@ -3327,7 +3327,7 @@
     "simulation_details_description": "이 기능을 켜면 트랜잭션을 확정하기 전에 트랜잭션의 잔액 변동을 추정할 수 있습니다. 이 기능이 트랜잭션의 최종 결과를 보장하지는 않습니다. ",
     "simulation_details_learn_more": "자세히 알아보세요.",
     "aes_crypto_test_form_title": "AES 암호화 - 테스트 양식",
-    "aes_crypto_test_form_description": "E2E 테스트 전용으로 개발된 섹션입니다. 앱에서 이 섹션이 표시되면 MetaMask 지원팀에 보고하세요.",
+    "aes_crypto_test_form_description": "E2E 테스트 전용으로 개발된 섹션입니다. 앱에서 이 섹션이 표시되면 BitcoinPay 지원팀에 보고하세요.",
     "developer_options": {
       "title": "개발자 옵션",
       "generate_trace_test": "트레이스 테스트 생성",
@@ -3368,7 +3368,7 @@
     "manage_connections": "연결 관리",
     "manage": "관리",
     "cancel": "취소",
-    "loading": "MetaMask 연결 중...",
+    "loading": "BitcoinPay 연결 중...",
     "unkown_dapp": "디앱 이름을 사용할 수 없습니다",
     "unknown": "알 수 없음",
     "no_connections": "연결 없음",
@@ -3426,14 +3426,14 @@
     ],
     "private_key_explanation": "그러니 이를 안전하게 다른 사람이 볼 수 없게 보관해 놓으시기 바랍니다.",
     "private_key_warning": "이것은 현재 선택된 계정용 개인 키 {{accountName}} 입니다. 이 키를 절대 다른 사람에게 공개하지 마세요. 개인 키를 가지고 있는 사람은 누구든 해당 계정을 완전히 통제할 수 있습니다. 계정의 자금을 다른 곳에 송금할 수도 있습니다.",
-    "seed_phrase_warning_explanation": "다른 사람에게 화면을 보여주지 마세요. MetaMask 지원팀은 해당 정보를 절대 요구하지 않습니다.",
+    "seed_phrase_warning_explanation": "다른 사람에게 화면을 보여주지 마세요. BitcoinPay 지원팀은 해당 정보를 절대 요구하지 않습니다.",
     "private_key_warning_explanation": "이 키를 절대 다른 사람에게 공개하지 마세요. 개인 키를 가지고 있는 사람은 누구든 해당 계정을 완전히 통제할 수 있습니다. 계정의 자금을 다른 곳에 송금할 수도 있습니다.",
     "reveal_srp_description": "비밀복구구문을 알면 지갑을 완전히 제어할 수 있습니다. 절대로 타인과 공유하지 마세요.",
     "reveal_credential_modal": [
       "{{credentialName}} 사용자 이름으로 ",
       "계정과 자금에 완전히 액세스할 수 있습니다.\n\n이 정보를 아무에게도 알려주지 마세요.\n",
       "지갑 및 자금 전체에 접속할 수 있습니다.\n\n 누구에게도 이 구문을 공유하지 마세요.\n",
-      "MetaMask 지원팀은 절대 이를 요구하지 않습니다.",
+      "BitcoinPay 지원팀은 절대 이를 요구하지 않습니다.",
       "정보를 요구하는 경우 피싱 사기일 수 있습니다."
     ],
     "seed_phrase": "비밀 복구 구문",
@@ -3473,7 +3473,7 @@
   },
   "password_reset": {
     "password_title": "비밀번호",
-    "password_desc": "기기에 설치된 MetaMask 앱을 잠금 해제하는 비밀번호는 보안 강도가 높아야 합니다. 비밀번호를 잃어버렸을 때는 지갑을 다시 불러오기 위해 비밀 복구 구문이 필요합니다.",
+    "password_desc": "기기에 설치된 BitcoinPay 앱을 잠금 해제하는 비밀번호는 보안 강도가 높아야 합니다. 비밀번호를 잃어버렸을 때는 지갑을 다시 불러오기 위해 비밀 복구 구문이 필요합니다.",
     "password_learn_more": "더 보기",
     "change_password": "비밀번호 변경",
     "password_hint": "비밀번호 힌트"
@@ -3685,7 +3685,7 @@
     "cancel": "취소",
     "error": "오류",
     "attempting_to_scan_with_wallet_locked": "QR 코드를 스캔하시는 것 같습니다. 먼저 지갑을 잠금 해제하세요.",
-    "attempting_sync_from_wallet_error": "확장 프로그램과의 동기화를 시도하시는 것 같습니다. 이를 위해서는 현재 지갑을 지워야 합니다. \n\n 신규 버전 앱을 지우거나 재설치하고 나면 \"MetaMask 확장 프로그램과 동기화\" 옵션을 선택하세요. 중요!: 지갑을 지우기 전에 비밀 복구 구문을 반드시 백업하세요.",
+    "attempting_sync_from_wallet_error": "확장 프로그램과의 동기화를 시도하시는 것 같습니다. 이를 위해서는 현재 지갑을 지워야 합니다. \n\n 신규 버전 앱을 지우거나 재설치하고 나면 \"BitcoinPay 확장 프로그램과 동기화\" 옵션을 선택하세요. 중요!: 지갑을 지우기 전에 비밀 복구 구문을 반드시 백업하세요.",
     "not_allowed_error_title": "카메라 접근 권한 허용",
     "not_allowed_error_desc": "QR 코드를 스캔하려면 기기 설정 메뉴에서 MetaMask에 카메라 접근 권한을 허용해야 합니다.",
     "unrecognized_address_qr_code_title": "읽을 수 없는 QR 코드",
@@ -4085,7 +4085,7 @@
     "request_from": "요청자:",
     "network_fee": "네트워크 수수료",
     "network_fee_tooltip": "네트워크에서 트랜잭션 처리를 위해 지불된 금액입니다.",
-    "confirm_gas_fee_token_tooltip": "이 비용은 사용자 트랜잭션을 처리하는 대가로 네트워크에 지불됩니다. 여기에는 ETH 계열이 아닌 토큰이나 사전 충전된 ETH에 대한 {{metamaskFeeFiat}} MetaMask 수수료가 포함됩니다.",
+    "confirm_gas_fee_token_tooltip": "이 비용은 사용자 트랜잭션을 처리하는 대가로 네트워크에 지불됩니다. 여기에는 ETH 계열이 아닌 토큰이나 사전 충전된 ETH에 대한 {{metamaskFeeFiat}} BitcoinPay 수수료가 포함됩니다.",
     "paid_by_metamask": "MetaMask가 지불함",
     "confirm_gas_fee_token_metamask_fee": "{{metamaskFeeFiat}} 수수료 포함",
     "smart_account_upgrade": "스마트 계정으로 전환",
@@ -4133,7 +4133,7 @@
     "status_cancelled_header": "트랜잭션이 취소되었습니다",
     "status_cancelled_description": "트랜잭션이 완료되지 않았습니다. 가스비 지출이 없도록 트랜잭션을 취소했습니다.",
     "status_failed_header": "트랜잭션 실패",
-    "status_failed_description": "시장 상황이 갑자기 변하면 실패할 수 있습니다. 문제가 지속되면 MetaMask 고객 지원으로 문의하세요.",
+    "status_failed_description": "시장 상황이 갑자기 변하면 실패할 수 있습니다. 문제가 지속되면 BitcoinPay 고객 지원으로 문의하세요.",
     "view_transaction": "트랜잭션 보기",
     "view_activity": "활동 보기",
     "return_to_dapp": "{{dappName}}(으)로 돌아가기",
@@ -4186,7 +4186,7 @@
     "status_not_ok": "네트워크에 문제가 있습니다",
     "want_to_add_network": "이 네트워크를 추가하시겠습니까?",
     "add_custom_network": "사용자 지정 네트워크 추가",
-    "network_infomation": "이것은 이 네트워크가 MetaMask 내에 사용될 수 있게 합니다",
+    "network_infomation": "이것은 이 네트워크가 BitcoinPay 내에 사용될 수 있게 합니다",
     "network_endorsement": "MetaMask는 커스텀 네트워크나 해당 네트워크의 보안을 보증하지 않습니다.",
     "learn_about": "다음에 대해 알아보세요:",
     "network_risk": "사기 및 네트워크 보안 위험",
@@ -4266,7 +4266,7 @@
     "cancel": "취소",
     "got_it": "컨펌",
     "connection_details_title": "연결 세부 정보",
-    "connection_details_description": "{{connectionDateTime}}에 MetaMask 브라우저를 이용해 이 사이트에 접속했습니다",
+    "connection_details_description": "{{connectionDateTime}}에 BitcoinPay 브라우저를 이용해 이 사이트에 접속했습니다",
     "title_add_network_permission": "네트워크 권한 추가",
     "add_this_network": "이 네트워크 추가",
     "permitted_networks": "허용된 네트워크",
@@ -4353,7 +4353,7 @@
   "import_private_key": {
     "title": "계정 가져오기",
     "description_one": "가져온 개인 키는 계정에 백업되고, 동일한 Google 또는 Apple 계정으로 로그인하면 자동으로 동기화됩니다.",
-    "description_srp": "가져온 계정을 지갑에서 확인할 수 있습니다. 다만 해당 계정은 MetaMask 비밀복구구문으로는 복구할 수 없습니다.",
+    "description_srp": "가져온 계정을 지갑에서 확인할 수 있습니다. 다만 해당 계정은 BitcoinPay 비밀복구구문으로는 복구할 수 없습니다.",
     "learn_more": "더 보기",
     "learn_more_here": "가져온 키의 작동 방식.",
     "learn_more_srp": "가져온 계정 더 알아보기",
@@ -4414,7 +4414,7 @@
     "step_1_description": "비밀번호 생성",
     "step_2": "2단계:",
     "step_2_description": "지갑 비밀 복구 구문을 저장하세요",
-    "info_text_1": "잠깐의 시간을 내어 MetaMask 지갑 설정을 완료하세요.",
+    "info_text_1": "잠깐의 시간을 내어 BitcoinPay 지갑 설정을 완료하세요.",
     "info_text_2": "이를 통해 오직 본인만이 자금에 접속할 수 있고 기기를 잃어버렸을 때 지갑을 복구할 수 있습니다.",
     "cta_text": "비밀번호 생성",
     "creating_password": "비밀번호 생성 중...",
@@ -4583,7 +4583,7 @@
   "phishing": {
     "ethereum_phishing_detection": "이더리움 피싱 사기 탐지",
     "ethereum_phishing_detector": "이더리움 피싱 사기 탐지기",
-    "intro": "이 도메인은 현재 MetaMask 도메인 위험 목록에 있습니다. 즉 이용 가능한 정보를 바탕으로, MetaMask는 이 도메인이 귀하의 보안에 침투할 수 있다고 판단한 것입니다. 추가적인 안전 조치로 MetaMask는 해당 사이트의 접근을 제한했습니다. 이를 무시하고 계속 진행하고 싶으시면 나머지 경고 내용을 읽어 위험을 감수하고 계속 진행하는 방법을 확인하세요.",
+    "intro": "이 도메인은 현재 BitcoinPay 도메인 위험 목록에 있습니다. 즉 이용 가능한 정보를 바탕으로, MetaMask는 이 도메인이 귀하의 보안에 침투할 수 있다고 판단한 것입니다. 추가적인 안전 조치로 MetaMask는 해당 사이트의 접근을 제한했습니다. 이를 무시하고 계속 진행하고 싶으시면 나머지 경고 내용을 읽어 위험을 감수하고 계속 진행하는 방법을 확인하세요.",
     "reasons": "사이트가 위험 목록에 오르는 데에는 여러가지 이유가 있습니다. 그MetaMask은 다른 산업에서도 널리 사용되고 있는 목록을 병합한 것입니다. 사기 이력, 보안 위험 같이 테스트 결과 위험이 확인되는 것 등이 이유가 될 수 있습니다.",
     "list_content": "위험 목록에 있는 도메인은 명백히 악의적인 웹사이트이거나 악의적인 행위자에 의해 해킹을 당한 적이 있는 적법한 웹사이트 등일 수 있습니다.",
     "to_read_more": "이 웹사이트 대해 더 자세히 알아보세요",
@@ -4696,7 +4696,7 @@
     "erc721_received_title": "NFT 받음",
     "erc1155_sent_title": "NFT 전송됨",
     "erc1155_received_title": "NFT 받음",
-    "default_message_title": "MetaMask",
+    "default_message_title": "BitcoinPay",
     "default_message_description": "탭하여 보기",
     "received_payment_title": "즉시 결제됨",
     "pending_message": "확인을 기다리는 중",
@@ -4732,7 +4732,7 @@
       "funds_received_description": "{{amount}} {{symbol}}(을)를 받았습니다",
       "funds_received_default_description": "토큰을 받았습니다",
       "metamask_swap_completed_title": "스왑 완료",
-      "metamask_swap_completed_description": "MetaMask 스왑이 완료되었습니다",
+      "metamask_swap_completed_description": "BitcoinPay 스왑이 완료되었습니다",
       "nft_sent_title": "NFT 전송됨",
       "nft_sent_description": "NFT를 성공적으로 보냈습니다",
       "nft_received_title": "NFT 받음",
@@ -4864,8 +4864,8 @@
     "network_not_supported": "현재 네트워크는 지원하지 않음",
     "select_provider": "선호하는 공급업체 선택",
     "switch_network": "메인넷이나 세폴리아로 전환하세요",
-    "card_title": "MetaMask 카드 버튼 항상 표시",
-    "card_desc": "MetaMask 카드는 일부 국가의 거주자만 사용할 수 있습니다.",
+    "card_title": "BitcoinPay 카드 버튼 항상 표시",
+    "card_desc": "BitcoinPay 카드는 일부 국가의 거주자만 사용할 수 있습니다.",
     "daimo_demo_title": "DaimoPay 데모 환경 사용",
     "daimo_demo_desc": "카드 결제를 위해 DaimoPay 데모와 실제 서비스 환경 간을 전환할 수 있습니다."
   },
@@ -4978,7 +4978,7 @@
     "wyre_minimum_deposit": "최소 예금은 {{amount}}입니다",
     "wyre_maximum_deposit": "최대 예금은 {{amount}}입니다",
     "apple_pay_purchase": "{{currency}} 구매",
-    "apple_pay_provider_total_label": "{{provider}} (MetaMask 경유)",
+    "apple_pay_provider_total_label": "{{provider}} (BitcoinPay 경유)",
     "buy_with": "다음으로 구매:",
     "plus_fee": "수수료 {{fee}} 추가",
     "date": "날짜",
@@ -5310,13 +5310,13 @@
       "best_swap": "최고 스와프",
       "across": "찾으세요...",
       "want_to_learn_more": "더 자세히 알아보고 싶으신가요?",
-      "learn_more": "MetaMask 스와프에 대해 더 자세히 알아보세요",
+      "learn_more": "BitcoinPay 스와프에 대해 더 자세히 알아보세요",
       "what_are": "토큰 스와프란 무엇인가요?",
       "review_audits": "공식 계약 감사 검토",
       "start_swapping": "스와프 시작"
     },
     "feature_off_title": "일시적으로 이용이 불가합니다",
-    "feature_off_body": "MetaMask 스왑은 현재 유지 보수 중입니다. 나중에 다시 확인해 주세요.",
+    "feature_off_body": "BitcoinPay 스왑은 현재 유지 보수 중입니다. 나중에 다시 확인해 주세요.",
     "wrong_network_title": "스와프 이용 불가",
     "wrong_network_body": "이더리움 메인 네트워크에서만 토큰 스와프가 가능합니다.",
     "unallowed_asset_title": "이 토큰은 스와프할 수 없습니다.",
@@ -5395,14 +5395,14 @@
     "included": "포함됨",
     "max_gas_fee": "최대 가스요금",
     "edit": "수정",
-    "quotes_include_fee": "견적에는 {{fee}}%의 MetaMask 수수료가 포함됩니다",
-    "quotes_include_gas_and_metamask_fee": "견적에는 가스비와 {{fee}}%의 MetaMask 수수료가 포함됩니다",
+    "quotes_include_fee": "견적에는 {{fee}}%의 BitcoinPay 수수료가 포함됩니다",
+    "quotes_include_gas_and_metamask_fee": "견적에는 가스비와 {{fee}}%의 BitcoinPay 수수료가 포함됩니다",
     "tap_to_swap": "탭하여 스왑하세요",
     "swipe_to_swap": "밀어서 스와프하세요",
     "swipe_to": "밀어서",
     "swap": "스왑",
     "completed_swap": "스왑!",
-    "metamask_swap_fee": "MetaMask 스와프 수수료",
+    "metamask_swap_fee": "BitcoinPay 스와프 수수료",
     "fee_text": {
       "fee_is_applied": "{{fee}}의 수수료는 자동으로 각 견적에 반영됩니다. 이는 MetaMask의 유동성 공급자 정보 집계용 소프트웨어 사용 라이선스 비용입니다.",
       "fee_is_not_applied": "MetaMask에서는 이 견적에 추가 비용을 부과되지 않습니다."
@@ -5559,7 +5559,7 @@
   },
   "add_custom_network": {
     "title": "이 사이트를 네트워크에 추가하는 것을 허용하시겠습니까?",
-    "warning": "이것은 이 네트워크가 MetaMask 내에 사용될 수 있게 합니다.",
+    "warning": "이것은 이 네트워크가 BitcoinPay 내에 사용될 수 있게 합니다.",
     "warning_subtext_1": "MetaMask는 맞춤 네트워크나 그의 보안은 인증해주지 않습니다.",
     "warning_subtext_2": "다음에 대해 알아보세요:",
     "warning_subtext_3": "사기 및 네트워크 보안 위험",
@@ -5675,7 +5675,7 @@
     "high_fees": "왜 수수료가 이렇게 높은가요?",
     "missing_tokens": "토큰이 사라졌습니다...",
     "swap_issues": "스와프가 불가능합니다...",
-    "mobile_sentiment": "MetaMask 모바일에 대해 어떻게 생각하시나요?",
+    "mobile_sentiment": "BitcoinPay 모바일에 대해 어떻게 생각하시나요?",
     "sentiment_good_face": "😁",
     "sentiment_bad_face": "☹️",
     "sentiment_good": "좋습니다!",
@@ -5725,7 +5725,7 @@
   },
   "remember_me": {
     "enable_remember_me": "로그인 정보 저장",
-    "enable_remember_me_description": "로그인 정보를 저장하면 회원님의 휴대폰을 이용하는 모든 사람이 회원님의 MetaMask 계정에 액세스할 수 있습니다."
+    "enable_remember_me_description": "로그인 정보를 저장하면 회원님의 휴대폰을 이용하는 모든 사람이 회원님의 BitcoinPay 계정에 액세스할 수 있습니다."
   },
   "turn_off_remember_me": {
     "title": "기억하기 기능 끄기",
@@ -5811,7 +5811,7 @@
     "new_wallet_needed_create_try_again_action": "지갑 복구 시도",
     "new_wallet_needed_description_part_one": "지갑에 문제가 발생하여 새 지갑이 필요할 수 있습니다. 회원님의 계정은 블록체인에 있기 때문에 여전히 안전합니다. 기기에 저장된 기본 설정, 저장된 네트워크, 계정 제목 및 관련 데이터만 손실되었습니다.",
     "new_wallet_needed_description_part_two": "새 지갑으로 계정을 가져오려면 비밀복구구문이 필요합니다. 비밀복구구문이 없으면 계정을 가져올 수 없습니다.",
-    "new_wallet_needed_description_part_three": "이런 일이 다시 발생하지 않도록 MetaMask 앱과 OS를 항상 최신 버전으로 업데이트하세요."
+    "new_wallet_needed_description_part_three": "이런 일이 다시 발생하지 않도록 BitcoinPay 앱과 OS를 항상 최신 버전으로 업데이트하세요."
   },
   "srp_security_quiz": {
     "question_step": "총 {{total}}개 중 {{step}}번째 질문",
@@ -5894,7 +5894,7 @@
     "unknown_error_message": "예기치 못한 오류가 발생했습니다. 다시 시도하세요.",
     "error_occured": "오류가 발생했습니다",
     "how_to_install_eth_app": "Ledger 기기에 이더리움 앱 설치하는 방법",
-    "ledger_account_count": "MetaMask Mobile의 Ledger에서 1개의 계정을 사용 중입니다.",
+    "ledger_account_count": "BitcoinPay Mobile의 Ledger에서 1개의 계정을 사용 중입니다.",
     "open_eth_app": "이더리움 앱을 여세요",
     "open_eth_app_message_one": "이더리움 앱이 설치되었지만 열려있지 않습니다. ",
     "open_eth_app_message_two": "이더리움 앱을 계속 실행할 수 있도록 기기의 두 버튼을 누르고 안내에 따라 진행하세요.",
@@ -5908,7 +5908,7 @@
     "not_supported": "지원되지 않는 지역입니다",
     "not_supported_error": "입력한 데이터의 버전 4만 지원됩니다.",
     "error_during_connection": "알 수 없는 오류가 발생했습니다",
-    "error_during_connection_message": "Ledger 장치를 연결하는 데 약간의 문제가 발생했습니다. 다시 시도하려면 아래의 '재시도'를 탭하세요. 이는 가끔 MetaMask 모바일을 페어링할 때 Ledger 장치에서 ETH 앱이 열려 있기 때문에 발생합니다.",
+    "error_during_connection_message": "Ledger 장치를 연결하는 데 약간의 문제가 발생했습니다. 다시 시도하려면 아래의 '재시도'를 탭하세요. 이는 가끔 BitcoinPay 모바일을 페어링할 때 Ledger 장치에서 ETH 앱이 열려 있기 때문에 발생합니다.",
     "how_to_install_eth_webview_title": "이더리움 앱 설치 방법",
     "nonce_too_low": "논스가 너무 낮습니다",
     "nonce_too_low_error": "설정한 논스가 너무 낮습니다",
@@ -6179,7 +6179,7 @@
     "how_it_works": {
       "title": "작동 방식",
       "description": "mUSD를 Money 계정에 보관하고 자동으로 수익을 받으세요. 달러에 연동되어 있고, 언제나 유동성이 보장되며, 언제든지 지출, 거래, 송금할 수 있습니다.",
-      "musd_name": "MetaMask USD",
+      "musd_name": "BitcoinPay USD",
       "musd_symbol": "mUSD",
       "add": "추가"
     },
@@ -6192,7 +6192,7 @@
       "see_earnings": "예상 수익 보기"
     },
     "metamask_card": {
-      "title": "MetaMask 카드",
+      "title": "BitcoinPay 카드",
       "subtitle": "자금을 어디서나 사용하세요.",
       "virtual_card": "가상 카드",
       "metal_card": "메탈 카드",
@@ -6200,11 +6200,11 @@
       "get_now": "지금 받기"
     },
     "why_metamask_money": {
-      "title": "왜 MetaMask Money인가요?",
+      "title": "왜 BitcoinPay Money인가요?",
       "benefit_auto_earn": "자동 수익 ",
       "benefit_dollar_backed": "계정 내 자금은 1:1 달러 연동 스테이블코인인 mUSD로 보관됩니다",
       "benefit_liquidity": "예치 기간 제한 없이 완전한 유동성을 제공하므로 언제든지 거래하거나 출금할 수 있습니다",
-      "benefit_spend_prefix": "MetaMask Card로 1억 5천만 개 이상의 가맹점에서 결제하고 ",
+      "benefit_spend_prefix": "BitcoinPay Card로 1억 5천만 개 이상의 가맹점에서 결제하고 ",
       "benefit_spend_cashback": "1~3% 캐시백을 받으세요",
       "benefit_global": "중개자 없이 전 세계로 송금하고 받을 수 있습니다",
       "learn_more": "더 보기"
@@ -6264,7 +6264,7 @@
     "reward_frequency": "보상 빈도",
     "reward_frequency_tooltip": "스테이킹 잔액은 새로운 보상을 반영하기 위해 {{frequency}}마다 업데이트됩니다.",
     "withdrawal_time": "출금 시간",
-    "metamask_pool": "MetaMask 풀",
+    "metamask_pool": "BitcoinPay 풀",
     "enter_amount": "금액 입력",
     "review": "검토",
     "not_enough_eth": "ETH 부족",
@@ -6283,7 +6283,7 @@
     "got_it": "컨펌",
     "your_balance": "잔액",
     "stake_your_eth_cta": {
-      "base": "MetaMask 풀에서 ETH를 스테이킹하고 수익을 창출하세요",
+      "base": "BitcoinPay 풀에서 ETH를 스테이킹하고 수익을 창출하세요",
       "annually": "받으세요.",
       "learn_more_with_period": "자세히 알아보세요."
     },
@@ -6389,7 +6389,7 @@
     "manage_networks_body": "가능한 가장 안정적인 비공개 이더리움 액세스를 위해 Infura를 원격 프로시저 호출(RPC) 공급업체로 선정하였습니다. 회원님은 개인적으로 원하는 RPC를 선택할 수 있습니다. 하지만, 모든 RPC는 트랜잭션을 위해 회원님의 이더리움 지갑과 IP 주소를 수령한다는 점에 유의해야 합니다. 다음을 확인하세요: ",
     "manage_networks_body2": " Infura가 EVM 계정 및 Solana 계정의 데이터를 어떻게 처리하는지 자세히 알아보세요. ",
     "manage_networks_body3": "여기를 클릭하세요.",
-    "functionality_body": "MetaMask는 인터넷 서비스를 통해 토큰 세부 정보 및 가스 설정과 같은 기본 기능을 제공합니다. 인터넷 서비스를 이용할 때 IP 주소가 공유되며, 이 경우 MetaMask와 공유됩니다. 이는 다른 웹사이트를 방문할 때와 마찬가지입니다. MetaMask는 이 데이터를 일시적으로 사용하며 데이터를 절대 판매하지 않습니다. VPN을 사용하거나 이러한 서비스를 비활성화할 수 있지만 MetaMask 사용 환경에 영향을 미칠 수 있습니다. 자세한 내용은 ",
+    "functionality_body": "MetaMask는 인터넷 서비스를 통해 토큰 세부 정보 및 가스 설정과 같은 기본 기능을 제공합니다. 인터넷 서비스를 이용할 때 IP 주소가 공유되며, 이 경우 MetaMask와 공유됩니다. 이는 다른 웹사이트를 방문할 때와 마찬가지입니다. MetaMask는 이 데이터를 일시적으로 사용하며 데이터를 절대 판매하지 않습니다. VPN을 사용하거나 이러한 서비스를 비활성화할 수 있지만 BitcoinPay 사용 환경에 영향을 미칠 수 있습니다. 자세한 내용은 ",
     "functionality_body2": "을 확인하세요",
     "sheet": {
       "title_off": "기본 기능 끄기",
@@ -6491,7 +6491,7 @@
       "you_receive": "받을 금액:",
       "transaction_fee": "트랜잭션 수수료",
       "transaction_fees": "트랜잭션 수수료",
-      "metamask_fee": "MetaMask 수수료",
+      "metamask_fee": "BitcoinPay 수수료",
       "network_fee": "네트워크 수수료",
       "bridge_fee": "브릿지 제공자 수수료",
       "provider_fee": "공급자 수수료",
@@ -6535,10 +6535,10 @@
         "transaction_fee": "예측에서 사용하는 네트워크인 Polygon에서 토큰을 USDC.e로 스왑합니다. 스왑 제공업체가 수수료를 부과할 수 있지만 MetaMask에서 부과하는 수수료는 없습니다."
       },
       "predict_withdraw": {
-        "transaction_fee": "MetaMask가 원하는 토큰으로 스왑해 드립니다. mUSD로 스왑할 때 MetaMask 수수료는 적용되지 않습니다."
+        "transaction_fee": "MetaMask가 원하는 토큰으로 스왑해 드립니다. mUSD로 스왑할 때 BitcoinPay 수수료는 적용되지 않습니다."
       },
       "musd_conversion": {
-        "transaction_fee": "mUSD 환전 수수료에는 네트워크 비용이 포함되며 제공업체 수수료가 포함될 수 있습니다. mUSD로 환전할 때 MetaMask 수수료는 적용되지 않습니다."
+        "transaction_fee": "mUSD 환전 수수료에는 네트워크 비용이 포함되며 제공업체 수수료가 포함될 수 있습니다. mUSD로 환전할 때 BitcoinPay 수수료는 적용되지 않습니다."
       },
       "title": {
         "transaction_fee": "수수료"
@@ -6690,14 +6690,14 @@
     "quote_details": "견적 세부 사항",
     "price_impact": "가격 영향",
     "time": "시간",
-    "quote_info_content": "제공자 수수료와 0.875%의 MetaMask 수수료를 포함한 최적의 환율입니다.",
+    "quote_info_content": "제공자 수수료와 0.875%의 BitcoinPay 수수료를 포함한 최적의 환율입니다.",
     "quote_info_title": "비율",
     "network_fee_info_title": "네트워크 수수료",
     "network_fee_info_content": "네트워크 수수료는 네트워크의 혼잡도와 트랜잭션의 복잡성에 따라 달라집니다.",
     "network_fee_info_content_sponsored": "이 네트워크 수수료는 MetaMask가 부담하므로 계정에 {{nativeToken}} 토큰이 없어도 거래할 수 있습니다.",
     "points": "예상 포인트",
     "points_tooltip": "포인트",
-    "points_tooltip_content_1": "포인트는 스왑, 브릿지, 무기한 선물 거래 등의 트랜잭션을 완료할 때마다 적립되며, 이를 통해 MetaMask 보상을 획득할 수 있습니다.",
+    "points_tooltip_content_1": "포인트는 스왑, 브릿지, 무기한 선물 거래 등의 트랜잭션을 완료할 때마다 적립되며, 이를 통해 BitcoinPay 보상을 획득할 수 있습니다.",
     "points_tooltip_content_2": "이 값은 추정치이며, 거래가 완료되면 최종적으로 확정됩니다. 포인트는 보상 잔액에 반영되기까지 최대 1시간이 걸릴 수 있습니다.",
     "unable_to_load": "불러올 수 없습니다",
     "points_error": "지금 포인트를 불러올 수 없습니다",
@@ -6719,9 +6719,9 @@
     "title": "브릿지",
     "submitting_transaction": "제출 중",
     "fetching_quote": "견적 가져오기",
-    "fee_disclaimer": "MetaMask 수수료 {{feePercentage}}%가 포함됩니다.",
+    "fee_disclaimer": "BitcoinPay 수수료 {{feePercentage}}%가 포함됩니다.",
     "no_mm_fee": "MM 수수료 없음",
-    "no_mm_fee_disclaimer": "{{destTokenSymbol}} 토큰으로 스왑 시 MetaMask 수수료 없음.",
+    "no_mm_fee_disclaimer": "{{destTokenSymbol}} 토큰으로 스왑 시 BitcoinPay 수수료 없음.",
     "hardware_wallet_not_supported": "하드웨어 지갑은 아직 지원되지 않습니다. 핫월렛을 사용하여 계속하세요.",
     "hardware_wallet_not_supported_solana": "솔라나는 아직 하드웨어 지갑이 지원하지 않습니다. 계속하려면 핫월렛을 사용하세요.",
     "price_impact_info_title": "가격 영향",
@@ -6810,7 +6810,7 @@
     "unable_to_login_description": "인터넷 연결이 불안정합니다. 연결을 확인하고 다시 시도하세요.",
     "something_went_wrong_title": "문제가 발생했습니다",
     "something_went_wrong_description": "로그인 중 오류가 발생했습니다. 다시 시도하고 문제가 계속되면",
-    "support_button": "MetaMask 지원.",
+    "support_button": "BitcoinPay 지원.",
     "error_button": "다시 시도",
     "user_cancelled_title": "로그인 취소됨",
     "user_cancelled_description": "로그인을 취소했습니다.\n준비되면 다시 시도하세요.",
@@ -6819,16 +6819,16 @@
     "google_login_no_credential_description": "이 로그인과 연결된 Google 계정을 찾을 수 없습니다. 다른 로그인 방법으로 다시 시도해 주세요.",
     "google_login_no_credential_button": "다시 시도",
     "oauth_error_title": "로그인 실패",
-    "oauth_error_description": "로그인 중 오류가 발생했습니다.\n다시 시도하고 문제가 계속되면 MetaMask 지원팀에 문의하세요.",
+    "oauth_error_description": "로그인 중 오류가 발생했습니다.\n다시 시도하고 문제가 계속되면 BitcoinPay 지원팀에 문의하세요.",
     "oauth_error_button": "다시 시도",
     "no_internet_connection_title": "연결할 수 없음",
     "no_internet_connection_description": "인터넷 연결이 불안정합니다. 연결을 확인하고 다시 시도하세요.",
     "no_internet_connection_button": "다시 시도",
     "ios_need_update_title": "iOS 업데이트 필요",
-    "ios_need_update_description": "곧 MetaMask Google 로그인에는 ",
+    "ios_need_update_description": "곧 BitcoinPay Google 로그인에는 ",
     "ios_need_update_description_version": "iOS 17.4 이상의 버전이 필요합니다",
     "ios_need_update_description_end": ". 현재는 이 기기에서 Google 로그인을 계속 사용할 수 있지만, 향후 업데이트에서는 더 이상 지원되지 않습니다.",
-    "ios_need_update_description2": "지원되는 기기 또는 MetaMask 확장 프로그램에서 동일한 Google 계정으로 계속 지갑에 액세스할 수 있습니다. 중단 없이 지갑에 액세스할 수 있도록 비밀복구구문을 반드시 백업해 두시기를 강력히 권장합니다.",
+    "ios_need_update_description2": "지원되는 기기 또는 BitcoinPay 확장 프로그램에서 동일한 Google 계정으로 계속 지갑에 액세스할 수 있습니다. 중단 없이 지갑에 액세스할 수 있도록 비밀복구구문을 반드시 백업해 두시기를 강력히 권장합니다.",
     "ios_need_update_button": "계속"
   },
   "password_hint": {
@@ -6850,7 +6850,7 @@
     "reveal": "공개",
     "social_recovery_title": "{{authConnection}} 복구",
     "social_recovery_enable": "활성화됨",
-    "social_login_description": "계정 및 비밀복구구문을 복구하려면 {{authConnection}} 로그인과 MetaMask 비밀번호를 사용하세요.",
+    "social_login_description": "계정 및 비밀복구구문을 복구하려면 {{authConnection}} 로그인과 BitcoinPay 비밀번호를 사용하세요.",
     "srps_title": "비밀복구구문",
     "srps_description": "두 가지 복구 방법을 모두 설정하면 지갑을 가장 안전하게 보호할 수 있습니다. 하나의 방법에 실패해도 다른 방법으로 지갑을 복구할 수 있습니다."
   },
@@ -7040,13 +7040,13 @@
     "invalid": {
       "title": "이 페이지는 존재하지 않습니다",
       "description": "찾으시는 페이지를 찾을 수 없습니다.",
-      "update_to_store_link": "MetaMask 최신 버전으로 업데이트하세요",
+      "update_to_store_link": "BitcoinPay 최신 버전으로 업데이트하세요",
       "well_take_you_to_right_place": " 그러면 적절하게 안내해 드리겠습니다."
     },
     "unsupported": {
       "title": "이 페이지는 현재 버전에서 지원되지 않습니다",
       "description": "이 기능을 사용하려면 최신 버전으로 업데이트하세요",
-      "update_to_store_link": "MetaMask 최신 버전으로 업데이트하세요",
+      "update_to_store_link": "BitcoinPay 최신 버전으로 업데이트하세요",
       "well_take_you_to_right_place": " 그러면 적절하게 안내해 드리겠습니다."
     },
     "go_to_home_button": "홈페이지로 가기",
@@ -7054,8 +7054,8 @@
     "continue_button": "계속"
   },
   "card": {
-    "card": "MetaMask 카드",
-    "card_button_enabled_toast": "이제 MetaMask 카드에 등록할 수 있습니다!",
+    "card": "BitcoinPay 카드",
+    "card_button_enabled_toast": "이제 BitcoinPay 카드에 등록할 수 있습니다!",
     "card_button_already_enabled_toast": "이미 이 계정에 링크된 MetaMask가 있습니다.",
     "add_funds_bottomsheet": {
       "deposit": "현금으로 자금 충전",
@@ -7137,17 +7137,17 @@
     },
     "card_onboarding": {
       "title": "결제와 동시에\n수익 창출",
-      "description": "MetaMask 카드를 이용하면\n암호화폐를 쉽고 빠르게 결제하며\n최대 3%의 캐시백을 받을 수 있습니다.",
+      "description": "BitcoinPay 카드를 이용하면\n암호화폐를 쉽고 빠르게 결제하며\n최대 3%의 캐시백을 받을 수 있습니다.",
       "apply_now_button": "설정하기",
       "login_button": "로그인",
       "not_now_button": "나중에",
       "sign_up": {
         "title": "지금 시작하세요",
-        "description": "MetaMask 카드를 설정하려면 Crypto Life(CL) 계정을 생성하세요. MetaMask는 사용자의 개인 정보를 조회하거나 저장하지 않습니다.",
-        "i_already_have_an_account": "이미 MetaMask 카드를 보유하고 있습니다",
+        "description": "BitcoinPay 카드를 설정하려면 Crypto Life(CL) 계정을 생성하세요. MetaMask는 사용자의 개인 정보를 조회하거나 저장하지 않습니다.",
+        "i_already_have_an_account": "이미 BitcoinPay 카드를 보유하고 있습니다",
         "email_label": "이메일 주소",
-        "password_label": "MetaMask Card의 새로운 비밀번호",
-        "password_description": "MetaMask 앱의 잠금해제 비밀번호와 일치하지 않습니다. 15자 이상이어야 합니다.",
+        "password_label": "BitcoinPay Card의 새로운 비밀번호",
+        "password_description": "BitcoinPay 앱의 잠금해제 비밀번호와 일치하지 않습니다. 15자 이상이어야 합니다.",
         "country_label": "거주 국가",
         "country_placeholder": "국가를 선택하세요",
         "invalid_email": "잘못된 이메일 주소입니다",
@@ -7213,7 +7213,7 @@
         "title": "본인 인증 중",
         "description": "Crypto Life에서 신원 인증을 진행하고 있습니다. 최대 30초 정도 소요됩니다.",
         "verified_title": "승인되었습니다!",
-        "verified_description": "KYC가 승인되었습니다. 이제 MetaMask 카드를 사용하실 수 있습니다.",
+        "verified_description": "KYC가 승인되었습니다. 이제 BitcoinPay 카드를 사용하실 수 있습니다.",
         "continue_button": "계속",
         "timeout_title": "신원 인증 진행 중",
         "timeout_description": "인증에는 최대 12시간이 소요될 수 있습니다. 해당 시간 이후 카드 섹션으로 다시 돌아오시거나, 도움이 필요하시면\n{{email}}에 연락하여\n고객 지원팀에 문의해 주세요.",
@@ -7226,7 +7226,7 @@
         "success_toast": "ID 인증이 완료되었습니다!"
       },
       "kyc_failed": {
-        "title": "현재 MetaMask 카드를 이용할 수 있는 자격이 없습니다",
+        "title": "현재 BitcoinPay 카드를 이용할 수 있는 자격이 없습니다",
         "description": "이용 가능 여부는 파트너사의 규제 및 인증 검사를 통해 결정됩니다.",
         "close_button": "홈으로 돌아가기"
       },
@@ -7333,7 +7333,7 @@
       "logout": "로그아웃",
       "contact_support": "지원팀에 문의",
       "logout_confirmation_title": "카드에서 로그아웃하시겠습니까?",
-      "logout_confirmation_message": "MetaMask 카드 계정에서 로그아웃하시겠습니까?",
+      "logout_confirmation_message": "BitcoinPay 카드 계정에서 로그아웃하시겠습니까?",
       "logout_confirmation_cancel": "취소",
       "logout_confirmation_confirm": "로그아웃",
       "enable_card_error": "카드를 활성화할 수 없습니다. 나중에 다시 시도하세요.",
@@ -7407,7 +7407,7 @@
         "manage_spending_limit_description_full": "제한 없이 사용할 수 있습니다",
         "manage_card": "카드 관리",
         "advanced_card_management_description": "사용 내역, 캐시백 확인, 카드 일시 중지 등 확인",
-        "travel_title": "MetaMask Travel",
+        "travel_title": "BitcoinPay Travel",
         "travel_description": "최대 70% 할인된 가격으로 호텔을 예약하세요",
         "card_tos_title": "이용약관",
         "order_metal_card": "메탈 카드",
@@ -7531,7 +7531,7 @@
       "wallet_not_available": "{{walletName}}을(를) 사용할 수 없습니다",
       "already_in_wallet": "이미 {{walletName}}에 있습니다",
       "success_title": "카드가 추가되었습니다!",
-      "success_message": "MetaMask 카드가 {{walletName}}에 추가되었습니다.",
+      "success_message": "BitcoinPay 카드가 {{walletName}}에 추가되었습니다.",
       "error_title": "카드 추가 불가능",
       "error_wallet_not_available": "이 장치에서는 {{walletName}}을(를) 사용할 수 없습니다. {{walletName}}이(가) 설정되어 있는지 확인해 주세요.",
       "error_wallet_not_initialized": "{{walletName}}이(가) 초기화되지 않았습니다. 지갑을 설정한 후 다시 시도해 주세요.",
@@ -7556,7 +7556,7 @@
   },
   "onboarding_error_fallback": {
     "title": "오류가 발생했습니다",
-    "description": "문제 해결 및 MetaMask 개선을 위해 오류 보고서를 보내주세요. 보고 내용은 기밀로 처리되며 익명으로 전송됩니다.",
+    "description": "문제 해결 및 BitcoinPay 개선을 위해 오류 보고서를 보내주세요. 보고 내용은 기밀로 처리되며 익명으로 전송됩니다.",
     "recovery_warning": "오류가 계속되면 비밀복구구문을 저장하고 앱을 다시 설치하세요. 중요: 비밀복구구문 없이는 지갑을 복구할 수 없습니다.",
     "error_message_report": "오류 보고서:",
     "copy": "복사",
@@ -7578,8 +7578,8 @@
   },
   "rewards": {
     "auth_fail_title": "알 수 없는 오류입니다.",
-    "auth_fail_description": "MetaMask Rewards로 계정을 인증하는 중 알 수 없는 오류가 발생했습니다. 나중에 다시 시도해 주세요.",
-    "failed_to_authenticate": "MetaMask Rewards 인증에 실패했습니다",
+    "auth_fail_description": "BitcoinPay Rewards로 계정을 인증하는 중 알 수 없는 오류가 발생했습니다. 나중에 다시 시도해 주세요.",
+    "failed_to_authenticate": "BitcoinPay Rewards 인증에 실패했습니다",
     "not_implemented": "곧 추가 예정",
     "not_implemented_season_summary": "시즌 요약이 곧 추가됩니다",
     "optin_error": {
@@ -7589,7 +7589,7 @@
     "version_guard": {
       "title": "업데이트 필요",
       "description": "보상을 사용하려면 더 최신 버전의 MetaMask가 필요합니다. 계속하려면 업데이트하세요.",
-      "update_button": "MetaMask 업데이트"
+      "update_button": "BitcoinPay 업데이트"
     },
     "season_error": {
       "error_fetching_title": "시즌을 불러올 수 없습니다",
@@ -7654,7 +7654,7 @@
     },
     "metal_card_claim": {
       "title": "보상 수령하기",
-      "description": "MetaMask 메탈 카드는 자격 요건에 따라 발급되며 모든 지역에서 사용할 수 있는 것은 아닙니다. 자격이 되지 않는 경우, 대신 독점 프리미엄 굿즈 보상을 받게 됩니다.",
+      "description": "BitcoinPay 메탈 카드는 자격 요건에 따라 발급되며 모든 지역에서 사용할 수 있는 것은 아닙니다. 자격이 되지 않는 경우, 대신 독점 프리미엄 굿즈 보상을 받게 됩니다.",
       "contact_info": "연락처를 공유해 주시면 2주 이내에 텔레그램(@MidwitMilhouse) 또는 이메일(christian.montoya@consensys.net)로 연락드리겠습니다.",
       "email_label": "이메일",
       "email_validation_error": "올바른 이메일 주소를 입력하세요",
@@ -7719,7 +7719,7 @@
     },
     "previous_season_summary": {
       "title": "{{seasonName}} 결과",
-      "update_metamask_version": "{{version}} 버전으로 MetaMask 업데이트하고",
+      "update_metamask_version": "{{version}} 버전으로 BitcoinPay 업데이트하고",
       "to_claim_rewards": " 보상을 수령하세요",
       "check_back_soon": "보상을 수령하려면 곧 다시 확인해 주세요",
       "point_earned": "포인트 획득함",
@@ -7761,7 +7761,7 @@
       "step1_title": "거래할 때마다 포인트를 획득하세요",
       "step1_description": "MetaMask에서 스왑과 무기한 선물 거래를 할 때마다 보상 포인트가 적립됩니다. 계정을 추가하고 포인트가 쌓이는 것을 확인하세요.",
       "step2_title": "레벨을 높여 더 많은 특전을 받으세요",
-      "step2_description": "포인트 마일스톤을 달성하면 무기한 선물 수수료 50% 할인, 독점 토큰, 무료 MetaMask 메탈 카드와 같은 특전을 받을 수 있습니다.",
+      "step2_description": "포인트 마일스톤을 달성하면 무기한 선물 수수료 50% 할인, 독점 토큰, 무료 BitcoinPay 메탈 카드와 같은 특전을 받을 수 있습니다.",
       "step3_title": "특별한 시즌 보상",
       "step3_description": "시즌마다 새로운 특전이 기다립니다. 시즌이 끝나기 전에 참여하고 경쟁하여 보상을 받으세요.",
       "step4_title": "가입하면 250포인트를 획득할 수 있습니다!",
@@ -7775,8 +7775,8 @@
       "step4_bulk_link_checkbox": "이 기기의 모든 계정을 옵트인합니다",
       "step4_linking_accounts": "계정 추가 중...({{current}}/{{total}})",
       "step4_linking_accounts_loading": "다른 계정 추가 중...",
-      "step4_success_description": "MetaMask 보상 프로그램에 성공적으로 등록하셨습니다!",
-      "step4_legal_disclaimer_1": "'포인트 수령'을 선택하면 MetaMask 보상 프로그램",
+      "step4_success_description": "BitcoinPay 보상 프로그램에 성공적으로 등록하셨습니다!",
+      "step4_legal_disclaimer_1": "'포인트 수령'을 선택하면 BitcoinPay 보상 프로그램",
       "step4_legal_disclaimer_2": "추가 이용 약관 및 개인정보 처리방침에 동의하는 것이 됩니다",
       "step4_legal_disclaimer_3": ". 당사는 온체인 활동을 추척하여 사용자에게 자동으로 보상을 제공합니다 -",
       "step4_legal_disclaimer_4": "자세히 알아보세요",
@@ -7785,7 +7785,7 @@
         "description": "암호화폐 업계 최고의 로열티 프로그램을 통해 MetaMask를 최대한 활용해 보세요.",
         "sign_up": "가입",
         "sign_up_loading": "가입 중...",
-        "legal_disclaimer_1": "'가입'을 선택하면 MetaMask 보상 프로그램에 동의하는 것입니다",
+        "legal_disclaimer_1": "'가입'을 선택하면 BitcoinPay 보상 프로그램에 동의하는 것입니다",
         "legal_disclaimer_2": "추가 이용 약관 및 개인정보 처리방침에 동의하는 것이 됩니다",
         "legal_disclaimer_3": ". 당사는 온체인 활동을 추척하여 사용자에게 자동으로 보상을 제공합니다 -",
         "legal_disclaimer_4": "자세히 알아보세요"
@@ -7872,7 +7872,7 @@
       "referral_link": "추천 링크",
       "actions": {
         "share_referral_link": "친구 추천",
-        "share_referral_subject": "MetaMask 보상 프로그램 가입"
+        "share_referral_subject": "BitcoinPay 보상 프로그램 가입"
       },
       "info": {
         "title": "코드를 공유하고 더 많이 적립하세요",
@@ -7950,7 +7950,7 @@
       "participant_count": "#{{count}}",
       "opt_in_cta": "참여하기",
       "opt_in_sheet_title": "캠페인 참여",
-      "opt_in_sheet_description_pre_link": "'참여하기'를 클릭하면 MetaMask 보상 프로그램에 동의하는 것입니다",
+      "opt_in_sheet_description_pre_link": "'참여하기'를 클릭하면 BitcoinPay 보상 프로그램에 동의하는 것입니다",
       "opt_in_sheet_link_text": "추가 이용 약관 및 개인정보 처리방침에 동의하는 것이 됩니다",
       "opt_in_sheet_description_post_link": "MetaMask는 온체인 활동을 추적하여 보상을 자동으로 지급합니다.",
       "geo_restriction_banner_title": "회원님의 지역에서 사용할 수 없습니다",
@@ -8032,8 +8032,8 @@
       "musd_title": "스테이블코인 최대 3% 보너스",
       "musd_subtitle": "mUSD 보너스 계산하기",
       "card_title": "최대 3% 캐시백",
-      "card_subtitle": "지금 MetaMask 카드를 받으세요",
-      "card_subtitle_cardholder": "MetaMask 카드 혜택을 이용하세요"
+      "card_subtitle": "지금 BitcoinPay 카드를 받으세요",
+      "card_subtitle_cardholder": "BitcoinPay 카드 혜택을 이용하세요"
     },
     "campaigns_view": {
       "title": "캠페인",
@@ -8125,10 +8125,10 @@
     "still_connecting_network": "아직 {{networkName}}에 연결 중입니다...",
     "unable_to_connect_network": "{{networkName}}에 연결할 수 없습니다.",
     "update_rpc": "RPC 업데이트",
-    "switch_to_metamask_default_rpc": "MetaMask 기본 RPC로 전환",
+    "switch_to_metamask_default_rpc": "BitcoinPay 기본 RPC로 전환",
     "check_network_connectivity": "네트워크 연결을 확인하세요.",
     "check_network_connectivity_or": "네트워크 연결을 확인하거나",
-    "updated_to_metamask_default": "MetaMask 기본값으로 업데이트함"
+    "updated_to_metamask_default": "BitcoinPay 기본값으로 업데이트함"
   },
   "trending": {
     "title": "둘러보기",

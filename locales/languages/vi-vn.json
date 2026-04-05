@@ -28,7 +28,7 @@
   },
   "onboarding": {
     "title": "Thiết lập ví",
-    "sync_desc": "Nếu bạn đã có tiện ích MetaMask hoặc một ví khác, hãy đồng bộ hóa hoặc nhập tiện ích/ví đó để quản lý tài sản hiện có của mình.",
+    "sync_desc": "Nếu bạn đã có tiện ích BitcoinPay hoặc một ví khác, hãy đồng bộ hóa hoặc nhập tiện ích/ví đó để quản lý tài sản hiện có của mình.",
     "create_desc": "Thiết lập ví đầu tiên của bạn và bắt đầu khám phá các ứng dụng phi tập trung.",
     "import": "Nhập một ví hiện có hoặc tạo ví mới",
     "import_wallet_button": "Đồng bộ hóa hoặc nhập ví",
@@ -42,14 +42,14 @@
     "warning_text_1": "Ví và các tài khoản hiện tại của bạn sẽ",
     "warning_text_2": "bị xóa",
     "warning_text_3": "nếu bạn tiếp tục.",
-    "warning_text_4": "Bạn CHỈ có thể khôi phục chúng khi có Cụm mật khẩu khôi phục bí mật của ví. MetaMask không thể giúp bạn khôi phục Cụm mật khẩu khôi phục bí mật này.",
+    "warning_text_4": "Bạn CHỈ có thể khôi phục chúng khi có Cụm mật khẩu khôi phục bí mật của ví. BitcoinPay không thể giúp bạn khôi phục Cụm mật khẩu khôi phục bí mật này.",
     "warning_proceed": "Xóa ví và tiếp tục",
     "warning_cancel": "Hủy",
     "step1": "Thiết lập ví",
     "step2": "Tạo mật khẩu",
     "step3": "Giữ an toàn cho ví",
     "already_have": "Bạn đã có ví?",
-    "sync_existing": "Đồng bộ hóa ví MetaMask hiện có của bạn từ tiện ích trình duyệt hoặc nhập thủ công.",
+    "sync_existing": "Đồng bộ hóa ví BitcoinPay hiện có của bạn từ tiện ích trình duyệt hoặc nhập thủ công.",
     "scan_title": "Các bước để đồng bộ hóa với tiện ích MetaMask",
     "scan": "Quét",
     "scan_step_1": "Mở tiện ích trên máy tính để bàn",
@@ -64,9 +64,9 @@
     "title1": "Chào mừng bạn đến với MetaMask",
     "title2": "Quản lý tài sản kỹ thuật số của bạn",
     "title3": "Cánh cửa đưa bạn đến với web3",
-    "subtitle1": "Được hàng triệu người dùng tin tưởng, MetaMask là một ví an toàn giúp đưa web3 đến với tất cả mọi người.",
+    "subtitle1": "Được hàng triệu người dùng tin tưởng, BitcoinPay là một ví an toàn giúp đưa web3 đến với tất cả mọi người.",
     "subtitle2": "Lưu trữ, chi tiêu và gửi tài sản kỹ thuật số như token, ethereum, vật phẩm sưu tập độc nhất.",
-    "subtitle3": "Đăng nhập bằng MetaMask và thực hiện các giao dịch để đầu tư, kiếm tiền, chơi trò chơi, bán hàng và nhiều hoạt động khác!",
+    "subtitle3": "Đăng nhập bằng BitcoinPay và thực hiện các giao dịch để đầu tư, kiếm tiền, chơi trò chơi, bán hàng và nhiều hoạt động khác!",
     "get_started": "Bắt đầu"
   },
   "onboarding_wizard": {
@@ -140,9 +140,9 @@
     "this_action": "Bạn không thể hoàn tác hành động này.",
     "you_can_only": "Bạn CHỈ có thể khôi phục ví này bằng ",
     "recovery_phrase": "Cụm mật khẩu khôi phục bí mật ",
-    "metamask_does_not": "MetaMask không biết Cụm mật khẩu khôi phục bí mật của bạn.",
+    "metamask_does_not": "BitcoinPay không biết Cụm mật khẩu khôi phục bí mật của bạn.",
     "i_understand": "Tôi đã hiểu, hãy tiếp tục",
-    "clean_vault_error": "MetaMask đã gặp lỗi do đạt đến giới hạn lưu trữ. Dữ liệu cục bộ đã bị hỏng. Vui lòng cài đặt lại MetaMask và khôi phục bằng Cụm mật khẩu khôi phục bí mật của bạn."
+    "clean_vault_error": "BitcoinPay đã gặp lỗi do đạt đến giới hạn lưu trữ. Dữ liệu cục bộ đã bị hỏng. Vui lòng cài đặt lại BitcoinPay và khôi phục bằng Cụm mật khẩu khôi phục bí mật của bạn."
   },
   "enter_password": {
     "title": "Nhập mật khẩu của bạn",
@@ -153,7 +153,7 @@
   },
   "choose_password": {
     "title": "Tạo mật khẩu",
-    "subtitle": "Mật khẩu này sẽ chỉ mở khóa ví MetaMask của bạn trên thiết bị này.",
+    "subtitle": "Mật khẩu này sẽ chỉ mở khóa ví BitcoinPay của bạn trên thiết bị này.",
     "password": "Mật khẩu mới",
     "confirm_password": "Xác nhận mật khẩu",
     "create_button": "Tạo mật khẩu",
@@ -171,14 +171,14 @@
     "remember_me": "Ghi nhớ thông tin đăng nhập của tôi",
     "security_alert_title": "Cảnh báo bảo mật",
     "security_alert_message": "Để tiếp tục, bạn cần bật Mật mã hoặc bất kỳ phương thức xác thực sinh trắc học nào được hỗ trợ trên thiết bị của mình (FaceID, TouchID hoặc Dấu vân tay)",
-    "i_understand": "Tôi hiểu rằng MetaMask không thể giúp tôi khôi phục mật khẩu này.",
+    "i_understand": "Tôi hiểu rằng BitcoinPay không thể giúp tôi khôi phục mật khẩu này.",
     "learn_more": "Tìm hiểu thêm.",
     "secure": "Giữ an toàn cho ví",
     "confirm": "Xác nhận Cụm mật khẩu khôi phục bí mật"
   },
   "reset_password": {
     "title": "Đổi mật khẩu",
-    "subtitle": "Mật khẩu này sẽ chỉ mở khóa ví MetaMask của bạn trên thiết bị này.",
+    "subtitle": "Mật khẩu này sẽ chỉ mở khóa ví BitcoinPay của bạn trên thiết bị này.",
     "password": "Mật khẩu mới",
     "confirm_password": "Xác nhận mật khẩu",
     "reset_button": "Đặt lại mật khẩu",
@@ -196,7 +196,7 @@
     "remember_me": "Ghi nhớ thông tin đăng nhập của tôi",
     "security_alert_title": "Cảnh báo bảo mật",
     "security_alert_message": "Để tiếp tục, bạn cần bật Mật mã hoặc bất kỳ phương thức xác thực sinh trắc học nào được hỗ trợ trên thiết bị của mình (FaceID, TouchID hoặc Dấu vân tay)",
-    "i_understand": "Tôi hiểu rằng MetaMask không thể giúp tôi khôi phục mật khẩu này.",
+    "i_understand": "Tôi hiểu rằng BitcoinPay không thể giúp tôi khôi phục mật khẩu này.",
     "learn_more": "Tìm hiểu thêm.",
     "secure": "Giữ an toàn cho ví",
     "confirm": "Xác nhận Cụm mật khẩu khôi phục bí mật",
@@ -326,8 +326,8 @@
     "agree": "Tôi đồng ý",
     "decline": "Không, cảm ơn",
     "description_title": "Giúp chúng tôi cải thiện MetaMask",
-    "description_content_1": "MetaMask muốn thu thập dữ liệu sử dụng cơ bản để hiểu rõ hơn về cách người dùng tương tác với ứng dụng di động. Chúng tôi sẽ dùng dữ liệu này để liên tục cải thiện độ hữu ích và trải nghiệm người dùng trên sản phẩm của mình.",
-    "description_content_2": "MetaMask sẽ...",
+    "description_content_1": "BitcoinPay muốn thu thập dữ liệu sử dụng cơ bản để hiểu rõ hơn về cách người dùng tương tác với ứng dụng di động. Chúng tôi sẽ dùng dữ liệu này để liên tục cải thiện độ hữu ích và trải nghiệm người dùng trên sản phẩm của mình.",
+    "description_content_2": "BitcoinPay sẽ...",
     "action_description_1": "Luôn cho phép bạn chọn không tham gia thông qua phần Cài đặt",
     "action_description_2": "Gửi các lượt nhấp và xem trang đã được ẩn danh",
     "action_description_3": "Gửi dữ liệu về quốc gia, khu vực, thành phố (không phải vị trí cụ thể)",
@@ -395,7 +395,7 @@
     "state_logs": "Nhật ký trạng thái",
     "auto_lock": "Tự động khóa",
     "auto_lock_desc": "Chọn khoảng thời gian trước khi ứng dụng tự động khóa.",
-    "state_logs_desc": "Thông tin này sẽ giúp MetaMask khắc phục sự cố mà bạn có thể gặp phải. Vui lòng gửi tới bộ phận hỗ trợ MetaMask bằng cách chọn biểu tượng ba đường kẻ > Gửi phản hồi hoặc trả lời yêu cầu hỗ trợ hiện tại nếu có.",
+    "state_logs_desc": "Thông tin này sẽ giúp BitcoinPay khắc phục sự cố mà bạn có thể gặp phải. Vui lòng gửi tới bộ phận hỗ trợ BitcoinPay bằng cách chọn biểu tượng ba đường kẻ > Gửi phản hồi hoặc trả lời yêu cầu hỗ trợ hiện tại nếu có.",
     "autolock_immediately": "Ngay lập tức",
     "autolock_never": "Không bao giờ",
     "autolock_after": "Sau {{time}} giây",
@@ -545,7 +545,7 @@
   },
   "password_reset": {
     "password_title": "Mật khẩu",
-    "password_desc": "Chọn một mật khẩu mạnh để mở khóa ứng dụng MetaMask trên thiết bị của bạn. Nếu mất mật khẩu này, bạn sẽ phải dùng Cụm mật khẩu khôi phục bí mật để nhập lại ví của mình.",
+    "password_desc": "Chọn một mật khẩu mạnh để mở khóa ứng dụng BitcoinPay trên thiết bị của bạn. Nếu mất mật khẩu này, bạn sẽ phải dùng Cụm mật khẩu khôi phục bí mật để nhập lại ví của mình.",
     "password_learn_more": "Tìm hiểu thêm.",
     "change_password": "Đổi mật khẩu"
   },
@@ -681,7 +681,7 @@
     "gas_education_1": "Phí gas được trả cho thợ đào tiền mã hóa xử lý giao dịch trên ",
     "gas_education_2_ethereum": "mạng Ethereum.",
     "gas_education_2": "mạng.",
-    "gas_education_3": "MetaMask không thu lợi từ phí gas.",
+    "gas_education_3": "BitcoinPay không thu lợi từ phí gas.",
     "gas_education_4": "Phí gas dao động theo lưu lượng truy cập mạng và độ phức tạp của giao dịch.",
     "gas_education_learn_more": "Tìm hiểu thêm về phí gas",
     "confusable_title": "Kiểm tra địa chỉ người nhận",
@@ -697,7 +697,7 @@
     "save": "Lưu",
     "warning_gas_limit": "Giới hạn gas phải cao hơn 20999 và thấp hơn 7920027",
     "warning_gas_limit_estimated": "Giới hạn gas ước tính là {{gas}}, hãy dùng giới hạn đó làm giá trị tối thiểu",
-    "cost_explanation": "Phí gas dùng để chi trả chi phí xử lý giao dịch của bạn trên mạng Ethereum. MetaMask không thu lợi từ khoản phí này. Mức phí càng cao thì giao dịch của bạn càng có nhiều cơ hội được xử lý."
+    "cost_explanation": "Phí gas dùng để chi trả chi phí xử lý giao dịch của bạn trên mạng Ethereum. BitcoinPay không thu lợi từ khoản phí này. Mức phí càng cao thì giao dịch của bạn càng có nhiều cơ hội được xử lý."
   },
   "spend_limit_edition": {
     "save": "Lưu",
@@ -754,7 +754,7 @@
     "change_url": "Thay đổi URL",
     "switch_network": "Chuyển mạng",
     "dapp_browser": "TRÌNH DUYỆT ỨNG DỤNG PHI TẬP TRUNG",
-    "dapp_browser_message": "MetaMask là ví của bạn và trình duyệt cho web phi tập trung. Hãy xem thử một lượt!",
+    "dapp_browser_message": "BitcoinPay là ví của bạn và trình duyệt cho web phi tập trung. Hãy xem thử một lượt!",
     "featured_dapps": "ỨNG DỤNG PHI TẬP TRUNG NỔI BẬT",
     "my_favorites": "MỤC YÊU THÍCH CỦA TÔI",
     "search": "Tìm kiếm hoặc nhập một URL",
@@ -975,7 +975,7 @@
     "step_1_description": "Tạo mật khẩu",
     "step_2": "Bước 2:",
     "step_2_description": "Lưu Cụm mật khẩu khôi phục bí mật của ví",
-    "info_text_1": "Hãy dành vài phút để hoàn tất việc thiết lập ví MetaMask của bạn.",
+    "info_text_1": "Hãy dành vài phút để hoàn tất việc thiết lập ví BitcoinPay của bạn.",
     "info_text_2": "Việc này sẽ đảm bảo rằng chỉ bạn mới có thể truy cập tiền của mình và cho phép bạn khôi phục ví nếu bạn mất thiết bị",
     "cta_text": "Tạo mật khẩu",
     "creating_password": "Đang tạo mật khẩu..."
@@ -997,7 +997,7 @@
     "what_is_seedphrase_title": "“Cụm mật khẩu khôi phục bí mật” là gì",
     "what_is_seedphrase_text_1": "Cụm mật khẩu khôi phục bí mật gồm có 12 từ chứa toàn bộ thông tin về ví của bạn, bao gồm cả số tiền của bạn. Đây giống như một mã bí mật dùng để truy cập toàn bộ ví của bạn.",
     "what_is_seedphrase_text_2": "Bạn phải lưu giữ Cụm mật khẩu khôi phục bí mật ở nơi an toàn và bí mật. Nếu ai đó biết Cụm mật khẩu khôi phục bí mật của bạn, họ có thể kiểm soát các tài khoản của bạn.",
-    "what_is_seedphrase_text_3": "Hãy lưu ở nơi mà bạn có thể lấy để sử dụng. Nếu bạn làm mất thì ngay cả MetaMask cũng không thể giúp bạn khôi phục."
+    "what_is_seedphrase_text_3": "Hãy lưu ở nơi mà bạn có thể lấy để sử dụng. Nếu bạn làm mất thì ngay cả BitcoinPay cũng không thể giúp bạn khôi phục."
   },
   "account_backup_step_1B": {
     "title": "Bảo mật cho ví của bạn",
@@ -1070,7 +1070,7 @@
   },
   "account_backup_step_6": {
     "title": "Mẹo bảo mật",
-    "info_text": "MetaMask không thể khôi phục Cụm mật khẩu khôi phục bí mật của bạn nếu bạn bị mất",
+    "info_text": "BitcoinPay không thể khôi phục Cụm mật khẩu khôi phục bí mật của bạn nếu bạn bị mất",
     "tip_1": "Lưu giữ nhiều bản sao lưu Cụm mật khẩu khôi phục bí mật của bạn",
     "tip_2": "Lưu giữ cụm mật khẩu trong trình quản lý mật khẩu đáng tin cậy và các bản sao lưu trên giấy ở nơi an toàn",
     "tip_3": "Tuyệt đối không chia sẻ cụm mật khẩu này với bất kỳ ai",
@@ -1108,7 +1108,7 @@
     "congratulations": "Chúc mừng bạn",
     "success": "Bạn đã bảo vệ thành công ví của mình. Hãy nhớ lưu giữ an toàn Cụm mật khẩu khôi phục bí mật của bạn. Đây là trách nhiệm của bạn!",
     "hint": "Để lại gợi ý cho bạn?",
-    "recover": "MetaMask không thể khôi phục ví của bạn nếu bạn bị mất cụm mật khẩu này. Bạn có thể tìm thấy Cụm mật khẩu khôi phục bí mật của mình trong phần Cài đặt > Bảo mật và quyền riêng tư.",
+    "recover": "BitcoinPay không thể khôi phục ví của bạn nếu bạn bị mất cụm mật khẩu này. Bạn có thể tìm thấy Cụm mật khẩu khôi phục bí mật của mình trong phần Cài đặt > Bảo mật và quyền riêng tư.",
     "learn": "Tìm hiểu thêm",
     "done": "Hoàn tất",
     "recovery_hint": "Gợi ý khôi phục",
@@ -1121,7 +1121,7 @@
   "phishing": {
     "ethereum_phishing_detection": "Phát hiện lừa đảo trên Ethereum",
     "ethereum_phishing_detector": "Trình phát hiện lừa đảo trên Ethereum",
-    "intro": " hiện đang nằm trong danh sách miền cảnh báo của MetaMask. Điều này có nghĩa là, dựa vào thông tin có sẵn với chúng tôi, MetaMask cho rằng miền này hiện có thể xâm phạm đến tính bảo mật của bạn và với vai trò là tính năng bảo mật bổ sung, MetaMask đã hạn chế quyền truy cập vào trang web đó. Để bỏ qua cảnh báo này, vui lòng đọc phần còn lại của cảnh báo để biết hướng dẫn về cách tiếp tục với rủi ro do bạn tự chịu.",
+    "intro": " hiện đang nằm trong danh sách miền cảnh báo của MetaMask. Điều này có nghĩa là, dựa vào thông tin có sẵn với chúng tôi, BitcoinPay cho rằng miền này hiện có thể xâm phạm đến tính bảo mật của bạn và với vai trò là tính năng bảo mật bổ sung, BitcoinPay đã hạn chế quyền truy cập vào trang web đó. Để bỏ qua cảnh báo này, vui lòng đọc phần còn lại của cảnh báo để biết hướng dẫn về cách tiếp tục với rủi ro do bạn tự chịu.",
     "reasons": "Có nhiều lý do có thể khiến các trang web nằm trong danh sách cảnh báo của chúng tôi và danh sách cảnh báo của chúng tôi tổng hợp từ các danh sách khác được sử dụng rộng rãi trong ngành. Những lý do đó có thể là các rủi ro đã biết về hành vi gian lận hoặc tính bảo mật, chẳng hạn như các miền cho kết quả kiểm tra là có vấn đề trên ",
     "list_content": "Những miền có các trong danh sách cảnh báo này có thể bao gồm các trang web hoàn toàn độc hại cũng như các trang web an toàn nhưng đã bị tác nhân độc hại xâm phạm.",
     "to_read_more": "Để tìm hiểu thêm về trang web này ",
@@ -1156,7 +1156,7 @@
     "received_message": "Nhấn để xem giao dịch này",
     "received_payment_message": "Bạn đã nhận được {{amount}} DAI",
     "prompt_title": "Bật thông báo đẩy",
-    "prompt_desc": "Bật thông báo để MetaMask có thể cho bạn biết mỗi khi bạn nhận được ETH hoặc khi giao dịch của bạn đã được xác nhận.",
+    "prompt_desc": "Bật thông báo để BitcoinPay có thể cho bạn biết mỗi khi bạn nhận được ETH hoặc khi giao dịch của bạn đã được xác nhận.",
     "prompt_ok": "Có",
     "prompt_cancel": "Không, cảm ơn",
     "wc_connected_title": "Kết nối với {{title}}",
@@ -1335,12 +1335,12 @@
         "average_gas_fee": "Phí gas trung bình hiện tại:",
         "subtitle_1": "Nếu bạn định hoán đổi hoặc chuyển nhượng {{ticker}}, vui lòng mua thêm để chi trả cho cả phí ga.",
         "subtitle_2": "Phí gas cho giao dịch tách biệt với chi phí mua {{ticker}}.",
-        "subtitle_3": "MetaMask không thu lợi từ phí gas."
+        "subtitle_3": "BitcoinPay không thu lợi từ phí gas."
       },
       "step_2": {
         "title": "Phí gas là gì?",
         "subtitle_1": "Ga dùng để thực hiện các giao dịch trên mạng Ethereum. Trong {{ticker}}, đó là một phí được trả cho thợ đào tiền mã hóa xử lý giao dịch của bạn.",
-        "subtitle_2": "MetaMask không thu lợi từ phí gas.",
+        "subtitle_2": "BitcoinPay không thu lợi từ phí gas.",
         "learn_more": "Tìm hiểu thêm về phí gas"
       },
       "step_3": {
@@ -1381,7 +1381,7 @@
       "start_swapping": "Bắt đầu hoán đổi"
     },
     "feature_off_title": "Tạm thời không dùng được",
-    "feature_off_body": "Tính năng Hoán đổi trên MetaMask đang được bảo trì. Vui lòng kiểm tra lại sau.",
+    "feature_off_body": "Tính năng Hoán đổi trên BitcoinPay đang được bảo trì. Vui lòng kiểm tra lại sau.",
     "wrong_network_title": "Không thể hoán đổi",
     "wrong_network_body": "Bạn chỉ có thể hoán đổi token trên Mạng chính thức của Ethereum.",
     "unallowed_asset_title": "Không thể hoán đổi token này",
@@ -1446,7 +1446,7 @@
     "completed_swap": "Hoán đổi!",
     "metamask_swap_fee": "Phí hoán đổi của MetaMask",
     "fee_text": {
-      "fee_is_applied": "Khoản phí {{fee}} tự động được tính vào mỗi báo giá để hỗ trợ sự phát triển liên tục và giúp MetaMask hoàn thiện hơn nữa."
+      "fee_is_applied": "Khoản phí {{fee}} tự động được tính vào mỗi báo giá để hỗ trợ sự phát triển liên tục và giúp BitcoinPay hoàn thiện hơn nữa."
     },
     "enable": {
       "this_will": "Việc này sẽ",
@@ -1541,7 +1541,7 @@
   "switch_custom_network": {
     "title_existing_network": "Trang web này muốn chuyển mạng",
     "title_new_network": "Đã thêm mạng mới",
-    "switch_warning": "Thao tác này sẽ chuyển mạng đang chọn trong MetaMask sang một mạng đã thêm trước đó:",
+    "switch_warning": "Thao tác này sẽ chuyển mạng đang chọn trong BitcoinPay sang một mạng đã thêm trước đó:",
     "available": "hiện đã có trong bộ chọn mạng.",
     "cancel": "Hủy",
     "switch": "Chuyển mạng"
@@ -1549,7 +1549,7 @@
   "add_custom_network": {
     "title": "Cho phép trang web này thêm một mạng?",
     "warning": "Điều này cho phép sử dụng mạng này trong MetaMask.",
-    "warning_subtext_1": "MetaMask không xác minh mạng tùy chỉnh hoặc tính bảo mật của các mạng đó.",
+    "warning_subtext_1": "BitcoinPay không xác minh mạng tùy chỉnh hoặc tính bảo mật của các mạng đó.",
     "warning_subtext_2": "Tìm hiểu thêm về",
     "warning_subtext_3": "các nguy cơ lừa đảo và an ninh mạng",
     "display_name": "Hiển thị tên",

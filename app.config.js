@@ -23,8 +23,8 @@ const CODE_SIGNING_KEYIDS = {
 };
 
 module.exports = {
-  name: 'MetaMask',
-  displayName: 'MetaMask',
+  name: 'BitcoinPay',
+  displayName: 'BitcoinPay',
   experiments: {
     reactCompiler: {
       enabled: true,
@@ -87,19 +87,19 @@ module.exports = {
   android: {
     package:
       process.env.METAMASK_BUILD_TYPE === 'flask'
-        ? 'io.metamask.flask'
-        : 'io.metamask', // Required for @expo/repack-app Android repacking
+        ? 'com.bitcoinpay.wallet.flask'
+        : 'com.bitcoinpay.wallet', // Required for @expo/repack-app Android repacking
   },
   ios: {
     bundleIdentifier:
       process.env.METAMASK_BUILD_TYPE === 'flask'
-        ? 'io.metamask.MetaMask-Flask'
-        : 'io.metamask.MetaMask', // Required for @expo/repack-app iOS repacking
+        ? 'com.bitcoinpay.wallet.flask'
+        : 'com.bitcoinpay.wallet', // Required for @expo/repack-app iOS repacking
     usesAppleSignIn: true,
     jsEngine: 'hermes',
   },
   expo: {
-    owner: 'metamask',
+    owner: 'bitcoinpay',
     runtimeVersion: RUNTIME_VERSION,
     updates: {
       codeSigningCertificate: CODE_SIGNING_CERTS[OTA_ENV],
@@ -115,10 +115,10 @@ module.exports = {
       },
     },
     android: {
-      package: 'io.metamask',
+      package: 'com.bitcoinpay.wallet',
     },
     ios: {
-      bundleIdentifier: 'io.metamask.MetaMask',
+      bundleIdentifier: 'com.bitcoinpay.wallet',
     },
   },
 };

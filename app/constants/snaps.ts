@@ -9,7 +9,7 @@ export interface SnapsDerivationPath {
   name: string;
 }
 
-// Copy of extension mapping: https://github.com/MetaMask/metamask-extension/blob/f37544d16cd24e85a7c36f0e067fa009f115083e/shared/constants/snaps.ts#L52
+// Copy of extension mapping: https://github.com/BitcoinPay/metamask-extension/blob/f37544d16cd24e85a7c36f0e067fa009f115083e/shared/constants/snaps.ts#L52
 export const SNAPS_DERIVATION_PATHS: SnapsDerivationPath[] = [
   {
     path: ['m', `44'`, `0'`],

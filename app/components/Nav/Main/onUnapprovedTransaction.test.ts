@@ -67,18 +67,18 @@ describe('onUnapprovedTransaction', () => {
     jest.resetAllMocks();
   });
 
-  it('skips processing when origin is MetaMask Mobile (MMM)', () => {
+  it('skips processing when origin is BitcoinPay Mobile (MMM)', () => {
     const callbacks = mockCallbacks();
-    const txMeta = buildSwapTxMeta({ origin: 'MetaMask Mobile' });
+    const txMeta = buildSwapTxMeta({ origin: 'BitcoinPay Mobile' });
 
     onUnapprovedTransaction(txMeta, callbacks);
 
     expect(callbacks.autoSign).not.toHaveBeenCalled();
   });
 
-  it('skips processing when origin is MetaMask Mobile Card (MMM_CARD)', () => {
+  it('skips processing when origin is BitcoinPay Mobile Card (MMM_CARD)', () => {
     const callbacks = mockCallbacks();
-    const txMeta = buildSwapTxMeta({ origin: 'MetaMask Mobile Card' });
+    const txMeta = buildSwapTxMeta({ origin: 'BitcoinPay Mobile Card' });
 
     onUnapprovedTransaction(txMeta, callbacks);
 
