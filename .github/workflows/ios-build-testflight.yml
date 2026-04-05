@@ -158,17 +158,9 @@ jobs:
           # react-native-gzip and other packages lack proper codegenConfig,
           # so RNGzipSpec.h is never generated. Disabling new arch makes them
           # fall back to the old bridge module interface.
-          cd ios
-          python3 -c "
-import json
-with open('Podfile.properties.json', 'r') as f:
-    props = json.load(f)
-props['newArchEnabled'] = 'false'
-with open('Podfile.properties.json', 'w') as f:
-    json.dump(props, f, indent=4)
-print('Set newArchEnabled to false')
-"
-          cat Podfile.properties.json
+          sed -i 's/"newArchEnabled": "true"/"newArchEnabled": "false"/' ios/Podfile.properties.json
+          echo "Updated Podfile.properties.json:"
+          cat ios/Podfile.properties.json
 
       - name: Install CocoaPods
         working-directory: ios
