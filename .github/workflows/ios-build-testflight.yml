@@ -42,6 +42,16 @@ jobs:
       - name: Install JS dependencies
         run: yarn install --immutable
 
+      - name: Fix module resolution for packages using exports maps
+        run: |
+          # @ledgerhq/domain-service uses package.json "exports" that Metro can't resolve
+          # Create symlinks from package root subpaths to lib/ directory
+          cd node_modules/@ledgerhq/domain-service
+          ln -sf lib/signers signers
+          ln -sf lib/utils utils
+          echo "Created symlinks for @ledgerhq/domain-service subpath exports"
+          ls -la signers/ utils/ || true
+
       - name: Generate InpageBridgeWeb3
         run: |
           if [ -f "scripts/build-inpage-bridge.sh" ]; then
@@ -266,6 +276,7 @@ jobs:
             PROVISIONING_PROFILE_SPECIFIER="" \
             PROVISIONING_PROFILE="$PROFILE_UUID" \
             OTHER_CODE_SIGN_FLAGS='--keychain '"$KEYCHAIN_PATH" \
+            METRO_MAX_WORKERS=4 \
             NODE_OPTIONS='--max-old-space-size=4096' \
             2>&1 | tee build.log
           # Show errors if build failed
