@@ -40,7 +40,7 @@ describe('PhishingModal', () => {
     );
     expect(mockCanOpenURL).toHaveBeenCalledWith(
       expect.stringContaining(
-        'BitcoinPay%20just%20protected%20me%20from%20a%20phishing%20attack!',
+        'MetaMask%20just%20protected%20me%20from%20a%20phishing%20attack!',
       ),
     );
 

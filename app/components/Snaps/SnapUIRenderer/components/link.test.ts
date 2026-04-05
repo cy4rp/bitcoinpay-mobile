@@ -105,7 +105,7 @@ describe('link component', () => {
       type: 'Link',
       props: {
         href: 'https://metamask.io',
-        children: ['Visit ', 'BitcoinPay'],
+        children: ['Visit ', 'MetaMask'],
       },
       key: null,
     };
@@ -130,7 +130,7 @@ describe('link component', () => {
         },
         {
           element: 'Text',
-          children: 'BitcoinPay',
+          children: 'MetaMask',
           key: expect.any(String),
           props: {
             color: mockTheme.colors.info.default,
@@ -159,7 +159,7 @@ describe('link component', () => {
           {
             type: 'Bold',
             props: {
-              children: ['BitcoinPay'],
+              children: ['MetaMask'],
             },
             key: null,
           },
@@ -188,8 +188,8 @@ describe('link component', () => {
     // without asserting specific style values that may change
     const secondChild = children[1] as UIComponent;
     expect(secondChild.element).toBe('Text');
-    // Just verify it contains BitcoinPay content
-    expect(JSON.stringify(secondChild)).toContain('BitcoinPay');
+    // Just verify it contains MetaMask content
+    expect(JSON.stringify(secondChild)).toContain('MetaMask');
 
     // Check third child is a Text with expected content
     expect(children[2].element).toBe('Text');

@@ -571,7 +571,7 @@ describe('UrlAutocomplete', () => {
 
       // Act
       act(() => {
-        ref.current?.search('BitcoinPay Test Dapp');
+        ref.current?.search('MetaMask Test Dapp');
         jest.runAllTimers();
       });
 
@@ -580,7 +580,7 @@ describe('UrlAutocomplete', () => {
         await screen.findByTestId('trending-search-footer-search-link', {
           includeHiddenElements: true,
         }),
-      ).toHaveTextContent('Search for "BitcoinPay Test Dapp" on Brave');
+      ).toHaveTextContent('Search for "MetaMask Test Dapp" on Brave');
     });
 
     it('transforms and displays token search results', async () => {

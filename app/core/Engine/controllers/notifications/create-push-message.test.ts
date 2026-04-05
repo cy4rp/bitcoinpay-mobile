@@ -12,7 +12,7 @@ import {
   createMockNotificationLidoStakeCompleted,
   createMockNotificationLidoWithdrawalCompleted,
   createMockNotificationLidoWithdrawalRequested,
-  createMockNotificationBitcoinPaySwapsCompleted,
+  createMockNotificationMetaMaskSwapsCompleted,
   createMockNotificationRocketPoolStakeCompleted,
   createMockNotificationRocketPoolUnStakeCompleted,
 } from '@metamask/notification-services-controller/notification-services/mocks';
@@ -57,12 +57,12 @@ describe('notification-message tests', () => {
 
   test('displays metamask swap completed notification', () => {
     const notification = processNotification(
-      createMockNotificationBitcoinPaySwapsCompleted(),
+      createMockNotificationMetaMaskSwapsCompleted(),
     );
     const result = createNotificationMessage(notification);
 
     expect(result?.title).toBe('Swap completed');
-    expect(result?.description).toContain('Your BitcoinPay Swap was successful');
+    expect(result?.description).toContain('Your MetaMask Swap was successful');
   });
 
   test('displays erc721 sent notification', () => {

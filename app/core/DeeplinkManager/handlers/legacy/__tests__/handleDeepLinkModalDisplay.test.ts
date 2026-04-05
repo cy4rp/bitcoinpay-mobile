@@ -54,7 +54,7 @@ describe('handleDeepLinkModalDisplay', () => {
       );
       handleDeepLinkModalDisplay({
         linkType,
-        pageTitle: 'BitcoinPay',
+        pageTitle: 'MetaMask',
         onContinue: jest.fn(),
         onBack: jest.fn(),
       });

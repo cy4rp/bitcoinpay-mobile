@@ -145,7 +145,7 @@ describe('tokenUtils', () => {
 
       expect(result).toBeDefined();
       expect(result?.symbol).toBe('mUSD');
-      expect(result?.name).toBe('BitcoinPay USD');
+      expect(result?.name).toBe('MetaMask USD');
       expect(result?.chainId).toBe(caipChainId); // Should return with original CAIP format
     });
 

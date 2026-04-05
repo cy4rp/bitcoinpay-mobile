@@ -1,7 +1,7 @@
 import AppConstants from '../../../../core/AppConstants';
-import { getDefaultBaanxApiBaseUrlForBitcoinPayEnv } from './mapBaanxApiUrl';
+import { getDefaultBaanxApiBaseUrlForMetaMaskEnv } from './mapBaanxApiUrl';
 
-describe('getDefaultBaanxApiBaseUrlForBitcoinPayEnv', () => {
+describe('getDefaultBaanxApiBaseUrlForMetaMaskEnv', () => {
   const originalBaanxUrl = process.env.BAANX_API_URL;
   const originalBuildsEnabled =
     process.env.BUILDS_ENABLED_WITH_GH_ACTIONS_TEMPORARY;
@@ -27,25 +27,25 @@ describe('getDefaultBaanxApiBaseUrlForBitcoinPayEnv', () => {
 
     it('returns BAANX_API_URL from environment when set', () => {
       process.env.BAANX_API_URL = 'https://test.api';
-      expect(getDefaultBaanxApiBaseUrlForBitcoinPayEnv('any-env')).toBe(
+      expect(getDefaultBaanxApiBaseUrlForMetaMaskEnv('any-env')).toBe(
         'https://test.api',
       );
     });
 
     it('ignores metaMaskEnv parameter (URL is set at build time)', () => {
       process.env.BAANX_API_URL = 'https://custom.api';
-      expect(getDefaultBaanxApiBaseUrlForBitcoinPayEnv('dev')).toBe(
+      expect(getDefaultBaanxApiBaseUrlForMetaMaskEnv('dev')).toBe(
         'https://custom.api',
       );
-      expect(getDefaultBaanxApiBaseUrlForBitcoinPayEnv('production')).toBe(
+      expect(getDefaultBaanxApiBaseUrlForMetaMaskEnv('production')).toBe(
         'https://custom.api',
       );
     });
 
     it('produces same output for same input', () => {
       process.env.BAANX_API_URL = 'https://test.api';
-      const result1 = getDefaultBaanxApiBaseUrlForBitcoinPayEnv('production');
-      const result2 = getDefaultBaanxApiBaseUrlForBitcoinPayEnv('production');
+      const result1 = getDefaultBaanxApiBaseUrlForMetaMaskEnv('production');
+      const result2 = getDefaultBaanxApiBaseUrlForMetaMaskEnv('production');
       expect(result1).toBe(result2);
     });
   });
@@ -56,34 +56,34 @@ describe('getDefaultBaanxApiBaseUrlForBitcoinPayEnv', () => {
     });
 
     it('returns AppConstants.BAANX_API_URL.PRD for production/rc', () => {
-      expect(getDefaultBaanxApiBaseUrlForBitcoinPayEnv('production')).toBe(
+      expect(getDefaultBaanxApiBaseUrlForMetaMaskEnv('production')).toBe(
         AppConstants.BAANX_API_URL.PRD,
       );
-      expect(getDefaultBaanxApiBaseUrlForBitcoinPayEnv('rc')).toBe(
+      expect(getDefaultBaanxApiBaseUrlForMetaMaskEnv('rc')).toBe(
         AppConstants.BAANX_API_URL.PRD,
       );
     });
 
     it('returns AppConstants.BAANX_API_URL.UAT for pre-release/exp/beta', () => {
-      expect(getDefaultBaanxApiBaseUrlForBitcoinPayEnv('pre-release')).toBe(
+      expect(getDefaultBaanxApiBaseUrlForMetaMaskEnv('pre-release')).toBe(
         AppConstants.BAANX_API_URL.UAT,
       );
-      expect(getDefaultBaanxApiBaseUrlForBitcoinPayEnv('exp')).toBe(
+      expect(getDefaultBaanxApiBaseUrlForMetaMaskEnv('exp')).toBe(
         AppConstants.BAANX_API_URL.UAT,
       );
-      expect(getDefaultBaanxApiBaseUrlForBitcoinPayEnv('beta')).toBe(
+      expect(getDefaultBaanxApiBaseUrlForMetaMaskEnv('beta')).toBe(
         AppConstants.BAANX_API_URL.UAT,
       );
     });
 
     it('returns AppConstants.BAANX_API_URL.DEV for dev/e2e/local', () => {
-      expect(getDefaultBaanxApiBaseUrlForBitcoinPayEnv('dev')).toBe(
+      expect(getDefaultBaanxApiBaseUrlForMetaMaskEnv('dev')).toBe(
         AppConstants.BAANX_API_URL.DEV,
       );
-      expect(getDefaultBaanxApiBaseUrlForBitcoinPayEnv('e2e')).toBe(
+      expect(getDefaultBaanxApiBaseUrlForMetaMaskEnv('e2e')).toBe(
         AppConstants.BAANX_API_URL.DEV,
       );
-      expect(getDefaultBaanxApiBaseUrlForBitcoinPayEnv('local')).toBe(
+      expect(getDefaultBaanxApiBaseUrlForMetaMaskEnv('local')).toBe(
         AppConstants.BAANX_API_URL.DEV,
       );
     });
@@ -91,7 +91,7 @@ describe('getDefaultBaanxApiBaseUrlForBitcoinPayEnv', () => {
     it('returns a non-empty string for all inputs', () => {
       const testCases = ['production', 'dev', undefined, null, '', 'unknown'];
       testCases.forEach((testCase) => {
-        const result = getDefaultBaanxApiBaseUrlForBitcoinPayEnv(
+        const result = getDefaultBaanxApiBaseUrlForMetaMaskEnv(
           testCase as string | undefined,
         );
         expect(typeof result).toBe('string');

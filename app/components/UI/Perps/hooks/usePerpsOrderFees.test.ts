@@ -167,7 +167,7 @@ describe('usePerpsOrderFees', () => {
         feeRate: 0.00045, // 0.045% total
         feeAmount: 45,
         protocolFeeRate: 0.00045, // 0.045% protocol
-        metamaskFeeRate: 0, // 0% BitcoinPay currently
+        metamaskFeeRate: 0, // 0% MetaMask currently
       };
       mockCalculateFees.mockResolvedValue(mockFeeResult);
 
@@ -208,7 +208,7 @@ describe('usePerpsOrderFees', () => {
         feeRate: 0.00015, // 0.015% total
         feeAmount: 15,
         protocolFeeRate: 0.00015, // 0.015% protocol
-        metamaskFeeRate: 0, // 0% BitcoinPay currently
+        metamaskFeeRate: 0, // 0% MetaMask currently
       };
       mockCalculateFees.mockResolvedValue(mockFeeResult);
 
@@ -244,7 +244,7 @@ describe('usePerpsOrderFees', () => {
         feeRate: 0.00045, // 0.045% total
         feeAmount: 45,
         protocolFeeRate: 0.00045, // 0.045% protocol
-        metamaskFeeRate: 0, // 0% BitcoinPay currently
+        metamaskFeeRate: 0, // 0% MetaMask currently
       };
       mockCalculateFees.mockResolvedValue(mockFeeResult);
 
@@ -631,17 +631,17 @@ describe('usePerpsOrderFees', () => {
     });
   });
 
-  describe('BitcoinPay fee integration', () => {
-    it('should include BitcoinPay fees in total calculation', async () => {
+  describe('MetaMask fee integration', () => {
+    it('should include MetaMask fees in total calculation', async () => {
       const mockFeeResult: FeeCalculationResult = {
-        feeRate: 0.01045, // 0.045% protocol + 1% BitcoinPay = 1.045% total
+        feeRate: 0.01045, // 0.045% protocol + 1% MetaMask = 1.045% total
         feeAmount: 1045,
         protocolFeeRate: 0.00045,
         metamaskFeeRate: 0.01,
       };
       mockCalculateFees.mockResolvedValue(mockFeeResult);
 
-      // The provider now returns BitcoinPay fee directly
+      // The provider now returns MetaMask fee directly
 
       const { result } = renderHook(
         () =>

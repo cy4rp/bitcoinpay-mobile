@@ -7,7 +7,7 @@ describe('isDappOrigin', () => {
     expect(isDappOrigin('opensea.io')).toBe(true);
   });
 
-  it('returns false for BitcoinPay origins', () => {
+  it('returns false for MetaMask origins', () => {
     expect(isDappOrigin(MMM_ORIGIN)).toBe(false);
     expect(isDappOrigin(MM_MOBILE_ORIGIN)).toBe(false);
   });

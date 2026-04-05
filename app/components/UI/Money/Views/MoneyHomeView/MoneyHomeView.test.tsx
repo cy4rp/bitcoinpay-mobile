@@ -9,8 +9,8 @@ import { MoneyActionButtonRowTestIds } from '../../components/MoneyActionButtonR
 import { MoneyYourPositionTestIds } from '../../components/MoneyYourPosition/MoneyYourPosition.testIds';
 import { MoneyHowItWorksTestIds } from '../../components/MoneyHowItWorks/MoneyHowItWorks.testIds';
 import { MoneyPotentialEarningsTestIds } from '../../components/MoneyPotentialEarnings/MoneyPotentialEarnings.testIds';
-import { MoneyBitcoinPayCardTestIds } from '../../components/MoneyBitcoinPayCard/MoneyBitcoinPayCard.testIds';
-import { MoneyWhyBitcoinPayMoneyTestIds } from '../../components/MoneyWhyBitcoinPayMoney/MoneyWhyBitcoinPayMoney.testIds';
+import { MoneyMetaMaskCardTestIds } from '../../components/MoneyMetaMaskCard/MoneyMetaMaskCard.testIds';
+import { MoneyWhyMetaMaskMoneyTestIds } from '../../components/MoneyWhyMetaMaskMoney/MoneyWhyMetaMaskMoney.testIds';
 import { MoneyFooterTestIds } from '../../components/MoneyFooter/MoneyFooter.testIds';
 
 const mockGoBack = jest.fn();
@@ -133,17 +133,17 @@ describe('MoneyHomeView', () => {
     ).toBeOnTheScreen();
   });
 
-  it('renders the BitcoinPay Card section', () => {
+  it('renders the MetaMask Card section', () => {
     const { getByTestId } = renderWithProvider(<MoneyHomeView />);
 
-    expect(getByTestId(MoneyBitcoinPayCardTestIds.CONTAINER)).toBeOnTheScreen();
+    expect(getByTestId(MoneyMetaMaskCardTestIds.CONTAINER)).toBeOnTheScreen();
   });
 
-  it('renders the why BitcoinPay Money section', () => {
+  it('renders the why MetaMask Money section', () => {
     const { getByTestId } = renderWithProvider(<MoneyHomeView />);
 
     expect(
-      getByTestId(MoneyWhyBitcoinPayMoneyTestIds.CONTAINER),
+      getByTestId(MoneyWhyMetaMaskMoneyTestIds.CONTAINER),
     ).toBeOnTheScreen();
   });
 

@@ -126,7 +126,7 @@ describe('SitesFullView', () => {
   const mockSites: SiteData[] = [
     {
       id: '1',
-      name: 'BitcoinPay',
+      name: 'MetaMask',
       url: 'https://metamask.io',
       displayUrl: 'metamask.io',
       logoUrl: 'https://example.com/metamask.png',
@@ -459,7 +459,7 @@ describe('SitesFullView', () => {
       // Search with different case
       fireEvent.changeText(searchInput, 'METAMASK');
 
-      // BitcoinPay should still be found
+      // MetaMask should still be found
       expect(getByTestId('site-item-1')).toBeOnTheScreen();
       expect(queryByTestId('site-item-2')).toBeNull();
     });

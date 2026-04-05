@@ -100,7 +100,7 @@ describe('CashGetMusdEmptyState', () => {
       screen.getByTestId(CashGetMusdEmptyStateSelectors.CONTAINER),
     ).toBeOnTheScreen();
     expect(screen.getByText('Get mUSD')).toBeOnTheScreen();
-    expect(screen.getByText('BitcoinPay USD')).toBeOnTheScreen();
+    expect(screen.getByText('MetaMask USD')).toBeOnTheScreen();
     expect(screen.getByText('3% bonus')).toBeOnTheScreen();
   });
 
@@ -114,7 +114,7 @@ describe('CashGetMusdEmptyState', () => {
       'Asset',
       expect.objectContaining({
         symbol: 'mUSD',
-        name: 'BitcoinPay USD',
+        name: 'MetaMask USD',
         address: expect.any(String),
         chainId: '0x1',
         source: 'mobile-token-list-page',

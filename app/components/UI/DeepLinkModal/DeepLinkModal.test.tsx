@@ -95,7 +95,7 @@ describe('DeepLinkModal', () => {
   const mockOnContinue = jest.fn();
   const mockOnBack = jest.fn();
   const baseParams = {
-    pageTitle: 'BitcoinPay',
+    pageTitle: 'MetaMask',
     onContinue: mockOnContinue,
     onBack: mockOnBack,
   };
@@ -171,7 +171,7 @@ describe('DeepLinkModal', () => {
 
     const title = getByText('Proceed with caution');
     const description = getByText(
-      /You were sent here by a third party, not BitcoinPay. You'll open BitcoinPay if you continue./i,
+      /You were sent here by a third party, not MetaMask. You'll open MetaMask if you continue./i,
     );
     const checkbox = queryByText(/Don't remind me again/i);
 
@@ -191,8 +191,8 @@ describe('DeepLinkModal', () => {
       { state: {} },
     );
 
-    const title = getByText('Redirecting you to BitcoinPay');
-    const description = getByText(/You'll open BitcoinPay if you continue./i);
+    const title = getByText('Redirecting you to MetaMask');
+    const description = getByText(/You'll open MetaMask if you continue./i);
     const checkbox = getByText(/Don't remind me again/i);
 
     expect(title).toBeOnTheScreen();
@@ -236,7 +236,7 @@ describe('DeepLinkModal', () => {
     );
     const goToHomeButton = getByText('Go to the home page');
     const storeLinkText = getByText(
-      "Update to the latest version of BitcoinPay and we'll take you to the right place.",
+      "Update to the latest version of MetaMask and we'll take you to the right place.",
     );
     const checkbox = queryByText(/Don't remind me again/i);
 
@@ -269,7 +269,7 @@ describe('DeepLinkModal', () => {
         { name: 'DeepLinkModal' },
         { state: {} },
       );
-      const storeLink = getByText('Update to the latest version of BitcoinPay');
+      const storeLink = getByText('Update to the latest version of MetaMask');
 
       await act(async () => {
         fireEvent.press(storeLink);
@@ -297,7 +297,7 @@ describe('DeepLinkModal', () => {
         { name: 'DeepLinkModal' },
         { state: {} },
       );
-      const storeLink = getByText('Update to the latest version of BitcoinPay');
+      const storeLink = getByText('Update to the latest version of MetaMask');
 
       await act(async () => {
         fireEvent.press(storeLink);

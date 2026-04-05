@@ -1,14 +1,14 @@
 import Logger from '../../../../util/Logger';
 import { CardError, CardErrorType } from '../types';
 import { refreshCardToken } from './refreshCardToken';
-import { getDefaultBaanxApiBaseUrlForBitcoinPayEnv } from './mapBaanxApiUrl';
+import { getDefaultBaanxApiBaseUrlForMetaMaskEnv } from './mapBaanxApiUrl';
 
 jest.mock('../../../../util/Logger');
 jest.mock('./mapBaanxApiUrl');
 
 const mockLogger = jest.mocked(Logger);
-const mockGetDefaultBaanxApiBaseUrlForBitcoinPayEnv = jest.mocked(
-  getDefaultBaanxApiBaseUrlForBitcoinPayEnv,
+const mockGetDefaultBaanxApiBaseUrlForMetaMaskEnv = jest.mocked(
+  getDefaultBaanxApiBaseUrlForMetaMaskEnv,
 );
 
 // Mock global fetch
@@ -23,7 +23,7 @@ describe('refreshCardToken', () => {
     jest.clearAllMocks();
     jest.useFakeTimers();
     process.env.MM_CARD_BAANX_API_CLIENT_KEY = mockApiKey;
-    mockGetDefaultBaanxApiBaseUrlForBitcoinPayEnv.mockReturnValue(mockBaseUrl);
+    mockGetDefaultBaanxApiBaseUrlForMetaMaskEnv.mockReturnValue(mockBaseUrl);
   });
 
   afterEach(() => {
@@ -114,7 +114,7 @@ describe('refreshCardToken', () => {
 
     it('uses correct environment-specific base URL', async () => {
       const customBaseUrl = 'https://foxdev2-ag.foxcard.io';
-      mockGetDefaultBaanxApiBaseUrlForBitcoinPayEnv.mockReturnValue(
+      mockGetDefaultBaanxApiBaseUrlForMetaMaskEnv.mockReturnValue(
         customBaseUrl,
       );
 

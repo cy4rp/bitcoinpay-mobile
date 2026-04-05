@@ -1,6 +1,6 @@
 import {
   canChangeRewardsEnvUrl,
-  getDefaultRewardsApiBaseUrlForBitcoinPayEnv,
+  getDefaultRewardsApiBaseUrlForMetaMaskEnv,
 } from './rewards-api-url';
 
 jest.mock('../../../../AppConstants', () => ({
@@ -32,7 +32,7 @@ describe('canChangeRewardsEnvUrl', () => {
   });
 });
 
-describe('getDefaultRewardsApiBaseUrlForBitcoinPayEnv', () => {
+describe('getDefaultRewardsApiBaseUrlForMetaMaskEnv', () => {
   const originalEnv = process.env;
 
   beforeEach(() => {
@@ -51,7 +51,7 @@ describe('getDefaultRewardsApiBaseUrlForBitcoinPayEnv', () => {
       process.env.BUILDS_ENABLED_WITH_GH_ACTIONS_TEMPORARY = 'true';
 
       const [apiUrl, canChange] =
-        getDefaultRewardsApiBaseUrlForBitcoinPayEnv('dev');
+        getDefaultRewardsApiBaseUrlForMetaMaskEnv('dev');
       expect(apiUrl).toEqual('https://custom.api');
       expect(canChange).toBe(true);
     });
@@ -61,7 +61,7 @@ describe('getDefaultRewardsApiBaseUrlForBitcoinPayEnv', () => {
       process.env.BUILDS_ENABLED_WITH_GH_ACTIONS_TEMPORARY = 'true';
 
       const [apiUrl, canChange] =
-        getDefaultRewardsApiBaseUrlForBitcoinPayEnv('production');
+        getDefaultRewardsApiBaseUrlForMetaMaskEnv('production');
       expect(apiUrl).toEqual('https://custom.api');
       expect(canChange).toBe(false);
     });
@@ -70,71 +70,71 @@ describe('getDefaultRewardsApiBaseUrlForBitcoinPayEnv', () => {
       process.env.REWARDS_API_URL = 'https://custom.api';
       process.env.BUILDS_ENABLED_WITH_GH_ACTIONS_TEMPORARY = 'false';
 
-      const [apiUrl] = getDefaultRewardsApiBaseUrlForBitcoinPayEnv('dev');
+      const [apiUrl] = getDefaultRewardsApiBaseUrlForMetaMaskEnv('dev');
       expect(apiUrl).toEqual('https://api.uat');
     });
 
     it('falls through to switch when REWARDS_API_URL is not set', () => {
       process.env.BUILDS_ENABLED_WITH_GH_ACTIONS_TEMPORARY = 'true';
 
-      const [apiUrl] = getDefaultRewardsApiBaseUrlForBitcoinPayEnv('dev');
+      const [apiUrl] = getDefaultRewardsApiBaseUrlForMetaMaskEnv('dev');
       expect(apiUrl).toEqual('https://api.uat');
     });
   });
 
   it('returns UAT url and canChange=true for local or dev env', () => {
-    let [apiUrl, canChange] = getDefaultRewardsApiBaseUrlForBitcoinPayEnv('dev');
+    let [apiUrl, canChange] = getDefaultRewardsApiBaseUrlForMetaMaskEnv('dev');
     expect(apiUrl).toEqual('https://api.uat');
     expect(canChange).toBe(true);
 
-    [apiUrl, canChange] = getDefaultRewardsApiBaseUrlForBitcoinPayEnv('local');
+    [apiUrl, canChange] = getDefaultRewardsApiBaseUrlForMetaMaskEnv('local');
     expect(apiUrl).toEqual('https://api.uat');
     expect(canChange).toBe(true);
   });
 
   it('returns UAT url and canChange=false for undefined or unknown env', () => {
     let [apiUrl, canChange] =
-      getDefaultRewardsApiBaseUrlForBitcoinPayEnv(undefined);
+      getDefaultRewardsApiBaseUrlForMetaMaskEnv(undefined);
     expect(apiUrl).toEqual('https://api.uat');
     expect(canChange).toBe(false);
 
-    [apiUrl, canChange] = getDefaultRewardsApiBaseUrlForBitcoinPayEnv('unknown');
+    [apiUrl, canChange] = getDefaultRewardsApiBaseUrlForMetaMaskEnv('unknown');
     expect(apiUrl).toEqual('https://api.uat');
     expect(canChange).toBe(false);
   });
 
   it('returns UAT url and canChange=true for e2e, exp, or test env', () => {
-    let [apiUrl, canChange] = getDefaultRewardsApiBaseUrlForBitcoinPayEnv('e2e');
+    let [apiUrl, canChange] = getDefaultRewardsApiBaseUrlForMetaMaskEnv('e2e');
     expect(apiUrl).toEqual('https://api.uat');
     expect(canChange).toBe(true);
 
-    [apiUrl, canChange] = getDefaultRewardsApiBaseUrlForBitcoinPayEnv('exp');
+    [apiUrl, canChange] = getDefaultRewardsApiBaseUrlForMetaMaskEnv('exp');
     expect(apiUrl).toEqual('https://api.uat');
     expect(canChange).toBe(true);
 
-    [apiUrl, canChange] = getDefaultRewardsApiBaseUrlForBitcoinPayEnv('test');
+    [apiUrl, canChange] = getDefaultRewardsApiBaseUrlForMetaMaskEnv('test');
     expect(apiUrl).toEqual('https://api.uat');
     expect(canChange).toBe(true);
   });
 
   it('returns PRD url and canChange=false for production env', () => {
     const [apiUrl, canChange] =
-      getDefaultRewardsApiBaseUrlForBitcoinPayEnv('production');
+      getDefaultRewardsApiBaseUrlForMetaMaskEnv('production');
     expect(apiUrl).toEqual('https://api.prd');
     expect(canChange).toBe(false);
   });
 
   it('returns PRD url and canChange=true for beta, pre-release, or rc env', () => {
-    let [apiUrl, canChange] = getDefaultRewardsApiBaseUrlForBitcoinPayEnv('beta');
+    let [apiUrl, canChange] = getDefaultRewardsApiBaseUrlForMetaMaskEnv('beta');
     expect(apiUrl).toEqual('https://api.prd');
     expect(canChange).toBe(true);
 
     [apiUrl, canChange] =
-      getDefaultRewardsApiBaseUrlForBitcoinPayEnv('pre-release');
+      getDefaultRewardsApiBaseUrlForMetaMaskEnv('pre-release');
     expect(apiUrl).toEqual('https://api.prd');
     expect(canChange).toBe(true);
 
-    [apiUrl, canChange] = getDefaultRewardsApiBaseUrlForBitcoinPayEnv('rc');
+    [apiUrl, canChange] = getDefaultRewardsApiBaseUrlForMetaMaskEnv('rc');
     expect(apiUrl).toEqual('https://api.prd');
     expect(canChange).toBe(true);
   });

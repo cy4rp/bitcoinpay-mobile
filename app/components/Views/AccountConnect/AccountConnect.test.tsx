@@ -790,7 +790,7 @@ describe('AccountConnect', () => {
       );
 
       const warningText = await findByText(
-        `BitcoinPay flagged the site you're trying to visit as potentially deceptive. Attackers may trick you into doing something dangerous.`,
+        `MetaMask flagged the site you're trying to visit as potentially deceptive. Attackers may trick you into doing something dangerous.`,
       );
       expect(warningText).toBeTruthy();
       expect(Engine.context.PhishingController.scanUrl).toHaveBeenCalledWith(
@@ -822,7 +822,7 @@ describe('AccountConnect', () => {
       );
 
       const warningText = queryByText(
-        `BitcoinPay flagged the site you're trying to visit as potentially deceptive.`,
+        `MetaMask flagged the site you're trying to visit as potentially deceptive.`,
       );
       expect(warningText).toBeNull();
       expect(Engine.context.PhishingController.scanUrl).toHaveBeenCalledWith(

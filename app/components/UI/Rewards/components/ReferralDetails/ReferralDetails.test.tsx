@@ -91,7 +91,7 @@ const mockUseSelector = useSelector as jest.MockedFunction<typeof useSelector>;
 jest.mock('../../../../../../locales/i18n', () => ({
   strings: jest.fn((key: string) => {
     const translations: Record<string, string> = {
-      'rewards.referral.actions.share_referral_subject': 'Join me on BitcoinPay!',
+      'rewards.referral.actions.share_referral_subject': 'Join me on MetaMask!',
       'rewards.season_status_error.error_fetching_title':
         "Season balance couldn't be loaded",
       'rewards.season_status_error.error_fetching_description':

@@ -14,7 +14,7 @@ import { ORIGIN_METAMASK, toHex } from '@metamask/controller-utils';
 import { MOCK_ANY_NAMESPACE, MockAnyNamespace } from '@metamask/messenger';
 import { Hex } from '@metamask/utils';
 import { selectShouldUseSmartTransaction } from '../../../../selectors/smartTransactionsController';
-import { selectBitcoinPayPayFlags } from '../../../../selectors/featureFlagController/confirmations';
+import { selectMetaMaskPayFlags } from '../../../../selectors/featureFlagController/confirmations';
 import { getGlobalChainId } from '../../../../util/networks/global-network';
 import { submitSmartTransactionHook } from '../../../../util/smart-transactions/smart-publish-hook';
 import { accountSupports7702 } from '../../../../util/transactions/account-supports-7702';
@@ -145,7 +145,7 @@ describe('Transaction Controller Init', () => {
   );
   const accountSupports7702Mock = jest.mocked(accountSupports7702);
   const isSendBundleSupportedMock = jest.mocked(isSendBundleSupported);
-  const selectBitcoinPayPayFlagsMock = jest.mocked(selectBitcoinPayPayFlags);
+  const selectMetaMaskPayFlagsMock = jest.mocked(selectMetaMaskPayFlags);
   const payHookClassMock = jest.mocked(TransactionPayPublishHook);
   const payHookMock: jest.MockedFn<PublishHook> = jest.fn();
 
@@ -178,7 +178,7 @@ describe('Transaction Controller Init', () => {
     selectShouldUseSmartTransactionMock.mockReturnValue(true);
     getGlobalChainIdMock.mockReturnValue('0x1');
     isSendBundleSupportedMock.mockResolvedValue(true);
-    selectBitcoinPayPayFlagsMock.mockReturnValue({
+    selectMetaMaskPayFlagsMock.mockReturnValue({
       attemptsMax: 2,
       bufferInitial: 0.025,
       bufferStep: 0.025,
@@ -331,7 +331,7 @@ describe('Transaction Controller Init', () => {
     });
 
     it('passes isSmartTransaction returning false to pay hook when stxDisabled is true', async () => {
-      selectBitcoinPayPayFlagsMock.mockReturnValue({
+      selectMetaMaskPayFlagsMock.mockReturnValue({
         attemptsMax: 2,
         bufferInitial: 0.025,
         bufferStep: 0.025,
@@ -348,7 +348,7 @@ describe('Transaction Controller Init', () => {
     });
 
     it('passes isSmartTransaction returning true to pay hook when stxDisabled is false', async () => {
-      selectBitcoinPayPayFlagsMock.mockReturnValue({
+      selectMetaMaskPayFlagsMock.mockReturnValue({
         attemptsMax: 2,
         bufferInitial: 0.025,
         bufferStep: 0.025,
@@ -608,7 +608,7 @@ describe('Transaction Controller Init', () => {
       expect(result).toBe(false);
     });
 
-    it('returns true for tokenMethodApprove with non-BitcoinPay origin', () => {
+    it('returns true for tokenMethodApprove with non-MetaMask origin', () => {
       const option = testConstructorOption('isAutomaticGasFeeUpdateEnabled');
       const isEnabledFn = option as ({
         type,

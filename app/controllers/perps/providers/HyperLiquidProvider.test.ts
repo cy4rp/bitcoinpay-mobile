@@ -4254,7 +4254,7 @@ describe('HyperLiquidProvider', () => {
           symbol: 'BTC',
         });
 
-        expect(result.feeRate).toBe(0.00145); // 0.045% taker + 0.1% BitcoinPay fee
+        expect(result.feeRate).toBe(0.00145); // 0.045% taker + 0.1% MetaMask fee
         expect(result.feeAmount).toBe(145); // 100000 * 0.00145
       });
 
@@ -4266,8 +4266,8 @@ describe('HyperLiquidProvider', () => {
           symbol: 'BTC',
         });
 
-        expect(result.feeRate).toBe(0.00145); // 0.045% taker + 0.1% BitcoinPay fee
-        expect(result.feeAmount).toBe(145); // Includes BitcoinPay fee
+        expect(result.feeRate).toBe(0.00145); // 0.045% taker + 0.1% MetaMask fee
+        expect(result.feeAmount).toBe(145); // Includes MetaMask fee
       });
 
       it('calculates fees for limit orders as maker', async () => {
@@ -4278,8 +4278,8 @@ describe('HyperLiquidProvider', () => {
           symbol: 'BTC',
         });
 
-        expect(result.feeRate).toBe(0.00115); // 0.015% maker + 0.1% BitcoinPay fee
-        expect(result.feeAmount).toBeCloseTo(115, 10); // Includes BitcoinPay fee
+        expect(result.feeRate).toBe(0.00115); // 0.015% maker + 0.1% MetaMask fee
+        expect(result.feeAmount).toBeCloseTo(115, 10); // Includes MetaMask fee
       });
 
       it('handles zero amount', async () => {
@@ -4290,7 +4290,7 @@ describe('HyperLiquidProvider', () => {
           symbol: 'BTC',
         });
 
-        expect(result.feeRate).toBe(0.00145); // Includes 0.1% BitcoinPay fee
+        expect(result.feeRate).toBe(0.00145); // Includes 0.1% MetaMask fee
         expect(result.feeAmount).toBe(0);
       });
 
@@ -4301,7 +4301,7 @@ describe('HyperLiquidProvider', () => {
           symbol: 'BTC',
         });
 
-        expect(result.feeRate).toBe(0.00145); // Includes 0.1% BitcoinPay fee
+        expect(result.feeRate).toBe(0.00145); // Includes 0.1% MetaMask fee
         expect(result.feeAmount).toBeUndefined();
       });
 
@@ -4330,7 +4330,7 @@ describe('HyperLiquidProvider', () => {
         });
 
         // Should use dynamically calculated rate: 0.045% * (1 - 0.04 - 0.05) = 0.045% * 0.91 = 0.04095%
-        expect(result1.feeRate).toBeCloseTo(0.0014095, 6); // Dynamic rate + 0.1% BitcoinPay
+        expect(result1.feeRate).toBeCloseTo(0.0014095, 6); // Dynamic rate + 0.1% MetaMask
         expect(result1.feeAmount).toBeCloseTo(140.95, 2); // 100000 * 0.0014095
         expect(
           mockClientService.getInfoClient().userFees,
@@ -4344,8 +4344,8 @@ describe('HyperLiquidProvider', () => {
           symbol: 'BTC',
         });
 
-        expect(result2.feeRate).toBeCloseTo(0.0014095, 6); // Includes BitcoinPay fee
-        expect(result2.feeAmount).toBeCloseTo(140.95, 2); // Includes BitcoinPay fee
+        expect(result2.feeRate).toBeCloseTo(0.0014095, 6); // Includes MetaMask fee
+        expect(result2.feeAmount).toBeCloseTo(140.95, 2); // Includes MetaMask fee
         // Should not call API again (cached)
         expect(
           mockClientService.getInfoClient().userFees,
@@ -4370,8 +4370,8 @@ describe('HyperLiquidProvider', () => {
         });
 
         // Should use base rates on failure
-        expect(result.feeRate).toBe(0.00145); // Includes 0.1% BitcoinPay fee // Base taker rate
-        expect(result.feeAmount).toBe(145); // Includes BitcoinPay fee
+        expect(result.feeRate).toBe(0.00145); // Includes 0.1% MetaMask fee // Base taker rate
+        expect(result.feeAmount).toBe(145); // Includes MetaMask fee
       });
 
       it('handles non-numeric amount gracefully', async () => {
@@ -4382,7 +4382,7 @@ describe('HyperLiquidProvider', () => {
           symbol: 'BTC',
         });
 
-        expect(result.feeRate).toBe(0.00145); // Includes 0.1% BitcoinPay fee
+        expect(result.feeRate).toBe(0.00145); // Includes 0.1% MetaMask fee
         expect(result.feeAmount).toBe(0); // parseFloat('invalid') returns NaN, which * 0.00045 = NaN, but we expect 0
       });
 
@@ -4435,8 +4435,8 @@ describe('HyperLiquidProvider', () => {
           symbol: 'BTC',
         });
 
-        expect(result.feeRate).toBeCloseTo(0.001432, 6); // 0.045% * (1 - 0.04) + 0.1% BitcoinPay
-        expect(result.feeAmount).toBeCloseTo(143.2, 2); // Includes BitcoinPay fee
+        expect(result.feeRate).toBeCloseTo(0.001432, 6); // 0.045% * (1 - 0.04) + 0.1% MetaMask
+        expect(result.feeAmount).toBeCloseTo(143.2, 2); // Includes MetaMask fee
       });
 
       it('falls back to base rates when API returns invalid fee rates', async () => {
@@ -4463,8 +4463,8 @@ describe('HyperLiquidProvider', () => {
         });
 
         // Should fall back to base rates due to validation failure
-        expect(result.feeRate).toBe(0.00145); // Includes 0.1% BitcoinPay fee // Base taker rate
-        expect(result.feeAmount).toBe(145); // Includes BitcoinPay fee
+        expect(result.feeRate).toBe(0.00145); // Includes 0.1% MetaMask fee // Base taker rate
+        expect(result.feeAmount).toBe(145); // Includes MetaMask fee
       });
 
       it('falls back to base rates when API returns negative fee rates', async () => {
@@ -4491,8 +4491,8 @@ describe('HyperLiquidProvider', () => {
         });
 
         // Should fall back to base rates due to validation failure
-        expect(result.feeRate).toBe(0.00145); // Includes 0.1% BitcoinPay fee // Base taker rate
-        expect(result.feeAmount).toBe(145); // Includes BitcoinPay fee
+        expect(result.feeRate).toBe(0.00145); // Includes 0.1% MetaMask fee // Base taker rate
+        expect(result.feeAmount).toBe(145); // Includes MetaMask fee
       });
 
       it('always uses taker rate for market orders regardless of isMaker', async () => {
@@ -4521,8 +4521,8 @@ describe('HyperLiquidProvider', () => {
         });
 
         // Should use taker rate even though isMaker is true
-        expect(result.feeRate).toBeCloseTo(0.001336, 6); // 0.035% * (1 - 0.04) + 0.1% BitcoinPay
-        expect(result.feeAmount).toBeCloseTo(133.6, 2); // Includes BitcoinPay fee
+        expect(result.feeRate).toBeCloseTo(0.001336, 6); // 0.035% * (1 - 0.04) + 0.1% MetaMask
+        expect(result.feeAmount).toBeCloseTo(133.6, 2); // Includes MetaMask fee
       });
 
       it('applies referral discount only when no staking discount', async () => {
@@ -4550,7 +4550,7 @@ describe('HyperLiquidProvider', () => {
         });
 
         // Should apply only referral discount: 0.045% * (1 - 0.04) = 0.0432%
-        expect(result.feeRate).toBeCloseTo(0.001432, 6); // 0.0432% + 0.1% BitcoinPay
+        expect(result.feeRate).toBeCloseTo(0.001432, 6); // 0.0432% + 0.1% MetaMask
         expect(result.feeAmount).toBeCloseTo(143.2, 2);
       });
 
@@ -4579,7 +4579,7 @@ describe('HyperLiquidProvider', () => {
         });
 
         // Should apply only staking discount: 0.045% * (1 - 0.10) = 0.0405%
-        expect(result.feeRate).toBeCloseTo(0.001405, 6); // 0.0405% + 0.1% BitcoinPay
+        expect(result.feeRate).toBeCloseTo(0.001405, 6); // 0.0405% + 0.1% MetaMask
         expect(result.feeAmount).toBeCloseTo(140.5, 2);
       });
 
@@ -4609,7 +4609,7 @@ describe('HyperLiquidProvider', () => {
 
         // Combined discounts would be 55%, but capped at 40%
         // 0.045% * (1 - 0.40) = 0.027%
-        expect(result.feeRate).toBeCloseTo(0.00127, 6); // 0.027% + 0.1% BitcoinPay
+        expect(result.feeRate).toBeCloseTo(0.00127, 6); // 0.027% + 0.1% MetaMask
         expect(result.feeAmount).toBeCloseTo(127.0, 2);
       });
 
@@ -4638,7 +4638,7 @@ describe('HyperLiquidProvider', () => {
         });
 
         // Should apply discounts to maker rate: 0.015% * (1 - 0.04 - 0.05) = 0.01365%
-        expect(result.feeRate).toBeCloseTo(0.0011365, 6); // 0.01365% + 0.1% BitcoinPay
+        expect(result.feeRate).toBeCloseTo(0.0011365, 6); // 0.01365% + 0.1% MetaMask
         expect(result.feeAmount).toBeCloseTo(113.65, 2);
       });
 
@@ -4667,7 +4667,7 @@ describe('HyperLiquidProvider', () => {
         });
 
         // Should use base rates without discounts
-        expect(result.feeRate).toBe(0.00145); // 0.045% + 0.1% BitcoinPay
+        expect(result.feeRate).toBe(0.00145); // 0.045% + 0.1% MetaMask
         expect(result.feeAmount).toBe(145);
       });
 
@@ -4680,8 +4680,8 @@ describe('HyperLiquidProvider', () => {
           symbol: 'xyz:TSLA', // HIP-3 asset
         });
 
-        // HIP-3 should have 2× base fees: 0.045% * 2 = 0.09% + 0.1% BitcoinPay = 0.19%
-        expect(result.feeRate).toBe(0.0019); // 0.09% taker + 0.1% BitcoinPay fee
+        // HIP-3 should have 2× base fees: 0.045% * 2 = 0.09% + 0.1% MetaMask = 0.19%
+        expect(result.feeRate).toBe(0.0019); // 0.09% taker + 0.1% MetaMask fee
         expect(result.feeAmount).toBe(190); // 100000 * 0.0019
       });
 
@@ -4694,8 +4694,8 @@ describe('HyperLiquidProvider', () => {
           symbol: 'abc:SPX', // HIP-3 asset
         });
 
-        // HIP-3 should have 2× base fees: 0.015% * 2 = 0.03% + 0.1% BitcoinPay = 0.13%
-        expect(result.feeRate).toBe(0.0013); // 0.03% maker + 0.1% BitcoinPay fee
+        // HIP-3 should have 2× base fees: 0.015% * 2 = 0.03% + 0.1% MetaMask = 0.13%
+        expect(result.feeRate).toBe(0.0013); // 0.03% maker + 0.1% MetaMask fee
         expect(result.feeAmount).toBe(130); // 100000 * 0.0013
       });
     });
@@ -4799,7 +4799,7 @@ describe('HyperLiquidProvider', () => {
           );
         });
 
-        it('applies discount to BitcoinPay fees when active', async () => {
+        it('applies discount to MetaMask fees when active', async () => {
           // Arrange
           const discountBips = 2000; // 20% discount in basis points
           provider.setUserFeeDiscount(discountBips);
@@ -4813,8 +4813,8 @@ describe('HyperLiquidProvider', () => {
           });
 
           // Assert
-          // Base: 0.045% protocol + 0.1% BitcoinPay = 0.145%
-          // With 20% discount on BitcoinPay fee: 0.045% + (0.1% * 0.8) = 0.045% + 0.08% = 0.125%
+          // Base: 0.045% protocol + 0.1% MetaMask = 0.145%
+          // With 20% discount on MetaMask fee: 0.045% + (0.1% * 0.8) = 0.045% + 0.08% = 0.125%
           expect(result.feeRate).toBe(0.00125);
           expect(result.feeAmount).toBe(125);
         });
@@ -4833,15 +4833,15 @@ describe('HyperLiquidProvider', () => {
           });
 
           // Assert
-          // Base: 0.015% protocol + 0.1% BitcoinPay = 0.115%
-          // With 50% discount on BitcoinPay fee: 0.015% + (0.1% * 0.5) = 0.015% + 0.05% = 0.065%
+          // Base: 0.015% protocol + 0.1% MetaMask = 0.115%
+          // With 50% discount on MetaMask fee: 0.015% + (0.1% * 0.5) = 0.015% + 0.05% = 0.065%
           expect(result.feeRate).toBe(0.00065);
           expect(result.feeAmount).toBe(65);
         });
 
         it('preserves protocol fees unchanged', async () => {
           // Arrange
-          const discountBips = 10000; // 100% discount on BitcoinPay fees (in basis points)
+          const discountBips = 10000; // 100% discount on MetaMask fees (in basis points)
           provider.setUserFeeDiscount(discountBips);
 
           // Act
@@ -4854,7 +4854,7 @@ describe('HyperLiquidProvider', () => {
 
           // Assert
           // Should only have protocol fees: 0.045%
-          // BitcoinPay fee should be 0 with 100% discount
+          // MetaMask fee should be 0 with 100% discount
           expect(result.feeRate).toBe(0.00045);
           expect(result.feeAmount).toBe(45);
         });
@@ -4890,14 +4890,14 @@ describe('HyperLiquidProvider', () => {
           });
 
           // Assert
-          // 0% discount means full BitcoinPay fee: 0.015% + 0.1% = 0.115%
+          // 0% discount means full MetaMask fee: 0.015% + 0.1% = 0.115%
           expect(result.feeRate).toBe(0.00115);
           expect(result.feeAmount).toBeCloseTo(115, 10);
         });
 
         it('combines discount with user staking discount', async () => {
           // Arrange
-          const rewardsDiscountBips = 2000; // 20% BitcoinPay rewards discount in basis points
+          const rewardsDiscountBips = 2000; // 20% MetaMask rewards discount in basis points
           provider.setUserFeeDiscount(rewardsDiscountBips);
 
           // Clear fee cache to ensure fresh API call
@@ -4927,7 +4927,7 @@ describe('HyperLiquidProvider', () => {
 
           // Assert
           // Note: If staking discount is not applied properly in test, it falls back to base rates
-          // Base protocol fee: 0.045% + BitcoinPay fee with rewards discount: 0.08% = 0.125%
+          // Base protocol fee: 0.045% + MetaMask fee with rewards discount: 0.08% = 0.125%
           // This test validates that the rewards discount is properly applied even when staking API is mocked
           expect(result.feeRate).toBeCloseTo(0.00125, 5);
           expect(result.feeAmount).toBeCloseTo(125, 0);

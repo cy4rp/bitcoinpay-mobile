@@ -163,7 +163,7 @@ describe('Result', () => {
       // Arrange
       const favoriteResult = {
         category: UrlAutocompleteCategory.Favorites,
-        name: 'BitcoinPay',
+        name: 'MetaMask',
         url: 'https://metamask.io',
       } as const;
 
@@ -177,7 +177,7 @@ describe('Result', () => {
       );
 
       // Assert - name appears in both text display and WebsiteIcon
-      expect(screen.getAllByText('BitcoinPay').length).toBeGreaterThan(0);
+      expect(screen.getAllByText('MetaMask').length).toBeGreaterThan(0);
       expect(screen.getByText('https://metamask.io')).toBeOnTheScreen();
     });
 
@@ -185,7 +185,7 @@ describe('Result', () => {
       // Arrange
       const favoriteResult = {
         category: UrlAutocompleteCategory.Favorites,
-        name: 'BitcoinPay',
+        name: 'MetaMask',
         url: 'https://metamask.io',
       } as const;
 
@@ -208,7 +208,7 @@ describe('Result', () => {
       // Arrange
       const favoriteResult = {
         category: UrlAutocompleteCategory.Favorites,
-        name: 'BitcoinPay',
+        name: 'MetaMask',
         url: 'https://metamask.io',
       } as const;
       renderWithProvider(
@@ -233,7 +233,7 @@ describe('Result', () => {
       // Arrange
       const favoriteResult = {
         category: UrlAutocompleteCategory.Favorites,
-        name: 'BitcoinPay',
+        name: 'MetaMask',
         url: 'https://metamask.io',
       } as const;
 
@@ -245,8 +245,8 @@ describe('Result', () => {
           onSwapPress={mockOnSwapPress}
         />,
       );
-      // Press the first BitcoinPay text (the actual name display, not icon)
-      fireEvent.press(screen.getAllByText('BitcoinPay')[0]);
+      // Press the first MetaMask text (the actual name display, not icon)
+      fireEvent.press(screen.getAllByText('MetaMask')[0]);
 
       // Assert
       expect(mockOnPress).toHaveBeenCalledTimes(1);

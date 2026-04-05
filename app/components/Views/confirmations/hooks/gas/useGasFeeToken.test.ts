@@ -163,7 +163,7 @@ describe('useGasFeeToken', () => {
     );
   });
 
-  describe('BitcoinPay fee calculation', () => {
+  describe('MetaMask fee calculation', () => {
     it('uses provided fee property when available', () => {
       const customFee = toHex(500); // Custom fee of 500
       const tokenWithFee: GasFeeToken = {

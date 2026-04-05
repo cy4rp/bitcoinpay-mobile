@@ -326,7 +326,7 @@ describe('GasFeesDetailsRow', () => {
     expect(getByText('ETH')).toBeDefined();
   });
 
-  it(`shows 'Paid by BitcoinPay' when gas is sponsored`, async () => {
+  it(`shows 'Paid by MetaMask' when gas is sponsored`, async () => {
     const clonedStakingDepositConfirmationState =
       createStateWithSimulationData();
     clonedStakingDepositConfirmationState.engine.backgroundState.TransactionController.transactions[0].isGasFeeSponsored = true;
@@ -337,11 +337,11 @@ describe('GasFeesDetailsRow', () => {
       },
     );
 
-    expect(getByText('Paid by BitcoinPay')).toBeDefined();
+    expect(getByText('Paid by MetaMask')).toBeDefined();
     expect(queryByText('ETH')).toBeNull();
   });
 
-  it('does not show BitcoinPay fee info when metaMaskFee is 0x0', () => {
+  it('does not show MetaMask fee info when metaMaskFee is 0x0', () => {
     const mockToken = {
       ...GAS_FEE_TOKEN_MOCK,
       metaMaskFee: '0x0',
@@ -356,10 +356,10 @@ describe('GasFeesDetailsRow', () => {
       state: createStateWithSimulationData(),
     });
 
-    expect(queryByText('BitcoinPay fee: $0.12')).toBeNull();
+    expect(queryByText('MetaMask fee: $0.12')).toBeNull();
   });
 
-  it('shows BitcoinPay fee info when metaMaskFee is higher than 0x0', () => {
+  it('shows MetaMask fee info when metaMaskFee is higher than 0x0', () => {
     const mockToken = {
       ...GAS_FEE_TOKEN_MOCK,
       metaMaskFee: '0x2',

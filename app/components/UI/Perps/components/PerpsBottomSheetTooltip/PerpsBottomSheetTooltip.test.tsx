@@ -223,7 +223,7 @@ describe('PerpsBottomSheetTooltip', () => {
               contentKey={'fees'}
               testID={PerpsBottomSheetTooltipSelectorsIDs.TOOLTIP}
               data={{
-                metamaskFeeRate: 0.001, // 0.1% BitcoinPay fee
+                metamaskFeeRate: 0.001, // 0.1% MetaMask fee
                 protocolFeeRate: 0.00045, // 0.045% protocol fee for taker
               }}
             />
@@ -233,9 +233,9 @@ describe('PerpsBottomSheetTooltip', () => {
     );
 
     expect(getByText('Fees')).toBeTruthy();
-    expect(getByText('BitcoinPay fee')).toBeTruthy();
+    expect(getByText('MetaMask fee')).toBeTruthy();
     expect(getByText('Provider fee')).toBeTruthy();
-    // BitcoinPay fee should show 0.100%
+    // MetaMask fee should show 0.100%
     expect(getByText('0.100%')).toBeTruthy();
     // Provider fee (taker) should be 0.045%
     expect(getByText('0.045%')).toBeTruthy();

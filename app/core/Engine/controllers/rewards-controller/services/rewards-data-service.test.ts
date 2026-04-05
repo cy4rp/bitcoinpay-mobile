@@ -25,7 +25,7 @@ import type {
 import { getSubscriptionToken } from '../utils/multi-subscription-token-vault';
 import {
   canChangeRewardsEnvUrl,
-  getDefaultRewardsApiBaseUrlForBitcoinPayEnv,
+  getDefaultRewardsApiBaseUrlForMetaMaskEnv,
 } from '../utils/rewards-api-url';
 import type { CaipAccountId } from '@metamask/utils';
 import AppConstants from '../../../../AppConstants';
@@ -46,7 +46,7 @@ jest.mock('react-native-device-info', () => ({
 jest.mock('../utils/rewards-api-url', () => ({
   ...jest.requireActual('../utils/rewards-api-url'),
   canChangeRewardsEnvUrl: jest.fn(),
-  getDefaultRewardsApiBaseUrlForBitcoinPayEnv: jest.fn(),
+  getDefaultRewardsApiBaseUrlForMetaMaskEnv: jest.fn(),
 }));
 
 const mockGetSubscriptionToken = getSubscriptionToken as jest.MockedFunction<
@@ -55,9 +55,9 @@ const mockGetSubscriptionToken = getSubscriptionToken as jest.MockedFunction<
 const mockCanChangeRewardsEnv = canChangeRewardsEnvUrl as jest.MockedFunction<
   typeof canChangeRewardsEnvUrl
 >;
-const mockGetDefaultRewardsApiBaseUrlForBitcoinPayEnv =
-  getDefaultRewardsApiBaseUrlForBitcoinPayEnv as jest.MockedFunction<
-    typeof getDefaultRewardsApiBaseUrlForBitcoinPayEnv
+const mockGetDefaultRewardsApiBaseUrlForMetaMaskEnv =
+  getDefaultRewardsApiBaseUrlForMetaMaskEnv as jest.MockedFunction<
+    typeof getDefaultRewardsApiBaseUrlForMetaMaskEnv
   >;
 
 describe('RewardsDataService', () => {
@@ -75,7 +75,7 @@ describe('RewardsDataService', () => {
     // getRewardsEnvUrl reads canChange from the tuple, so the second element
     // must be true here.  Tests that want the guard to block override both
     // mocks individually.
-    mockGetDefaultRewardsApiBaseUrlForBitcoinPayEnv.mockReturnValue([
+    mockGetDefaultRewardsApiBaseUrlForMetaMaskEnv.mockReturnValue([
       AppConstants.REWARDS_API_URL.UAT,
       true,
     ]);
@@ -215,7 +215,7 @@ describe('RewardsDataService', () => {
 
     it('is a no-op when the build does not allow env changes', () => {
       mockCanChangeRewardsEnv.mockReturnValue(false);
-      mockGetDefaultRewardsApiBaseUrlForBitcoinPayEnv.mockReturnValue([
+      mockGetDefaultRewardsApiBaseUrlForMetaMaskEnv.mockReturnValue([
         AppConstants.REWARDS_API_URL.PRD,
         false,
       ]);
@@ -240,14 +240,14 @@ describe('RewardsDataService', () => {
     });
 
     it('returns override URL when build allows env changes', () => {
-      // getDefaultRewardsApiBaseUrlForBitcoinPayEnv returns [UAT, true] by default (beforeEach)
+      // getDefaultRewardsApiBaseUrlForMetaMaskEnv returns [UAT, true] by default (beforeEach)
       service.setRewardsEnvUrl(AppConstants.REWARDS_API_URL.DEV);
       expect(service.getRewardsEnvUrl()).toBe(AppConstants.REWARDS_API_URL.DEV);
     });
 
     it('locks to default URL and ignores override when build does not allow changes', () => {
       // Simulate a PRD build where env changes are not permitted
-      mockGetDefaultRewardsApiBaseUrlForBitcoinPayEnv.mockReturnValue([
+      mockGetDefaultRewardsApiBaseUrlForMetaMaskEnv.mockReturnValue([
         AppConstants.REWARDS_API_URL.PRD,
         false,
       ]);
@@ -257,7 +257,7 @@ describe('RewardsDataService', () => {
     });
 
     it('returns default PRD URL with no override when build does not allow changes', () => {
-      mockGetDefaultRewardsApiBaseUrlForBitcoinPayEnv.mockReturnValue([
+      mockGetDefaultRewardsApiBaseUrlForMetaMaskEnv.mockReturnValue([
         AppConstants.REWARDS_API_URL.PRD,
         false,
       ]);

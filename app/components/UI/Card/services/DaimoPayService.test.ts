@@ -56,7 +56,7 @@ describe('DaimoPayService', () => {
         expect(requestBody.display.paymentValue).toBe('0.25');
         expect(requestBody.display.currency).toBe('USD');
         expect(requestBody.display.intent).toBe(
-          'BitcoinPay Metal Card Purchase (Test)',
+          'MetaMask Metal Card Purchase (Test)',
         );
       });
 

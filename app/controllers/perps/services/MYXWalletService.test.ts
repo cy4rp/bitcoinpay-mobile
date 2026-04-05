@@ -16,7 +16,7 @@ jest.mock('@metamask/keyring-controller', () => ({
   SignTypedDataVersion: { V4: 'V4' },
 }));
 
-// Mock BitcoinPay utils
+// Mock MetaMask utils
 jest.mock('@metamask/utils', () => ({
   parseCaipAccountId: jest.fn((accountId: string) => {
     const parts = accountId.split(':');

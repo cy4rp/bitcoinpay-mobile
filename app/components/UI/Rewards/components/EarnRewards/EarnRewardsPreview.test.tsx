@@ -43,9 +43,9 @@ jest.mock('../../../../../../locales/i18n', () => ({
       'rewards.earn_rewards.musd_title': 'Up to 3% bonus on stables',
       'rewards.earn_rewards.musd_subtitle': 'Calculate your mUSD bonus',
       'rewards.earn_rewards.card_title': 'Up to 3% cash back',
-      'rewards.earn_rewards.card_subtitle': 'Get your BitcoinPay Card now',
+      'rewards.earn_rewards.card_subtitle': 'Get your MetaMask Card now',
       'rewards.earn_rewards.card_subtitle_cardholder':
-        'Access your BitcoinPay Card benefits',
+        'Access your MetaMask Card benefits',
     };
     return map[key] || key;
   },
@@ -112,7 +112,7 @@ describe('EarnRewardsPreview', () => {
   });
 
   describe('geo loading state', () => {
-    it('shows mUSD skeleton and renders BitcoinPay Card row while mUSD geo is loading', () => {
+    it('shows mUSD skeleton and renders MetaMask Card row while mUSD geo is loading', () => {
       setupSelectors({ geoStatus: 'loading' });
       const { getByTestId, queryByTestId } = render(<EarnRewardsPreview />);
       expect(
@@ -126,7 +126,7 @@ describe('EarnRewardsPreview', () => {
       ).toBeOnTheScreen();
     });
 
-    it('shows mUSD skeleton and renders BitcoinPay Card row while mUSD geo is idle (not yet started)', () => {
+    it('shows mUSD skeleton and renders MetaMask Card row while mUSD geo is idle (not yet started)', () => {
       setupSelectors({ geoStatus: 'idle' });
       const { getByTestId, queryByTestId } = render(<EarnRewardsPreview />);
       expect(
@@ -140,7 +140,7 @@ describe('EarnRewardsPreview', () => {
       ).toBeOnTheScreen();
     });
 
-    it('shows mUSD card (not skeleton) and BitcoinPay Card when geo is still loading but location is already known (e.g. US)', () => {
+    it('shows mUSD card (not skeleton) and MetaMask Card when geo is still loading but location is already known (e.g. US)', () => {
       setupSelectors({
         geoLocation: 'US',
         geoStatus: 'loading',
@@ -159,7 +159,7 @@ describe('EarnRewardsPreview', () => {
   });
 
   describe('after geo loaded — both allowed', () => {
-    it('shows both mUSD and BitcoinPay Card rows when geo allows mUSD', () => {
+    it('shows both mUSD and MetaMask Card rows when geo allows mUSD', () => {
       setupSelectors({ geoLocation: 'US' });
       const { getByTestId } = render(<EarnRewardsPreview />);
       expect(
@@ -199,11 +199,11 @@ describe('EarnRewardsPreview', () => {
       expect(getByText('Calculate your mUSD bonus')).toBeOnTheScreen();
     });
 
-    it('renders correct text for BitcoinPay card', () => {
+    it('renders correct text for MetaMask card', () => {
       setupSelectors({ geoLocation: 'US' });
       const { getByText } = render(<EarnRewardsPreview />);
       expect(getByText('Up to 3% cash back')).toBeOnTheScreen();
-      expect(getByText('Get your BitcoinPay Card now')).toBeOnTheScreen();
+      expect(getByText('Get your MetaMask Card now')).toBeOnTheScreen();
     });
   });
 
@@ -211,7 +211,7 @@ describe('EarnRewardsPreview', () => {
     it('shows cardholder subtitle when isCardholder is true', () => {
       setupSelectors({ geoLocation: 'US', isCardholder: true });
       const { getByText } = render(<EarnRewardsPreview />);
-      expect(getByText('Access your BitcoinPay Card benefits')).toBeOnTheScreen();
+      expect(getByText('Access your MetaMask Card benefits')).toBeOnTheScreen();
     });
 
     it('shows cardholder subtitle when isAuthenticatedCard is true', () => {
@@ -220,7 +220,7 @@ describe('EarnRewardsPreview', () => {
         isAuthenticatedCard: true,
       });
       const { getByText } = render(<EarnRewardsPreview />);
-      expect(getByText('Access your BitcoinPay Card benefits')).toBeOnTheScreen();
+      expect(getByText('Access your MetaMask Card benefits')).toBeOnTheScreen();
     });
 
     it('shows cardholder subtitle when both isCardholder and isAuthenticatedCard are true', () => {
@@ -230,13 +230,13 @@ describe('EarnRewardsPreview', () => {
         isAuthenticatedCard: true,
       });
       const { getByText } = render(<EarnRewardsPreview />);
-      expect(getByText('Access your BitcoinPay Card benefits')).toBeOnTheScreen();
+      expect(getByText('Access your MetaMask Card benefits')).toBeOnTheScreen();
     });
 
     it('shows default subtitle when neither isCardholder nor isAuthenticatedCard', () => {
       setupSelectors({ geoLocation: 'US' });
       const { getByText } = render(<EarnRewardsPreview />);
-      expect(getByText('Get your BitcoinPay Card now')).toBeOnTheScreen();
+      expect(getByText('Get your MetaMask Card now')).toBeOnTheScreen();
     });
   });
 

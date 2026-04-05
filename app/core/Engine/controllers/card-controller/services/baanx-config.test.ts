@@ -1,8 +1,8 @@
 import { resolveBaanxConfig } from './baanx-config';
-import { getDefaultBaanxApiBaseUrlForBitcoinPayEnv } from '../../../../../components/UI/Card/util/mapBaanxApiUrl';
+import { getDefaultBaanxApiBaseUrlForMetaMaskEnv } from '../../../../../components/UI/Card/util/mapBaanxApiUrl';
 
 jest.mock('../../../../../components/UI/Card/util/mapBaanxApiUrl', () => ({
-  getDefaultBaanxApiBaseUrlForBitcoinPayEnv: jest.fn(
+  getDefaultBaanxApiBaseUrlForMetaMaskEnv: jest.fn(
     () => 'https://mocked-base-url',
   ),
 }));
@@ -30,7 +30,7 @@ describe('resolveBaanxConfig', () => {
 
   describe('baseUrl', () => {
     beforeEach(() => {
-      (getDefaultBaanxApiBaseUrlForBitcoinPayEnv as jest.Mock).mockClear();
+      (getDefaultBaanxApiBaseUrlForMetaMaskEnv as jest.Mock).mockClear();
     });
 
     it('uses BAANX_API_URL directly when set', () => {
@@ -39,17 +39,17 @@ describe('resolveBaanxConfig', () => {
       const config = resolveBaanxConfig();
 
       expect(config.baseUrl).toBe('https://override-url');
-      expect(getDefaultBaanxApiBaseUrlForBitcoinPayEnv).not.toHaveBeenCalled();
+      expect(getDefaultBaanxApiBaseUrlForMetaMaskEnv).not.toHaveBeenCalled();
     });
 
-    it('delegates to getDefaultBaanxApiBaseUrlForBitcoinPayEnv when BAANX_API_URL is not set', () => {
+    it('delegates to getDefaultBaanxApiBaseUrlForMetaMaskEnv when BAANX_API_URL is not set', () => {
       delete process.env.BAANX_API_URL;
       process.env.METAMASK_ENVIRONMENT = 'dev';
 
       const config = resolveBaanxConfig();
 
       expect(config.baseUrl).toBe('https://mocked-base-url');
-      expect(getDefaultBaanxApiBaseUrlForBitcoinPayEnv).toHaveBeenCalledWith(
+      expect(getDefaultBaanxApiBaseUrlForMetaMaskEnv).toHaveBeenCalledWith(
         'dev',
       );
     });

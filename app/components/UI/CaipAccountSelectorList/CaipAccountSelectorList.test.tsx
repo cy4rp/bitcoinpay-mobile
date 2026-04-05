@@ -371,7 +371,7 @@ describe('CaipAccountSelectorList', () => {
 
     const mockAccountsWithSnap = createMockAccountsControllerStateWithSnap(
       [MOCK_ADDRESS_1, MOCK_ADDRESS_2],
-      'BitcoinPay Simple Snap Keyring',
+      'MetaMask Simple Snap Keyring',
     );
 
     const stateWithSnapAccount = {
@@ -388,7 +388,7 @@ describe('CaipAccountSelectorList', () => {
     const { queryByText } = renderComponent(stateWithSnapAccount);
 
     await waitFor(async () => {
-      const snapTag = await queryByText('BitcoinPay Simple Snap Keyring');
+      const snapTag = await queryByText('MetaMask Simple Snap Keyring');
       expect(snapTag).toBeDefined();
     });
   });
@@ -548,7 +548,7 @@ describe('CaipAccountSelectorList', () => {
 
     const mockAccountsWithSnap = createMockAccountsControllerStateWithSnap(
       [MOCK_ADDRESS_1, MOCK_ADDRESS_2],
-      'BitcoinPay Simple Snap Keyring',
+      'MetaMask Simple Snap Keyring',
     );
 
     const stateWithSnapAccount = {

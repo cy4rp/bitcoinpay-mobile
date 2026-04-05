@@ -1025,7 +1025,7 @@ describe('AssetSelectionBottomSheet', () => {
         {
           address: '0xmusd',
           symbol: 'mUSD',
-          name: 'BitcoinPay USD',
+          name: 'MetaMask USD',
           decimals: 6,
         },
       ]);
@@ -1058,7 +1058,7 @@ describe('AssetSelectionBottomSheet', () => {
         {
           address: '0xmusd',
           symbol: 'mUSD',
-          name: 'BitcoinPay USD',
+          name: 'MetaMask USD',
           decimals: 6,
         },
       ]);
@@ -1134,7 +1134,7 @@ describe('AssetSelectionBottomSheet', () => {
         {
           address: '0x123',
           symbol: 'mUSD',
-          name: 'BitcoinPay USD',
+          name: 'MetaMask USD',
           decimals: 6,
         },
         {
@@ -1184,7 +1184,7 @@ describe('AssetSelectionBottomSheet', () => {
         {
           address: '0x123',
           symbol: 'mUSD',
-          name: 'BitcoinPay USD',
+          name: 'MetaMask USD',
           decimals: 6,
         },
       ]);

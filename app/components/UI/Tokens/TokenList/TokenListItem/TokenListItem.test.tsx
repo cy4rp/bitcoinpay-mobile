@@ -1169,7 +1169,7 @@ describe('TokenListItem - Component Rendering Tests for Coverage', () => {
       ...defaultAsset,
       address: musdAddress,
       symbol: 'mUSD',
-      name: 'BitcoinPay USD',
+      name: 'MetaMask USD',
       isNative: false,
     };
 
@@ -1195,7 +1195,7 @@ describe('TokenListItem - Component Rendering Tests for Coverage', () => {
         />,
       );
 
-      const tokenElement = getByText('BitcoinPay USD');
+      const tokenElement = getByText('MetaMask USD');
       fireEvent(tokenElement, 'longPress');
 
       expect(mockShowRemoveMenu).not.toHaveBeenCalled();
@@ -1240,7 +1240,7 @@ describe('TokenListItem - Component Rendering Tests for Coverage', () => {
       ...defaultAsset,
       address: MUSD_TOKEN_ADDRESS,
       symbol: 'mUSD',
-      name: 'BitcoinPay USD',
+      name: 'MetaMask USD',
     };
     const assetKey: FlashListAssetKey = {
       address: claimableAsset.address,

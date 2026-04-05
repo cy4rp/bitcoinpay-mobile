@@ -458,7 +458,7 @@ describe('usePredictBuyInfo', () => {
   });
 
   describe('totalPayForPredictBalance', () => {
-    it('returns the bet amount plus provider and BitcoinPay fees', () => {
+    it('returns the bet amount plus provider and MetaMask fees', () => {
       const { result } = renderHook(() => usePredictBuyInfo(defaultParams));
 
       expect(result.current.totalPayForPredictBalance).toBe(105);

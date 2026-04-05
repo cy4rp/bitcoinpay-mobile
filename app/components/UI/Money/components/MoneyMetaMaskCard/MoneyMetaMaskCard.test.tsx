@@ -1,12 +1,12 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
-import MoneyBitcoinPayCard from './MoneyBitcoinPayCard';
-import { MoneyBitcoinPayCardTestIds } from './MoneyBitcoinPayCard.testIds';
+import MoneyMetaMaskCard from './MoneyMetaMaskCard';
+import { MoneyMetaMaskCardTestIds } from './MoneyMetaMaskCard.testIds';
 import { strings } from '../../../../../../locales/i18n';
 
-describe('MoneyBitcoinPayCard', () => {
+describe('MoneyMetaMaskCard', () => {
   it('renders the section title and subtitle', () => {
-    const { getByText } = render(<MoneyBitcoinPayCard />);
+    const { getByText } = render(<MoneyMetaMaskCard />);
 
     expect(getByText(strings('money.metamask_card.title'))).toBeOnTheScreen();
     expect(
@@ -15,7 +15,7 @@ describe('MoneyBitcoinPayCard', () => {
   });
 
   it('renders virtual card row', () => {
-    const { getByText, getByTestId } = render(<MoneyBitcoinPayCard />);
+    const { getByText, getByTestId } = render(<MoneyMetaMaskCard />);
 
     expect(
       getByText(strings('money.metamask_card.virtual_card')),
@@ -24,12 +24,12 @@ describe('MoneyBitcoinPayCard', () => {
       getByText(strings('money.metamask_card.cashback', { percentage: '1' })),
     ).toBeOnTheScreen();
     expect(
-      getByTestId(MoneyBitcoinPayCardTestIds.VIRTUAL_CARD_ROW),
+      getByTestId(MoneyMetaMaskCardTestIds.VIRTUAL_CARD_ROW),
     ).toBeOnTheScreen();
   });
 
   it('renders metal card row', () => {
-    const { getByText, getByTestId } = render(<MoneyBitcoinPayCard />);
+    const { getByText, getByTestId } = render(<MoneyMetaMaskCard />);
 
     expect(
       getByText(strings('money.metamask_card.metal_card')),
@@ -38,14 +38,14 @@ describe('MoneyBitcoinPayCard', () => {
       getByText(strings('money.metamask_card.cashback', { percentage: '3' })),
     ).toBeOnTheScreen();
     expect(
-      getByTestId(MoneyBitcoinPayCardTestIds.METAL_CARD_ROW),
+      getByTestId(MoneyMetaMaskCardTestIds.METAL_CARD_ROW),
     ).toBeOnTheScreen();
   });
 
   it('calls onGetNowPress with "virtual" when virtual card Get now is pressed', () => {
     const mockGetNow = jest.fn();
     const { getAllByText } = render(
-      <MoneyBitcoinPayCard onGetNowPress={mockGetNow} />,
+      <MoneyMetaMaskCard onGetNowPress={mockGetNow} />,
     );
 
     const getNowButtons = getAllByText(strings('money.metamask_card.get_now'));
@@ -57,7 +57,7 @@ describe('MoneyBitcoinPayCard', () => {
   it('calls onGetNowPress with "metal" when metal card Get now is pressed', () => {
     const mockGetNow = jest.fn();
     const { getAllByText } = render(
-      <MoneyBitcoinPayCard onGetNowPress={mockGetNow} />,
+      <MoneyMetaMaskCard onGetNowPress={mockGetNow} />,
     );
 
     const getNowButtons = getAllByText(strings('money.metamask_card.get_now'));

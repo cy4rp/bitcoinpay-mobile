@@ -59,14 +59,14 @@ describe('PersonalSign', () => {
     expect(getByText('Message')).toBeDefined();
     expect(
       getByText(
-        'I accept the BitcoinPay Terms of Service: https://community.metamask.io/tos',
+        'I accept the MetaMask Terms of Service: https://community.metamask.io/tos',
       ),
     ).toBeDefined();
     fireEvent.press(getByText('Message'));
     expect(getAllByText('Message')).toHaveLength(2);
     expect(
       getAllByText(
-        'I accept the BitcoinPay Terms of Service: https://community.metamask.io/tos',
+        'I accept the MetaMask Terms of Service: https://community.metamask.io/tos',
       ),
     ).toHaveLength(2);
     expect(getByText('URL')).toBeDefined();

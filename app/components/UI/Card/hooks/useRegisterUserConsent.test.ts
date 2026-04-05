@@ -30,7 +30,7 @@ jest.mock('../util/getErrorMessage', () => ({
 }));
 
 jest.mock('../../../../core/AppConstants', () => ({
-  USER_AGENT: 'BitcoinPay Mobile Test Agent',
+  USER_AGENT: 'MetaMask Mobile Test Agent',
   BUNDLE_IDS: {
     ANDROID: 'io.metamask.test',
     IOS: 'io.metamask.test',

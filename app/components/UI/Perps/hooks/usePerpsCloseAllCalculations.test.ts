@@ -311,7 +311,7 @@ describe('usePerpsCloseAllCalculations', () => {
       mockCalculateFees.mockResolvedValue(
         createMockFeeResult({
           feeAmount: 286, // Base total (before discount calculation)
-          metamaskFeeAmount: 261, // BitcoinPay component
+          metamaskFeeAmount: 261, // MetaMask component
           protocolFeeAmount: 25, // Protocol component
         }),
       );
@@ -423,7 +423,7 @@ describe('usePerpsCloseAllCalculations', () => {
   });
 
   describe('Fee Discount', () => {
-    it('applies account-level fee discount to BitcoinPay fees', async () => {
+    it('applies account-level fee discount to MetaMask fees', async () => {
       // Arrange: 10% discount (1000 basis points)
       mockGetPerpsDiscount.mockResolvedValue(1000);
 
@@ -433,8 +433,8 @@ describe('usePerpsCloseAllCalculations', () => {
       mockCalculateFees.mockResolvedValue(
         createMockFeeResult({
           feeAmount: 275, // Base total fee (before discount)
-          metamaskFeeRate: 0.01, // 1% BitcoinPay fee rate
-          metamaskFeeAmount: 250, // Base BitcoinPay fee
+          metamaskFeeRate: 0.01, // 1% MetaMask fee rate
+          metamaskFeeAmount: 250, // Base MetaMask fee
           protocolFeeRate: 0.001, // Protocol fee rate (not discounted)
           protocolFeeAmount: 25, // Protocol fee (not discounted)
         }),
@@ -448,8 +448,8 @@ describe('usePerpsCloseAllCalculations', () => {
       // Assert
       await waitFor(() => expect(result.current.isLoading).toBe(false));
 
-      // Discount applied: 250 * (1 - 1000/10000) = 250 * 0.9 = 225 (BitcoinPay fee)
-      // Total fee: 225 (discounted BitcoinPay) + 25 (protocol) = 250
+      // Discount applied: 250 * (1 - 1000/10000) = 250 * 0.9 = 225 (MetaMask fee)
+      // Total fee: 225 (discounted MetaMask) + 25 (protocol) = 250
       expect(result.current.totalFees).toBeCloseTo(250, 1);
       expect(result.current.avgFeeDiscountPercentage).toBe(10); // 1000 bips / 100 = 10%
       expect(mockGetPerpsDiscount).toHaveBeenCalledTimes(1);
@@ -481,7 +481,7 @@ describe('usePerpsCloseAllCalculations', () => {
       // Assert
       await waitFor(() => expect(result.current.isLoading).toBe(false));
 
-      // Each position: 50 * (1 - 6500/10000) = 50 * 0.35 = 17.5 (BitcoinPay fee)
+      // Each position: 50 * (1 - 6500/10000) = 50 * 0.35 = 17.5 (MetaMask fee)
       // Per position total: 17.5 + 50 = 67.5
       // Two positions: 67.5 * 2 = 135
       expect(result.current.totalFees).toBeCloseTo(135, 1);
@@ -769,7 +769,7 @@ describe('usePerpsCloseAllCalculations', () => {
       });
 
       // Total fees: (270+30) + (180+20) = 500
-      // Weighted average BitcoinPay fee rate uses total fees as weights:
+      // Weighted average MetaMask fee rate uses total fees as weights:
       // (300*0.01 + 200*0.008) / 500 = 0.0092
       expect(result.current.avgMetamaskFeeRate).toBeCloseTo(0.0092, 4);
 

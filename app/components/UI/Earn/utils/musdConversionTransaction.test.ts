@@ -57,7 +57,7 @@ jest.mock('../constants/musd', () => ({
   MUSD_TOKEN_ADDRESS_BY_CHAIN: {},
   MUSD_TOKEN: {
     symbol: 'mUSD',
-    name: 'BitcoinPay USD',
+    name: 'MetaMask USD',
     decimals: 6,
   },
 }));
@@ -824,7 +824,7 @@ describe('musdConversionTransaction', () => {
         expect(tokensControllerAddToken).toHaveBeenCalledWith({
           address: MUSD_ADDRESS,
           decimals: 6,
-          name: 'BitcoinPay USD',
+          name: 'MetaMask USD',
           symbol: 'mUSD',
           networkClientId: NETWORK_CLIENT_ID,
         });
@@ -852,7 +852,7 @@ describe('musdConversionTransaction', () => {
         expect(tokensControllerAddToken).toHaveBeenCalledWith({
           address: MUSD_ADDRESS,
           decimals: 6,
-          name: 'BitcoinPay USD',
+          name: 'MetaMask USD',
           symbol: 'mUSD',
           networkClientId: NETWORK_CLIENT_ID,
         });

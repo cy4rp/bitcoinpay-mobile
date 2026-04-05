@@ -1268,7 +1268,7 @@ const dappTxMeta = {
 const sendEthTxMeta = {
   chainId: '0x1',
   type: TransactionType.simpleSend,
-  origin: 'BitcoinPay Mobile',
+  origin: 'MetaMask Mobile',
   transaction: {
     from: '0xc5fe6ef47965741f6f7a4734bf784bf3ae3f2452',
     data: undefined,
@@ -1284,7 +1284,7 @@ const sendEthTxMeta = {
 const sendERC20TxMeta = {
   chainId: '0x1',
   type: TransactionType.tokenMethodTransfer,
-  origin: 'BitcoinPay Mobile',
+  origin: 'MetaMask Mobile',
   transaction: {
     from: '0xc5fe6ef47965741f6f7a4734bf784bf3ae3f2452',
     data: '0xa9059cbb000000000000000000000000dc738206f559bdae106894a62876a119e470aee20000000000000000000000000000000000000000000000000000000005f5e100',

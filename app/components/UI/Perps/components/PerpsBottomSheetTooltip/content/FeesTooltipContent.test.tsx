@@ -17,7 +17,7 @@ describe('FeesTooltipContent', () => {
     );
 
     // Assert
-    expect(getByText('BitcoinPay fee')).toBeTruthy();
+    expect(getByText('MetaMask fee')).toBeTruthy();
     expect(getByText('Provider fee')).toBeTruthy();
   });
 
@@ -28,7 +28,7 @@ describe('FeesTooltipContent', () => {
     );
 
     // Assert
-    expect(getByText("You're saving 25% with BitcoinPay Rewards.")).toBeTruthy();
+    expect(getByText("You're saving 25% with MetaMask Rewards.")).toBeTruthy();
   });
 
   it('does not display discount banner when no discount', () => {
@@ -73,7 +73,7 @@ describe('FeesTooltipContent', () => {
     const { getByText } = render(<FeesTooltipContent testID="fees-tooltip" />);
 
     // Assert
-    expect(getByText('BitcoinPay fee')).toBeTruthy();
+    expect(getByText('MetaMask fee')).toBeTruthy();
     expect(getByText('Provider fee')).toBeTruthy();
   });
 });

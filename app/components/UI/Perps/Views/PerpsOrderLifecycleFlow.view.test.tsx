@@ -284,7 +284,7 @@ describe('Order Lifecycle & Funds Flow', () => {
     expect(screen.queryByText(ORDER_TYPE_TITLE)).not.toBeOnTheScreen();
 
     // ── PHASE 8: Review quote details ────────────────────────────────────
-    // Trader reviews deposit quote: network fee, BitcoinPay fee, time, rate
+    // Trader reviews deposit quote: network fee, MetaMask fee, time, rate
     cleanup();
     renderPerpsComponent(
       PerpsQuoteDetailsCard as unknown as React.ComponentType<

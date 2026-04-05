@@ -7,7 +7,7 @@ import { usePerpsNotificationTooltip } from './usePerpsNotificationTooltip';
 import Engine from '../../../../core/Engine';
 import { act } from '@testing-library/react-native';
 import type { NotificationServicesControllerState } from '@metamask/notification-services-controller/notification-services';
-import { selectIsBitcoinPayPushNotificationsEnabled } from '../../../../selectors/notifications';
+import { selectIsMetaMaskPushNotificationsEnabled } from '../../../../selectors/notifications';
 
 // Mock notifications feature flag
 jest.mock('../../../../util/notifications/constants', () => ({
@@ -38,7 +38,7 @@ jest.mock('../../../../core/SDKConnect/utils/DevLogger', () => ({
 
 // Mock selectors
 jest.mock('../../../../selectors/notifications', () => ({
-  selectIsBitcoinPayPushNotificationsEnabled: jest.fn(),
+  selectIsMetaMaskPushNotificationsEnabled: jest.fn(),
 }));
 
 jest.mock('@metamask/perps-controller', () => ({
@@ -52,7 +52,7 @@ jest.mock('./usePerpsSelector', () => ({
 }));
 
 const mockSelectIsPushEnabled = jest.mocked(
-  selectIsBitcoinPayPushNotificationsEnabled,
+  selectIsMetaMaskPushNotificationsEnabled,
 );
 
 describe('usePerpsNotificationTooltip', () => {

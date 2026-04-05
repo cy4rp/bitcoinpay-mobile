@@ -62,7 +62,7 @@ jest.mock('../../../core/Analytics/MetaMetrics.events', () => ({
   EVENT_NAME: {
     CARD_HOME_CLICKED: 'Card Home Clicked',
     SETTINGS_VIEWED: 'Settings Viewed',
-    SETTINGS_ABOUT: 'About BitcoinPay',
+    SETTINGS_ABOUT: 'About MetaMask',
     NAVIGATION_TAPS_SEND_FEEDBACK: 'Send Feedback',
     NAVIGATION_TAPS_GET_HELP: 'Get Help',
     NAVIGATION_TAPS_LOGOUT: 'Logout',
@@ -195,8 +195,8 @@ describe('AccountsMenu', () => {
     expect(getByText('accounts_menu.resources')).toBeOnTheScreen();
   });
 
-  describe('BitcoinPay Card Button', () => {
-    it('navigate to card and track analytics when BitcoinPay Card is pressed', () => {
+  describe('MetaMask Card Button', () => {
+    it('navigate to card and track analytics when MetaMask Card is pressed', () => {
       (useSelector as jest.Mock).mockReturnValue(true);
 
       const { getByTestId } = render(<AccountsMenu />);
@@ -614,8 +614,8 @@ describe('AccountsMenu', () => {
   });
 
   describe('RESOURCES Section', () => {
-    describe('About BitcoinPay Row', () => {
-      it('render About BitcoinPay row', () => {
+    describe('About MetaMask Row', () => {
+      it('render About MetaMask row', () => {
         const { getByText, getByTestId } = render(<AccountsMenu />);
 
         expect(getByText('app_settings.info_title_beta')).toBeOnTheScreen();
@@ -624,7 +624,7 @@ describe('AccountsMenu', () => {
         ).toBeOnTheScreen();
       });
 
-      it('navigate to CompanySettings when About BitcoinPay is pressed', () => {
+      it('navigate to CompanySettings when About MetaMask is pressed', () => {
         const { getByTestId } = render(<AccountsMenu />);
         const aboutButton = getByTestId(
           AccountsMenuSelectorsIDs.ABOUT_METAMASK,
@@ -771,13 +771,13 @@ describe('AccountsMenu', () => {
       expect(mockNavigate).toHaveBeenCalledWith(Routes.SETTINGS.ROOT);
     });
 
-    it('track SETTINGS_ABOUT event when About BitcoinPay is pressed', () => {
+    it('track SETTINGS_ABOUT event when About MetaMask is pressed', () => {
       const { getByTestId } = render(<AccountsMenu />);
       const aboutButton = getByTestId(AccountsMenuSelectorsIDs.ABOUT_METAMASK);
 
       fireEvent.press(aboutButton);
 
-      expect(mockCreateEventBuilder).toHaveBeenCalledWith('About BitcoinPay');
+      expect(mockCreateEventBuilder).toHaveBeenCalledWith('About MetaMask');
       expect(mockTrackEvent).toHaveBeenCalled();
       expect(mockNavigate).toHaveBeenCalledWith(Routes.SETTINGS.COMPANY);
     });

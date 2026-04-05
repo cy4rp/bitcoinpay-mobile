@@ -2,7 +2,7 @@ import {
   TransactionMeta,
   TransactionType,
 } from '@metamask/transaction-controller';
-import { getBitcoinPayPayProperties } from './metamask-pay';
+import { getMetaMaskPayProperties } from './metamask-pay';
 import { TransactionMetrics, TransactionMetricsBuilder } from '../types';
 import { RootState } from '../../../../../reducers';
 import { TransactionPayStrategy } from '@metamask/transaction-pay-controller';
@@ -64,7 +64,7 @@ describe('Metamask Pay Metrics', () => {
   it('returns nothing if perps_deposit', () => {
     request.transactionMeta.type = TransactionType.perpsDeposit;
 
-    const result = getBitcoinPayPayProperties(request);
+    const result = getMetaMaskPayProperties(request);
 
     expect(result).toStrictEqual({
       properties: {},
@@ -75,7 +75,7 @@ describe('Metamask Pay Metrics', () => {
   it('returns nothing if predict_withdraw', () => {
     request.transactionMeta.type = TransactionType.predictWithdraw;
 
-    const result = getBitcoinPayPayProperties(request);
+    const result = getMetaMaskPayProperties(request);
 
     expect(result).toStrictEqual({
       properties: {},
@@ -119,7 +119,7 @@ describe('Metamask Pay Metrics', () => {
       } as unknown as TransactionMeta,
     ];
 
-    const result = getBitcoinPayPayProperties(request);
+    const result = getMetaMaskPayProperties(request);
 
     expect(result).toStrictEqual({
       properties: expect.objectContaining({
@@ -174,7 +174,7 @@ describe('Metamask Pay Metrics', () => {
       } as unknown as TransactionMeta,
     ];
 
-    const result = getBitcoinPayPayProperties(request);
+    const result = getMetaMaskPayProperties(request);
 
     expect(result).toStrictEqual({
       properties: expect.objectContaining({
@@ -197,7 +197,7 @@ describe('Metamask Pay Metrics', () => {
       } as TransactionMeta,
     ];
 
-    const result = getBitcoinPayPayProperties(request);
+    const result = getMetaMaskPayProperties(request);
 
     expect(result).toStrictEqual({
       properties: expect.objectContaining({
@@ -216,7 +216,7 @@ describe('Metamask Pay Metrics', () => {
       } as TransactionMeta,
     ];
 
-    const result = getBitcoinPayPayProperties(request);
+    const result = getMetaMaskPayProperties(request);
 
     expect(result).toStrictEqual({
       properties: expect.objectContaining({
@@ -244,7 +244,7 @@ describe('Metamask Pay Metrics', () => {
 
     getStateMock.mockReturnValue(PAY_CONTROLLER_STATE_MOCK);
 
-    const result = getBitcoinPayPayProperties(request);
+    const result = getMetaMaskPayProperties(request);
 
     expect(result).toStrictEqual({
       properties: expect.objectContaining({
@@ -275,7 +275,7 @@ describe('Metamask Pay Metrics', () => {
 
     getStateMock.mockReturnValue(PAY_CONTROLLER_STATE_MOCK);
 
-    const result = getBitcoinPayPayProperties(request);
+    const result = getMetaMaskPayProperties(request);
 
     expect(result).toStrictEqual({
       properties: expect.objectContaining({
@@ -327,7 +327,7 @@ describe('Metamask Pay Metrics', () => {
       }) as unknown as RootState,
     );
 
-    const result = getBitcoinPayPayProperties(request);
+    const result = getMetaMaskPayProperties(request);
 
     expect(result).toStrictEqual({
       properties: expect.objectContaining({
@@ -376,7 +376,7 @@ describe('Metamask Pay Metrics', () => {
       }) as unknown as RootState,
     );
 
-    const result = getBitcoinPayPayProperties(request) as TransactionMetrics;
+    const result = getMetaMaskPayProperties(request) as TransactionMetrics;
 
     expect(result.properties.mm_pay_dust_usd).toBeUndefined();
   });
@@ -387,7 +387,7 @@ describe('Metamask Pay Metrics', () => {
       { data: '0xa1884d2c1234' },
     ];
 
-    const result = getBitcoinPayPayProperties(request);
+    const result = getMetaMaskPayProperties(request);
 
     expect(result).toStrictEqual({
       properties: {
@@ -403,7 +403,7 @@ describe('Metamask Pay Metrics', () => {
       { data: '0xa1884d2d' },
     ];
 
-    const result = getBitcoinPayPayProperties(request);
+    const result = getMetaMaskPayProperties(request);
 
     expect(result).toStrictEqual({
       properties: {
@@ -439,7 +439,7 @@ describe('Metamask Pay Metrics', () => {
       },
     } as never);
 
-    const result = getBitcoinPayPayProperties(request);
+    const result = getMetaMaskPayProperties(request);
 
     expect(result).toStrictEqual({
       properties: expect.objectContaining({
@@ -473,7 +473,7 @@ describe('Metamask Pay Metrics', () => {
       },
     } as never);
 
-    const result = getBitcoinPayPayProperties(request);
+    const result = getMetaMaskPayProperties(request);
 
     expect(result).toStrictEqual({
       properties: expect.objectContaining({
@@ -511,7 +511,7 @@ describe('Metamask Pay Metrics', () => {
       },
     } as never);
 
-    const result = getBitcoinPayPayProperties(request);
+    const result = getMetaMaskPayProperties(request);
 
     expect(result).toStrictEqual({
       properties: expect.objectContaining({
@@ -537,7 +537,7 @@ describe('Metamask Pay Metrics', () => {
       },
     } as never);
 
-    const result = getBitcoinPayPayProperties(request);
+    const result = getMetaMaskPayProperties(request);
 
     expect(result).toStrictEqual({
       properties: expect.objectContaining({
@@ -564,7 +564,7 @@ describe('Metamask Pay Metrics', () => {
       },
     } as never);
 
-    const result = getBitcoinPayPayProperties(request);
+    const result = getMetaMaskPayProperties(request);
 
     expect(result).toStrictEqual({
       properties: expect.objectContaining({
@@ -612,7 +612,7 @@ describe('Metamask Pay Metrics', () => {
       },
     } as never);
 
-    const result = getBitcoinPayPayProperties(request);
+    const result = getMetaMaskPayProperties(request);
 
     expect(result).toStrictEqual({
       properties: expect.objectContaining({
@@ -657,7 +657,7 @@ describe('Metamask Pay Metrics', () => {
         } as TransactionMeta,
       ];
 
-      const result = getBitcoinPayPayProperties(request) as TransactionMetrics;
+      const result = getMetaMaskPayProperties(request) as TransactionMetrics;
 
       expect(result.properties).toStrictEqual(
         expect.objectContaining({
@@ -678,7 +678,7 @@ describe('Metamask Pay Metrics', () => {
         } as TransactionMeta,
       ];
 
-      const result = getBitcoinPayPayProperties(request) as TransactionMetrics;
+      const result = getMetaMaskPayProperties(request) as TransactionMetrics;
 
       expect(result.properties).not.toHaveProperty('mm_pay_time_to_complete_s');
     });
@@ -688,7 +688,7 @@ describe('Metamask Pay Metrics', () => {
       request.transactionMeta.type = TransactionType.perpsDeposit;
       request.transactionMeta.submittedTime = 1000000;
 
-      const result = getBitcoinPayPayProperties(request) as TransactionMetrics;
+      const result = getMetaMaskPayProperties(request) as TransactionMetrics;
 
       expect(result.properties).not.toHaveProperty('mm_pay_time_to_complete_s');
     });
@@ -696,7 +696,7 @@ describe('Metamask Pay Metrics', () => {
     it('does not add mm_pay_time_to_complete_s when submittedTime is undefined', () => {
       request.transactionMeta.type = TransactionType.perpsDeposit;
 
-      const result = getBitcoinPayPayProperties(request) as TransactionMetrics;
+      const result = getMetaMaskPayProperties(request) as TransactionMetrics;
 
       expect(result.properties).not.toHaveProperty('mm_pay_time_to_complete_s');
     });
@@ -707,7 +707,7 @@ describe('Metamask Pay Metrics', () => {
       request.transactionMeta.type = TransactionType.contractInteraction;
       request.transactionMeta.submittedTime = 1000000;
 
-      const result = getBitcoinPayPayProperties(request) as TransactionMetrics;
+      const result = getMetaMaskPayProperties(request) as TransactionMetrics;
 
       expect(result.properties).not.toHaveProperty('mm_pay_time_to_complete_s');
     });

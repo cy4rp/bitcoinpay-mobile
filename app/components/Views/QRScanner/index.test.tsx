@@ -101,7 +101,7 @@ jest.mock('../../../util/general', () => ({
 }));
 
 jest.mock('../../../core/DeeplinkManager/util/deeplinks', () => ({
-  isBitcoinPayUniversalLink: jest.fn().mockReturnValue(false),
+  isMetaMaskUniversalLink: jest.fn().mockReturnValue(false),
 }));
 
 jest.mock('eth-url-parser', () => ({
@@ -192,12 +192,12 @@ describe('QrScanner', () => {
     mockGoBack.mockClear();
     mockLinkingOpenURL.mockClear();
 
-    // Reset isBitcoinPayUniversalLink to default (false) — individual tests
+    // Reset isMetaMaskUniversalLink to default (false) — individual tests
     // that need it to return true will override this.
     const deeplinksUtilModule = jest.requireMock(
       '../../../core/DeeplinkManager/util/deeplinks',
     );
-    (deeplinksUtilModule.isBitcoinPayUniversalLink as jest.Mock).mockReturnValue(
+    (deeplinksUtilModule.isMetaMaskUniversalLink as jest.Mock).mockReturnValue(
       false,
     );
 
@@ -756,14 +756,14 @@ describe('QrScanner', () => {
         });
       });
 
-      it('routes BitcoinPay universal links through DeeplinkManager instead of Linking.openURL', async () => {
-        // isBitcoinPayUniversalLink identifies the link, isMwpDeeplink must be
+      it('routes MetaMask universal links through DeeplinkManager instead of Linking.openURL', async () => {
+        // isMetaMaskUniversalLink identifies the link, isMwpDeeplink must be
         // false so we don't get caught by the MWP handler above.
         const deeplinksUtilModule = jest.requireMock(
           '../../../core/DeeplinkManager/util/deeplinks',
         );
         (
-          deeplinksUtilModule.isBitcoinPayUniversalLink as jest.Mock
+          deeplinksUtilModule.isMetaMaskUniversalLink as jest.Mock
         ).mockReturnValue(true);
 
         const SDKConnectV2Module = jest.requireMock(
@@ -827,7 +827,7 @@ describe('QrScanner', () => {
           '../../../core/DeeplinkManager/util/deeplinks',
         );
         (
-          deeplinksUtilModule.isBitcoinPayUniversalLink as jest.Mock
+          deeplinksUtilModule.isMetaMaskUniversalLink as jest.Mock
         ).mockReturnValue(true);
 
         const SDKConnectV2Module = jest.requireMock(

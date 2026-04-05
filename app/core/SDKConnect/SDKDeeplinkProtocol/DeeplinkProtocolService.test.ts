@@ -187,7 +187,7 @@ describe('DeeplinkProtocolService', () => {
         clientId: 'client1',
         originatorInfo: {
           url: 'https://my-metamask-dapp.com',
-          title: 'My BitcoinPay App',
+          title: 'My MetaMask App',
           platform: 'test',
           dappId: 'dappId',
         },

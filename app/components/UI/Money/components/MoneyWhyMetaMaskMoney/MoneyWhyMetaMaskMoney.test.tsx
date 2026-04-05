@@ -1,12 +1,12 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
-import MoneyWhyBitcoinPayMoney from './MoneyWhyBitcoinPayMoney';
-import { MoneyWhyBitcoinPayMoneyTestIds } from './MoneyWhyBitcoinPayMoney.testIds';
+import MoneyWhyMetaMaskMoney from './MoneyWhyMetaMaskMoney';
+import { MoneyWhyMetaMaskMoneyTestIds } from './MoneyWhyMetaMaskMoney.testIds';
 import { strings } from '../../../../../../locales/i18n';
 
-describe('MoneyWhyBitcoinPayMoney', () => {
+describe('MoneyWhyMetaMaskMoney', () => {
   it('renders the section title', () => {
-    const { getByText } = render(<MoneyWhyBitcoinPayMoney />);
+    const { getByText } = render(<MoneyWhyMetaMaskMoney />);
 
     expect(
       getByText(strings('money.why_metamask_money.title')),
@@ -14,7 +14,7 @@ describe('MoneyWhyBitcoinPayMoney', () => {
   });
 
   it('renders benefit rows', () => {
-    const { getByText } = render(<MoneyWhyBitcoinPayMoney />);
+    const { getByText } = render(<MoneyWhyMetaMaskMoney />);
 
     expect(
       getByText(strings('money.why_metamask_money.benefit_dollar_backed')),
@@ -28,21 +28,21 @@ describe('MoneyWhyBitcoinPayMoney', () => {
   });
 
   it('renders the Learn more button', () => {
-    const { getByTestId } = render(<MoneyWhyBitcoinPayMoney />);
+    const { getByTestId } = render(<MoneyWhyMetaMaskMoney />);
 
     expect(
-      getByTestId(MoneyWhyBitcoinPayMoneyTestIds.LEARN_MORE_BUTTON),
+      getByTestId(MoneyWhyMetaMaskMoneyTestIds.LEARN_MORE_BUTTON),
     ).toBeOnTheScreen();
   });
 
   it('calls onLearnMorePress when Learn more button is pressed', () => {
     const mockLearnMore = jest.fn();
     const { getByTestId } = render(
-      <MoneyWhyBitcoinPayMoney onLearnMorePress={mockLearnMore} />,
+      <MoneyWhyMetaMaskMoney onLearnMorePress={mockLearnMore} />,
     );
 
     fireEvent.press(
-      getByTestId(MoneyWhyBitcoinPayMoneyTestIds.LEARN_MORE_BUTTON),
+      getByTestId(MoneyWhyMetaMaskMoneyTestIds.LEARN_MORE_BUTTON),
     );
 
     expect(mockLearnMore).toHaveBeenCalledTimes(1);

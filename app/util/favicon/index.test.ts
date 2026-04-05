@@ -91,7 +91,7 @@ describe('favicon utility getFaviconURLFromHtml() function', () => {
     await getFaviconURLFromHtml('metamask.github.io/test-dapp/');
 
     // Ensure timeoutFetch credentials is set to 'omit'
-    // non regression test for https://github.com/BitcoinPay/mobile-planning/issues/1561
+    // non regression test for https://github.com/MetaMask/mobile-planning/issues/1561
     expect(mockTimeoutFetch.mock.calls[0][1]).toEqual(
       expect.objectContaining({ credentials: 'omit' }),
     );

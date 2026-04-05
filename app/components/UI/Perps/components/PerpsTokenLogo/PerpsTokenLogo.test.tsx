@@ -77,14 +77,14 @@ describe('PerpsTokenLogo', () => {
     // Empty symbol results in empty fallback text
   });
 
-  it('renders Image component with primary BitcoinPay URL initially', () => {
+  it('renders Image component with primary MetaMask URL initially', () => {
     const { UNSAFE_getByType } = render(
       <PerpsTokenLogo symbol="BTC" testID="with-image" />,
     );
 
     const image = UNSAFE_getByType(Image);
     expect(image.props.source.uri).toBe(
-      'https://raw.githubusercontent.com/BitcoinPay/contract-metadata/master/icons/eip155:999/BTC.svg',
+      'https://raw.githubusercontent.com/MetaMask/contract-metadata/master/icons/eip155:999/BTC.svg',
     );
     expect(image.props.style).toEqual(
       expect.objectContaining({
@@ -101,7 +101,7 @@ describe('PerpsTokenLogo', () => {
 
     const image = UNSAFE_getByType(Image);
 
-    // Verify initial URL is primary (BitcoinPay)
+    // Verify initial URL is primary (MetaMask)
     expect(image.props.source.uri).toContain('contract-metadata');
 
     // Simulate primary URL error

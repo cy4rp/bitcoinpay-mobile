@@ -152,7 +152,7 @@ describe('useAutoUpdateDestToken', () => {
       const mUsdToken: BridgeToken = {
         address: '0xaca92e438df0b2401ff60da7e4337b687a2435da',
         symbol: 'mUSD',
-        name: 'BitcoinPay USD',
+        name: 'MetaMask USD',
         decimals: 6,
         chainId: ethChainId,
       };
@@ -239,7 +239,7 @@ describe('useAutoUpdateDestToken', () => {
       const mUsdToken: BridgeToken = {
         address: '0xaca92e438df0b2401ff60da7e4337b687a2435da',
         symbol: 'mUSD',
-        name: 'BitcoinPay USD',
+        name: 'MetaMask USD',
         decimals: 6,
         chainId: ethChainId,
       };
@@ -248,7 +248,7 @@ describe('useAutoUpdateDestToken', () => {
       const mUsdSourceToken: BridgeToken = {
         address: '0xaca92e438df0b2401ff60da7e4337b687a2435da',
         symbol: 'mUSD',
-        name: 'BitcoinPay USD',
+        name: 'MetaMask USD',
         decimals: 6,
         chainId: ethChainId,
       };
@@ -315,7 +315,7 @@ describe('useAutoUpdateDestToken', () => {
       const sourceTokenMatchingDefault: BridgeToken = {
         address: '0xaca92e438df0b2401ff60da7e4337b687a2435da',
         symbol: 'mUSD',
-        name: 'BitcoinPay USD',
+        name: 'MetaMask USD',
         decimals: 6,
         chainId: ethChainId,
       };

@@ -7,7 +7,7 @@ import StorageWrapper from '../../../store/storage-wrapper';
 // Local mocks specific to this test file to avoid affecting other tests
 jest.mock('react-native-device-info', () => ({
   getVersion: jest.fn(() => '7.50.1'),
-  getApplicationName: jest.fn(() => 'BitcoinPay'),
+  getApplicationName: jest.fn(() => 'MetaMask'),
   getBuildNumber: jest.fn(() => '1234'),
   getSystemVersion: jest.fn(() => '17.0'),
   getTotalMemorySync: jest.fn(() => 4000000000),

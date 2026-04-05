@@ -361,7 +361,7 @@ describe('AddToWalletButton', () => {
       });
     });
 
-    it('covers all BitcoinPay app-supported locales', () => {
+    it('covers all MetaMask app-supported locales', () => {
       const appLocales = [
         'de',
         'el',

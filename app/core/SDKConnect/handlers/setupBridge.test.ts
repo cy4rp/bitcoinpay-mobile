@@ -148,7 +148,7 @@ describe('setupBridge', () => {
   it('should allow connection when originatorInfo contains "metamask" as substring', () => {
     connection.backgroundBridge = undefined;
     originatorInfo.url = 'https://my-metamask-dapp.com';
-    originatorInfo.title = 'My BitcoinPay App';
+    originatorInfo.title = 'My MetaMask App';
 
     expect(() => setupBridge({ originatorInfo, connection })).not.toThrow();
     expect(BackgroundBridge).toHaveBeenCalled();

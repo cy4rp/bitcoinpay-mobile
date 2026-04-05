@@ -19,7 +19,7 @@ describe('SnapUILink', () => {
 
   const validProps = {
     href: 'https://metamask.io',
-    children: 'Visit BitcoinPay',
+    children: 'Visit MetaMask',
   };
 
   it('renders correctly with valid props', () => {
@@ -32,7 +32,7 @@ describe('SnapUILink', () => {
     const icon = UNSAFE_getByType(Icon);
 
     expect(linkText).toBeTruthy();
-    expect(linkText.props.children[0]).toBe('Visit BitcoinPay');
+    expect(linkText.props.children[0]).toBe('Visit MetaMask');
     expect(spacer).toBeTruthy();
     expect(spacer.props.style).toEqual({ width: 4 });
     expect(linkText.props.accessibilityRole).toBe('link');
@@ -71,14 +71,14 @@ describe('SnapUILink', () => {
   it('can be nested inside another Text component', () => {
     const { toJSON } = render(
       <Text>
-        Before <SnapUILink href="https://metamask.io">BitcoinPay</SnapUILink>{' '}
+        Before <SnapUILink href="https://metamask.io">MetaMask</SnapUILink>{' '}
         After
       </Text>,
     );
 
     const textContent = JSON.stringify(toJSON());
     expect(textContent).toContain('Before');
-    expect(textContent).toContain('BitcoinPay');
+    expect(textContent).toContain('MetaMask');
     expect(textContent).toContain('After');
   });
 

@@ -67,8 +67,8 @@ describe('smartTransactions', () => {
       expect(sanitizeOrigin('metamask')).toBe('metamask');
     });
 
-    it('returns BitcoinPay Mobile origin as-is', () => {
-      expect(sanitizeOrigin('BitcoinPay Mobile')).toBe('BitcoinPay Mobile');
+    it('returns MetaMask Mobile origin as-is', () => {
+      expect(sanitizeOrigin('MetaMask Mobile')).toBe('MetaMask Mobile');
     });
 
     it('returns RAMPS_SEND origin as-is', () => {

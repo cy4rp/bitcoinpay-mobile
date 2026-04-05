@@ -20,7 +20,7 @@ describe('useNotifications - usePushNotificationsToggle()', () => {
   const arrangeMocks = () => {
     const mockSelectEnabled = jest.spyOn(
       Selectors,
-      'selectIsBitcoinPayPushNotificationsEnabled',
+      'selectIsMetaMaskPushNotificationsEnabled',
     );
     const mockRequestPermission = jest.spyOn(
       NotificationServiceModule,

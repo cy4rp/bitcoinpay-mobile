@@ -63,7 +63,7 @@ describe('AppleWalletAdapter', () => {
     cardNetwork: 'MASTERCARD',
     cardholderName: 'John Doe',
     lastFourDigits: '1234',
-    cardDescription: 'BitcoinPay Card ending in 1234',
+    cardDescription: 'MetaMask Card ending in 1234',
     encryptedPayload: {}, // Empty for Apple Pay - data comes via callback
     issuerEncryptCallback: mockIssuerEncryptCallback,
   };
@@ -241,7 +241,7 @@ describe('AppleWalletAdapter', () => {
             network: 'mastercard', // Apple Wallet uses lowercase network names
             cardHolderName: 'John Doe',
             lastDigits: '1234',
-            cardDescription: 'BitcoinPay Card ending in 1234',
+            cardDescription: 'MetaMask Card ending in 1234',
           },
           expect.any(Function),
         );
@@ -273,7 +273,7 @@ describe('AppleWalletAdapter', () => {
 
         expect(mockAddCardToAppleWallet).toHaveBeenCalledWith(
           expect.objectContaining({
-            cardDescription: 'BitcoinPay Card ending in 1234',
+            cardDescription: 'MetaMask Card ending in 1234',
           }),
           expect.any(Function),
         );

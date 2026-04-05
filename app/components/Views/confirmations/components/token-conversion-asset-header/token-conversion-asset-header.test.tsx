@@ -67,7 +67,7 @@ function createMockToken(overrides: Partial<AssetType> = {}): AssetType {
     image: 'https://example.com/musd.png',
     chainId: '0xe708',
     address: '0x123',
-    name: 'BitcoinPay USD',
+    name: 'MetaMask USD',
     decimals: 6,
     balance: '0',
     logo: undefined,

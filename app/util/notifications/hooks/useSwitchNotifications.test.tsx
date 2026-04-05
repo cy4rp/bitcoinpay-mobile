@@ -384,12 +384,12 @@ describe('useSwitchNotifications - useSwitchNotificationLoadingText()', () => {
       .spyOn(Selectors, 'selectIsMetamaskNotificationsEnabled')
       .mockReturnValue(false);
 
-    const mockSelectIsBitcoinPayPushNotificationsLoading = jest
-      .spyOn(Selectors, 'selectIsBitcoinPayPushNotificationsLoading')
+    const mockSelectIsMetaMaskPushNotificationsLoading = jest
+      .spyOn(Selectors, 'selectIsMetaMaskPushNotificationsLoading')
       .mockReturnValue(false);
 
-    const mockSelectIsBitcoinPayPushNotificationsEnabled = jest
-      .spyOn(Selectors, 'selectIsBitcoinPayPushNotificationsEnabled')
+    const mockSelectIsMetaMaskPushNotificationsEnabled = jest
+      .spyOn(Selectors, 'selectIsMetaMaskPushNotificationsEnabled')
       .mockReturnValue(false);
 
     const mockSelectIsUpdatingMetamaskNotificationsAccount = jest
@@ -399,8 +399,8 @@ describe('useSwitchNotifications - useSwitchNotificationLoadingText()', () => {
     return {
       mockSelectIsUpdatingMetamaskNotifications,
       mockSelectIsMetamaskNotificationsEnabled,
-      mockSelectIsBitcoinPayPushNotificationsLoading,
-      mockSelectIsBitcoinPayPushNotificationsEnabled,
+      mockSelectIsMetaMaskPushNotificationsLoading,
+      mockSelectIsMetaMaskPushNotificationsEnabled,
       mockSelectIsUpdatingMetamaskNotificationsAccount,
     };
   };
@@ -440,8 +440,8 @@ describe('useSwitchNotifications - useSwitchNotificationLoadingText()', () => {
 
   it('returns disabling notifications text when push notifications are being disabled', () => {
     const { hook } = arrangeAct((m) => {
-      m.mockSelectIsBitcoinPayPushNotificationsEnabled.mockReturnValue(true);
-      m.mockSelectIsBitcoinPayPushNotificationsLoading.mockReturnValue(true);
+      m.mockSelectIsMetaMaskPushNotificationsEnabled.mockReturnValue(true);
+      m.mockSelectIsMetaMaskPushNotificationsLoading.mockReturnValue(true);
     });
     expect(hook.result.current).toBe(
       strings('app_settings.updating_notifications'),
@@ -450,8 +450,8 @@ describe('useSwitchNotifications - useSwitchNotificationLoadingText()', () => {
 
   it('returns enabling notifications text when push notifications are being enabled', () => {
     const { hook } = arrangeAct((m) => {
-      m.mockSelectIsBitcoinPayPushNotificationsEnabled.mockReturnValue(false);
-      m.mockSelectIsBitcoinPayPushNotificationsLoading.mockReturnValue(true);
+      m.mockSelectIsMetaMaskPushNotificationsEnabled.mockReturnValue(false);
+      m.mockSelectIsMetaMaskPushNotificationsLoading.mockReturnValue(true);
     });
     expect(hook.result.current).toBe(
       strings('app_settings.updating_notifications'),

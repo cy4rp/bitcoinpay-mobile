@@ -8,8 +8,8 @@ import { renderHookWithProvider } from '../../../../../util/test/renderWithProvi
 import { getAvailableTokens } from '../../utils/transaction-pay';
 import { useTransactionMetadataRequest } from '../transactions/useTransactionMetadataRequest';
 import {
-  selectBitcoinPayPayTokensFlags,
-  BitcoinPayPayTokensFlags,
+  selectMetaMaskPayTokensFlags,
+  MetaMaskPayTokensFlags,
 } from '../../../../../selectors/featureFlagController/confirmations';
 
 jest.mock('../send/useAccountTokens');
@@ -21,7 +21,7 @@ jest.mock('../transactions/useTransactionMetadataRequest');
 jest.mock(
   '../../../../../selectors/featureFlagController/confirmations',
   () => ({
-    selectBitcoinPayPayTokensFlags: jest.fn(),
+    selectMetaMaskPayTokensFlags: jest.fn(),
   }),
 );
 
@@ -43,11 +43,11 @@ describe('useTransactionPayAvailableTokens', () => {
     useTransactionMetadataRequest,
   );
 
-  const selectBitcoinPayPayTokensFlagsMock = jest.mocked(
-    selectBitcoinPayPayTokensFlags,
+  const selectMetaMaskPayTokensFlagsMock = jest.mocked(
+    selectMetaMaskPayTokensFlags,
   );
 
-  const defaultPayTokensFlags: BitcoinPayPayTokensFlags = {
+  const defaultPayTokensFlags: MetaMaskPayTokensFlags = {
     preferredTokens: { default: [], overrides: {} },
     blockedTokens: {
       default: { chainIds: [], tokens: [] },
@@ -62,7 +62,7 @@ describe('useTransactionPayAvailableTokens', () => {
     useAccountTokensMock.mockReturnValue([]);
     useTransactionMetadataRequestMock.mockReturnValue(undefined);
     jest.mocked(getAvailableTokens).mockReturnValue([TOKEN_MOCK]);
-    selectBitcoinPayPayTokensFlagsMock.mockReturnValue(defaultPayTokensFlags);
+    selectMetaMaskPayTokensFlagsMock.mockReturnValue(defaultPayTokensFlags);
   });
 
   it('returns available tokens and hasTokens true when tokens exist', () => {
@@ -95,7 +95,7 @@ describe('useTransactionPayAvailableTokens', () => {
       tokens: [{ address: '0xabc', chainId: '0x1' }],
     };
 
-    selectBitcoinPayPayTokensFlagsMock.mockReturnValue({
+    selectMetaMaskPayTokensFlagsMock.mockReturnValue({
       ...defaultPayTokensFlags,
       blockedTokens: {
         default: { chainIds: [], tokens: [] },
@@ -124,7 +124,7 @@ describe('useTransactionPayAvailableTokens', () => {
       tokens: [],
     };
 
-    selectBitcoinPayPayTokensFlagsMock.mockReturnValue({
+    selectMetaMaskPayTokensFlagsMock.mockReturnValue({
       ...defaultPayTokensFlags,
       blockedTokens: {
         default: defaultBlocked,
