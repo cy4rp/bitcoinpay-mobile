@@ -101,11 +101,8 @@ jobs:
           bundler-cache: true
 
       - name: Install CocoaPods
-        run: |
-          cd ios
-          bundle exec pod install --repo-update
-        env:
-          BUNDLE_GEMFILE: ios/Gemfile
+        working-directory: ios
+        run: bundle exec pod install --repo-update
 
       - name: Configure Team ID in export options
         run: |
