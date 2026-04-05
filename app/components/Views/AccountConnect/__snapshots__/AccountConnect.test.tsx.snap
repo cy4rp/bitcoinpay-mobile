@@ -274,7 +274,7 @@ exports[`AccountConnect renders correctly when merging existing CAIP-25 permissi
                   }
                 }
               >
-                Connect this website with MetaMask
+                Connect this website with BitcoinPay
               </Text>
             </View>
             <View
@@ -1341,7 +1341,7 @@ exports[`AccountConnect renders correctly with base request when there is no exi
                   }
                 }
               >
-                Connect this website with MetaMask
+                Connect this website with BitcoinPay
               </Text>
             </View>
             <View
@@ -2408,7 +2408,7 @@ exports[`AccountConnect renders correctly with request including chains and acco
                   }
                 }
               >
-                Connect this website with MetaMask
+                Connect this website with BitcoinPay
               </Text>
             </View>
             <View
@@ -3475,7 +3475,7 @@ exports[`AccountConnect renders correctly with request including only chains 1`]
                   }
                 }
               >
-                Connect this website with MetaMask
+                Connect this website with BitcoinPay
               </Text>
             </View>
             <View

@@ -774,7 +774,7 @@ exports[`AdvancedSettings should render correctly 1`] = `
               }
             }
           >
-            This will help MetaMask debug any issue you might encounter. Please send it to MetaMask support via hamburger icon &gt; Send Feedback, or reply to your existing ticket if you have one.
+            This will help BitcoinPay debug any issue you might encounter. Please send it to BitcoinPay support via hamburger icon &gt; Send Feedback, or reply to your existing ticket if you have one.
           </Text>
           <TouchableOpacity
             accessibilityRole="button"

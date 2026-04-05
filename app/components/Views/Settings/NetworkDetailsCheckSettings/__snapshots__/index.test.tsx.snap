@@ -82,7 +82,7 @@ exports[`NetworkDetailsCheckSettings should render correctly 1`] = `
       }
     }
   >
-    MetaMask uses a third-party service called 
+    BitcoinPay uses a third-party service called 
     <Text
       accessibilityRole="text"
       style={

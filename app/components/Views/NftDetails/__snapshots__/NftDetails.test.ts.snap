@@ -1321,7 +1321,7 @@ exports[`NftDetails renders correctly 1`] = `
                                     }
                                   }
                                 >
-                                  Disclaimer: MetaMask pulls the media file from the source URL. This URL is sometimes changed by the marketplace the NFT was minted on.
+                                  Disclaimer: BitcoinPay pulls the media file from the source URL. This URL is sometimes changed by the marketplace the NFT was minted on.
                                 </Text>
                               </View>
                             </View>

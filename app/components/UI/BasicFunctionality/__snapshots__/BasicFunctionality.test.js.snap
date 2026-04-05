@@ -67,7 +67,7 @@ exports[`BasicFunctionality should render correctly 1`] = `
       }
     }
   >
-    MetaMask offers basic features like token details and gas settings through internet services. When you use internet services, your IP address is shared, in this case with MetaMask. This is just like when you visit any website. MetaMask uses this data temporarily and never sells your data. You can use a VPN or turn off these services, but it may affect your MetaMask experience. Read our 
+    BitcoinPay offers basic features like token details and gas settings through internet services. When you use internet services, your IP address is shared, in this case with BitcoinPay. This is just like when you visit any website. BitcoinPay uses this data temporarily and never sells your data. You can use a VPN or turn off these services, but it may affect your BitcoinPay experience. Read our 
     <Text
       accessibilityRole="text"
       onPress={[Function]}

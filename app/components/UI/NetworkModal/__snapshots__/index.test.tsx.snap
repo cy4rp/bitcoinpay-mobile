@@ -286,7 +286,7 @@ exports[`NetworkDetails renders correctly 1`] = `
                       }
                     }
                   >
-                    MetaMask doesn’t verify custom networks, so only approve networks you trust.
+                    BitcoinPay doesn’t verify custom networks, so only approve networks you trust.
                      
                     <Text
                       accessibilityRole="text"

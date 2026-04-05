@@ -254,7 +254,7 @@ exports[`PermissionsSummary should render correctly 1`] = `
             }
           }
         >
-          Connect this website with MetaMask
+          Connect this website with BitcoinPay
         </Text>
       </View>
       <View
@@ -1389,7 +1389,7 @@ exports[`PermissionsSummary should render correctly for network switch 1`] = `
             }
           }
         >
-          Connect this website with MetaMask
+          Connect this website with BitcoinPay
         </Text>
       </View>
       <View
@@ -2109,7 +2109,7 @@ exports[`PermissionsSummary should render only the account permissions card when
             }
           }
         >
-          Connect this website with MetaMask
+          Connect this website with BitcoinPay
         </Text>
       </View>
       <View
@@ -2676,7 +2676,7 @@ exports[`PermissionsSummary should render only the network permissions card when
             }
           }
         >
-          Connect this website with MetaMask
+          Connect this website with BitcoinPay
         </Text>
       </View>
       <View
@@ -3349,7 +3349,7 @@ exports[`PermissionsSummary should render the tab view when both showAccountsOnl
             }
           }
         >
-          Connect this website with MetaMask
+          Connect this website with BitcoinPay
         </Text>
       </View>
       <View
@@ -4484,7 +4484,7 @@ exports[`PermissionsSummary should render with the correct initial tab based on 
             }
           }
         >
-          Connect this website with MetaMask
+          Connect this website with BitcoinPay
         </Text>
       </View>
       <View

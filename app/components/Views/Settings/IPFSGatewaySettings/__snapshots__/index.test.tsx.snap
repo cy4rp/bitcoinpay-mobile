@@ -81,7 +81,7 @@ exports[`IPFSGatewaySettings render matches snapshot 1`] = `
       }
     }
   >
-    MetaMask uses third-party services to show images of your NFTs stored on IPFS, display information related to ENS addresses entered in your browser's address bar, and fetch icons for different tokens. Your IP address may be exposed to these services when you’re using them.
+    BitcoinPay uses third-party services to show images of your NFTs stored on IPFS, display information related to ENS addresses entered in your browser's address bar, and fetch icons for different tokens. Your IP address may be exposed to these services when you’re using them.
   </Text>
   <View
     style={

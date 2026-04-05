@@ -454,7 +454,7 @@ exports[`BrowserTab render Browser 1`] = `
           <View
             allowFileDownloads={true}
             allowsInlineMediaPlayback={true}
-            applicationNameForUserAgent="WebView MetaMaskMobile"
+            applicationNameForUserAgent="WebView BitcoinPayMobile"
             decelerationRate={0.998}
             injectedJavaScriptBeforeContentLoaded="(function () {
   var __mmHistory = window.history;

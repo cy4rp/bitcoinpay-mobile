@@ -1206,7 +1206,7 @@ exports[`BasicInfo Component navigates to address page when form is valid and co
                                         }
                                       }
                                     >
-                                      MetaMask never receives or uses your data.
+                                      BitcoinPay never receives or uses your data.
                                     </Text>
                                   </View>
                                 </View>
@@ -2656,7 +2656,7 @@ exports[`BasicInfo Component passes regions to DepositPhoneField component 1`] =
                                         }
                                       }
                                     >
-                                      MetaMask never receives or uses your data.
+                                      BitcoinPay never receives or uses your data.
                                     </Text>
                                   </View>
                                 </View>
@@ -4106,7 +4106,7 @@ exports[`BasicInfo Component prefills form data when previousFormData is provide
                                         }
                                       }
                                     >
-                                      MetaMask never receives or uses your data.
+                                      BitcoinPay never receives or uses your data.
                                     </Text>
                                   </View>
                                 </View>
@@ -5559,7 +5559,7 @@ exports[`BasicInfo Component render matches snapshot 1`] = `
                                         }
                                       }
                                     >
-                                      MetaMask never receives or uses your data.
+                                      BitcoinPay never receives or uses your data.
                                     </Text>
                                   </View>
                                 </View>
@@ -7072,7 +7072,7 @@ exports[`BasicInfo Component snapshot matches validation errors when continue is
                                         }
                                       }
                                     >
-                                      MetaMask never receives or uses your data.
+                                      BitcoinPay never receives or uses your data.
                                     </Text>
                                   </View>
                                 </View>
@@ -8567,7 +8567,7 @@ exports[`BasicInfo Component snapshot matches validation errors when continue is
                                         }
                                       }
                                     >
-                                      MetaMask never receives or uses your data.
+                                      BitcoinPay never receives or uses your data.
                                     </Text>
                                   </View>
                                 </View>
@@ -9895,7 +9895,7 @@ exports[`BasicInfo Component snapshot matches validation errors when continue is
                                         }
                                       }
                                     >
-                                      MetaMask never receives or uses your data.
+                                      BitcoinPay never receives or uses your data.
                                     </Text>
                                   </View>
                                 </View>

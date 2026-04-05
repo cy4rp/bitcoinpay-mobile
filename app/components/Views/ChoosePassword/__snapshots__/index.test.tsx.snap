@@ -122,7 +122,7 @@ exports[`ChoosePassword renders correctly 1`] = `
                 ]
               }
             >
-              MetaMask password
+              BitcoinPay password
             </Text>
             <Text
               accessibilityRole="text"
@@ -140,7 +140,7 @@ exports[`ChoosePassword renders correctly 1`] = `
                 ]
               }
             >
-              Unlocks MetaMask on this device only.
+              Unlocks BitcoinPay on this device only.
             </Text>
           </View>
           <View
@@ -614,7 +614,7 @@ exports[`ChoosePassword renders correctly 1`] = `
                     ]
                   }
                 >
-                  If I lose this password, MetaMask can’t reset it.
+                  If I lose this password, BitcoinPay can’t reset it.
                   <Text
                     accessibilityRole="text"
                     onPress={[Function]}

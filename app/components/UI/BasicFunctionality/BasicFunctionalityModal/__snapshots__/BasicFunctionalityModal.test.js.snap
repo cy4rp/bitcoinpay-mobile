@@ -172,7 +172,7 @@ exports[`BasicFunctionalityModal should render correctly 1`] = `
             }
           }
         >
-          This means you won't fully optimize your time on MetaMask. Basic features (like token details, optimal gas settings, and others) won't be available to you.
+          This means you won't fully optimize your time on BitcoinPay. Basic features (like token details, optimal gas settings, and others) won't be available to you.
         </Text>
         <Text
           accessibilityRole="text"

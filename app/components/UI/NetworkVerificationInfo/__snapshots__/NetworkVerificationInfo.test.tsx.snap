@@ -245,7 +245,7 @@ exports[`NetworkVerificationInfo renders correctly 1`] = `
           }
         }
       >
-        MetaMask doesn’t verify custom networks, so only approve networks you trust.
+        BitcoinPay doesn’t verify custom networks, so only approve networks you trust.
          
         <Text
           accessibilityRole="text"
@@ -695,7 +695,7 @@ exports[`NetworkVerificationInfo renders updated details when isNetworkRpcUpdate
             }
           }
         >
-          You're updating this network in MetaMask and giving metamask.github.io permission to use it.
+          You're updating this network in BitcoinPay and giving metamask.github.io permission to use it.
         </Text>
       </Text>
       <RCTScrollView

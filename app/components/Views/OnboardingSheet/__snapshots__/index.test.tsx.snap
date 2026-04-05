@@ -565,7 +565,7 @@ exports[`OnboardingSheet Snapshots renders correctly with createWallet=false (im
               ]
             }
           >
-            By continuing, you agree to MetaMask's
+            By continuing, you agree to BitcoinPay's
              
             <Text
               accessibilityRole="text"
@@ -1183,7 +1183,7 @@ exports[`OnboardingSheet Snapshots renders correctly with createWallet=true (cre
               ]
             }
           >
-            By continuing, you agree to MetaMask's
+            By continuing, you agree to BitcoinPay's
              
             <Text
               accessibilityRole="text"

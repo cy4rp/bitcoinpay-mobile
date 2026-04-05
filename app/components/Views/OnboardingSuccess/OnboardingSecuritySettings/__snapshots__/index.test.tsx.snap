@@ -95,7 +95,7 @@ exports[`OnboardingSecuritySettings Basic rendering should render correctly with
           }
         }
       >
-        MetaMask uses a third-party service called 
+        BitcoinPay uses a third-party service called 
         <Text
           accessibilityRole="text"
           style={

@@ -157,7 +157,7 @@ exports[`SwitchCustomNetwork should render correctly 1`] = `
             }
           }
         >
-          Connect this website with MetaMask
+          Connect this website with BitcoinPay
         </Text>
       </View>
       <View

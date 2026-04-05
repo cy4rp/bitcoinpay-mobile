@@ -496,7 +496,7 @@ exports[`DeleteWalletModal bottom sheet renders matching snapshot 1`] = `
                                 }
                                 testID="forgot-password-modal-description"
                               >
-                                MetaMask can’t recover your password for you.
+                                BitcoinPay can’t recover your password for you.
                               </Text>
                               <View
                                 style={
@@ -547,7 +547,7 @@ exports[`DeleteWalletModal bottom sheet renders matching snapshot 1`] = `
                                       }
                                     }
                                   >
-                                    If you’re logged into MetaMask on a device with
+                                    If you’re logged into BitcoinPay on a device with
                                      
                                     <Text
                                       accessibilityRole="text"

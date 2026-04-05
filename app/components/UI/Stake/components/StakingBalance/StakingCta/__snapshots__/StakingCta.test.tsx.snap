@@ -38,7 +38,7 @@ exports[`StakingCta render matches snapshot 1`] = `
           }
         }
       >
-        Stake your ETH with MetaMask Pool and earn
+        Stake your ETH with BitcoinPay Pool and earn
          
       </Text>
       <Text

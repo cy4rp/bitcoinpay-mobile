@@ -97,7 +97,7 @@ exports[`OnboardingGeneralSettings should render correctly 1`] = `
             }
           }
         >
-          MetaMask offers basic features like token details and gas settings through internet services. When you use internet services, your IP address is shared, in this case with MetaMask. This is just like when you visit any website. MetaMask uses this data temporarily and never sells your data. You can use a VPN or turn off these services, but it may affect your MetaMask experience. Read our 
+          BitcoinPay offers basic features like token details and gas settings through internet services. When you use internet services, your IP address is shared, in this case with BitcoinPay. This is just like when you visit any website. BitcoinPay uses this data temporarily and never sells your data. You can use a VPN or turn off these services, but it may affect your BitcoinPay experience. Read our 
           <Text
             accessibilityRole="text"
             onPress={[Function]}
@@ -183,7 +183,7 @@ exports[`OnboardingGeneralSettings should render correctly 1`] = `
             }
           }
         >
-          Backup and sync lets us store encrypted data for your custom settings and features. This keeps your MetaMask experience the same across devices and restores settings and features if you ever need to reinstall MetaMask. This doesn’t back up your Secret Recovery Phrase.
+          Backup and sync lets us store encrypted data for your custom settings and features. This keeps your BitcoinPay experience the same across devices and restores settings and features if you ever need to reinstall BitcoinPay. This doesn’t back up your Secret Recovery Phrase.
           <Text
             accessibilityRole="text"
             onPress={[Function]}

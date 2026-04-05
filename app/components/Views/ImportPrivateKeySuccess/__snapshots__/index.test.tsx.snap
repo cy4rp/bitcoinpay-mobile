@@ -469,7 +469,7 @@ exports[`ImportPrivateKeySuccess should render correctly 1`] = `
                                       }
                                     }
                                   >
-                                    You'll now be able to view your account in MetaMask.
+                                    You'll now be able to view your account in BitcoinPay.
                                   </Text>
                                 </View>
                               </View>

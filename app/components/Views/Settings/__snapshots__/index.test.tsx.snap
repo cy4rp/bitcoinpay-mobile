@@ -981,7 +981,7 @@ exports[`Settings renders settings component with all sections 1`] = `
                   }
                 }
               >
-                Section exclusively developed for E2E testing. If this is visible in your app, please report it to MetaMask support.
+                Section exclusively developed for E2E testing. If this is visible in your app, please report it to BitcoinPay support.
               </Text>
             </View>
             <View

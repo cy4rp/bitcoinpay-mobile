@@ -268,7 +268,7 @@ exports[`OnboardingAssetSettings should render correctly 1`] = `
           }
         }
       >
-        Let MetaMask add NFTs you own using third-party services (like OpenSea). Autodetecting NFTs exposes your IP and account address to these services. Enabling this feature could associate your IP address with your Ethereum address and display fake NFTs airdropped by scammers. You can add tokens manually to avoid this risk.
+        Let BitcoinPay add NFTs you own using third-party services (like OpenSea). Autodetecting NFTs exposes your IP and account address to these services. Enabling this feature could associate your IP address with your Ethereum address and display fake NFTs airdropped by scammers. You can add tokens manually to avoid this risk.
       </Text>
     </View>
     <View
@@ -351,7 +351,7 @@ exports[`OnboardingAssetSettings should render correctly 1`] = `
           }
         }
       >
-        MetaMask uses third-party services to show images of your NFTs stored on IPFS, display information related to ENS addresses entered in your browser's address bar, and fetch icons for different tokens. Your IP address may be exposed to these services when you’re using them.
+        BitcoinPay uses third-party services to show images of your NFTs stored on IPFS, display information related to ENS addresses entered in your browser's address bar, and fetch icons for different tokens. Your IP address may be exposed to these services when you’re using them.
       </Text>
       <View
         style={

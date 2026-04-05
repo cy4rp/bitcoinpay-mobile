@@ -82,7 +82,7 @@ exports[`ConnectionDetails renders correctly 1`] = `
         }
       }
     >
-      You connected to this site using the MetaMask browser on Feb 28, 2023
+      You connected to this site using the BitcoinPay browser on Feb 28, 2023
     </Text>
   </View>
   <View

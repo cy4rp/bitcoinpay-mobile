@@ -311,7 +311,7 @@ exports[`OptinMetrics Snapshots android render matches snapshot 1`] = `
                                 }
                                 testID="optin-metrics-title-id"
                               >
-                                Improve MetaMask
+                                Improve BitcoinPay
                               </Text>
                               <Text
                                 accessibilityRole="text"
@@ -1240,7 +1240,7 @@ exports[`OptinMetrics Snapshots android render matches snapshot with status bar 
                                 }
                                 testID="optin-metrics-title-id"
                               >
-                                Improve MetaMask
+                                Improve BitcoinPay
                               </Text>
                               <Text
                                 accessibilityRole="text"
@@ -2286,7 +2286,7 @@ exports[`OptinMetrics Snapshots iOS renders correctly 1`] = `
                                 }
                                 testID="optin-metrics-title-id"
                               >
-                                Improve MetaMask
+                                Improve BitcoinPay
                               </Text>
                               <Text
                                 accessibilityRole="text"

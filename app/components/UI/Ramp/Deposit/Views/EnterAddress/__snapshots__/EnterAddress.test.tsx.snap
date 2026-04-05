@@ -1309,7 +1309,7 @@ exports[`EnterAddress Component displays form validation errors when continue is
                                           }
                                         }
                                       >
-                                        MetaMask never receives or uses your data.
+                                        BitcoinPay never receives or uses your data.
                                       </Text>
                                     </View>
                                   </View>
@@ -2790,7 +2790,7 @@ exports[`EnterAddress Component prefills form data when previousFormData is prov
                                           }
                                         }
                                       >
-                                        MetaMask never receives or uses your data.
+                                        BitcoinPay never receives or uses your data.
                                       </Text>
                                     </View>
                                   </View>
@@ -4283,7 +4283,7 @@ exports[`EnterAddress Component render matches snapshot 1`] = `
                                           }
                                         }
                                       >
-                                        MetaMask never receives or uses your data.
+                                        BitcoinPay never receives or uses your data.
                                       </Text>
                                     </View>
                                   </View>
@@ -5797,7 +5797,7 @@ exports[`EnterAddress Component shows text input for state when region is not US
                                           }
                                         }
                                       >
-                                        MetaMask never receives or uses your data.
+                                        BitcoinPay never receives or uses your data.
                                       </Text>
                                     </View>
                                   </View>

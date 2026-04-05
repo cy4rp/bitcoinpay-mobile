@@ -533,7 +533,7 @@ exports[`NFT Auto detection modal render matches snapshot 1`] = `
                                     }
                                   }
                                 >
-                                  Allow MetaMask to detect and display your NFTs with autodetection. You’ll be able to:
+                                  Allow BitcoinPay to detect and display your NFTs with autodetection. You’ll be able to:
                                 </Text>
                                 <Text
                                   accessibilityRole="text"

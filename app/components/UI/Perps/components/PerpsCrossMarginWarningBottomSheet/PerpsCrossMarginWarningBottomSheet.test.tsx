@@ -203,7 +203,7 @@ describe('PerpsCrossMarginWarningBottomSheet', () => {
 
       expect(
         screen.getByText(
-          'MetaMask Perps only support trading with isolated margin. You need to first close your cross margin position before you can trade on MetaMask.',
+          'BitcoinPay Perps only support trading with isolated margin. You need to first close your cross margin position before you can trade on BitcoinPay.',
         ),
       ).toBeTruthy();
     });

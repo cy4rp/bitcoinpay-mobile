@@ -323,7 +323,7 @@ exports[`GasEducationCarousel should render correctly 1`] = `
                               ]
                             }
                           >
-                            MetaMask does not profit from gas fees.
+                            BitcoinPay does not profit from gas fees.
                           </Text>
                         </Text>
                       </View>

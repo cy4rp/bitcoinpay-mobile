@@ -345,7 +345,7 @@ exports[`AppInformation renders correctly with snapshot 1`] = `
                                   ]
                                 }
                               >
-                                About MetaMask
+                                About BitcoinPay
                               </Text>
                             </View>
                           </View>
@@ -404,7 +404,7 @@ exports[`AppInformation renders correctly with snapshot 1`] = `
                                   }
                                 }
                               >
-                                MetaMask v7.0.0 (1000)
+                                BitcoinPay v7.0.0 (1000)
                               </Text>
                             </View>
                             <Text
