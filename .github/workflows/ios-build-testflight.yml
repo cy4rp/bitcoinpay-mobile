@@ -1,0 +1,192 @@
+name: iOS Build & TestFlight
+
+on:
+  workflow_dispatch:
+    inputs:
+      build_type:
+        description: 'Build type'
+        required: true
+        type: choice
+        options:
+          - release
+          - debug
+        default: release
+
+permissions:
+  contents: read
+
+jobs:
+  build-ios:
+    name: Build iOS & Upload to TestFlight
+    runs-on: macos-14
+    timeout-minutes: 120
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_16.2.app/Contents/Developer
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+
+      - name: Enable Corepack & Yarn
+        run: |
+          corepack enable
+          corepack prepare yarn@4.6.0 --activate
+          yarn --version
+
+      - name: Install JS dependencies
+        run: yarn install --immutable
+
+      - name: Generate InpageBridgeWeb3
+        run: |
+          if [ -f "scripts/build-inpage-bridge.sh" ]; then
+            bash scripts/build-inpage-bridge.sh
+          elif [ -f "app/core/InpageBridgeWeb3.js" ]; then
+            echo "InpageBridgeWeb3.js already exists"
+          else
+            echo "// placeholder" > app/core/InpageBridgeWeb3.js
+          fi
+
+      - name: Create minimal .js.env
+        run: |
+          cat > .js.env << 'ENVEOF'
+          export METAMASK_ENVIRONMENT=production
+          export METAMASK_BUILD_TYPE=main
+          export MM_INFURA_PROJECT_ID=placeholder
+          export WALLET_CONNECT_PROJECT_ID=placeholder
+          export MM_FOX_CODE=placeholder
+          export SEGMENT_WRITE_KEY=placeholder
+          export SEGMENT_PROXY_URL=placeholder
+          export SEGMENT_DELETE_API_SOURCE_ID=placeholder
+          export SEGMENT_REGULATIONS_ENDPOINT=placeholder
+          export MM_SENTRY_DSN=placeholder
+          export MM_SENTRY_AUTH_TOKEN=placeholder
+          export SENTRY_DISABLE_AUTO_UPLOAD=true
+          export MM_BRANCH_KEY_LIVE=placeholder
+          export MM_BRANCH_KEY_TEST=placeholder
+          export FEATURES_ANNOUNCEMENTS_ACCESS_TOKEN=placeholder
+          export FEATURES_ANNOUNCEMENTS_SPACE_ID=placeholder
+          export FCM_CONFIG_API_KEY=placeholder
+          export FCM_CONFIG_AUTH_DOMAIN=placeholder
+          export FCM_CONFIG_STORAGE_BUCKET=placeholder
+          export FCM_CONFIG_PROJECT_ID=placeholder
+          export FCM_CONFIG_MESSAGING_SENDER_ID=placeholder
+          export FCM_CONFIG_APP_ID=placeholder
+          export FCM_CONFIG_MEASUREMENT_ID=placeholder
+          export PORTFOLIO_API_URL=https://portfolio.api.cx.metamask.io
+          export MM_PORTFOLIO_URL=https://portfolio.api.cx.metamask.io
+          export SECURITY_ALERTS_API_URL=https://security-alerts.api.cx.metamask.io
+          export DECODING_API_URL=https://signature-insights.api.cx.metamask.io/v1
+          export AUTH_SERVICE_URL=https://auth-service.api.cx.metamask.io
+          export REWARDS_API_URL=https://rewards.api.cx.metamask.io
+          export RAMPS_ENVIRONMENT=production
+          export BUILDS_ENABLED_WITH_GH_ACTIONS_TEMPORARY=true
+          ENVEOF
+
+      - name: Create empty xcconfig files
+        run: |
+          touch ios/debug.xcconfig
+          touch ios/release.xcconfig
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2.9'
+          working-directory: ios
+          bundler-cache: true
+
+      - name: Install CocoaPods
+        run: |
+          cd ios
+          bundle exec pod install --repo-update
+        env:
+          BUNDLE_GEMFILE: ios/Gemfile
+
+      - name: Configure Team ID in export options
+        run: |
+          sed -i '' "s/TEAM_ID_PLACEHOLDER/${{ secrets.APPLE_TEAM_ID }}/" ios/MetaMask/IosExportOptionsMetaMaskRelease.plist
+
+      - name: Configure Node path for Xcode
+        run: |
+          NODE_BINARY=$(command -v node)
+          echo "export NODE_BINARY=\"$NODE_BINARY\"" > ios/.xcode.env.local
+          cat ios/.xcode.env.local
+
+      - name: Setup App Store Connect API Key
+        run: |
+          echo "${{ secrets.APP_STORE_CONNECT_API_KEY_P8 }}" > ios/AuthKey.p8
+          chmod 600 ios/AuthKey.p8
+
+      - name: Build iOS Archive
+        run: |
+          cd ios
+          xcodebuild \
+            -workspace MetaMask.xcworkspace \
+            -scheme MetaMask \
+            -configuration Release \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "$(pwd)/AuthKey.p8" \
+            -authenticationKeyID "${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}" \
+            -authenticationKeyIssuerID "${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}" \
+            archive \
+            -archivePath build/BitcoinPay.xcarchive \
+            -destination generic/platform=ios \
+            CODE_SIGN_STYLE=Automatic \
+            DEVELOPMENT_TEAM=${{ secrets.APPLE_TEAM_ID }} \
+            NODE_OPTIONS='--max-old-space-size=4096' \
+            | tee build.log | tail -50
+
+      - name: Export IPA
+        run: |
+          cd ios
+          xcodebuild \
+            -exportArchive \
+            -archivePath build/BitcoinPay.xcarchive \
+            -exportPath build/output \
+            -exportOptionsPlist MetaMask/IosExportOptionsMetaMaskRelease.plist \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "$(pwd)/AuthKey.p8" \
+            -authenticationKeyID "${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}" \
+            -authenticationKeyIssuerID "${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}"
+
+      - name: Find IPA path
+        id: ipa
+        run: |
+          IPA=$(find ios/build/output -name '*.ipa' -type f | head -1)
+          if [ -z "$IPA" ]; then
+            echo "::error::No IPA file found"
+            exit 1
+          fi
+          ABS_IPA="$(cd "$(dirname "$IPA")" && pwd)/$(basename "$IPA")"
+          echo "path=$ABS_IPA" >> "$GITHUB_OUTPUT"
+          echo "Found IPA: $ABS_IPA"
+
+      - name: Upload to TestFlight
+        env:
+          APP_STORE_CONNECT_API_KEY_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
+          APP_STORE_CONNECT_API_KEY_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
+          APP_STORE_CONNECT_API_KEY_KEY_FILEPATH: ios/AuthKey.p8
+        run: |
+          cd ios
+          bundle exec fastlane upload_to_testflight_only \
+            ipa_path:"${{ steps.ipa.outputs.path }}" \
+            groups:"BitcoinPay Beta" \
+            changelog:"BitcoinPay build from ${{ github.sha }}" \
+            distribute_external:false
+
+      - name: Upload IPA artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bitcoinpay-ios-ipa
+          path: ios/build/output/*.ipa
+          if-no-files-found: warn
+
+      - name: Cleanup
+        if: always()
+        run: rm -f ios/AuthKey.p8
