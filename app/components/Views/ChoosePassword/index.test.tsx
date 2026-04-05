@@ -753,7 +753,8 @@ describe('ChoosePassword', () => {
       mockStorageWrapper.getItem.mockImplementation((key) => {
         if (key === '@BitcoinPay:biometryChoiceDisabled')
           return Promise.resolve('TRUE');
-        if (key === '@BitcoinPay:passcodeDisabled') return Promise.resolve(null);
+        if (key === '@BitcoinPay:passcodeDisabled')
+          return Promise.resolve(null);
         if (key === '@BitcoinPay:UserTermsAcceptedv1.0')
           return Promise.resolve('true');
         return Promise.resolve(null);

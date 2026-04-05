@@ -814,7 +814,8 @@ describe('ResetPassword', () => {
       mockStorageWrapper.getItem.mockImplementation((key) => {
         if (key === '@BitcoinPay:biometryChoiceDisabled')
           return Promise.resolve('TRUE');
-        if (key === '@BitcoinPay:passcodeDisabled') return Promise.resolve(null);
+        if (key === '@BitcoinPay:passcodeDisabled')
+          return Promise.resolve(null);
         return Promise.resolve(null);
       });
 
@@ -842,10 +843,12 @@ describe('ResetPassword', () => {
 
       const mockStorageWrapper = jest.mocked(StorageWrapper);
       mockStorageWrapper.getItem.mockImplementation((key) => {
-        if (key === '@BitcoinPay:biometryChoice') return Promise.resolve('TRUE');
+        if (key === '@BitcoinPay:biometryChoice')
+          return Promise.resolve('TRUE');
         if (key === '@BitcoinPay:biometryChoiceDisabled')
           return Promise.resolve(null);
-        if (key === '@BitcoinPay:passcodeDisabled') return Promise.resolve(null);
+        if (key === '@BitcoinPay:passcodeDisabled')
+          return Promise.resolve(null);
         return Promise.resolve(null);
       });
 
