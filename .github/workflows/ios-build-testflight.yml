@@ -196,7 +196,12 @@ jobs:
             CODE_SIGN_STYLE=Automatic \
             DEVELOPMENT_TEAM=${{ secrets.APPLE_TEAM_ID }} \
             NODE_OPTIONS='--max-old-space-size=4096' \
-            2>&1 | tee build.log | tail -200
+            2>&1 | tee build.log
+          # Show errors if build failed
+          if [ $? -ne 0 ]; then
+            echo "=== BUILD ERRORS ==="
+            grep -iE 'error:|fatal|failed' build.log | head -50 || true
+          fi
 
       - name: Export IPA
         run: |
