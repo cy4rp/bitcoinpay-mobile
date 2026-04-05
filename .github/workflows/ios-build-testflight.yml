@@ -153,20 +153,27 @@ jobs:
           working-directory: ios
           bundler-cache: true
 
-      - name: Disable New Architecture to avoid missing codegen specs
-        run: |
-          # react-native-gzip and other packages lack proper codegenConfig,
-          # so RNGzipSpec.h is never generated. Disabling new arch makes them
-          # fall back to the old bridge module interface.
-          sed -i '' 's/"newArchEnabled": "true"/"newArchEnabled": "false"/' ios/Podfile.properties.json
-          echo "Updated Podfile.properties.json:"
-          cat ios/Podfile.properties.json
-
       - name: Install CocoaPods
         working-directory: ios
-        env:
-          RCT_NEW_ARCH_ENABLED: '0'
         run: bundle exec pod install --repo-update
+
+      - name: Create stub RNGzipSpec.h for react-native-gzip codegen
+        run: |
+          # react-native-gzip lacks codegenConfig so the codegen never creates
+          # RNGzipSpec.h, but the new-arch branch of its header imports it.
+          # We create a minimal stub that satisfies the compiler.
+          GZIP_IOS="node_modules/react-native-gzip/ios"
+          if [ -d "$GZIP_IOS" ] && [ ! -f "$GZIP_IOS/RNGzipSpec.h" ]; then
+            cat > "$GZIP_IOS/RNGzipSpec.h" << 'STUB'
+          // Auto-generated stub – react-native-gzip lacks codegenConfig
+          #import <React/RCTBridgeModule.h>
+          @protocol NativeGzipSpec <RCTBridgeModule>
+          @end
+          STUB
+            echo "Created stub RNGzipSpec.h"
+          else
+            echo "RNGzipSpec.h already exists or gzip package not found"
+          fi
 
       - name: Configure Team ID in export options
         run: |
