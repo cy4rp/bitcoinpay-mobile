@@ -157,6 +157,20 @@ jobs:
         working-directory: ios
         run: bundle exec pod install --repo-update
 
+      - name: Generate React Native codegen artifacts
+        run: |
+          # Run codegen to generate TurboModule spec files (e.g. RNGzipSpec.h)
+          if [ -f "node_modules/react-native/scripts/generate-codegen-artifacts.js" ]; then
+            node node_modules/react-native/scripts/generate-codegen-artifacts.js \
+              --path . \
+              --outputDir ios/build/generated/ios \
+              --targetPlatform ios || echo "Codegen script returned non-zero but may have generated files"
+          fi
+          # Also ensure the build/generated path is findable by listing what was created
+          find ios/build/generated -name "*.h" 2>/dev/null | head -20 || echo "No codegen headers in ios/build/generated"
+          # Check if codegen files exist in Pods
+          find ios/Pods -name "RNGzipSpec.h" 2>/dev/null || echo "RNGzipSpec.h not in Pods"
+
       - name: Configure Team ID in export options
         run: |
           sed -i '' "s/TEAM_ID_PLACEHOLDER/${{ secrets.APPLE_TEAM_ID }}/" ios/MetaMask/IosExportOptionsMetaMaskRelease.plist
@@ -322,6 +336,7 @@ jobs:
             OTHER_CODE_SIGN_FLAGS='--keychain '"$KEYCHAIN_PATH" \
             METRO_MAX_WORKERS=4 \
             NODE_OPTIONS='--max-old-space-size=4096' \
+            HEADER_SEARCH_PATHS='$(inherited) $(PODS_ROOT)/Headers/Public "$(SRCROOT)/../ios/build/generated/ios"' \
             2>&1 | tee build.log
           # Show errors if build failed
           if [ $? -ne 0 ]; then
