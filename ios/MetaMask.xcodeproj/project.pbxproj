@@ -146,7 +146,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				153F84CB2319B8FD00C19B63 /* Branch.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -157,7 +156,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2EF2828C2B0FF86900D7B4B1 /* Branch.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,7 +166,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B339FF32289ABD70001B89FB /* Branch.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,7 +266,6 @@
 				F961A37228105CF9007442B5 /* LinkPresentation.framework in Frameworks */,
 				650F2B9D24DC5FF200C3B9C4 /* libRCTAesForked.a in Frameworks */,
 				153C1ABB2217BCDC0088EFE0 /* JavaScriptCore.framework in Frameworks */,
-				153F84CA2319B8FD00C19B63 /* Branch.framework in Frameworks */,
 				ED2E8FE6D71BE9319F3B27D3 /* libPods-MetaMask.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,7 +277,6 @@
 				2EF282612B0FF86900D7B4B1 /* LinkPresentation.framework in Frameworks */,
 				2EF282622B0FF86900D7B4B1 /* libRCTAesForked.a in Frameworks */,
 				2EF282632B0FF86900D7B4B1 /* JavaScriptCore.framework in Frameworks */,
-				2EF282652B0FF86900D7B4B1 /* Branch.framework in Frameworks */,
 				A9AB7F6A09E06325C0A71FA4 /* libPods-MetaMask-Flask.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,7 +288,6 @@
 				B339FF07289ABD70001B89FB /* LinkPresentation.framework in Frameworks */,
 				B339FF08289ABD70001B89FB /* libRCTAesForked.a in Frameworks */,
 				B339FF09289ABD70001B89FB /* JavaScriptCore.framework in Frameworks */,
-				B339FF0C289ABD70001B89FB /* Branch.framework in Frameworks */,
 				A9A253A9A4C55258DD932254 /* libPods-MetaMask-QA.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1356,7 +1350,7 @@
 				ASSETCATALOG_COMPILER_OPTIMIZATION = time;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = MetaMask/MetaMask.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 4138;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1489,7 +1483,7 @@
 				ASSETCATALOG_COMPILER_OPTIMIZATION = time;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = MetaMask/MetaMask.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 4138;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1722,7 +1716,7 @@
 				ASSETCATALOG_COMPILER_OPTIMIZATION = time;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = MetaMask/MetaMask.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 4138;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
