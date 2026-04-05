@@ -274,6 +274,14 @@ jobs:
             grep -iE 'error:|fatal|failed' build.log | head -50 || true
           fi
 
+      - name: Update export options with provisioning profile UUID
+        run: |
+          # Replace the profile name with the actual UUID from the installed profile
+          /usr/libexec/PlistBuddy -c "Set :provisioningProfiles:com.bitcoinpay.btcp $PROFILE_UUID" \
+            ios/MetaMask/IosExportOptionsMetaMaskRelease.plist
+          echo "Updated export options with profile UUID: $PROFILE_UUID"
+          cat ios/MetaMask/IosExportOptionsMetaMaskRelease.plist
+
       - name: Export IPA
         run: |
           cd ios
@@ -282,7 +290,7 @@ jobs:
             -archivePath build/BitcoinPay.xcarchive \
             -exportPath build/output \
             -exportOptionsPlist MetaMask/IosExportOptionsMetaMaskRelease.plist \
-            -allowProvisioningUpdates \
+            OTHER_CODE_SIGN_FLAGS='--keychain '"$KEYCHAIN_PATH" \
             -authenticationKeyPath "$(pwd)/AuthKey.p8" \
             -authenticationKeyID "${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}" \
             -authenticationKeyIssuerID "${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}"
