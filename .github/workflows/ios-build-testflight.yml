@@ -178,6 +178,54 @@ jobs:
           head -1 ios/AuthKey.p8
           tail -1 ios/AuthKey.p8
 
+      - name: Fix header search paths for native modules
+        run: |
+          # Fix RCTDeprecation header not found issue for non-Pod native modules
+          # RCTAesForked and similar standalone Xcode projects need Pods headers
+          cd ios
+          ruby - << 'RUBYEOF'
+          require 'xcodeproj'
+
+          # Find all .xcodeproj in node_modules that are part of the workspace
+          workspace = Xcodeproj::Workspace.new_from_xcworkspace('MetaMask.xcworkspace')
+          pods_root = File.expand_path('Pods', Dir.pwd)
+
+          workspace.file_references.each do |ref|
+            proj_path = ref.path
+            next unless proj_path.include?('node_modules')
+            full_path = File.expand_path(proj_path, Dir.pwd)
+            next unless File.exist?(full_path)
+
+            begin
+              project = Xcodeproj::Project.open(full_path)
+              project.build_configurations.each do |config|
+                paths = config.build_settings['HEADER_SEARCH_PATHS'] || ['$(inherited)']
+                paths = [paths] if paths.is_a?(String)
+                pods_headers = "\"#{pods_root}/Headers/Public\""
+                unless paths.any? { |p| p.include?('Pods/Headers/Public') || p.include?('Pods\\/Headers\\/Public') }
+                  paths << pods_headers
+                  config.build_settings['HEADER_SEARCH_PATHS'] = paths
+                end
+              end
+              project.native_targets.each do |target|
+                target.build_configurations.each do |config|
+                  paths = config.build_settings['HEADER_SEARCH_PATHS'] || ['$(inherited)']
+                  paths = [paths] if paths.is_a?(String)
+                  pods_headers = "\"#{pods_root}/Headers/Public\""
+                  unless paths.any? { |p| p.include?('Pods/Headers/Public') || p.include?('Pods\\/Headers\\/Public') }
+                    paths << pods_headers
+                    config.build_settings['HEADER_SEARCH_PATHS'] = paths
+                  end
+                end
+              end
+              project.save
+              puts "Fixed header search paths: #{proj_path}"
+            rescue => e
+              puts "Skipping #{proj_path}: #{e.message}"
+            end
+          end
+          RUBYEOF
+
       - name: Build iOS Archive
         run: |
           set -o pipefail
