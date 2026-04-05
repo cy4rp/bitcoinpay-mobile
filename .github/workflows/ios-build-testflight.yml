@@ -178,6 +178,45 @@ jobs:
           head -1 ios/AuthKey.p8
           tail -1 ios/AuthKey.p8
 
+          # Also place in Xcode's expected API key location
+          mkdir -p ~/private_keys
+          cp ios/AuthKey.p8 ~/private_keys/AuthKey_${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}.p8
+
+      - name: Setup signing keychain
+        run: |
+          # Create a fresh temporary keychain for CI signing
+          KEYCHAIN_PATH="$RUNNER_TEMP/app-signing.keychain-db"
+          KEYCHAIN_PASSWORD="ci-$(date +%s)"
+
+          # Create and configure keychain
+          security create-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
+          security set-keychain-settings -lut 21600 "$KEYCHAIN_PATH"
+          security unlock-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
+
+          # Add to search list (prepend so it's found first)
+          security list-keychains -d user -s "$KEYCHAIN_PATH" $(security list-keychains -d user | tr -d '"')
+          security default-keychain -s "$KEYCHAIN_PATH"
+
+          # Generate a new CSR and private key for Apple Development certificate
+          openssl req -new -newkey rsa:2048 -nodes \
+            -keyout "$RUNNER_TEMP/dev.key" \
+            -out "$RUNNER_TEMP/dev.csr" \
+            -subj "/CN=BitcoinPay CI/O=BitcoinPay/C=US"
+
+          # Import the private key into keychain
+          openssl pkcs12 -export -inkey "$RUNNER_TEMP/dev.key" \
+            -out "$RUNNER_TEMP/dev.p12" \
+            -name "BitcoinPay CI" \
+            -passout pass:"$KEYCHAIN_PASSWORD" \
+            -nocerts
+          security import "$RUNNER_TEMP/dev.p12" -k "$KEYCHAIN_PATH" \
+            -P "$KEYCHAIN_PASSWORD" -T /usr/bin/codesign -T /usr/bin/security
+          security set-key-partition-list -S apple-tool:,apple:,codesign: \
+            -s -k "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
+
+          echo "KEYCHAIN_PATH=$KEYCHAIN_PATH" >> "$GITHUB_ENV"
+          echo "Keychain created and configured at: $KEYCHAIN_PATH"
+
       - name: Fix header search paths for native modules
         run: |
           # Fix RCTDeprecation header not found issue for non-Pod native modules
@@ -212,6 +251,7 @@ jobs:
             -scheme MetaMask \
             -configuration Release \
             -allowProvisioningUpdates \
+            -allowProvisioningDeviceRegistration \
             -authenticationKeyPath "$(pwd)/AuthKey.p8" \
             -authenticationKeyID "${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}" \
             -authenticationKeyIssuerID "${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}" \
@@ -220,6 +260,7 @@ jobs:
             -destination generic/platform=ios \
             CODE_SIGN_STYLE=Automatic \
             DEVELOPMENT_TEAM=${{ secrets.APPLE_TEAM_ID }} \
+            OTHER_CODE_SIGN_FLAGS='--keychain '$KEYCHAIN_PATH \
             NODE_OPTIONS='--max-old-space-size=4096' \
             2>&1 | tee build.log
           # Show errors if build failed
@@ -276,4 +317,9 @@ jobs:
 
       - name: Cleanup
         if: always()
-        run: rm -f ios/AuthKey.p8
+        run: |
+          rm -f ios/AuthKey.p8
+          rm -f ~/private_keys/AuthKey_${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}.p8
+          if [ -n "$KEYCHAIN_PATH" ]; then
+            security delete-keychain "$KEYCHAIN_PATH" || true
+          fi
