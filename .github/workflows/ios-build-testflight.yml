@@ -19,7 +19,7 @@ jobs:
   build-ios:
     name: Build iOS & Upload to TestFlight
     runs-on: macos-14
-    timeout-minutes: 120
+    timeout-minutes: 300
     env:
       DEVELOPER_DIR: /Applications/Xcode_16.2.app/Contents/Developer
     steps:
@@ -258,6 +258,63 @@ jobs:
             echo "=== RCTAesForked HEADER_SEARCH_PATHS ==="
             grep -A2 "HEADER_SEARCH_PATHS" "$AESFORKED" | head -20
           fi
+
+      - name: Disable expo-updates resource generation to speed up build
+        run: |
+          # The EXUpdates pod runs Metro bundler during xcodebuild to generate
+          # update resources. This takes 100+ minutes on CI runners and is not
+          # needed for TestFlight builds.
+          
+          # Method 1: Replace shell scripts in Target Support Files
+          SUPPORT_DIR="ios/Pods/Target Support Files/EXUpdates"
+          if [ -d "$SUPPORT_DIR" ]; then
+            find "$SUPPORT_DIR" -name "*.sh" | while read script; do
+              echo "Replacing EXUpdates script: $script"
+              printf '#!/bin/sh\necho "Skipped EXUpdates script for CI build"\nexit 0\n' > "$script"
+              chmod +x "$script"
+            done
+          fi
+          
+          # Method 2: Patch the Pods project to replace the "Generate updates resources"
+          # build phase script with a no-op. The script is embedded in project.pbxproj.
+          PODS_PROJ="ios/Pods/Pods.xcodeproj/project.pbxproj"
+          if [ -f "$PODS_PROJ" ]; then
+            # Replace the shellScript content for "Generate updates resources for expo-updates"
+            python3 << 'PYEOF'
+import re
+
+with open("ios/Pods/Pods.xcodeproj/project.pbxproj", "r") as f:
+    content = f.read()
+
+# Find and replace the "Generate updates resources" script phase
+# The pattern matches: name = "[CP-User] Generate updates resources for expo-updates";
+# followed by shellScript = "...";
+pattern = r'(name\s*=\s*"\[CP-User\]\s*Generate updates resources for expo-updates".*?shellScript\s*=\s*)"(.*?)"(\s*;)'
+replacement = r'\1"echo \\"Skipped expo-updates resource generation for CI\\""\3'
+
+new_content, count = re.subn(pattern, replacement, content, flags=re.DOTALL)
+if count > 0:
+    print(f"Replaced {count} expo-updates script(s) in Pods project")
+    with open("ios/Pods/Pods.xcodeproj/project.pbxproj", "w") as f:
+        f.write(new_content)
+else:
+    print("No expo-updates script found in Pods project (trying alternative)")
+    # Try simpler pattern - just replace any shellScript in EXUpdates section
+    # that contains "expo-updates" or "create-manifest"
+    pattern2 = r'(Generate updates resources.*?shellScript = )"[^"]*"'
+    new_content2, count2 = re.subn(pattern2, r'\1"echo skipped"', content, flags=re.DOTALL)
+    if count2 > 0:
+        print(f"Replaced {count2} script(s) with alternative pattern")
+        with open("ios/Pods/Pods.xcodeproj/project.pbxproj", "w") as f:
+            f.write(new_content2)
+    else:
+        print("WARNING: Could not find expo-updates script to disable")
+PYEOF
+          fi
+          
+          # Method 3: Set environment variable as fallback
+          echo "EX_UPDATES_NATIVE_DEBUG=1" >> "$GITHUB_ENV"
+          echo "EXPO_UPDATES_ENABLED=0" >> "$GITHUB_ENV"
 
       - name: Build iOS Archive
         run: |
