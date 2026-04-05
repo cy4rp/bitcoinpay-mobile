@@ -153,23 +153,28 @@ jobs:
           working-directory: ios
           bundler-cache: true
 
+      - name: Disable New Architecture to avoid missing codegen specs
+        run: |
+          # react-native-gzip and other packages lack proper codegenConfig,
+          # so RNGzipSpec.h is never generated. Disabling new arch makes them
+          # fall back to the old bridge module interface.
+          cd ios
+          python3 -c "
+import json
+with open('Podfile.properties.json', 'r') as f:
+    props = json.load(f)
+props['newArchEnabled'] = 'false'
+with open('Podfile.properties.json', 'w') as f:
+    json.dump(props, f, indent=4)
+print('Set newArchEnabled to false')
+"
+          cat Podfile.properties.json
+
       - name: Install CocoaPods
         working-directory: ios
+        env:
+          RCT_NEW_ARCH_ENABLED: '0'
         run: bundle exec pod install --repo-update
-
-      - name: Generate React Native codegen artifacts
-        run: |
-          # Run codegen to generate TurboModule spec files (e.g. RNGzipSpec.h)
-          if [ -f "node_modules/react-native/scripts/generate-codegen-artifacts.js" ]; then
-            node node_modules/react-native/scripts/generate-codegen-artifacts.js \
-              --path . \
-              --outputDir ios/build/generated/ios \
-              --targetPlatform ios || echo "Codegen script returned non-zero but may have generated files"
-          fi
-          # Also ensure the build/generated path is findable by listing what was created
-          find ios/build/generated -name "*.h" 2>/dev/null | head -20 || echo "No codegen headers in ios/build/generated"
-          # Check if codegen files exist in Pods
-          find ios/Pods -name "RNGzipSpec.h" 2>/dev/null || echo "RNGzipSpec.h not in Pods"
 
       - name: Configure Team ID in export options
         run: |
@@ -336,7 +341,6 @@ jobs:
             OTHER_CODE_SIGN_FLAGS='--keychain '"$KEYCHAIN_PATH" \
             METRO_MAX_WORKERS=4 \
             NODE_OPTIONS='--max-old-space-size=4096' \
-            HEADER_SEARCH_PATHS='$(inherited) $(PODS_ROOT)/Headers/Public "$(SRCROOT)/../ios/build/generated/ios"' \
             2>&1 | tee build.log
           # Show errors if build failed
           if [ $? -ne 0 ]; then
