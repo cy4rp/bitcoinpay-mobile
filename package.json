@@ -256,7 +256,7 @@
     "@metamask/ethjs-contract": "^0.4.1",
     "@metamask/ethjs-query": "^0.7.1",
     "@metamask/ethjs-unit": "^0.3.0",
-    "@metamask/gas-fee-controller": "^26.1.0",
+    "@metamask/gas-fee-controller": "^27.0.0",
     "@metamask/gator-permissions-controller": "^3.0.0",
     "@metamask/geolocation-controller": "^0.1.1",
     "@metamask/hw-wallet-sdk": "^0.4.0",
